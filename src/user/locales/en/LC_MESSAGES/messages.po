@@ -1,0 +1,32 @@
+# English translations for AcademiaHub-backend-user.
+# Copyright (C) 2024 AcademiaHub
+# This file is distributed under the same license as the AcademiaHub-backend-user project.
+# Yan Feng <141114704+kcornw@users.noreply.github.com>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  1.0\n"
+"Report-Msgid-Bugs-To: 141114704+kcornw@users.noreply.github.com\n"
+"POT-Creation-Date: 2024-11-19 17:00+0800\n"
+"PO-Revision-Date: 2024-11-19 17:00+0800\n"
+"Last-Translator: Yan Feng <141114704+kcornw@users.noreply.github.com>\n"
+"Language: en\n"
+"Language-Team: Yan Feng <141114704+kcornw@users.noreply.github.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: src/response.py:8
+msgid "操作成功"
+msgstr "Success"
+
+#: src/response.py:9
+msgid "参数 {} 无效"
+msgstr "Invalid parameter {}"
+
+#: src/response.py:14
+msgid "未知错误类型"
+msgstr "Unknown error type"
+
