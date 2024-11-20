@@ -4,7 +4,7 @@ from src.extensions import babel, db
 from src.service import service_bp
 from dotenv import load_dotenv
 
-assert load_dotenv()
+load_dotenv()
 
 
 def create_app(**config):
