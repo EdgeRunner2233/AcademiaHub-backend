@@ -1,14 +1,9 @@
-import os
 import sqlalchemy as sql
 import sqlalchemy.exc as exc
-from src.app import app
+from src.extensions import db
 from src.util import logger
-from flask_sqlalchemy import SQLAlchemy
 from typing import Type, TypeVar, Optional, Union, List
 
-
-app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("SQLALCHEMY_DATABASE_URI")
-db = SQLAlchemy(app)
 
 T = TypeVar("T", bound="Base")
 
