@@ -37,6 +37,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: user-module-coverage-report-${{ matrix.python-version }}
-          path: user-module-coverage-${{ matrix.python-version }}.xml
+          path: services/user/user-module-coverage-${{ matrix.python-version }}.xml
           retention-days: 3
         if: ${{ always() }}
+      - name: Report Coveralls
+        run: curl -sL https://coveralls.io/coveralls-linux.tar.gz | tar -xz && ./coveralls
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
