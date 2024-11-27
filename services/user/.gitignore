@@ -166,3 +166,6 @@ cython_debug/
 
 # Coveralls config
 .coveralls.yml
+
+# Server logs
+logs/*
