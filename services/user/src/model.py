@@ -1,8 +1,9 @@
 import sqlalchemy as sql
 import sqlalchemy.exc as exc
 from src.extensions import db
-from src.util import logger
-from typing import Type, TypeVar, Optional, Union, List
+from src.util import logger, Token
+import werkzeug.security as security
+from typing import Type, TypeVar, Optional, Union, Tuple, List
 
 
 T = TypeVar("T", bound="Base")
@@ -60,8 +61,151 @@ class Base:
 
 class User(db.Model, Base):
     id = sql.Column(sql.Integer, primary_key=True)
-    name = sql.Column(sql.String(20))
+    role = sql.Column(sql.Integer, default=0)
+
+    email = sql.Column(sql.String(50))
+    nickname = sql.Column(sql.String(20))
+    password_hash = sql.Column(sql.String(256))
+    openalex_id = sql.Column(sql.String(30))
+
+    organization = sql.Column(sql.String(50), default="")
+    title = sql.Column(sql.String(20), default="")
+    research_field = sql.Column(sql.String(50), default="")
+    gmt_became_researcher = sql.Column(sql.DateTime)
+
+    gmt_registered = sql.Column(sql.DateTime, default=sql.func.now())
+    gmt_created = sql.Column(sql.DateTime, default=sql.func.now())
+    gmt_modified = sql.Column(sql.DateTime, default=sql.func.now())
+
     is_deleted = sql.Column(sql.Boolean, default=False)
 
+    class Role:
+        USER = 0
+        RESEARCHER = 1
+        ADMIN = 2
+        SUPER_ADMIN = 3
+
+    @staticmethod
+    def create(email: str, nickname: str, plain_password: str) -> Optional["User"]:
+        """
+        Create a new user and save it to database.
+
+        Args:
+            email (str): The email of the user.
+            nickname (str): The nickname of the user.
+            plain_password (str): The plain text password of the user.
+
+        Returns:
+            Optional[User]: The created user object or None if failed.
+        """
+
+        user = User(
+            email=email,
+            nickname=nickname,
+            password_hash=security.generate_password_hash(plain_password),
+        )
+        return user if user.save() else None
+
+    @staticmethod
+    def login_check(email: str, plain_password: str) -> bool:
+        """
+        Check whether the given email and password match a user in the database.
+
+        Args:
+            email (str): The email of the user.
+            plain_password (str): The plain text password of the user.
+
+        Returns:
+            bool: Whether the given email and password match a user in the database.
+        """
+
+        user = User.query_first(email=email)
+        if user is None:
+            return False
+        return security.check_password_hash(user.password_hash, plain_password)
+
+    @staticmethod
+    def exists(email: str) -> bool:
+        """
+        Check whether the user with given email exists in the database.
+
+        Args:
+            email (str): The email of the user.
+
+        Returns:
+            bool: Whether the given email exists in the database.
+        """
+        return User.query_first(email=email) is not None
+
+    @staticmethod
+    def get(email: str) -> Optional["User"]:
+        """
+        Get the user with given email.
+
+        Args:
+            email (str): The email of the user.
+
+        Returns:
+            Optional[User]: The user with given email or None if not found.
+        """
+
+        return User.query_first(email=email)
+
+    def generate_token(self) -> str:
+        """
+        Generate a token for the user.
+
+        Returns:
+            str: The generated token.
+        """
+
+        token = Token.generate_token({"id": self.id})
+        return token
+
+    @staticmethod
+    def get_user_by_token(token: str) -> Tuple[Optional["User"], int]:
+        """
+        Get the user by the given token.
+
+        Args:
+            token (str): The token to get the user.
+
+        Returns:
+            tuple (Optional[User], int): A tuple of (user, error_code).
+        """
+
+        try:
+            payloads = Token.verify_token(token)
+        except Token.TokenExpired:
+            return None, 402
+        except Token.TokenInvalid:
+            return None, 403
+
+        id = payloads.get("id", None)
+        user = User.query_first(id=id)
+        return user, 0
+
+    def verify_token(self, token: str) -> Tuple[bool, int]:
+        """
+        Verify the given token.
+
+        Args:
+            token (str): The token to verify.
+
+        Returns:
+            tuple (bool, int): A tuple of (is_valid, error_code).
+        """
+
+        try:
+            payloads = Token.verify_token(token)
+            if payloads.get("id") != self.id:
+                return False, 403
+        except Token.TokenExpired:
+            return False, 402
+        except Token.TokenInvalid:
+            return False, 403
+
+        return True, 0
+
     def __repr__(self):
-        return f"<User {self.name}({self.id})>"
+        return f"<User {self.email}({self.id})>"

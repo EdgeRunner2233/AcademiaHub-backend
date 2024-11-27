@@ -6,7 +6,17 @@ from dataclasses import dataclass, field
 class Message:
     _mapping = {
         0: gettext("操作成功"),
-        101: gettext("参数 {} 无效"),
+        101: gettext("缺少参数 {}"),
+        102: gettext("参数 {} 不符合格式要求"),
+        300: gettext("登陆成功"),
+        301: gettext("用户不存在或密码错误"),
+        310: gettext("注册成功"),
+        311: gettext("用户已存在"),
+        319: gettext("注册失败"),
+        401: gettext("请求缺少token"),
+        402: gettext("用户token已过期"),
+        403: gettext("用户token无效"),
+        404: gettext("无操作权限"),
     }
 
     @staticmethod
@@ -31,5 +41,24 @@ class Response:
             "data": self.data,
         }
 
-    def __call__(self):
+    def __call__(
+        self, code, message_param=None, data=None, status_code=None, success=None
+    ):
+        self.code = code
+        self.message = (
+            Message.get(self.code, message_param)
+            if message_param
+            else Message.get(code)
+        )
+        if code % 10 != 0:
+            self.success = False
+
+        if data:
+            self.data = data
+
+        if status_code:
+            self.status_code = status_code
+        if success:
+            self.success = success
+
         return self.to_dict(), self.status_code
