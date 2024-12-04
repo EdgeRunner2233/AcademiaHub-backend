@@ -1,3 +1,4 @@
+import os
 import re
 import random
 from typing import Optional
@@ -31,8 +32,8 @@ logger = get_logger()
 
 class Token:
     header = {"alg": "HS256", "typ": "JWT"}
-    secret = "dev"
-    expire_time = 3600
+    secret = os.getenv("TOKEN_SECRET")
+    expire_time = os.getenv("TOKEN_EXPIRE_TIME")
 
     class TokenExpired(Exception):
         pass
