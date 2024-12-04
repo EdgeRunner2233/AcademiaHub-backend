@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'AcademiaHub.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'AcademiaHub',
+        'USER':'root',
+        'PASSWORD':'Djs0104151671',
+        'HOST':'bj-cynosdbmysql-grp-jyqfzjf4.sql.tencentcdb.com',
+        'PORT':'29086',
     }
 }
 
