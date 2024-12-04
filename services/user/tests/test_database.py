@@ -15,8 +15,8 @@ class DatabaseTestCase(unittest.TestCase):
         self.app_context.push()
 
         self.test_db.create_all()
-        user_1 = User(id=1, name="test_1")
-        user_2 = User(id=2, name="test_2")
+        user_1 = User(id=1, nickname="test_1")
+        user_2 = User(id=2, nickname="test_2")
         self.test_db.session.add_all([user_1, user_2])
         self.test_db.session.commit()
 
@@ -36,7 +36,7 @@ class DatabaseTestCase(unittest.TestCase):
     def test_query_first(self):
         user = User.query_first(id=1)
         self.assertIsNotNone(user)
-        self.assertEqual(user.name, "test_1")
+        self.assertEqual(user.nickname, "test_1")
 
     def test_query_all(self):
         users = User.query_all()
@@ -46,7 +46,7 @@ class DatabaseTestCase(unittest.TestCase):
         user = User.query_first(id=3)
         self.assertIsNone(user)
 
-        user = User(id=3, name="test_3")
+        user = User(id=3, nickname="test_3")
         self.assertTrue(user.save())
 
         user = User.query_first(id=3)
@@ -77,7 +77,7 @@ class DatabaseTestCase(unittest.TestCase):
     def test_update(self):
         user = User.query_first(id=1)
         self.assertIsNotNone(user)
-        self.assertTrue(user.update(name="test_1_update"))
+        self.assertTrue(user.update(nickname="test_1_update"))
 
         user = User.query_first(id=1)
-        self.assertEqual(user.name, "test_1_update")
+        self.assertEqual(user.nickname, "test_1_update")

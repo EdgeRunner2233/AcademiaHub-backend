@@ -31,7 +31,7 @@ class ApiTestCase(unittest.TestCase):
         self.assertTrue(self.app.config["TESTING"])
 
     def test_api_health(self):
-        response = self.client.get("/api/health")
+        response = self.client.get("/api/user/health")
         self.assertEqual(response.status_code, 200)
 
         payload = json.loads(response.data)
