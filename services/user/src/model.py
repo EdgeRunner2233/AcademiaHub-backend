@@ -60,14 +60,20 @@ class Base:
 
 
 class User(db.Model, Base):
+    class Role:
+        USER = 0
+        RESEARCHER = 1
+        ADMIN = 2
+        SUPER_ADMIN = 3
+
     id = sql.Column(sql.Integer, primary_key=True)
-    role = sql.Column(sql.Integer, default=0)
+    role = sql.Column(sql.Integer, default=Role.USER)
 
     email = sql.Column(sql.String(50))
     nickname = sql.Column(sql.String(20))
     password_hash = sql.Column(sql.String(256))
-    openalex_id = sql.Column(sql.String(30))
 
+    openalex_id = sql.Column(sql.String(30), default="")
     organization = sql.Column(sql.String(50), default="")
     title = sql.Column(sql.String(20), default="")
     research_field = sql.Column(sql.String(50), default="")
@@ -78,12 +84,6 @@ class User(db.Model, Base):
     gmt_modified = sql.Column(sql.DateTime, default=sql.func.now())
 
     is_deleted = sql.Column(sql.Boolean, default=False)
-
-    class Role:
-        USER = 0
-        RESEARCHER = 1
-        ADMIN = 2
-        SUPER_ADMIN = 3
 
     @staticmethod
     def create(email: str, nickname: str, plain_password: str) -> Optional["User"]:
@@ -138,7 +138,21 @@ class User(db.Model, Base):
         return User.query_first(email=email) is not None
 
     @staticmethod
-    def get(email: str) -> Optional["User"]:
+    def get_by_id(id: str) -> Optional["User"]:
+        """
+        Get the user with given id.
+
+        Args:
+            id (str): The id of the user.
+
+        Returns:
+            Optional[User]: The user with given id or None if not found.
+        """
+
+        return User.query_first(id=id)
+
+    @staticmethod
+    def get_by_email(email: str) -> Optional["User"]:
         """
         Get the user with given email.
 
@@ -150,6 +164,19 @@ class User(db.Model, Base):
         """
 
         return User.query_first(email=email)
+
+    @staticmethod
+    def generate_password_hash(plain_password: str) -> str:
+        """
+        Generate a password hash for the given plain text password.
+
+        Args:
+            plain_password (str): The plain text password.
+
+        Returns:
+            str: The generated password hash.
+        """
+        return security.generate_password_hash(plain_password)
 
     def generate_token(self) -> str:
         """
@@ -163,7 +190,7 @@ class User(db.Model, Base):
         return token
 
     @staticmethod
-    def get_user_by_token(token: str) -> Tuple[Optional["User"], int]:
+    def get_by_token(token: str) -> Tuple[Optional["User"], int]:
         """
         Get the user by the given token.
 
