@@ -7,7 +7,7 @@ from flask import Blueprint, request
 service_bp = Blueprint("service", __name__, url_prefix="/api/user")
 
 
-def login_required(required_role=User.Role.USER):
+def permission(required_role=User.Role.USER):
     def decorator(f):
         @functools.wraps(f)
         def warper(*args, **kwargs):
@@ -15,12 +15,13 @@ def login_required(required_role=User.Role.USER):
             token = request.headers.get("Authorization", "")
             if not token:
                 return res(401)
-            user, err = User.get_user_by_token(token)
+            user, err = User.get_by_token(token)
             if err > 0:
                 return res(err)
-            if user.role < required_role:
+            elif user.role < required_role:
                 return res(404)
-            return f(*args, **kwargs)
+            else:
+                return f(*args, **kwargs)
 
         return warper
 
@@ -50,9 +51,9 @@ def login():
     if not User.login_check(user_email, user_password):
         return res(301)
 
-    user = User.get(user_email)
+    user = User.get_by_email(user_email)
     token = user.generate_token()
-    return res(300, data={"token": token})
+    return res(300, data={"id": user.id, "token": token})
 
 
 @service_bp.route("/register", methods=["POST"])
@@ -79,4 +80,4 @@ def register():
         return res(319)
 
     token = user.generate_token()
-    return res(310, data={"token": token})
+    return res(310, data={"id": user.id, "token": token})
