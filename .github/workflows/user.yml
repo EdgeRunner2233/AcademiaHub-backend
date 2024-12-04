@@ -15,6 +15,14 @@ jobs:
     env:
       SECRET_KEY: "dev"
       SQLALCHEMY_DATABASE_URI: "sqlite:///:memory:"
+      TOKEN_SECRET: "dev"
+      TOKEN_EXPIRE_TIME: 3600
+      MAIL_SERVER: "smtp.163.com"
+      MAIL_PORT: 465
+      MAIL_USE_SSL: True
+      MAIL_USERNAME: "AcademiaHub@163.com"
+      MAIL_PASSWORD: "dev"
+      MAIL_DEFAULT_SENDER: "AcademiaHub@163.com"
 
     defaults:
       run:
