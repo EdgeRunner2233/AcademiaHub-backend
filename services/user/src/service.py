@@ -4,7 +4,7 @@ from src.model import User
 from src.response import Response
 from flask import Blueprint, request
 
-service_bp = Blueprint("service", __name__)
+service_bp = Blueprint("service", __name__, url_prefix="/api/user")
 
 
 def login_required(required_role=User.Role.USER):
@@ -27,14 +27,14 @@ def login_required(required_role=User.Role.USER):
     return decorator
 
 
-@service_bp.route("/api/health", methods=["GET", "POST"])
+@service_bp.route("/health", methods=["GET", "POST"])
 def health_check():
     logger.info("health_check service called")
     res = Response()
     return res(0)
 
 
-@service_bp.route("/api/login", methods=["POST"])
+@service_bp.route("/login", methods=["POST"])
 def login():
     req: dict = request.json
     res = Response()
@@ -55,7 +55,7 @@ def login():
     return res(300, data={"token": token})
 
 
-@service_bp.route("/api/register", methods=["POST"])
+@service_bp.route("/register", methods=["POST"])
 def register():
     req: dict = request.json
     res = Response()
