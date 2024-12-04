@@ -32,8 +32,8 @@ logger = get_logger()
 
 class Token:
     header = {"alg": "HS256", "typ": "JWT"}
-    secret = os.getenv("TOKEN_SECRET")
-    expire_time = os.getenv("TOKEN_EXPIRE_TIME")
+    secret = os.getenv("TOKEN_SECRET", "dev")
+    expire_time = int(os.getenv("TOKEN_EXPIRE_TIME", 3600))
 
     class TokenExpired(Exception):
         pass
@@ -54,13 +54,13 @@ class Token:
         """
 
         expiration_time = datetime.now(timezone.utc) + timedelta(
-            seconds=Token.expire_time
+            seconds=float(Token.expire_time)
         )
         payload.update({"exp": expiration_time})
         return jwt.encode(Token.header, payload, Token.secret).decode("utf-8")
 
     @staticmethod
-    def verify_token(token: str) -> Optional[dict]:
+    def verify_token(token: str) -> dict:
         """
         Verify a token and return its payload.
 
@@ -72,7 +72,7 @@ class Token:
             TokenInvalid: If token is invalid.
 
         Returns:
-            Optional[dict]: Decoded payload or None if token is invalid.
+            dict: Decoded payload.
         """
 
         try:
@@ -142,7 +142,7 @@ AcademiaHub Team"""
             None
         """
 
-        def construct_subject_body(code: str) -> str:
+        def construct_subject_body(code: str) -> tuple[str, str]:
             return (
                 VerificationCode.subject.format(code=code),
                 VerificationCode.body.format(code=code),
