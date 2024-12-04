@@ -2,13 +2,17 @@ import json
 import unittest
 from src import create_app
 from src.model import User
-from src.extensions import db
+from src.extensions import db, mail
 
 
 class ApiTestCase(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.app = create_app(TESTING=True, SQLALCHEMY_DATABASE_URI="sqlite:///:memory:")
+        cls.app = create_app(
+            TESTING=True,
+            SQLALCHEMY_DATABASE_URI="sqlite:///:memory:",
+            MAIL_SUPPRESS_SEND=True,
+        )
         cls.test_db = db
         cls.app_context = cls.app.app_context()
         cls.client = cls.app.test_client()
@@ -37,19 +41,30 @@ class ApiTestCase(unittest.TestCase):
             dict: The response payload.
         """
 
-        email = email or "test@email.email"
+        email = email or "test@email.testemail"
         nickname = nickname or "test"
         password = password or "test_password"
+
+        response = self.client.post(
+            "/api/user/get_verification",
+            data={"email": email},
+            content_type="multipart/form-data",
+        )
+
+        user = User.get_by_email(email)
+        self.assertIsNotNone(user)
+        verification_code = user.pending_verification_code
+        self.assertTrue(len(verification_code) > 0)
+
         response = self.client.post(
             "/api/user/register",
-            data=json.dumps(
-                {
-                    "email": email,
-                    "nickname": nickname,
-                    "password": password,
-                }
-            ),
-            content_type="application/json",
+            data={
+                "email": email,
+                "nickname": nickname,
+                "password": password,
+                "verification_code": verification_code,
+            },
+            content_type="multipart/form-data",
         )
 
         self.assertEqual(response.status_code, 200)
@@ -69,17 +84,12 @@ class ApiTestCase(unittest.TestCase):
             dict: The response payload.
         """
 
-        email = email or "test@email.email"
+        email = email or "test@email.testemail"
         password = password or "test_password"
         response = self.client.post(
             "/api/user/login",
-            data=json.dumps(
-                {
-                    "email": email,
-                    "password": password,
-                }
-            ),
-            content_type="application/json",
+            data={"email": email, "password": password},
+            content_type="multipart/form-data",
         )
 
         self.assertEqual(response.status_code, 200)
@@ -111,17 +121,39 @@ class ApiTestCase(unittest.TestCase):
         self.assertEqual(payload["success"], True)
         self.assertEqual(payload["code"], 0)
 
+    def test_api_get_verification(self):
+        with mail.record_messages() as outbox:
+            response = self.client.post(
+                "/api/user/get_verification",
+                data={"email": "test@email.testemail"},
+                content_type="multipart/form-data",
+            )
+
+            self.assertEqual(len(outbox), 1)
+
+        self.assertEqual(response.status_code, 200)
+
+        payload: dict = json.loads(response.data)
+        self.assertIn("success", payload)
+        self.assertIn("code", payload)
+        self.assertIn("message", payload)
+        self.assertIn("data", payload)
+
+        self.assertEqual(payload["success"], True)
+
+        user = User.get_by_email("test@email.testemail")
+        self.assertIsNotNone(user)
+        v_code = user.pending_verification_code
+        self.assertTrue(len(v_code) > 0)
+
+        self.assertEqual(outbox[0].subject, f"[AcademiaHub] 验证码: {v_code}")
+
     def test_api_login(self):
         response = self.register()
         response = self.client.post(
             "/api/user/login",
-            data=json.dumps(
-                {
-                    "email": "test@email.email",
-                    "password": "test_password",
-                }
-            ),
-            content_type="application/json",
+            data={"email": "test@email.testemail", "password": "test_password"},
+            content_type="multipart/form-data",
         )
         self.assertEqual(response.status_code, 200)
 
@@ -142,15 +174,25 @@ class ApiTestCase(unittest.TestCase):
 
     def test_api_register(self):
         response = self.client.post(
+            "/api/user/get_verification",
+            data={"email": "test@email.testemail"},
+            content_type="multipart/form-data",
+        )
+
+        user = User.get_by_email("test@email.testemail")
+        self.assertIsNotNone(user)
+        verification_code = user.pending_verification_code
+        self.assertTrue(len(verification_code) > 0)
+
+        response = self.client.post(
             "/api/user/register",
-            data=json.dumps(
-                {
-                    "email": "test@email.email",
-                    "nickname": "test",
-                    "password": "test_password",
-                }
-            ),
-            content_type="application/json",
+            data={
+                "email": "test@email.testemail",
+                "nickname": "test",
+                "password": "test_password",
+                "verification_code": verification_code,
+            },
+            content_type="multipart/form-data",
         )
         self.assertEqual(response.status_code, 200)
 

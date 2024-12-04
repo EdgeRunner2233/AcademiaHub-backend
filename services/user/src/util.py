@@ -1,5 +1,9 @@
+import re
+import random
 from typing import Optional
 from authlib.jose import jwt
+from src.extensions import mail
+from flask_mail import Message as MailMessage
 from authlib.jose.errors import BadSignatureError
 from datetime import datetime, timedelta, timezone
 
@@ -78,3 +82,71 @@ class Token:
             raise Token.TokenExpired
 
         return dict(claims)
+
+
+def check_email_pattern(email: str) -> bool:
+    """
+    Check if email is valid.
+
+    Args:
+        email (str): Email to be checked.
+
+    Returns:
+        bool: True if email is valid, False otherwise.
+    """
+
+    pattern = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+    return re.match(pattern, email) is not None
+
+
+class VerificationCode:
+    subject = "[AcademiaHub] 验证码: {code}"
+    body = """感谢您注册AcademiaHub, 您的验证码为: {code}。
+
+Thank you for registering on AcademiaHub. Your verification code is: {code}.
+
+
+
+----------
+
+AcademiaHub Team"""
+
+    @staticmethod
+    def send(subject: str, recipients: str, body: str):
+        message = MailMessage(subject, [recipients], body)
+        mail.send(message)
+
+    @staticmethod
+    def generate_code() -> str:
+        """
+        Generate a 6-digit verification code.
+
+        Returns:
+            str: verification code.
+        """
+
+        code = "".join([str(int(random.random() * 10)) for _ in range(6)])
+        return code
+
+    @staticmethod
+    def send_verification_code(email: str, code: str) -> None:
+        """
+        Send verification code to user.
+
+        Args:
+            email (str): user email.
+            code (str): verification code.
+
+        Returns:
+            None
+        """
+
+        def construct_subject_body(code: str) -> str:
+            return (
+                VerificationCode.subject.format(code=code),
+                VerificationCode.body.format(code=code),
+            )
+
+        subject_body = construct_subject_body(code)
+
+        VerificationCode.send(subject_body[0], email, subject_body[1])

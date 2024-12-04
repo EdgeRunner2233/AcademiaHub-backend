@@ -73,6 +73,9 @@ class User(db.Model, Base):
     nickname = sql.Column(sql.String(20))
     password_hash = sql.Column(sql.String(256))
 
+    is_activated = sql.Column(sql.Boolean, default=False)
+    pending_verification_code = sql.Column(sql.String(6), default="")
+
     openalex_id = sql.Column(sql.String(30), default="")
     organization = sql.Column(sql.String(50), default="")
     title = sql.Column(sql.String(20), default="")

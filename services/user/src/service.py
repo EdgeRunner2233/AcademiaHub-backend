@@ -1,8 +1,10 @@
 import functools
-from src.util import logger
+import src.util as util
 from src.model import User
+from src.util import logger
 from src.response import Response
 from flask import Blueprint, request
+from src.util import VerificationCode
 
 service_bp = Blueprint("service", __name__, url_prefix="/api/user")
 
@@ -35,9 +37,31 @@ def health_check():
     return res(0)
 
 
+@service_bp.route("/get_verification", methods=["POST"])
+def send_verification():
+    req = request.form
+    res = Response()
+
+    user_email = req.get("email", None)
+    if not util.check_email_pattern(user_email):
+        return res(102, "email")
+
+    virification_code = VerificationCode.generate_code()
+    user = User.get_by_email(user_email)
+
+    if user is None:
+        user = User.create(user_email, "", "")
+
+    user.update(pending_verification_code=virification_code)
+
+    VerificationCode.send_verification_code(user_email, virification_code)
+
+    return res(0)
+
+
 @service_bp.route("/login", methods=["POST"])
 def login():
-    req: dict = request.json
+    req = request.form
     res = Response()
 
     user_email = req.get("email", None)
@@ -58,12 +82,13 @@ def login():
 
 @service_bp.route("/register", methods=["POST"])
 def register():
-    req: dict = request.json
+    req = request.form
     res = Response()
 
     user_email = req.get("email")
     user_nickname = req.get("nickname")
     user_password = req.get("password")
+    verification_code = req.get("verification_code")
 
     if not user_email:
         return res(101, "email")
@@ -72,12 +97,22 @@ def register():
     if not user_password:
         return res(101, "password")
 
-    if User.exists(user_email):
+    user = User.get_by_email(user_email)
+    if user is None:
+        return res(303)
+    if user.is_activated:
         return res(311)
 
-    user = User.create(user_email, user_nickname, user_password)
-    if not user:
-        return res(319)
+    if user.pending_verification_code != verification_code:
+        return res(304)
+
+    user.update(
+        email=user_email,
+        nickname=user_nickname,
+        password_hash=User.generate_password_hash(user_password),
+        pending_verification_code="",
+        is_activated=True,
+    )
 
     token = user.generate_token()
     return res(310, data={"id": user.id, "token": token})

@@ -1,8 +1,8 @@
 import os
 from flask import Flask
-from src.extensions import babel, db
-from src.service import service_bp
 from dotenv import load_dotenv
+from src.service import service_bp
+from src.extensions import babel, db, mail
 
 load_dotenv()
 
@@ -18,7 +18,17 @@ def create_app(**config):
             SQLALCHEMY_DATABASE_URI=os.getenv("SQLALCHEMY_DATABASE_URI"),
         )
 
+    app.config.update(
+        MAIL_SERVER=os.getenv("MAIL_SERVER"),
+        MAIL_PORT=os.getenv("MAIL_PORT"),
+        MAIL_USE_SSL=os.getenv("MAIL_USE_SSL"),
+        MAIL_USERNAME=os.getenv("MAIL_USERNAME"),
+        MAIL_PASSWORD=os.getenv("MAIL_PASSWORD"),
+        MAIL_DEFAULT_SENDER=os.getenv("MAIL_DEFAULT_SENDER"),
+    )
+
     db.init_app(app)
+    mail.init_app(app)
     babel.init_app(app)
 
     app.register_blueprint(service_bp)
