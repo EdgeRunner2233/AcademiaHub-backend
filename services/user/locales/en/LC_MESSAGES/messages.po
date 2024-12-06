@@ -1,13 +1,14 @@
 # English translations for AcademiaHub-backend-user.
 # Copyright (C) 2024 AcademiaHub
-# This file is distributed under the same license as the AcademiaHub-backend-user project.
+# This file is distributed under the same license as the
+# AcademiaHub-backend-user project.
 # Yan Feng <141114704+kcornw@users.noreply.github.com>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version:  1.0\n"
 "Report-Msgid-Bugs-To: 141114704+kcornw@users.noreply.github.com\n"
-"POT-Creation-Date: 2024-11-19 17:00+0800\n"
+"POT-Creation-Date: 2024-12-06 16:00+0800\n"
 "PO-Revision-Date: 2024-11-19 17:00+0800\n"
 "Last-Translator: Yan Feng <141114704+kcornw@users.noreply.github.com>\n"
 "Language: en\n"
@@ -23,10 +24,63 @@ msgid "操作成功"
 msgstr "Success"
 
 #: src/response.py:9
-msgid "参数 {} 无效"
+#, fuzzy
+msgid "缺少参数 {}"
 msgstr "Invalid parameter {}"
 
+#: src/response.py:10
+msgid "参数 {} 不符合格式要求"
+msgstr "Parameter {} does not meet the format requirements"
+
+#: src/response.py:11
+msgid "登陆成功"
+msgstr "Login success"
+
+#: src/response.py:12
+msgid "用户不存在或密码错误"
+msgstr "User does not exist or password is incorrect"
+
+#: src/response.py:13
+msgid "用户不存在"
+msgstr "User does not exist"
+
 #: src/response.py:14
+msgid "请获取验证码"
+msgstr "Please get the verification code"
+
+#: src/response.py:15
+msgid "验证码错误"
+msgstr "Verification code error"
+
+#: src/response.py:16
+msgid "注册成功"
+msgstr "Register success"
+
+#: src/response.py:17
+msgid "用户已存在"
+msgstr "User already exists"
+
+#: src/response.py:18
+msgid "注册失败"
+msgstr "Register failed"
+
+#: src/response.py:19
+msgid "请求缺少token"
+msgstr "Request missing token"
+
+#: src/response.py:20
+msgid "用户token已过期"
+msgstr "User token has expired"
+
+#: src/response.py:21
+msgid "用户token无效"
+msgstr "User token is invalid"
+
+#: src/response.py:22
+msgid "无操作权限"
+msgstr "No permission"
+
+#: src/response.py:27
 msgid "未知错误类型"
 msgstr "Unknown error type"
 
