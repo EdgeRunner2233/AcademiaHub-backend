@@ -9,4 +9,4 @@ COPY . /Service/User
 RUN pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
 RUN pip install -r requirements.txt
 
-CMD [ "uwsgi", "uwsgi.ini" ]
+CMD [ "bash", "start_server.sh" ]
