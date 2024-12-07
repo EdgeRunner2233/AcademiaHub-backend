@@ -10,6 +10,16 @@ services:
       - redis
     environment:
       - REDIS_HOST=redis
+      - SECRET_KEY=<SECRET_KEY>
+      - SQLALCHEMY_DATABASE_URI=sqlite:////Service/User/data.db
+      - MAIL_SERVER=smtp.163.com
+      - MAIL_PORT=465
+      - MAIL_USE_SSL=True
+      - MAIL_USERNAME=AcademiaHub@163.com
+      - MAIL_PASSWORD=<MAIL_PASSWORD>
+      - MAIL_DEFAULT_SENDER=AcademiaHub@163.com
+      - TOKEN_SECRET=<TOKEN_SECRET>
+      - TOKEN_EXPIRE_TIME=3600
     networks:
       - user_module_network
 
