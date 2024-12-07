@@ -1,4 +1,4 @@
-name: User Module CI
+name: User Module CI/CD
 
 on:
   push:
@@ -11,7 +11,6 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
     env:
       SECRET_KEY: "dev"
       SQLALCHEMY_DATABASE_URI: "sqlite:///:memory:"
@@ -23,15 +22,12 @@ jobs:
       MAIL_USERNAME: "AcademiaHub@163.com"
       MAIL_PASSWORD: "dev"
       MAIL_DEFAULT_SENDER: "AcademiaHub@163.com"
-
     defaults:
       run:
         working-directory: ./services/user
-
     strategy:
       matrix:
         python-version: ["3.11", "3.12", "3.13"]
-
     steps:
       - uses: actions/checkout@v4
 
@@ -64,19 +60,16 @@ jobs:
 
   build-docker-image:
     needs: test
-
     runs-on: ubuntu-latest
-
+    if: startsWith(github.ref, 'refs/tags')
     env:
       REGISTRY: ghcr.io
       IMAGE_NAME: ${{ github.repository }}-Module-User
-
     permissions:
       contents: read
       packages: write
       attestations: write
       id-token: write
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -102,3 +95,15 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+  deploy:
+    needs: build-docker-image
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags')
+    steps:
+      - name: Deploy to Server
+        run: |
+          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 300 http://113.44.139.65/api/cd/user)
+          if [ "$RESPONSE" -ne 200 ]; then
+            exit 1
+          fi
