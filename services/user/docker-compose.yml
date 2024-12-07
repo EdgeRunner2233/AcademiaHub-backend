@@ -5,7 +5,7 @@ services:
       - user_module_network
 
   user_module:
-    image: ghcr.io/edgerunner2233/academiahub-backend-module-user:latest
+    image: ghcr.nju.edu.cn/edgerunner2233/academiahub-backend-module-user:latest
     depends_on:
       - redis
     environment:
