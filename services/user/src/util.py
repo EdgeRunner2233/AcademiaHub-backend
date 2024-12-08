@@ -1,7 +1,7 @@
 import os
 import re
 import random
-from typing import Optional
+from redis import Redis
 from authlib.jose import jwt
 from src.extensions import mail
 from flask_mail import Message as MailMessage
@@ -100,25 +100,17 @@ def check_email_pattern(email: str) -> bool:
     return re.match(pattern, email) is not None
 
 
-class VerificationCode:
-    subject = "[AcademiaHub] 验证码: {code}"
-    body = """感谢您注册AcademiaHub, 您的验证码为: {code}。
-
-Thank you for registering on AcademiaHub. Your verification code is: {code}.
-
-
-
-----------
-
-AcademiaHub Team"""
+class EmailMessage:
+    REDIS_HOST = os.getenv("REDIS_HOST", "localhost")
+    redis = Redis(host=REDIS_HOST, port=6379, db=0)
 
     @staticmethod
-    def send(subject: str, recipients: str, body: str):
+    def _send(subject: str, recipients: str, body: str):
         message = MailMessage(subject, [recipients], body)
         mail.send(message)
 
     @staticmethod
-    def generate_code() -> str:
+    def generate_vcode() -> str:
         """
         Generate a 6-digit verification code.
 
@@ -130,24 +122,77 @@ AcademiaHub Team"""
         return code
 
     @staticmethod
-    def send_verification_code(email: str, code: str) -> None:
+    def send_vcode(email: str) -> None:
         """
-        Send verification code to user.
+        Generate and send verification code to user.
+
+        Args:
+            email (str): user email.
+
+        Returns:
+            None
+        """
+
+        subject = "[AcademiaHub] 验证码: {code}"
+        body = (
+            "感谢您注册AcademiaHub, 您的验证码为: {code}, 10分钟内有效。\n\n"
+            + "Thank you for registering on AcademiaHub. "
+            + "Your verification code is: {code}, valid for 10 minutes.\n\n\n"
+            + "----------\nAcademiaHub Team"
+        )
+
+        def _construct_subject_body(code: str) -> tuple[str, str]:
+            return (
+                subject.format(code=code),
+                body.format(code=code),
+            )
+
+        code = EmailMessage.generate_vcode()
+
+        EmailMessage.redis.set(email, code, ex=600)
+
+        subject_body = _construct_subject_body(code)
+
+        EmailMessage._send(subject_body[0], email, subject_body[1])
+
+    @staticmethod
+    def send_register_success(email: str) -> None:
+        """
+        Send register success message to user.
+
+        Args:
+            email (str): user email.
+
+        Returns:
+            None
+        """
+
+        subject = "[AcademiaHub] 感谢您注册!"
+        body = (
+            "您的邮箱账户已激活。感谢您注册AcademiaHub! \n\n"
+            + "Your email has been activated. Thank you for registering on AcademiaHub! \n\n\n"
+            + "----------\nAcademiaHub Team"
+        )
+
+        EmailMessage._send(subject, email, body)
+
+    @staticmethod
+    def verify_vcode(email: str, code: str) -> bool:
+        """
+        Verify verification code.
 
         Args:
             email (str): user email.
             code (str): verification code.
 
         Returns:
-            None
+            bool: True if verification code is correct, False otherwise.
         """
 
-        def construct_subject_body(code: str) -> tuple[str, str]:
-            return (
-                VerificationCode.subject.format(code=code),
-                VerificationCode.body.format(code=code),
-            )
-
-        subject_body = construct_subject_body(code)
-
-        VerificationCode.send(subject_body[0], email, subject_body[1])
+        valid_code = EmailMessage.redis.get(email)
+        valid_code = valid_code.decode("utf-8") if valid_code is not None else None
+        if valid_code and valid_code == code:
+            EmailMessage.redis.delete(email)
+            return True
+        else:
+            return False

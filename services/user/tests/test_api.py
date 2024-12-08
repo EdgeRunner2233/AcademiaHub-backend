@@ -1,5 +1,7 @@
+import os
 import json
 import unittest
+from redis import Redis
 from src import create_app
 from src.model import User
 from src.extensions import db, mail
@@ -16,6 +18,7 @@ class ApiTestCase(unittest.TestCase):
         cls.test_db = db
         cls.app_context = cls.app.app_context()
         cls.client = cls.app.test_client()
+        cls.redis = Redis(host=os.getenv("REDIS_HOST", "localhost"))
 
     def setUp(self):
         self.app_context.push()
@@ -51,9 +54,9 @@ class ApiTestCase(unittest.TestCase):
             content_type="multipart/form-data",
         )
 
-        user = User.get_by_email(email)
-        self.assertIsNotNone(user)
-        verification_code = user.pending_verification_code
+        verification_code = self.redis.get(email)
+        self.assertIsNotNone(verification_code)
+        verification_code = verification_code.decode("utf-8")
         self.assertTrue(len(verification_code) > 0)
 
         response = self.client.post(
@@ -122,6 +125,9 @@ class ApiTestCase(unittest.TestCase):
         self.assertEqual(payload["code"], 0)
 
     def test_api_get_verification(self):
+        verification_code = self.redis.get("test@email.testemail")
+        self.assertIsNone(verification_code)
+
         with mail.record_messages() as outbox:
             response = self.client.post(
                 "/api/user/get_verification",
@@ -141,9 +147,9 @@ class ApiTestCase(unittest.TestCase):
 
         self.assertEqual(payload["success"], True)
 
-        user = User.get_by_email("test@email.testemail")
-        self.assertIsNotNone(user)
-        v_code = user.pending_verification_code
+        v_code = self.redis.get("test@email.testemail")
+        self.assertIsNotNone(v_code)
+        v_code = v_code.decode("utf-8")
         self.assertTrue(len(v_code) > 0)
 
         self.assertEqual(outbox[0].subject, f"[AcademiaHub] 验证码: {v_code}")
@@ -179,21 +185,24 @@ class ApiTestCase(unittest.TestCase):
             content_type="multipart/form-data",
         )
 
-        user = User.get_by_email("test@email.testemail")
-        self.assertIsNotNone(user)
-        verification_code = user.pending_verification_code
+        verification_code = self.redis.get("test@email.testemail")
+        self.assertIsNotNone(verification_code)
+        verification_code = verification_code.decode("utf-8")
         self.assertTrue(len(verification_code) > 0)
 
-        response = self.client.post(
-            "/api/user/register",
-            data={
-                "email": "test@email.testemail",
-                "nickname": "test",
-                "password": "test_password",
-                "verification_code": verification_code,
-            },
-            content_type="multipart/form-data",
-        )
+        with mail.record_messages() as outbox:
+            response = self.client.post(
+                "/api/user/register",
+                data={
+                    "email": "test@email.testemail",
+                    "nickname": "test",
+                    "password": "test_password",
+                    "verification_code": verification_code,
+                },
+                content_type="multipart/form-data",
+            )
+            self.assertEqual(len(outbox), 1)
+
         self.assertEqual(response.status_code, 200)
 
         payload: dict = json.loads(response.data)

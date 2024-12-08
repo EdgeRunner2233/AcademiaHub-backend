@@ -2,9 +2,9 @@ import functools
 import src.util as util
 from src.model import User
 from src.util import logger
+from src.util import EmailMessage
 from src.response import Response
 from flask import Blueprint, request
-from src.util import VerificationCode
 
 service_bp = Blueprint("service", __name__, url_prefix="/api/user")
 
@@ -46,15 +46,7 @@ def send_verification():
     if not util.check_email_pattern(user_email):
         return res(102, "email")
 
-    virification_code = VerificationCode.generate_code()
-    user = User.get_by_email(user_email)
-
-    if user is None:
-        user = User.create(user_email, "", "")
-
-    user.update(pending_verification_code=virification_code)
-
-    VerificationCode.send_verification_code(user_email, virification_code)
+    EmailMessage.send_vcode(user_email)
 
     return res(0)
 
@@ -96,23 +88,18 @@ def register():
         return res(101, "nickname")
     if not user_password:
         return res(101, "password")
+    if not verification_code:
+        return res(101, "verification_code")
 
-    user = User.get_by_email(user_email)
-    if user is None:
-        return res(303)
-    if user.is_activated:
+    if User.exists(user_email):
         return res(311)
 
-    if user.pending_verification_code != verification_code:
+    if not EmailMessage.verify_vcode(user_email, verification_code):
         return res(304)
 
-    user.update(
-        email=user_email,
-        nickname=user_nickname,
-        password_hash=User.generate_password_hash(user_password),
-        pending_verification_code="",
-        is_activated=True,
-    )
+    EmailMessage.send_register_success(user_email)
+
+    user = User.create(user_email, user_nickname, user_password)
 
     token = user.generate_token()
     return res(310, data={"id": user.id, "token": token})
