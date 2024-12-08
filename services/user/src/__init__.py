@@ -19,7 +19,7 @@ def create_app(**config):
         )
 
     app.config.update(
-        REDIS_URL=f"redis://{os.getenv("REDIS_HOST", "localhost")}:6379/0",
+        REDIS_URL=f"redis://{os.getenv('REDIS_HOST', 'localhost')}:6379/0",
         MAIL_SERVER=os.getenv("MAIL_SERVER"),
         MAIL_PORT=os.getenv("MAIL_PORT"),
         MAIL_USE_SSL=os.getenv("MAIL_USE_SSL"),
