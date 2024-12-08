@@ -33,7 +33,7 @@ class Base:
                 return False
 
     def update(self, **values: Union[int, str, bool]) -> bool:
-        ins = self.__class__.query_first(id=self.id)
+        ins = self.__class__.query_first(id=self.id)  # type: ignore
         if ins is None:
             logger.error(f"db: record not found: {self}")
             return False
@@ -50,16 +50,16 @@ class Base:
     def query_first(cls: Type[T], **filter: Union[int, str, bool]) -> Optional[T]:
         if "is_deleted" not in filter:
             filter["is_deleted"] = False
-        return cls.query.filter_by(**filter).first()
+        return cls.query.filter_by(**filter).first()  # type: ignore
 
     @classmethod
     def query_all(cls: Type[T], **filter: Union[int, str, bool]) -> List[T]:
         if "is_deleted" not in filter:
             filter["is_deleted"] = False
-        return cls.query.filter_by(**filter).all()
+        return cls.query.filter_by(**filter).all()  # type: ignore
 
 
-class User(db.Model, Base):
+class User(db.Model, Base):  # type: ignore
     class Role:
         USER = 0
         RESEARCHER = 1
@@ -122,7 +122,7 @@ class User(db.Model, Base):
         user = User.query_first(email=email)
         if user is None:
             return False
-        return security.check_password_hash(user.password_hash, plain_password)
+        return security.check_password_hash(str(user.password_hash), plain_password)
 
     @staticmethod
     def exists(email: str) -> bool:

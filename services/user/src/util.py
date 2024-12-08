@@ -190,7 +190,7 @@ class EmailMessage:
         """
 
         valid_code = EmailMessage.redis.get(email)
-        valid_code = valid_code.decode("utf-8") if valid_code is not None else None
+        valid_code = valid_code.decode("utf-8") if valid_code is not None else None  # type: ignore
         if valid_code and valid_code == code:
             EmailMessage.redis.delete(email)
             return True
