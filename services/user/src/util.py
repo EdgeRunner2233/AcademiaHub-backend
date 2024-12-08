@@ -1,9 +1,8 @@
 import os
 import re
 import random
-from redis import Redis
 from authlib.jose import jwt
-from src.extensions import mail
+from src.extensions import mail, redis
 from flask_mail import Message as MailMessage
 from authlib.jose.errors import BadSignatureError
 from datetime import datetime, timedelta, timezone
@@ -101,9 +100,6 @@ def check_email_pattern(email: str) -> bool:
 
 
 class EmailMessage:
-    REDIS_HOST = os.getenv("REDIS_HOST", "localhost")
-    redis = Redis(host=REDIS_HOST, port=6379, db=0)
-
     @staticmethod
     def _send(subject: str, recipients: str, body: str):
         message = MailMessage(subject, [recipients], body)
@@ -149,7 +145,7 @@ class EmailMessage:
 
         code = EmailMessage.generate_vcode()
 
-        EmailMessage.redis.set(email, code, ex=600)
+        redis.set(email, code, ex=600)
 
         subject_body = _construct_subject_body(code)
 
@@ -189,10 +185,10 @@ class EmailMessage:
             bool: True if verification code is correct, False otherwise.
         """
 
-        valid_code = EmailMessage.redis.get(email)
+        valid_code = redis.get(email)
         valid_code = valid_code.decode("utf-8") if valid_code is not None else None  # type: ignore
         if valid_code and valid_code == code:
-            EmailMessage.redis.delete(email)
+            redis.delete(email)
             return True
         else:
             return False

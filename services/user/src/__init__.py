@@ -2,7 +2,7 @@ import os
 from flask import Flask
 from dotenv import load_dotenv
 from src.service import service_bp
-from src.extensions import babel, db, mail
+from src.extensions import babel, db, mail, redis
 
 load_dotenv()
 
@@ -19,6 +19,7 @@ def create_app(**config):
         )
 
     app.config.update(
+        REDIS_URL=f"redis://{os.getenv("REDIS_HOST", "localhost")}:6379/0",
         MAIL_SERVER=os.getenv("MAIL_SERVER"),
         MAIL_PORT=os.getenv("MAIL_PORT"),
         MAIL_USE_SSL=os.getenv("MAIL_USE_SSL"),
@@ -30,6 +31,7 @@ def create_app(**config):
     db.init_app(app)
     mail.init_app(app)
     babel.init_app(app)
+    redis.init_app(app)
 
     app.register_blueprint(service_bp)
 

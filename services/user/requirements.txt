@@ -5,9 +5,11 @@ cffi==1.17.1
 click==8.1.7
 coverage==7.6.7
 cryptography==43.0.3
+fakeredis==2.26.1
 Flask==3.1.0
 flask-babel==4.0.0
 Flask-Mail==0.10.0
+flask-redis==0.4.0
 Flask-SQLAlchemy==3.1.1
 greenlet==3.1.1
 iniconfig==2.0.0
@@ -25,6 +27,7 @@ python-dotenv==1.0.1
 pytz==2024.2
 pyuwsgi==2.0.28.post1
 redis==5.2.1
+sortedcontainers==2.4.0
 SQLAlchemy==2.0.36
 typing_extensions==4.12.2
 Werkzeug==3.1.3
