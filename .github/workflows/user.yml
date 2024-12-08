@@ -42,6 +42,10 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
           pip install -r requirements.txt
 
+      - name: Check with mypy
+        run: |
+          mypy src/
+
       - name: Test with pytest
         run: pytest tests --cov --cov-report=xml:user-module-coverage-${{ matrix.python-version }}.xml
 
