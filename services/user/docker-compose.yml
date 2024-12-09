@@ -8,6 +8,8 @@ services:
     image: ghcr.nju.edu.cn/edgerunner2233/academiahub-backend-module-user:latest
     depends_on:
       - redis
+    ports:
+      - "30000:30000"
     environment:
       - REDIS_HOST=redis
       - SECRET_KEY=<SECRET_KEY>
