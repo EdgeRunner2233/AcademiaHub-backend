@@ -3,5 +3,9 @@ from . import views
 
 urlpatterns = [
     path('search', views.ordinary_search, name='search'),
-    path('a', views.a),
+    path('single-work', views.get_specific_work, name='single_work'),
+
+    path('hot-paper', views.get_weekly_popular_works, name='hot-paper'),
+    path('hot-word', views.get_weekly_popular_words, name='hot-word'),
+    path('new-paper', views.get_new_works, name='new-paper'),
 ]

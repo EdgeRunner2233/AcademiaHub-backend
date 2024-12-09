@@ -9,8 +9,12 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import os
 from pathlib import Path
+import environ
+
+env = environ.Env()
+environ.Env.read_env(env_file='/Users/jsd/Desktop/AcademiaHub-backend/AcademiaHub/.env')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-(hu-)1_4lh10_qh9nu69nzm6nig=2h$jm^ac&eq142uj)i&0xs'
+SECRET_KEY = env('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -34,6 +38,7 @@ CSRF_COOKIE_HTTPONLY = False
 # Application definition
 
 INSTALLED_APPS = [
+    'django_crontab',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -80,22 +85,63 @@ WSGI_APPLICATION = 'AcademiaHub.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'AcademiaHub',
         'USER':'root',
-        'PASSWORD':'Djs0104151671',
-        'HOST':'bj-cynosdbmysql-grp-jyqfzjf4.sql.tencentcdb.com',
+        'PASSWORD':env('DATABASE_PASSWORD'),
+        'HOST': env('DATABASE_HOST'),
         'PORT':'29086',
     }
 }
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',  # 指定 Redis 作为缓存后端
+        'LOCATION': 'redis://' + env('REDIS_HOST') + ':' + env('REDIS_PORT') + '/1',  # Redis 服务器的地址，127.0.0.1 是本地地址，6379 是 Redis 默认端口，/1 是数据库索引
+        'OPTIONS': {
+            'MAX_ENTRIES': env('REDIS_MAX_ENTRIES'),
+            'CLIENT_CLASS': 'django_redis.client.DefaultClient',  # 默认客户端配置
+            # 'PASSWORD': '123456',
+        },
+        'TIMEOUT': 3600,  # 设置缓存超时时间，单位为秒
+    }
+}
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'debug.log',  # 文件保存在当前目录
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': [],  # 不记录到文件
+            'level': 'DEBUG',  # 只记录 WARNING 级别以上的日志
+            'propagate': False,  # 防止 Django 默认的日志进入你设置的文件
+        },
+        'mylogger': {
+            'handlers': ['file'],  # 记录到文件
+            'level': 'DEBUG',  # 记录 DEBUG 级别及以上的日志
+            'propagate': False,  # 防止传播到父级日志
+        },
+    },
+}
+
+CRONJOBS = [
+    ('*/2 * * * *', 'search.cron.my_cron_job', '>>' + os.path.join(os.path.dirname(BASE_DIR) + '/AcademiaHub/cron.log')),  # 每分钟执行一次
+    ('*/2 * * * *', 'search.cron.delete_search_work_models', '>>' + os.path.join(os.path.dirname(BASE_DIR) + '/AcademiaHub/cron.log')),
+]
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',

@@ -4,13 +4,13 @@ from django.db import models
 
 
 class Work(models.Model):
-    url = models.CharField(max_length=50, verbose_name="路由信息")
-    author_name = models.CharField(max_length=50, verbose_name="作者姓名")
+    openalex_id = models.CharField(max_length=50, verbose_name="OpenAlexID")
+    author_name = models.CharField(max_length=1000, verbose_name="作者姓名")
     authorship = models.CharField(max_length=50, verbose_name="作者信息API")
     cited_by_count = models.IntegerField(verbose_name="引用次数")
     created_date = models.DateField(verbose_name="被收录时间")
-    openalex_id = models.CharField(max_length=50, verbose_name="OpenAlexID")
     publication_year = models.DateField(verbose_name="发表时间")
+
 
     class Meta:
         db_table = 'work_lists'
@@ -23,7 +23,7 @@ class Work(models.Model):
 
     def to_dic(self):
         return {
-            'ID': self.ID,
+            'ID': self.id,
             'url': self.url,
             'authorship': self.authorship,
             'cited_by_count': self.cited_by_count,
