@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 import environ
+from datetime import timedelta
+from celery.schedules import crontab
 
 env = environ.Env()
 environ.Env.read_env(env_file='/Users/jsd/Desktop/AcademiaHub-backend/AcademiaHub/.env')
@@ -118,6 +120,11 @@ LOGGING = {
             'class': 'logging.FileHandler',
             'filename': 'debug.log',  # 文件保存在当前目录
         },
+        'celeryFile': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'celery.log',  # 文件保存在当前目录
+        },
     },
     'loggers': {
         'django': {
@@ -127,6 +134,11 @@ LOGGING = {
         },
         'mylogger': {
             'handlers': ['file'],  # 记录到文件
+            'level': 'DEBUG',  # 记录 DEBUG 级别及以上的日志
+            'propagate': False,  # 防止传播到父级日志
+        },
+        'celery': {
+            'handlers': ['celeryFile'],  # 记录到文件
             'level': 'DEBUG',  # 记录 DEBUG 级别及以上的日志
             'propagate': False,  # 防止传播到父级日志
         },
@@ -157,15 +169,15 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
 USE_TZ = True
 
 # Celery 配置
-CELERY_BROKER_URL = 'redis://127.0.0.1:6379/0'  # Redis 服务器地址和数据库编号
-CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/0'  # Redis 存储任务结果
+CELERY_BROKER_URL = 'redis://127.0.0.1:6379/4'  # Redis 服务器地址和数据库编号
+CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/5'  # Redis 存储任务结果
 
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
@@ -174,6 +186,16 @@ CELERY_RESULT_SERIALIZER = 'json'
 # (可选) 如果使用时区敏感任务，请启用以下设置
 CELERY_TIMEZONE = 'Asia/Shanghai'  # 设置时区
 
+CELERY_BEAT_SCHEDULE = {
+    'task_name': {
+        'task': 'search.tasks.test',
+        'schedule': timedelta(seconds=60),  # 每 60 秒执行一次
+    },
+    'delete_search_model': {
+        'task': 'search.tasks.delete_search_weekly',
+        'schedule': timedelta(weeks=1),
+    },
+}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/

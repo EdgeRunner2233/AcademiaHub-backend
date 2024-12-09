@@ -5,11 +5,14 @@ from django.views.decorators.http import require_POST
 
 from utils.search_utils import *
 from .models import *
+from .tasks import *
+from history.models import *
 import threading
 import logging
 import requests
 
-from .tasks import *
+
+logger = logging.getLogger('mylogger')
 
 @require_POST
 def your_view(request):
@@ -98,8 +101,6 @@ class LogicExpressionParser:
         return self.postfix_to_infix(postfix)
 
 
-logger = logging.getLogger('mylogger')
-
 # Create your views here.
 def add_search_word_num(words):
     def task():
@@ -116,14 +117,21 @@ def add_search_word_num(words):
 
     threading.Thread(target=task).start()
 
+# def save_history(user_id, text):
+#     History.
+
 # 普通搜索
 @require_POST
 def ordinary_search(request):
     logger.info("ordinary_search")
+    user_id = request.POST.get('user_id', '')
     text = request.POST.get('key', '')
     type = request.POST.get('type', '') # 1: 作者 2: 文献
     page = request.POST.get('page', '')
     value = openAlex_ordinary_search(text, type, page)
+
+    # if user_id:
+    #     ;
 
     if type == '0':
         # 将词条存入search-word
