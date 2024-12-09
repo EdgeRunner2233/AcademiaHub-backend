@@ -123,6 +123,16 @@ USE_I18N = True
 
 USE_TZ = True
 
+# Celery 配置
+CELERY_BROKER_URL = 'redis://localhost:6379/0'  # Redis 服务器地址和数据库编号
+
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+
+# (可选) 如果使用时区敏感任务，请启用以下设置
+CELERY_TIMEZONE = 'Asia/Shanghai'  # 设置时区
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
