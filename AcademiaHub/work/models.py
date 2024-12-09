@@ -16,7 +16,7 @@ class Work(models.Model):
         db_table = 'work_lists'
         indexes = [
             models.Index(fields=['author_name']),
-            models.Index(fields=['url']),
+            models.Index(fields=['openalex_id']),
             models.Index(fields=['publication_year']),
             models.Index(fields=['cited_by_count']),
         ]
@@ -24,7 +24,6 @@ class Work(models.Model):
     def to_dic(self):
         return {
             'ID': self.id,
-            'url': self.url,
             'authorship': self.authorship,
             'cited_by_count': self.cited_by_count,
             'created_date': self.created_date.strftime('%Y-%m-%d') if self.created_date else None,  # 格式化日期

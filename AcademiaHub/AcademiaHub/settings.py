@@ -38,7 +38,6 @@ CSRF_COOKIE_HTTPONLY = False
 # Application definition
 
 INSTALLED_APPS = [
-    'django_crontab',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -105,7 +104,7 @@ CACHES = {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',  # 默认客户端配置
             # 'PASSWORD': '123456',
         },
-        'TIMEOUT': 3600,  # 设置缓存超时时间，单位为秒
+        'TIMEOUT': 300,  # 设置缓存超时时间，单位为秒
     }
 }
 
@@ -133,11 +132,6 @@ LOGGING = {
         },
     },
 }
-
-CRONJOBS = [
-    ('*/2 * * * *', 'search.cron.my_cron_job', '>>' + os.path.join(os.path.dirname(BASE_DIR) + '/AcademiaHub/cron.log')),  # 每分钟执行一次
-    ('*/2 * * * *', 'search.cron.delete_search_work_models', '>>' + os.path.join(os.path.dirname(BASE_DIR) + '/AcademiaHub/cron.log')),
-]
 
 
 # Password validation
@@ -170,7 +164,8 @@ USE_I18N = True
 USE_TZ = True
 
 # Celery 配置
-CELERY_BROKER_URL = 'redis://localhost:6379/0'  # Redis 服务器地址和数据库编号
+CELERY_BROKER_URL = 'redis://127.0.0.1:6379/0'  # Redis 服务器地址和数据库编号
+CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/0'  # Redis 存储任务结果
 
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'

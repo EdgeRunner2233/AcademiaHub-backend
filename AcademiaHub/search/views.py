@@ -1,6 +1,6 @@
 import json
 
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.views.decorators.http import require_POST
 
 from utils.search_utils import *
@@ -9,6 +9,12 @@ import threading
 import logging
 import requests
 
+from .tasks import *
+
+@require_POST
+def your_view(request):
+    result = add.delay(4, 5)  # 异步执行任务
+    return JsonResponse({'result': f"Task ID: {result.id}"})
 
 class LogicExpressionParser:
     def __init__(self, expression):
