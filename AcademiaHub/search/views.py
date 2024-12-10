@@ -10,14 +10,10 @@ from history.models import *
 import threading
 import logging
 import requests
-
+from .tasks import *
 
 logger = logging.getLogger('mylogger')
 
-@require_POST
-def your_view(request):
-    result = add.delay(4, 5)  # 异步执行任务
-    return JsonResponse({'result': f"Task ID: {result.id}"})
 
 class LogicExpressionParser:
     def __init__(self, expression):
@@ -126,7 +122,7 @@ def ordinary_search(request):
     logger.info("ordinary_search")
     user_id = request.POST.get('user_id', '')
     text = request.POST.get('key', '')
-    type = request.POST.get('type', '') # 1: 作者 2: 文献
+    type = request.POST.get('type', '') # 1: 作者 0: 文献
     page = request.POST.get('page', '')
     value = openAlex_ordinary_search(text, type, page)
 
@@ -135,9 +131,11 @@ def ordinary_search(request):
 
     if type == '0':
         # 将词条存入search-word
+        # 启动后台任务计算统计信息
+        calculate_statistics.delay({'filter':"default.search:"+text})
         add_search_word_num(text)
 
-    result = {'type': type, 'result': value}
+    result = {'type': type,'search_str':"default.search:"+text, 'result': value}
 
     return JsonResponse(result)
 
@@ -269,6 +267,8 @@ def advanced_search(request):
             # 构造最终的过滤字符串
             filter_string = ",".join(processed_filters)
             params = {'filter': filter_string} if filter_string else {}
+            # 启动后台任务计算统计信息
+            calculate_statistics.delay(params)
 
             # 添加分页和排序参数
             params['per-page'] = request_body_json.get('per-page', 25)
@@ -286,7 +286,7 @@ def advanced_search(request):
 
             # 转发 API 响应
             if response.status_code == 200:
-                return JsonResponse(response.json(), status=200, safe=False)
+                return JsonResponse({"result": response.json(),"search_str":filter_string}, status=200, safe=False)
             else:
                 return JsonResponse({"error": "Failed to fetch data from OpenAlex API", "details": response.json()},
                                     status=response.status_code)
@@ -353,3 +353,18 @@ def get_publisher_id(str):
     except Exception as e:
         print(f"Error fetching author ID: {e}")
         return None
+
+def get_statistics(request):
+    query = request.POST.get('search_str', '')  # 获取搜索关键词
+
+    # 尝试从数据库中获取统计数据
+    try:
+        stats = Statistics.objects.get(filter=query)
+        return JsonResponse({'status': 'completed', 'stats': {
+            'publication_year_list': stats.publication_year_list,
+            'type_list': stats.type_list,
+            'author_list': stats.author_list,
+        }})
+    except Statistics.DoesNotExist:
+        # 如果数据不存在，说明还在处理中
+        return JsonResponse({'status': 'processing'})

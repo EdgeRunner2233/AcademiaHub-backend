@@ -43,3 +43,13 @@ class NewWorks(models.Model):
             'work_id': self.work_id,
             'created_time': self.created_time,
         }
+
+class Statistics(models.Model):
+    filter = models.CharField(max_length=255)
+    publication_year_list = models.JSONField()  # 存储JSON数据
+    type_list = models.JSONField()  # 存储JSON数据
+    author_list = models.JSONField()  # 存储JSON数据
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Statistics for {self.filter} at {self.created_at}"

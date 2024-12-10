@@ -16,7 +16,7 @@ from datetime import timedelta
 from celery.schedules import crontab
 
 env = environ.Env()
-environ.Env.read_env(env_file='/Users/jsd/Desktop/AcademiaHub-backend/AcademiaHub/.env')
+environ.Env.read_env(env_file='D:\\1软分\\AcademiaHub-backend\\AcademiaHub\\.env')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent

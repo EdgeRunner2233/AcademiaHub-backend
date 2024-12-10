@@ -11,5 +11,5 @@ urlpatterns = [
     path('hot-word', views.get_weekly_popular_words, name='hot-word'),
     path('new-paper', views.get_new_works, name='new-paper'),
 
-    path('your_view', views.your_view, name='your_view'),
+    path('get_statistics', views.get_statistics, name='get_statistics'),
 ]
