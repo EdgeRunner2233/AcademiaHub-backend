@@ -19,22 +19,25 @@ class Mark(models.Model):
     def to_dic(self):
         return {
             'id': self.id,
-            'user': self.user,
+            'user_id': self.user_id,
             'list_name': self.list_name,
             'description': self.description,
         }
 
 
 class MarkRelationships(models.Model):
-    work = models.ForeignKey('work.Work', on_delete=models.CASCADE, related_name='mark_relationships', verbose_name="文献ID")
-    marklist = models.ForeignKey('mark.Mark', on_delete=models.CASCADE, related_name='mark_relationships', verbose_name="标记列表ID")
+    work_id = models.CharField(max_length=50, verbose_name="OpenAlexID", default='')
+    mark_list = models.ForeignKey('mark.Mark', on_delete=models.CASCADE, related_name='mark_list', verbose_name="标记列表ID")
 
     class Meta:
         db_table = 'mark_relationships'  # 设置数据库表名
         indexes = [
-            models.Index(fields=['work']),  # 为 WorkID 创建索引
-            models.Index(fields=['marklist']),  # 为 MarkListID 创建索引
+            models.Index(fields=['work_id']),  # 为 WorkID 创建索引
         ]
 
-    def __str__(self):
-        return f"Work: {self.work.id} - MarkList: {self.marklist.id}"
+    def to_dic(self):
+        return {
+            'id': self.id,
+            'work_id': self.work_id,
+            'mark_list': self.mark_list,
+        }

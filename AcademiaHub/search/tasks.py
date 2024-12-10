@@ -1,7 +1,5 @@
-# tasks.py
-from celery import shared_task
-from search.models import *
 from AcademiaHub.celery import app
+from search.models import *
 
 import logging
 
