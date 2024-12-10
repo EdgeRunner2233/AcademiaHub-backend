@@ -1,6 +1,6 @@
 import json
 
-from django.http import JsonResponse, HttpResponse
+from django.http import JsonResponse
 from django.views.decorators.http import require_POST
 
 from utils.search_utils import *
@@ -197,9 +197,7 @@ def get_weekly_popular_words(request):
 def get_new_works(request):
     result = {'result': get_new10_works()}
     return JsonResponse(result)
-def a(request):
-    result = {'type': 1}
-    return JsonResponse(result)
+
 
 
 def advanced_search(request):

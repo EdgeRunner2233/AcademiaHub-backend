@@ -1,8 +1,7 @@
-# tasks.py
-from celery import shared_task
-from search.models import *
 from AcademiaHub.celery import app
 import requests
+from search.models import *
+
 import logging
 from django.core.cache import cache
 from utils.search_utils import openAlex_ordinary_search
