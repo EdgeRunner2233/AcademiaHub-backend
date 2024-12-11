@@ -145,7 +145,7 @@ class EmailMessage:
 
         code = EmailMessage.generate_vcode()
 
-        redis.set(email, code, ex=600)
+        redis.set(f"vcode#{email}", code, ex=600)
 
         subject_body = _construct_subject_body(code)
 
@@ -185,7 +185,7 @@ class EmailMessage:
             bool: True if verification code is correct, False otherwise.
         """
 
-        valid_code = redis.get(email)
+        valid_code = redis.get(f"vcode#{email}")
         valid_code = valid_code.decode("utf-8") if valid_code is not None else None  # type: ignore
         if valid_code and valid_code == code:
             redis.delete(email)

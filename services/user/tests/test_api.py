@@ -55,7 +55,7 @@ class ApiTestCase(unittest.TestCase):
                 content_type="multipart/form-data",
             )
 
-        verification_code = self.test_redis.get(email)
+        verification_code = self.test_redis.get(f"vcode#{email}")
         self.assertIsNotNone(verification_code)
         verification_code = verification_code.decode("utf-8")
         self.assertTrue(len(verification_code) > 0)
@@ -127,7 +127,7 @@ class ApiTestCase(unittest.TestCase):
         self.assertEqual(payload["code"], 0)
 
     def test_api_get_verification(self):
-        verification_code = self.test_redis.get("test@email.testemail")
+        verification_code = self.test_redis.get("vcode#test@email.testemail")
         self.assertIsNone(verification_code)
 
         with patch("src.util.redis", self.test_redis):
@@ -150,7 +150,7 @@ class ApiTestCase(unittest.TestCase):
 
         self.assertEqual(payload["success"], True)
 
-        v_code = self.test_redis.get("test@email.testemail")
+        v_code = self.test_redis.get("vcode#test@email.testemail")
         self.assertIsNotNone(v_code)
         v_code = v_code.decode("utf-8")
         self.assertTrue(len(v_code) > 0)
@@ -189,7 +189,7 @@ class ApiTestCase(unittest.TestCase):
                 content_type="multipart/form-data",
             )
 
-        verification_code = self.test_redis.get("test@email.testemail")
+        verification_code = self.test_redis.get("vcode#test@email.testemail")
         self.assertIsNotNone(verification_code)
         verification_code = verification_code.decode("utf-8")
         self.assertTrue(len(verification_code) > 0)
