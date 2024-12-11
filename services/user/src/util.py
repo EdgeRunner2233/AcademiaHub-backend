@@ -201,6 +201,27 @@ class EmailMessage:
         EmailMessage._send(subject, email, body)
 
     @staticmethod
+    def send_change_password_success(email: str) -> None:
+        """
+        Send change password success message to user.
+
+        Args:
+            email (str): user email.
+
+        Returns:
+            None
+        """
+
+        subject = "[AcademiaHub] 您已成功修改密码!"
+        body = (
+            "您已成功修改密码。\n\n"
+            + "You have changed your password. \n\n\n"
+            + "----------\nAcademiaHub Team"
+        )
+
+        EmailMessage._send(subject, email, body)
+
+    @staticmethod
     def verify_vcode(email: str, code: str) -> bool:
         """
         Verify verification code.

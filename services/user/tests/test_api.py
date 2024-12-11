@@ -45,6 +45,8 @@ class ApiTestCase(unittest.TestCase):
         self.assertIn("message", payload)
         self.assertIn("data", payload)
 
+        if payload["success"] == False:
+            print("Error: ", payload["message"])
         self.assertEqual(payload["success"], True)
 
         return payload
@@ -223,3 +225,23 @@ class ApiTestCase(unittest.TestCase):
         user = User.get_by_email("test_new@email.testemail")
         self.assertIsNotNone(user)
         self.assertEqual(user.email, "test_new@email.testemail")
+
+    def test_api_change_password(self):
+        self.register()
+
+        self.assertTrue(User.login_check("test@email.testemail", "test_password"))
+
+        response = self.client.post(
+            "/api/user/change_password",
+            data={
+                "email": "test@email.testemail",
+                "password": "test_password",
+                "new_password": "test_new_password",
+            },
+            content_type="multipart/form-data",
+        )
+        payload = self.check_success_field(response)
+        self.assertEqual(payload["code"], 0)
+
+        self.assertFalse(User.login_check("test@email.testemail", "test_password"))
+        self.assertTrue(User.login_check("test@email.testemail", "test_new_password"))

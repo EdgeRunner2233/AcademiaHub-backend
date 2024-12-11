@@ -13,6 +13,7 @@ class Message:
         302: gettext("用户不存在"),
         303: gettext("请获取验证码"),
         304: gettext("验证码错误"),
+        305: gettext("密码错误"),
         310: gettext("注册成功"),
         311: gettext("用户已存在"),
         319: gettext("注册失败"),

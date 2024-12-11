@@ -135,3 +135,32 @@ def change_email():
     EmailMessage.send_change_email_success(new_email)
 
     return res(0)
+
+
+@service_bp.route("/change_password", methods=["POST"])
+def change_password():
+    req = request.form
+    res = Response()
+
+    email = req.get("email")
+    password = req.get("password")
+    new_password = req.get("new_password")
+
+    if not email:
+        return res(101, "email")
+    if not password:
+        return res(101, "password")
+    if not new_password:
+        return res(101, "new_password")
+
+    user = User.get_by_email(email)
+    if not user:
+        return res(302)
+
+    if not User.login_check(email, password):
+        return res(305)
+
+    user.update(password_hash=User.generate_password_hash(new_password))
+    EmailMessage.send_change_password_success(email)
+
+    return res(0)
