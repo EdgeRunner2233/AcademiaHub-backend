@@ -103,3 +103,35 @@ def register():
 
     token = user.generate_token()
     return res(310, data={"id": user.id, "token": token})
+
+
+@service_bp.route("/change_email", methods=["POST"])
+def change_email():
+    req = request.form
+    res = Response()
+
+    user_email = req.get("email")
+    new_email = req.get("new_email")
+
+    if not user_email:
+        return res(101, "email")
+    if not new_email:
+        return res(101, "new_email")
+
+    user = User.get_by_email(user_email)
+    if not user:
+        return res(302)
+
+    if not util.check_email_pattern(new_email):
+        return res(102, "new_email")
+
+    if new_email == user_email:
+        return res(322)
+
+    if User.exists(new_email):
+        return res(321)
+
+    user.update(email=new_email)
+    EmailMessage.send_change_email_success(new_email)
+
+    return res(0)

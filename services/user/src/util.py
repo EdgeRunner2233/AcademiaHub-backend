@@ -180,6 +180,27 @@ class EmailMessage:
         EmailMessage._send(subject, email, body)
 
     @staticmethod
+    def send_change_email_success(email: str) -> None:
+        """
+        Send change email success message to user.
+
+        Args:
+            email (str): user email.
+
+        Returns:
+            None
+        """
+
+        subject = "[AcademiaHub] 您已成功修改邮箱!"
+        body = (
+            "您的邮箱账户已激活。\n\n"
+            + "Your email has been activated. \n\n\n"
+            + "----------\nAcademiaHub Team"
+        )
+
+        EmailMessage._send(subject, email, body)
+
+    @staticmethod
     def verify_vcode(email: str, code: str) -> bool:
         """
         Verify verification code.

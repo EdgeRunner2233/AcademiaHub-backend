@@ -16,6 +16,8 @@ class Message:
         310: gettext("注册成功"),
         311: gettext("用户已存在"),
         319: gettext("注册失败"),
+        321: gettext("用户信息更新失败: 邮箱已被占用"),
+        322: gettext("用户信息更新失败: 新邮箱与原邮箱相同"),
         401: gettext("请求缺少token"),
         402: gettext("用户token已过期"),
         403: gettext("用户token无效"),

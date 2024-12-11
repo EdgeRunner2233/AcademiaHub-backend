@@ -5,6 +5,7 @@ from src.model import User
 from fakeredis import FakeRedis
 from unittest.mock import patch
 from src.extensions import db, mail
+from werkzeug.test import TestResponse
 
 test_redis = FakeRedis()
 
@@ -31,7 +32,22 @@ class ApiTestCase(unittest.TestCase):
         self.test_db.session.remove()
         self.test_db.drop_all()
 
+        test_redis.flushall()
+
         self.app_context.pop()
+
+    def check_success_field(self, response: TestResponse):
+        self.assertEqual(response.status_code, 200)
+
+        payload: dict = json.loads(response.data)
+        self.assertIn("success", payload)
+        self.assertIn("code", payload)
+        self.assertIn("message", payload)
+        self.assertIn("data", payload)
+
+        self.assertEqual(payload["success"], True)
+
+        return payload
 
     def register(self, email=None, nickname=None, password=None):
         """
@@ -72,10 +88,7 @@ class ApiTestCase(unittest.TestCase):
             content_type="multipart/form-data",
         )
 
-        self.assertEqual(response.status_code, 200)
-        payload: dict = json.loads(response.data)
-
-        return payload
+        return self.check_success_field(response)
 
     def login(self, email=None, password=None):
         """
@@ -97,10 +110,7 @@ class ApiTestCase(unittest.TestCase):
             content_type="multipart/form-data",
         )
 
-        self.assertEqual(response.status_code, 200)
-        payload: dict = json.loads(response.data)
-
-        return payload
+        return self.check_success_field(response)
 
     def test_app_exist(self):
         self.assertIsNotNone(self.app)
@@ -115,15 +125,7 @@ class ApiTestCase(unittest.TestCase):
 
     def test_api_health(self):
         response = self.client.get("/api/user/health")
-        self.assertEqual(response.status_code, 200)
-
-        payload: dict = json.loads(response.data)
-        self.assertIn("success", payload)
-        self.assertIn("code", payload)
-        self.assertIn("message", payload)
-        self.assertIn("data", payload)
-
-        self.assertEqual(payload["success"], True)
+        payload = self.check_success_field(response)
         self.assertEqual(payload["code"], 0)
 
     def test_api_get_verification(self):
@@ -139,15 +141,7 @@ class ApiTestCase(unittest.TestCase):
 
             self.assertEqual(len(outbox), 1)
 
-        self.assertEqual(response.status_code, 200)
-
-        payload: dict = json.loads(response.data)
-        self.assertIn("success", payload)
-        self.assertIn("code", payload)
-        self.assertIn("message", payload)
-        self.assertIn("data", payload)
-
-        self.assertEqual(payload["success"], True)
+        self.check_success_field(response)
 
         v_code = test_redis.get("vcode#test@email.testemail")
         self.assertIsNotNone(v_code)
@@ -163,15 +157,8 @@ class ApiTestCase(unittest.TestCase):
             data={"email": "test@email.testemail", "password": "test_password"},
             content_type="multipart/form-data",
         )
-        self.assertEqual(response.status_code, 200)
 
-        payload: dict = json.loads(response.data)
-        self.assertIn("success", payload)
-        self.assertIn("code", payload)
-        self.assertIn("message", payload)
-        self.assertIn("data", payload)
-
-        self.assertEqual(payload["success"], True)
+        payload = self.check_success_field(response)
         self.assertEqual(payload["code"], 300)
 
         user_id = payload["data"]["id"]
@@ -205,15 +192,7 @@ class ApiTestCase(unittest.TestCase):
             )
             self.assertEqual(len(outbox), 1)
 
-        self.assertEqual(response.status_code, 200)
-
-        payload: dict = json.loads(response.data)
-        self.assertIn("success", payload)
-        self.assertIn("code", payload)
-        self.assertIn("message", payload)
-        self.assertIn("data", payload)
-
-        self.assertEqual(payload["success"], True)
+        payload = self.check_success_field(response)
         self.assertEqual(payload["code"], 310)
 
         user_id = payload["data"]["id"]
@@ -221,3 +200,26 @@ class ApiTestCase(unittest.TestCase):
         user = User.get_by_id(user_id)
         self.assertIsNotNone(user)
         self.assertTrue(user.verify_token(token)[0])
+
+    def test_api_change_email(self):
+        self.register()
+
+        user = User.get_by_email("test@email.testemail")
+        self.assertIsNotNone(user)
+        self.assertEqual(user.email, "test@email.testemail")
+
+        response = self.client.post(
+            "/api/user/change_email",
+            data={
+                "email": "test@email.testemail",
+                "new_email": "test_new@email.testemail",
+            },
+            content_type="multipart/form-data",
+        )
+        self.check_success_field(response)
+
+        user = User.get_by_email("test@email.testemail")
+        self.assertIsNone(user)
+        user = User.get_by_email("test_new@email.testemail")
+        self.assertIsNotNone(user)
+        self.assertEqual(user.email, "test_new@email.testemail")
