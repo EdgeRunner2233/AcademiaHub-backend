@@ -4,7 +4,8 @@ import sqlalchemy.exc as exc
 from datetime import datetime
 from src.extensions import db
 from flask_babel import gettext
-from src.util import logger, Token
+from src.util import logger
+from src.cache import Token
 import werkzeug.security as security
 from typing import Type, TypeVar, Optional, Union, Tuple, List
 

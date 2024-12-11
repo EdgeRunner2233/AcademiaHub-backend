@@ -2,7 +2,7 @@ import functools
 import src.util as util
 from src.model import User
 from src.util import logger
-from src.util import EmailMessage
+from src.cache import EmailMessage
 from src.response import Response
 from flask import Blueprint, request
 

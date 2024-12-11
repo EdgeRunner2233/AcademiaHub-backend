@@ -10,7 +10,7 @@ from werkzeug.test import TestResponse
 test_redis = FakeRedis()
 
 
-@patch("src.util.redis", test_redis)
+@patch("src.cache.redis", test_redis)
 class ApiTestCase(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
