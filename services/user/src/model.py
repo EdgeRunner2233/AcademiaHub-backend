@@ -1,12 +1,16 @@
+import pytz
 import sqlalchemy as sql
 import sqlalchemy.exc as exc
+from datetime import datetime
 from src.extensions import db
+from flask_babel import gettext
 from src.util import logger, Token
 import werkzeug.security as security
 from typing import Type, TypeVar, Optional, Union, Tuple, List
 
 
 T = TypeVar("T", bound="Base")
+tz = pytz.timezone("Asia/Shanghai")
 
 
 class Base:
@@ -66,6 +70,13 @@ class User(db.Model, Base):  # type: ignore
         ADMIN = 2
         SUPER_ADMIN = 3
 
+        mapping = {
+            0: gettext("用户"),
+            1: gettext("科研人员"),
+            2: gettext("管理员"),
+            3: gettext("超级管理员"),
+        }
+
     id = sql.Column(sql.Integer, primary_key=True)
     role = sql.Column(sql.Integer, default=Role.USER)
 
@@ -79,9 +90,9 @@ class User(db.Model, Base):  # type: ignore
     research_field = sql.Column(sql.String(50), default="")
     gmt_became_researcher = sql.Column(sql.DateTime)
 
-    gmt_registered = sql.Column(sql.DateTime, default=sql.func.now())
-    gmt_created = sql.Column(sql.DateTime, default=sql.func.now())
-    gmt_modified = sql.Column(sql.DateTime, default=sql.func.now())
+    gmt_registered = sql.Column(sql.DateTime, default=datetime.now(tz))
+    gmt_created = sql.Column(sql.DateTime, default=datetime.now(tz))
+    gmt_modified = sql.Column(sql.DateTime, default=datetime.now(tz))
 
     is_deleted = sql.Column(sql.Boolean, default=False)
 
@@ -233,6 +244,34 @@ class User(db.Model, Base):  # type: ignore
             return False, 403
 
         return True, 0
+
+    def info(self) -> dict:
+        """
+        Get the user info.
+
+        Returns:
+            dict: The user info.
+        """
+        user_info = {
+            "id": self.id,
+            "email": self.email,
+            "nickname": self.nickname,
+            "time_registered": self.gmt_registered.strftime("%Y-%m-%d %H:%M:%S"),
+            "role": User.Role.mapping.get(int(self.role)),
+        }
+        if self.role == User.Role.RESEARCHER:
+            user_info.update(
+                {
+                    "openalex_id": self.openalex_id,
+                    "organization": self.organization,
+                    "title": self.title,
+                    "research_field": self.research_field,
+                    "gmt_became_researcher": self.gmt_became_researcher.strftime(
+                        "%Y-%m-%d %H:%M:%S"
+                    ),
+                }
+            )
+        return user_info
 
     def __repr__(self):
         return f"<User {self.email}({self.id})>"

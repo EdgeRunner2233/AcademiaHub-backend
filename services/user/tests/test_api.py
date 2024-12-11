@@ -245,3 +245,20 @@ class ApiTestCase(unittest.TestCase):
 
         self.assertFalse(User.login_check("test@email.testemail", "test_password"))
         self.assertTrue(User.login_check("test@email.testemail", "test_new_password"))
+
+    def test_api_get_user_info(self):
+        self.register()
+        response = self.client.post(
+            "/api/user/info",
+            data={"email": "test@email.testemail"},
+            content_type="multipart/form-data",
+        )
+        payload = self.check_success_field(response)
+        self.assertEqual(payload["code"], 0)
+
+        user_info = payload["data"]
+        self.assertEqual(user_info["email"], "test@email.testemail")
+        self.assertEqual(user_info["nickname"], "test")
+        self.assertEqual(user_info["role"], User.Role.mapping.get(User.Role.USER))
+
+        # TODO: test info for researcher

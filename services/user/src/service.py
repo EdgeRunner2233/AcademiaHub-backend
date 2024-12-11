@@ -105,6 +105,22 @@ def register():
     return res(310, data={"id": user.id, "token": token})
 
 
+@service_bp.route("/info", methods=["POST"])
+def get_user_info():
+    req = request.form
+    res = Response()
+
+    email = req.get("email")
+    if not email:
+        return res(101, "email")
+
+    user = User.get_by_email(email)
+    if not user:
+        return res(302)
+
+    return res(0, data=user.info())
+
+
 @service_bp.route("/change_email", methods=["POST"])
 def change_email():
     req = request.form
