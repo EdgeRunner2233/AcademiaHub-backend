@@ -56,7 +56,11 @@ class Token:
             seconds=float(Token.expire_time)
         )
         payload.update({"exp": expiration_time})
-        return jwt.encode(Token.header, payload, Token.secret).decode("utf-8")
+        token = jwt.encode(Token.header, payload, Token.secret).decode("utf-8")
+
+        redis.set(f"token#{token}", 1, ex=Token.expire_time)
+
+        return token
 
     @staticmethod
     def verify_token(token: str) -> dict:
@@ -73,6 +77,9 @@ class Token:
         Returns:
             dict: Decoded payload.
         """
+
+        if redis.get(f"token#{token}") is None:
+            raise Token.TokenInvalid
 
         try:
             claims = jwt.decode(token, Token.secret)
