@@ -1,8 +1,7 @@
-import json
 import requests
 
 
-def request_api(url: str, method="GET", kwargs={}) -> tuple[int, dict]:
+def request_api(url: str, method="GET", kwargs={}) -> tuple[int, str]:
     """
     Send request to url.
 
@@ -15,7 +14,7 @@ def request_api(url: str, method="GET", kwargs={}) -> tuple[int, dict]:
         RuntimeError: if request failed
 
     Returns:
-        tuple[int, dict]: status code and response body
+        tuple[int, str]: status code and response body
     """
 
     res = requests.request(method, url, **kwargs)

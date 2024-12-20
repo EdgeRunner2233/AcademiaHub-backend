@@ -4,6 +4,7 @@ from src.util import logger
 from src.cache import EmailMessage
 from src.response import Response
 from flask import Blueprint, request
+from src.pre_check import require_fields
 
 user_service_bp = Blueprint("usr_service", __name__, url_prefix="/api/user")
 
@@ -16,6 +17,7 @@ def health_check():
 
 
 @user_service_bp.route("/get_verification", methods=["POST"])
+@require_fields("email")
 def send_verification():
     req = request.form
     res = Response()
@@ -30,17 +32,13 @@ def send_verification():
 
 
 @user_service_bp.route("/login", methods=["POST"])
+@require_fields("email", "password")
 def login():
     req = request.form
     res = Response()
 
     user_email = req.get("email", None)
     user_password = req.get("password", None)
-
-    if not user_email:
-        return res(101, "email")
-    if not user_password:
-        return res(101, "password")
 
     if not User.login_check(user_email, user_password):
         return res(301)
@@ -51,6 +49,7 @@ def login():
 
 
 @user_service_bp.route("/register", methods=["POST"])
+@require_fields("email", "nickname", "password", "verification_code")
 def register():
     req = request.form
     res = Response()
@@ -59,15 +58,6 @@ def register():
     user_nickname = req.get("nickname")
     user_password = req.get("password")
     verification_code = req.get("verification_code")
-
-    if not user_email:
-        return res(101, "email")
-    if not user_nickname:
-        return res(101, "nickname")
-    if not user_password:
-        return res(101, "password")
-    if not verification_code:
-        return res(101, "verification_code")
 
     if User.exists(user_email):
         return res(311)
@@ -84,13 +74,12 @@ def register():
 
 
 @user_service_bp.route("/info", methods=["POST"])
+@require_fields("email")
 def get_user_info():
     req = request.form
     res = Response()
 
     email = req.get("email")
-    if not email:
-        return res(101, "email")
 
     user = User.get_by_email(email)
     if not user:
@@ -100,17 +89,13 @@ def get_user_info():
 
 
 @user_service_bp.route("/change_email", methods=["POST"])
+@require_fields("email", "new_email")
 def change_email():
     req = request.form
     res = Response()
 
     user_email = req.get("email")
     new_email = req.get("new_email")
-
-    if not user_email:
-        return res(101, "email")
-    if not new_email:
-        return res(101, "new_email")
 
     user = User.get_by_email(user_email)
     if not user:
@@ -132,6 +117,7 @@ def change_email():
 
 
 @user_service_bp.route("/change_password", methods=["POST"])
+@require_fields("email", "password", "new_password")
 def change_password():
     req = request.form
     res = Response()
@@ -139,13 +125,6 @@ def change_password():
     email = req.get("email")
     password = req.get("password")
     new_password = req.get("new_password")
-
-    if not email:
-        return res(101, "email")
-    if not password:
-        return res(101, "password")
-    if not new_password:
-        return res(101, "new_password")
 
     user = User.get_by_email(email)
     if not user:

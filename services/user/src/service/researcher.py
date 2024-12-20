@@ -3,6 +3,7 @@ from src.util import logger
 from src.response import Response
 from flask import Blueprint, request
 from src.api_request import request_api
+from src.pre_check import require_fields
 
 rsc_service_bp = Blueprint("rsc_service", __name__, url_prefix="/api/researcher")
 
@@ -17,14 +18,13 @@ def health_check():
 
 
 @rsc_service_bp.route("/info", methods=["POST"])
+@require_fields("researcher_id")
 def get_info():
     logger.info("get_info of researcher service called")
     req = request.form
     res = Response()
 
     researcher_id = req.get("researcher_id", None)
-    if not researcher_id:
-        return res(101, "researcher_id")
 
     code, result = request_api(f"{OPENALEX_BASE}/authors/{researcher_id}")
 

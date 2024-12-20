@@ -34,6 +34,7 @@ requests==2.32.3
 sortedcontainers==2.4.0
 SQLAlchemy==2.0.36
 types-pytz==2024.2.0.20241003
+types-requests==2.32.0.20241016
 typing_extensions==4.12.2
 urllib3==2.2.3
 Werkzeug==3.1.3
