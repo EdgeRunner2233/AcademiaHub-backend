@@ -1,4 +1,3 @@
-import functools
 import src.util as util
 from src.model import User
 from src.util import logger
@@ -6,28 +5,7 @@ from src.cache import EmailMessage
 from src.response import Response
 from flask import Blueprint, request
 
-user_service_bp = Blueprint("service", __name__, url_prefix="/api/user")
-
-
-def permission(required_role=User.Role.USER):
-    def decorator(f):
-        @functools.wraps(f)
-        def warper(*args, **kwargs):
-            res = Response()
-            token = request.headers.get("Authorization", "")
-            if not token:
-                return res(401)
-            user, err = User.get_by_token(token)
-            if err > 0:
-                return res(err)
-            elif user.role < required_role:
-                return res(404)
-            else:
-                return f(*args, **kwargs)
-
-        return warper
-
-    return decorator
+user_service_bp = Blueprint("usr_service", __name__, url_prefix="/api/user")
 
 
 @user_service_bp.route("/health", methods=["GET", "POST"])
