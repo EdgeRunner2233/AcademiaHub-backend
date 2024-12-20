@@ -6,7 +6,7 @@ from src.cache import EmailMessage
 from src.response import Response
 from flask import Blueprint, request
 
-service_bp = Blueprint("service", __name__, url_prefix="/api/user")
+user_service_bp = Blueprint("service", __name__, url_prefix="/api/user")
 
 
 def permission(required_role=User.Role.USER):
@@ -30,14 +30,14 @@ def permission(required_role=User.Role.USER):
     return decorator
 
 
-@service_bp.route("/health", methods=["GET", "POST"])
+@user_service_bp.route("/health", methods=["GET", "POST"])
 def health_check():
     logger.info("health_check service called")
     res = Response()
     return res(0)
 
 
-@service_bp.route("/get_verification", methods=["POST"])
+@user_service_bp.route("/get_verification", methods=["POST"])
 def send_verification():
     req = request.form
     res = Response()
@@ -51,7 +51,7 @@ def send_verification():
     return res(0)
 
 
-@service_bp.route("/login", methods=["POST"])
+@user_service_bp.route("/login", methods=["POST"])
 def login():
     req = request.form
     res = Response()
@@ -72,7 +72,7 @@ def login():
     return res(300, data={"id": user.id, "token": token})
 
 
-@service_bp.route("/register", methods=["POST"])
+@user_service_bp.route("/register", methods=["POST"])
 def register():
     req = request.form
     res = Response()
@@ -105,7 +105,7 @@ def register():
     return res(310, data={"id": user.id, "token": token})
 
 
-@service_bp.route("/info", methods=["POST"])
+@user_service_bp.route("/info", methods=["POST"])
 def get_user_info():
     req = request.form
     res = Response()
@@ -121,7 +121,7 @@ def get_user_info():
     return res(0, data=user.info())
 
 
-@service_bp.route("/change_email", methods=["POST"])
+@user_service_bp.route("/change_email", methods=["POST"])
 def change_email():
     req = request.form
     res = Response()
@@ -153,7 +153,7 @@ def change_email():
     return res(0)
 
 
-@service_bp.route("/change_password", methods=["POST"])
+@user_service_bp.route("/change_password", methods=["POST"])
 def change_password():
     req = request.form
     res = Response()

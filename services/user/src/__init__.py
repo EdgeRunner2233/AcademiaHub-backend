@@ -1,7 +1,7 @@
 import os
 from flask import Flask
 from dotenv import load_dotenv
-from src.service import service_bp
+from src.service.user import user_service_bp
 from src.extensions import babel, db, mail, redis
 
 load_dotenv()
@@ -33,6 +33,6 @@ def create_app(**config):
     babel.init_app(app)
     redis.init_app(app)
 
-    app.register_blueprint(service_bp)
+    app.register_blueprint(user_service_bp)
 
     return app
