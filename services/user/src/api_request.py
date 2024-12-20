@@ -2,7 +2,7 @@ import json
 import requests
 
 
-def request_api(url: str, method="GET", kwargs={}) -> dict:
+def request_api(url: str, method="GET", kwargs={}) -> tuple[int, dict]:
     """
     Send request to url.
 
@@ -15,12 +15,9 @@ def request_api(url: str, method="GET", kwargs={}) -> dict:
         RuntimeError: if request failed
 
     Returns:
-        dict: response from api
+        tuple[int, dict]: status code and response body
     """
 
     res = requests.request(method, url, **kwargs)
 
-    if res.status_code != 200:
-        raise RuntimeError("Request failed")
-
-    return json.loads(res.text)
+    return res.status_code, res.text

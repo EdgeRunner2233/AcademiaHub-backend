@@ -23,6 +23,8 @@ class Message:
         402: gettext("用户token已过期"),
         403: gettext("用户token无效"),
         404: gettext("无操作权限"),
+        501: gettext("科研人员id不存在"),
+        502: gettext("API请求失败"),
     }
 
     @staticmethod
