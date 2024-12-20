@@ -2,7 +2,7 @@ import json
 import requests
 
 
-def request(url: str, method="GET", kwargs={}) -> dict:
+def request_api(url: str, method="GET", kwargs={}) -> dict:
     """
     Send request to url.
 
