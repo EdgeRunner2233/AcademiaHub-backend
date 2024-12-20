@@ -1,4 +1,5 @@
 import re
+from src.config import INI_PATH
 
 
 def get_logger():
@@ -9,10 +10,8 @@ def get_logger():
         if _logger is None:
             import logging
             import logging.config
-            from pathlib import Path
 
-            ini_path = Path(__file__).absolute().parent.parent / "logging.ini"
-            logging.config.fileConfig(ini_path.as_posix())
+            logging.config.fileConfig(INI_PATH.as_posix())
             _logger = logging.getLogger("infoLogger")
         return _logger
 

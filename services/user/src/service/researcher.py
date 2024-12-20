@@ -4,17 +4,16 @@ from src.response import Response
 from flask import Blueprint, request
 from src.api_request import request_api
 from src.pre_check import require_fields
+from src.config import version, OPENALEX_BASE
 
 rsc_service_bp = Blueprint("rsc_service", __name__, url_prefix="/api/researcher")
-
-OPENALEX_BASE = "https://api.openalex.org/"
 
 
 @rsc_service_bp.route("/health", methods=["GET", "POST"])
 def health_check():
     logger.info("health_check of researcher service called")
     res = Response()
-    return res(0)
+    return res(0, data={"version": version()})
 
 
 @rsc_service_bp.route("/info", methods=["POST"])

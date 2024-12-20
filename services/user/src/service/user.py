@@ -1,6 +1,7 @@
 import src.util as util
 from src.model import User
 from src.util import logger
+from src.config import version
 from src.cache import EmailMessage
 from src.response import Response
 from flask import Blueprint, request
@@ -13,7 +14,7 @@ user_service_bp = Blueprint("usr_service", __name__, url_prefix="/api/user")
 def health_check():
     logger.info("health_check service called")
     res = Response()
-    return res(0)
+    return res(0, data={"version": version()})
 
 
 @user_service_bp.route("/get_verification", methods=["POST"])
