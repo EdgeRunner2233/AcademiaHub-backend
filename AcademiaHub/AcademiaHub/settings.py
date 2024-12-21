@@ -195,6 +195,10 @@ CELERY_BEAT_SCHEDULE = {
         'task': 'search.tasks.delete_search_weekly',
         'schedule': timedelta(weeks=1),
     },
+    'update_new_works': {
+        'task': 'search.tasks.update_new_works',
+        'schedule': timedelta(hours=1),
+    },
 }
 
 # Static files (CSS, JavaScript, Images)

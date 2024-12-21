@@ -197,8 +197,17 @@ def get_weekly_popular_words(request):
 
 @require_POST
 def get_new_works(request):
-    result = {'result': get_new10_works()}
-    return JsonResponse(result)
+    num = request.POST.get('num', '')
+    if num == '':
+        num = 10
+    num = int(num)
+    works_list = cache.get('new_works' + str(num))
+    if works_list is None:
+        works = NewWorks.objects.all().order_by('-publication_date')[:num]
+        works_list = [work.to_dic() for work in works]
+        cache.set('new_works' + str(num), works_list)
+
+    return JsonResponse({'result': works_list}, safe=False)
 
 
 

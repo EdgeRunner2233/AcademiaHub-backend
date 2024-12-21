@@ -175,3 +175,27 @@ def delete_mark(request):
     mark.delete()
     result = {'result': 'successful', 'message': 'Mark deleted successfully'}
     return JsonResponse(result)
+
+@require_POST
+def get_user_single_mark_list_detail(request):
+    user_id = request.POST.get('user_id', '')
+    list_id = request.POST.get('list_id', '')
+
+    if user_id == '':
+        result = {'result': 'error', 'message': '缺少用户id'}
+        return JsonResponse(result)
+
+    try:
+        # 查找 Mark 对象
+        mark = Mark.objects.get(id=list_id)
+    except Mark.DoesNotExist:
+        return JsonResponse({'result': 'error', 'message': '该用户没有标记列表'})
+
+    mark_relationships = MarkRelationships.objects.filter(mark_list=mark)
+
+    result = {
+        'mark_info': mark.to_dic(),  # Mark 信息
+        'relationships': [relationship.to_dic() for relationship in mark_relationships]  # MarkRelationships 信息
+    }
+
+    return JsonResponse(result)

@@ -36,10 +36,22 @@ class SearchWord(models.Model):
 
 class NewWorks(models.Model):
     work_id = models.CharField('OpenAlexID', max_length=50, primary_key=True)
-    created_time = models.DateTimeField('被收录时间')
+    work_title = models.CharField('文章题目', max_length=1000)
+    publication_date = models.DateTimeField('发布时间')
 
     def to_dic(self):
         return {
             'work_id': self.work_id,
-            'created_time': self.created_time,
+            'work_title': self.work_title,
+            'publication_date': self.publication_date,
         }
+
+class Statistics(models.Model):
+    filter = models.CharField(max_length=255)
+    publication_year_list = models.JSONField()  # 存储JSON数据
+    type_list = models.JSONField()  # 存储JSON数据
+    author_list = models.JSONField()  # 存储JSON数据
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Statistics for {self.filter} at {self.created_at}"

@@ -60,13 +60,14 @@ def get_single_work(openalex_id):
         cache.set(key, value, timeout=300)
     return single_work
 
-# 获取最近被收录的10篇文章
-def get_new10_works():
+
+# 获取最近被收录的150篇文章
+def get_new150_works():
     filters = None  # 可以根据需要设置过滤器
     search = None  # 如果没有搜索条件
     sort = {'publication_date': 'desc'}  # 按照发布日期降序排列（'asc' 或 'desc'）
-    per_page = 10  # 每页 10 个工作项
+    per_page = 150
     pages = [1]  # 获取第一页的结果
 
-    new10_works = list(openalex.get_list_of_works(filters=filters, search=search, sort=sort, per_page=per_page, pages=pages))
-    return new10_works
+    value = list(openalex.get_list_of_works(filters=filters, search=search, sort=sort, per_page=per_page, pages=pages))
+    return value

@@ -7,6 +7,7 @@ urlpatterns = [
     path('add-mark', views.add_mark, name='add-mark'),
     path('get-user-marks', views.get_user_marks, name='get-user-marks'),
     path('get-user-mark-lists', views.get_user_mark_lists, name='get-user-mark-lists'),
+    path('get-user-single-mark-list-detail', views.get_user_single_mark_list_detail, name='get-user-single-mark-list-detail'),
     path('delete-mark-relationship', views.delete_mark_relationship, name='delete-mark-relationship'),
     path('delete-mark', views.delete_mark, name='delete-mark'),
 ]

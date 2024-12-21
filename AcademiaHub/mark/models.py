@@ -8,6 +8,7 @@ class Mark(models.Model):
     # User 实例可以反向访问与之关联的所有 MarkLists
     list_name = models.CharField(max_length=255, verbose_name="列表名称")
     description = models.CharField(max_length=255, verbose_name="描述")
+    count = models.IntegerField(default=0, verbose_name="数量")
 
     class Meta:
         db_table = 'mark_lists'
@@ -22,6 +23,7 @@ class Mark(models.Model):
             'user_id': self.user_id,
             'list_name': self.list_name,
             'description': self.description,
+            'count': self.count,
         }
 
 
@@ -39,5 +41,5 @@ class MarkRelationships(models.Model):
         return {
             'id': self.id,
             'work_id': self.work_id,
-            'mark_list': self.mark_list,
+            'mark_list': self.mark_list.id,
         }
