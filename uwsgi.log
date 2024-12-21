@@ -3652,3 +3652,783 @@ Not Found: /
 [pid: 897608|app: 0|req: 120/171] 13.91.166.30 () {34 vars in 392 bytes} [Sat Dec 21 10:26:40 2024] GET / => generated 2619 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
 Not Found: /css/images/PTZOptics_powerby.png
 [pid: 897608|app: 0|req: 121/172] 1.92.149.201 () {36 vars in 633 bytes} [Sat Dec 21 10:27:40 2024] GET /css/images/PTZOptics_powerby.png => generated 2733 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 897608|app: 0|req: 122/173] 77.90.22.145 () {28 vars in 309 bytes} [Sat Dec 21 11:15:01 2024] GET / => generated 2622 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /login.rsp
+[pid: 897608|app: 0|req: 123/174] 154.213.187.237 () {34 vars in 419 bytes} [Sat Dec 21 11:26:05 2024] GET /login.rsp => generated 2667 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /.git/config
+[pid: 897607|app: 0|req: 31/175] 87.120.115.119 () {36 vars in 494 bytes} [Sat Dec 21 11:28:25 2024] GET /.git/config => generated 2670 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /.env
+[pid: 897608|app: 0|req: 124/176] 154.216.20.197 () {36 vars in 590 bytes} [Sat Dec 21 11:55:31 2024] GET /.env => generated 2649 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 897608|app: 0|req: 125/177] 154.216.20.197 () {40 vars in 697 bytes} [Sat Dec 21 11:55:48 2024] POST / => generated 2620 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 897608|app: 0|req: 126/178] 95.214.55.79 () {44 vars in 779 bytes} [Sat Dec 21 12:18:05 2024] GET / => generated 2619 bytes in 3 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 897608|app: 0|req: 127/179] 95.214.55.32 () {28 vars in 309 bytes} [Sat Dec 21 12:36:14 2024] GET / => generated 2622 bytes in 3 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 897607|app: 0|req: 32/180] 77.90.22.145 () {28 vars in 309 bytes} [Sat Dec 21 12:38:49 2024] GET / => generated 2622 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 897608|app: 0|req: 128/181] 147.185.133.51 () {32 vars in 627 bytes} [Sat Dec 21 13:02:55 2024] GET / => generated 2622 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+...gracefully killing workers...
+Gracefully killing worker 3 (pid: 897607)...
+Gracefully killing worker 2 (pid: 897606)...
+Gracefully killing worker 1 (pid: 897605)...
+Gracefully killing worker 4 (pid: 897608)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /AcademiaHub/Backend/AcademiaHub
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (0.0.0.0:8002)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.28 (64bit) on [Sat Dec 21 13:43:41 2024] ***
+compiled with version: 11.4.0 on 09 December 2024 07:39:47
+os: Linux-5.15.0-113-generic #123-Ubuntu SMP Mon Jun 10 08:16:17 UTC 2024
+nodename: zrtbighandsomeboy
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 16
+current working directory: /AcademiaHub/Backend/AcademiaHub
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /AcademiaHub/Backend/AcademiaHub
+your processes number limit is 126366
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8002 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov  6 2024, 20:22:13) [GCC 11.4.0]
+Python main interpreter initialized at 0x5633ad749f30
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507960 bytes (496 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5633ad749f30 pid: 870883 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 870883)
+spawned uWSGI worker 1 (pid: 920921, cores: 1)
+spawned uWSGI worker 2 (pid: 920922, cores: 1)
+spawned uWSGI worker 3 (pid: 920923, cores: 1)
+spawned uWSGI worker 4 (pid: 920924, cores: 1)
+Internal Server Error: /api/search/single-work
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/AcademiaHub/Backend/AcademiaHub/./search/views.py", line 321, in get_specific_work
+    specific_work = get_single_work(openalex_id)
+  File "/AcademiaHub/Backend/AcademiaHub/./utils/search_utils.py", line 56, in get_single_work
+    single_work = openalex.get_single_work(openalex_id)
+  File "/usr/local/lib/python3.10/dist-packages/diophila/openalex.py", line 128, in get_single_work
+    return Works(self._api_caller).get_single(id_value, id_type)
+  File "/usr/local/lib/python3.10/dist-packages/diophila/endpoints.py", line 83, in get_single
+    return self.api_caller.get(single_path)
+  File "/usr/local/lib/python3.10/dist-packages/diophila/api_caller.py", line 38, in get
+    response.raise_for_status()
+  File "/usr/local/lib/python3.10/dist-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: NOT FOUND for url: https://api.openalex.org/works/https://api.openalex.org/works/W2741809807
+[pid: 920924|app: 0|req: 1/1] 219.239.227.241 () {40 vars in 704 bytes} [Sat Dec 21 13:44:00 2024] POST /api/search/single-work => generated 82371 bytes in 1639 msecs (HTTP/1.1 500) 7 headers in 250 bytes (1 switches on core 0)
+Not Found: /
+[pid: 920921|app: 0|req: 1/2] 43.130.39.254 () {46 vars in 843 bytes} [Sat Dec 21 13:45:46 2024] GET / => generated 2619 bytes in 125 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 920921|app: 0|req: 2/3] 219.239.227.241 () {40 vars in 710 bytes} [Sat Dec 21 13:46:31 2024] POST /api/search/get_statistics => generated 24 bytes in 55 msecs (HTTP/1.1 200) 7 headers in 212 bytes (1 switches on core 0)
+Internal Server Error: /api/search/single-work
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/AcademiaHub/Backend/AcademiaHub/./search/views.py", line 329, in get_specific_work
+    bibtex_info = inforDir(bibtex)  # 将 BibTeX 转换为字典
+  File "/AcademiaHub/Backend/AcademiaHub/./search/views.py", line 255, in inforDir
+    infordir[result1[index]] = result2[index]
+IndexError: list index out of range
+[pid: 920923|app: 0|req: 1/4] 219.239.227.241 () {40 vars in 704 bytes} [Sat Dec 21 13:44:38 2024] POST /api/search/single-work => generated 72391 bytes in 132366 msecs (HTTP/1.1 500) 7 headers in 250 bytes (1 switches on core 0)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 920921)...
+Gracefully killing worker 3 (pid: 920923)...
+Gracefully killing worker 2 (pid: 920922)...
+Gracefully killing worker 4 (pid: 920924)...
+worker 1 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+*** Starting uWSGI 2.0.28 (64bit) on [Sat Dec 21 13:48:23 2024] ***
+compiled with version: 11.4.0 on 09 December 2024 07:39:47
+os: Linux-5.15.0-113-generic #123-Ubuntu SMP Mon Jun 10 08:16:17 UTC 2024
+nodename: zrtbighandsomeboy
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 16
+current working directory: /AcademiaHub/Backend/AcademiaHub
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /AcademiaHub/Backend/AcademiaHub
+your processes number limit is 126366
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8002 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov  6 2024, 20:22:13) [GCC 11.4.0]
+Python main interpreter initialized at 0x55631f2f3310
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507960 bytes (496 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55631f2f3310 pid: 921165 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 921165)
+spawned uWSGI worker 1 (pid: 921166, cores: 1)
+spawned uWSGI worker 2 (pid: 921167, cores: 1)
+spawned uWSGI worker 3 (pid: 921168, cores: 1)
+spawned uWSGI worker 4 (pid: 921169, cores: 1)
+[pid: 921168|app: 0|req: 1/1] 219.239.227.241 () {40 vars in 710 bytes} [Sat Dec 21 13:48:31 2024] POST /api/search/get_statistics => generated 24 bytes in 178 msecs (HTTP/1.1 200) 7 headers in 212 bytes (1 switches on core 0)
+Internal Server Error: /api/search/single-work
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/AcademiaHub/Backend/AcademiaHub/./search/views.py", line 329, in get_specific_work
+    bibtex_info = inforDir(bibtex)  # 将 BibTeX 转换为字典
+  File "/AcademiaHub/Backend/AcademiaHub/./search/views.py", line 255, in inforDir
+    infordir[result1[index]] = result2[index]
+IndexError: list index out of range
+[pid: 921168|app: 0|req: 2/2] 219.239.227.241 () {40 vars in 704 bytes} [Sat Dec 21 13:48:43 2024] POST /api/search/single-work => generated 72405 bytes in 1374 msecs (HTTP/1.1 500) 7 headers in 250 bytes (1 switches on core 0)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 921166)...
+Gracefully killing worker 3 (pid: 921168)...
+Gracefully killing worker 2 (pid: 921167)...
+Gracefully killing worker 4 (pid: 921169)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /AcademiaHub/Backend/AcademiaHub
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (0.0.0.0:8002)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.28 (64bit) on [Sat Dec 21 14:09:25 2024] ***
+compiled with version: 11.4.0 on 09 December 2024 07:39:47
+os: Linux-5.15.0-113-generic #123-Ubuntu SMP Mon Jun 10 08:16:17 UTC 2024
+nodename: zrtbighandsomeboy
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 16
+current working directory: /AcademiaHub/Backend/AcademiaHub
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /AcademiaHub/Backend/AcademiaHub
+your processes number limit is 126366
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8002 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov  6 2024, 20:22:13) [GCC 11.4.0]
+Python main interpreter initialized at 0x55cc2429af30
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507960 bytes (496 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55cc2429af30 pid: 921165 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 921165)
+spawned uWSGI worker 1 (pid: 922053, cores: 1)
+spawned uWSGI worker 2 (pid: 922054, cores: 1)
+spawned uWSGI worker 3 (pid: 922055, cores: 1)
+spawned uWSGI worker 4 (pid: 922056, cores: 1)
+[pid: 922056|app: 0|req: 1/1] 219.239.227.241 () {40 vars in 710 bytes} [Sat Dec 21 14:09:32 2024] POST /api/search/get_statistics => generated 24 bytes in 168 msecs (HTTP/1.1 200) 7 headers in 212 bytes (1 switches on core 0)
+Internal Server Error: /api/search/single-work
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/AcademiaHub/Backend/AcademiaHub/./search/views.py", line 331, in get_specific_work
+    ieee_format = getIeeeFormat(bibtex_info)  # 转换为 IEEE 格式
+  File "/AcademiaHub/Backend/AcademiaHub/./search/views.py", line 233, in getIeeeFormat
+    return getIeeeJournalFormat(bibInfo)
+  File "/AcademiaHub/Backend/AcademiaHub/./search/views.py", line 202, in getIeeeJournalFormat
+    ", " + bibInfo["year"] + "."
+KeyError: 'year'
+[pid: 922055|app: 0|req: 1/2] 219.239.227.241 () {40 vars in 704 bytes} [Sat Dec 21 14:09:35 2024] POST /api/search/single-work => generated 76851 bytes in 1486 msecs (HTTP/1.1 500) 7 headers in 250 bytes (1 switches on core 0)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 922053)...
+Gracefully killing worker 2 (pid: 922054)...
+Gracefully killing worker 4 (pid: 922056)...
+Gracefully killing worker 3 (pid: 922055)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /AcademiaHub/Backend/AcademiaHub
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (0.0.0.0:8002)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.28 (64bit) on [Sat Dec 21 14:17:48 2024] ***
+compiled with version: 11.4.0 on 09 December 2024 07:39:47
+os: Linux-5.15.0-113-generic #123-Ubuntu SMP Mon Jun 10 08:16:17 UTC 2024
+nodename: zrtbighandsomeboy
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 16
+current working directory: /AcademiaHub/Backend/AcademiaHub
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /AcademiaHub/Backend/AcademiaHub
+your processes number limit is 126366
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8002 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov  6 2024, 20:22:13) [GCC 11.4.0]
+Python main interpreter initialized at 0x5573cf10cf30
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507960 bytes (496 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5573cf10cf30 pid: 921165 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 921165)
+spawned uWSGI worker 1 (pid: 922447, cores: 1)
+spawned uWSGI worker 2 (pid: 922448, cores: 1)
+spawned uWSGI worker 3 (pid: 922449, cores: 1)
+spawned uWSGI worker 4 (pid: 922450, cores: 1)
+[pid: 922449|app: 0|req: 1/1] 219.239.227.241 () {40 vars in 704 bytes} [Sat Dec 21 14:17:56 2024] POST /api/search/single-work => generated 31303 bytes in 1385 msecs (HTTP/1.1 200) 7 headers in 215 bytes (1 switches on core 0)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 922447)...
+Gracefully killing worker 2 (pid: 922448)...
+Gracefully killing worker 3 (pid: 922449)...
+Gracefully killing worker 4 (pid: 922450)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /AcademiaHub/Backend/AcademiaHub
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (0.0.0.0:8002)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.28 (64bit) on [Sat Dec 21 14:19:43 2024] ***
+compiled with version: 11.4.0 on 09 December 2024 07:39:47
+os: Linux-5.15.0-113-generic #123-Ubuntu SMP Mon Jun 10 08:16:17 UTC 2024
+nodename: zrtbighandsomeboy
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 16
+current working directory: /AcademiaHub/Backend/AcademiaHub
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /AcademiaHub/Backend/AcademiaHub
+your processes number limit is 126366
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8002 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov  6 2024, 20:22:13) [GCC 11.4.0]
+Python main interpreter initialized at 0x55d4477fdf30
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507960 bytes (496 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55d4477fdf30 pid: 921165 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 921165)
+spawned uWSGI worker 1 (pid: 922572, cores: 1)
+spawned uWSGI worker 2 (pid: 922573, cores: 1)
+spawned uWSGI worker 3 (pid: 922574, cores: 1)
+spawned uWSGI worker 4 (pid: 922575, cores: 1)
+[pid: 922575|app: 0|req: 1/1] 219.239.227.241 () {40 vars in 704 bytes} [Sat Dec 21 14:19:45 2024] POST /api/search/single-work => generated 31303 bytes in 1364 msecs (HTTP/1.1 200) 7 headers in 215 bytes (1 switches on core 0)
+[pid: 922575|app: 0|req: 2/2] 219.239.227.241 () {40 vars in 704 bytes} [Sat Dec 21 14:20:39 2024] POST /api/search/single-work => generated 17464 bytes in 1131 msecs (HTTP/1.1 200) 7 headers in 215 bytes (1 switches on core 0)
+Not Found: /login.rsp
+[pid: 922573|app: 0|req: 1/3] 154.213.187.122 () {34 vars in 419 bytes} [Sat Dec 21 14:21:09 2024] GET /login.rsp => generated 2667 bytes in 119 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 922575|app: 0|req: 3/4] 219.239.227.241 () {40 vars in 704 bytes} [Sat Dec 21 14:21:07 2024] POST /api/search/single-work => generated 18373 bytes in 130957 msecs (HTTP/1.1 200) 7 headers in 215 bytes (1 switches on core 0)
+[pid: 922574|app: 0|req: 1/5] 219.239.227.241 () {40 vars in 710 bytes} [Sat Dec 21 14:24:45 2024] POST /api/search/get_statistics => generated 24 bytes in 181 msecs (HTTP/1.1 200) 7 headers in 212 bytes (1 switches on core 0)
+...gracefully killing workers...
+Gracefully killing worker 2 (pid: 922573)...
+Gracefully killing worker 1 (pid: 922572)...
+Gracefully killing worker 3 (pid: 922574)...
+Gracefully killing worker 4 (pid: 922575)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+*** Starting uWSGI 2.0.28 (64bit) on [Sat Dec 21 14:25:04 2024] ***
+compiled with version: 11.4.0 on 09 December 2024 07:39:47
+os: Linux-5.15.0-113-generic #123-Ubuntu SMP Mon Jun 10 08:16:17 UTC 2024
+nodename: zrtbighandsomeboy
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 16
+current working directory: /AcademiaHub/Backend/AcademiaHub
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /AcademiaHub/Backend/AcademiaHub
+your processes number limit is 126366
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8002 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov  6 2024, 20:22:13) [GCC 11.4.0]
+Python main interpreter initialized at 0x56533e637310
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507960 bytes (496 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x56533e637310 pid: 922828 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 922828)
+spawned uWSGI worker 1 (pid: 922829, cores: 1)
+spawned uWSGI worker 2 (pid: 922830, cores: 1)
+spawned uWSGI worker 3 (pid: 922831, cores: 1)
+spawned uWSGI worker 4 (pid: 922832, cores: 1)
+[pid: 922832|app: 0|req: 1/1] 219.239.227.241 () {40 vars in 704 bytes} [Sat Dec 21 14:25:10 2024] POST /api/search/single-work => generated 31303 bytes in 1225 msecs (HTTP/1.1 200) 7 headers in 215 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 2/2] 219.239.227.241 () {40 vars in 704 bytes} [Sat Dec 21 14:25:34 2024] POST /api/search/single-work => generated 18373 bytes in 923 msecs (HTTP/1.1 200) 7 headers in 215 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 3/3] 219.239.227.114 () {40 vars in 704 bytes} [Sat Dec 21 14:29:26 2024] POST /api/search/single-work => generated 15397 bytes in 2160 msecs (HTTP/1.1 200) 7 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 922832|app: 0|req: 4/4] 141.98.11.155 () {28 vars in 310 bytes} [Sat Dec 21 14:49:15 2024] GET / => generated 2622 bytes in 6 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 922832|app: 0|req: 5/5] 46.19.138.234 () {44 vars in 780 bytes} [Sat Dec 21 14:53:29 2024] GET / => generated 2619 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 922832|app: 0|req: 6/6] 3.15.177.251 () {34 vars in 488 bytes} [Sat Dec 21 15:00:45 2024] GET / => generated 2619 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 922832|app: 0|req: 7/7] 164.52.24.179 () {38 vars in 716 bytes} [Sat Dec 21 15:04:16 2024] GET / => generated 2619 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 922831|app: 0|req: 1/8] 164.52.24.179 () {38 vars in 745 bytes} [Sat Dec 21 15:04:20 2024] GET / => generated 2619 bytes in 131 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 922832|app: 0|req: 8/9] 164.52.24.179 () {30 vars in 390 bytes} [Sat Dec 21 15:04:25 2024] GET / => generated 2619 bytes in 3 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 922831|app: 0|req: 2/10] 164.52.24.179 () {38 vars in 738 bytes} [Sat Dec 21 15:04:28 2024] GET /favicon.ico => generated 2670 bytes in 5 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 922832|app: 0|req: 9/11] 164.52.24.179 () {38 vars in 767 bytes} [Sat Dec 21 15:04:32 2024] GET /favicon.ico => generated 2670 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 922832|app: 0|req: 10/12] 95.214.55.32 () {28 vars in 309 bytes} [Sat Dec 21 15:14:51 2024] GET / => generated 2622 bytes in 3 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /ReportServer
+[pid: 922832|app: 0|req: 11/13] 104.209.35.76 () {34 vars in 417 bytes} [Sat Dec 21 15:17:38 2024] GET /ReportServer => generated 2673 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 922830|app: 0|req: 1/14] 219.239.227.162 () {48 vars in 858 bytes} [Sat Dec 21 15:57:56 2024] OPTIONS /api/search/advanced_search => generated 0 bytes in 3 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 3/15] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 15:57:56 2024] POST /api/search/advanced_search => generated 722698 bytes in 2514 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 4/16] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 15:58:00 2024] POST /api/search/get_statistics => generated 24 bytes in 88 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 12/17] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 15:58:02 2024] POST /api/search/get_statistics => generated 24 bytes in 59 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 13/18] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 15:58:04 2024] POST /api/search/get_statistics => generated 24 bytes in 35 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 5/19] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 15:58:06 2024] POST /api/search/get_statistics => generated 24 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 6/20] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 15:58:08 2024] POST /api/search/get_statistics => generated 24 bytes in 51 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922830|app: 0|req: 2/21] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 15:58:10 2024] POST /api/search/get_statistics => generated 24 bytes in 163 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 14/22] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 15:58:12 2024] POST /api/search/get_statistics => generated 24 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922830|app: 0|req: 3/23] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 15:58:14 2024] POST /api/search/get_statistics => generated 24 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922830|app: 0|req: 4/24] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 15:58:27 2024] POST /api/search/get_statistics => generated 24 bytes in 39 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922830|app: 0|req: 5/25] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 15:58:30 2024] POST /api/search/get_statistics => generated 24 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 15/26] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 15:58:32 2024] POST /api/search/get_statistics => generated 24 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+Internal Server Error: /api/search/get_statistics
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/AcademiaHub/Backend/AcademiaHub/./search/views.py", line 546, in get_statistics
+    stats = Statistics.objects.get(filter=query)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/query.py", line 652, in get
+    raise self.model.MultipleObjectsReturned(
+search.models.Statistics.MultipleObjectsReturned: get() returned more than one Statistics -- it returned 4!
+[pid: 922832|app: 0|req: 16/27] 116.62.39.8 () {42 vars in 693 bytes} [Sat Dec 21 15:58:47 2024] POST /api/search/get_statistics => generated 69672 bytes in 185 msecs (HTTP/1.1 500) 7 headers in 250 bytes (1 switches on core 0)
+Internal Server Error: /api/search/get_statistics
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/AcademiaHub/Backend/AcademiaHub/./search/views.py", line 546, in get_statistics
+    stats = Statistics.objects.get(filter=query)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/query.py", line 652, in get
+    raise self.model.MultipleObjectsReturned(
+search.models.Statistics.MultipleObjectsReturned: get() returned more than one Statistics -- it returned 4!
+[pid: 922829|app: 0|req: 1/28] 47.98.188.100 () {42 vars in 695 bytes} [Sat Dec 21 15:59:17 2024] POST /api/search/get_statistics => generated 69674 bytes in 303 msecs (HTTP/1.1 500) 7 headers in 250 bytes (1 switches on core 0)
+Internal Server Error: /api/search/get_statistics
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/AcademiaHub/Backend/AcademiaHub/./search/views.py", line 546, in get_statistics
+    stats = Statistics.objects.get(filter=query)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/query.py", line 652, in get
+    raise self.model.MultipleObjectsReturned(
+search.models.Statistics.MultipleObjectsReturned: get() returned more than one Statistics -- it returned 4!
+[pid: 922830|app: 0|req: 6/29] 121.199.48.27 () {42 vars in 695 bytes} [Sat Dec 21 15:59:19 2024] POST /api/search/get_statistics => generated 69674 bytes in 183 msecs (HTTP/1.1 500) 7 headers in 250 bytes (1 switches on core 0)
+Internal Server Error: /api/search/get_statistics
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/AcademiaHub/Backend/AcademiaHub/./search/views.py", line 546, in get_statistics
+    stats = Statistics.objects.get(filter=query)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/query.py", line 652, in get
+    raise self.model.MultipleObjectsReturned(
+search.models.Statistics.MultipleObjectsReturned: get() returned more than one Statistics -- it returned 4!
+[pid: 922832|app: 0|req: 17/30] 121.199.10.203 () {42 vars in 696 bytes} [Sat Dec 21 15:59:21 2024] POST /api/search/get_statistics => generated 69675 bytes in 183 msecs (HTTP/1.1 500) 7 headers in 250 bytes (1 switches on core 0)
+Internal Server Error: /api/search/get_statistics
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/AcademiaHub/Backend/AcademiaHub/./search/views.py", line 546, in get_statistics
+    stats = Statistics.objects.get(filter=query)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/query.py", line 652, in get
+    raise self.model.MultipleObjectsReturned(
+search.models.Statistics.MultipleObjectsReturned: get() returned more than one Statistics -- it returned 4!
+[pid: 922832|app: 0|req: 18/31] 47.97.203.159 () {42 vars in 695 bytes} [Sat Dec 21 15:59:22 2024] POST /api/search/get_statistics => generated 69674 bytes in 152 msecs (HTTP/1.1 500) 7 headers in 250 bytes (1 switches on core 0)
+Internal Server Error: /api/search/get_statistics
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/AcademiaHub/Backend/AcademiaHub/./search/views.py", line 546, in get_statistics
+    stats = Statistics.objects.get(filter=query)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/query.py", line 652, in get
+    raise self.model.MultipleObjectsReturned(
+search.models.Statistics.MultipleObjectsReturned: get() returned more than one Statistics -- it returned 4!
+[pid: 922830|app: 0|req: 7/32] 114.55.93.83 () {42 vars in 694 bytes} [Sat Dec 21 15:59:30 2024] POST /api/search/get_statistics => generated 69673 bytes in 139 msecs (HTTP/1.1 500) 7 headers in 250 bytes (1 switches on core 0)
+Internal Server Error: /api/search/get_statistics
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/AcademiaHub/Backend/AcademiaHub/./search/views.py", line 546, in get_statistics
+    stats = Statistics.objects.get(filter=query)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/query.py", line 652, in get
+    raise self.model.MultipleObjectsReturned(
+search.models.Statistics.MultipleObjectsReturned: get() returned more than one Statistics -- it returned 4!
+[pid: 922832|app: 0|req: 19/33] 114.55.93.83 () {42 vars in 694 bytes} [Sat Dec 21 15:59:48 2024] POST /api/search/get_statistics => generated 69673 bytes in 133 msecs (HTTP/1.1 500) 7 headers in 250 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 20/34] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 16:00:26 2024] POST /api/search/advanced_search => generated 562428 bytes in 2247 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 21/35] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:00:28 2024] POST /api/search/get_statistics => generated 24 bytes in 32 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 22/36] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:00:30 2024] POST /api/search/get_statistics => generated 24 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 23/37] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:00:33 2024] POST /api/search/get_statistics => generated 24 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 24/38] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:00:35 2024] POST /api/search/get_statistics => generated 24 bytes in 37 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 25/39] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:00:37 2024] POST /api/search/get_statistics => generated 24 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 26/40] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:00:39 2024] POST /api/search/get_statistics => generated 24 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 27/41] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:00:41 2024] POST /api/search/get_statistics => generated 24 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 28/42] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:00:43 2024] POST /api/search/get_statistics => generated 24 bytes in 38 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 29/43] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:00:45 2024] POST /api/search/get_statistics => generated 24 bytes in 46 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 30/44] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:00:47 2024] POST /api/search/get_statistics => generated 24 bytes in 46 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 31/45] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:00:49 2024] POST /api/search/get_statistics => generated 24 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+Internal Server Error: /api/search/get_statistics
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/AcademiaHub/Backend/AcademiaHub/./search/views.py", line 546, in get_statistics
+    stats = Statistics.objects.get(filter=query)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/query.py", line 652, in get
+    raise self.model.MultipleObjectsReturned(
+search.models.Statistics.MultipleObjectsReturned: get() returned more than one Statistics -- it returned 3!
+[pid: 922832|app: 0|req: 32/46] 47.99.59.148 () {42 vars in 694 bytes} [Sat Dec 21 16:00:56 2024] POST /api/search/get_statistics => generated 69520 bytes in 145 msecs (HTTP/1.1 500) 7 headers in 250 bytes (1 switches on core 0)
+Internal Server Error: /api/search/get_statistics
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/AcademiaHub/Backend/AcademiaHub/./search/views.py", line 546, in get_statistics
+    stats = Statistics.objects.get(filter=query)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/query.py", line 652, in get
+    raise self.model.MultipleObjectsReturned(
+search.models.Statistics.MultipleObjectsReturned: get() returned more than one Statistics -- it returned 3!
+[pid: 922832|app: 0|req: 33/47] 121.40.244.240 () {42 vars in 696 bytes} [Sat Dec 21 16:03:05 2024] POST /api/search/get_statistics => generated 69522 bytes in 179 msecs (HTTP/1.1 500) 7 headers in 250 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 34/48] 219.239.227.193 () {40 vars in 742 bytes} [Sat Dec 21 16:03:08 2024] POST /api/mark/get-user-single-mark-list-detail => generated 197 bytes in 61 msecs (HTTP/1.1 200) 7 headers in 213 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 7/49] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:03:32 2024] POST /api/search/get_statistics => generated 24 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 35/50] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:03:34 2024] POST /api/search/get_statistics => generated 24 bytes in 40 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 36/51] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:03:36 2024] POST /api/search/get_statistics => generated 24 bytes in 39 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 37/52] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:03:38 2024] POST /api/search/get_statistics => generated 24 bytes in 37 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 38/53] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:03:41 2024] POST /api/search/get_statistics => generated 24 bytes in 52 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 8/54] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:03:44 2024] POST /api/search/get_statistics => generated 24 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 39/55] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:03:47 2024] POST /api/search/get_statistics => generated 24 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 9/56] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:03:50 2024] POST /api/search/get_statistics => generated 24 bytes in 38 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 40/57] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:03:53 2024] POST /api/search/get_statistics => generated 24 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 41/58] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:03:56 2024] POST /api/search/get_statistics => generated 24 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 42/59] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:03:59 2024] POST /api/search/get_statistics => generated 24 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 43/60] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 16:07:30 2024] POST /api/search/advanced_search => generated 562428 bytes in 1674 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 44/61] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:07:32 2024] POST /api/search/get_statistics => generated 24 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 10/62] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:07:34 2024] POST /api/search/get_statistics => generated 24 bytes in 52 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 11/63] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:07:36 2024] POST /api/search/get_statistics => generated 24 bytes in 49 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 45/64] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:07:38 2024] POST /api/search/get_statistics => generated 24 bytes in 37 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 46/65] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:07:40 2024] POST /api/search/get_statistics => generated 24 bytes in 40 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 47/66] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:07:42 2024] POST /api/search/get_statistics => generated 24 bytes in 35 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 12/67] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:07:44 2024] POST /api/search/get_statistics => generated 24 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922830|app: 0|req: 8/68] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:07:46 2024] POST /api/search/get_statistics => generated 24 bytes in 50 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 48/69] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:07:48 2024] POST /api/search/get_statistics => generated 24 bytes in 37 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 49/70] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:07:51 2024] POST /api/search/get_statistics => generated 24 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 50/71] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:07:53 2024] POST /api/search/get_statistics => generated 24 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 51/72] 219.239.227.241 () {40 vars in 694 bytes} [Sat Dec 21 16:07:55 2024] POST /api/search/search => generated 216435 bytes in 2382 msecs (HTTP/1.1 200) 7 headers in 216 bytes (1 switches on core 0)
+[pid: 922830|app: 0|req: 9/73] 219.239.227.241 () {40 vars in 710 bytes} [Sat Dec 21 16:08:12 2024] POST /api/search/get_statistics => generated 29337 bytes in 51 msecs (HTTP/1.1 200) 7 headers in 215 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 52/74] 219.239.227.241 () {40 vars in 710 bytes} [Sat Dec 21 16:08:13 2024] POST /api/search/get_statistics => generated 29337 bytes in 52 msecs (HTTP/1.1 200) 7 headers in 215 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 53/75] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:28 2024] POST /api/search/get_statistics => generated 24 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 54/76] 219.239.227.241 () {40 vars in 694 bytes} [Sat Dec 21 16:08:30 2024] POST /api/search/search => generated 216435 bytes in 8 msecs (HTTP/1.1 200) 7 headers in 216 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 13/77] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:30 2024] POST /api/search/get_statistics => generated 24 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 14/78] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:32 2024] POST /api/search/get_statistics => generated 24 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 15/79] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:35 2024] POST /api/search/get_statistics => generated 24 bytes in 40 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 55/80] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:37 2024] POST /api/search/get_statistics => generated 24 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922832|app: 0|req: 56/81] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:39 2024] POST /api/search/get_statistics => generated 24 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 16/82] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:41 2024] POST /api/search/get_statistics => generated 24 bytes in 40 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922830|app: 0|req: 10/83] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:43 2024] POST /api/search/get_statistics => generated 24 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 17/84] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:43 2024] POST /api/search/get_statistics => generated 24 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 18/85] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:45 2024] POST /api/search/get_statistics => generated 24 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 19/86] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:45 2024] POST /api/search/get_statistics => generated 24 bytes in 46 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 20/87] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:47 2024] POST /api/search/get_statistics => generated 24 bytes in 38 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 21/88] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:47 2024] POST /api/search/get_statistics => generated 24 bytes in 39 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922830|app: 0|req: 11/89] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:48 2024] POST /api/search/get_statistics => generated 24 bytes in 36 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922830|app: 0|req: 12/90] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:49 2024] POST /api/search/get_statistics => generated 24 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 22/91] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:49 2024] POST /api/search/get_statistics => generated 24 bytes in 38 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922830|app: 0|req: 13/92] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:50 2024] POST /api/search/get_statistics => generated 24 bytes in 37 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922829|app: 0|req: 2/93] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:51 2024] POST /api/search/get_statistics => generated 24 bytes in 39 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 23/94] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:52 2024] POST /api/search/get_statistics => generated 24 bytes in 36 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 24/95] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:53 2024] POST /api/search/get_statistics => generated 24 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922830|app: 0|req: 14/96] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:54 2024] POST /api/search/get_statistics => generated 24 bytes in 39 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 25/97] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:55 2024] POST /api/search/get_statistics => generated 24 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 26/98] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:56 2024] POST /api/search/get_statistics => generated 24 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 27/99] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:57 2024] POST /api/search/get_statistics => generated 24 bytes in 49 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922830|app: 0|req: 15/100] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:58 2024] POST /api/search/get_statistics => generated 24 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 28/101] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:08:59 2024] POST /api/search/get_statistics => generated 24 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 29/102] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:09:00 2024] POST /api/search/get_statistics => generated 24 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922830|app: 0|req: 16/103] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:09:01 2024] POST /api/search/get_statistics => generated 24 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 30/104] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:09:02 2024] POST /api/search/get_statistics => generated 24 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 31/105] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:09:03 2024] POST /api/search/get_statistics => generated 24 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 32/106] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:09:04 2024] POST /api/search/get_statistics => generated 24 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922830|app: 0|req: 17/107] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:09:06 2024] POST /api/search/get_statistics => generated 24 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 33/108] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:09:08 2024] POST /api/search/get_statistics => generated 24 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922830|app: 0|req: 18/109] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:09:09 2024] POST /api/search/get_statistics => generated 24 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922830|app: 0|req: 19/110] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:09:11 2024] POST /api/search/get_statistics => generated 24 bytes in 38 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 34/111] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:09:13 2024] POST /api/search/get_statistics => generated 24 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 35/112] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:09:15 2024] POST /api/search/get_statistics => generated 24 bytes in 39 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 36/113] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:09:17 2024] POST /api/search/get_statistics => generated 24 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 37/114] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:09:17 2024] POST /api/search/get_statistics => generated 24 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 38/115] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:09:19 2024] POST /api/search/get_statistics => generated 24 bytes in 46 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 39/116] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:09:19 2024] POST /api/search/get_statistics => generated 24 bytes in 39 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 40/117] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:09:21 2024] POST /api/search/get_statistics => generated 24 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 41/118] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:09:21 2024] POST /api/search/get_statistics => generated 24 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 42/119] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:09:23 2024] POST /api/search/get_statistics => generated 24 bytes in 40 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 43/120] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:09:23 2024] POST /api/search/get_statistics => generated 24 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 44/121] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:09:25 2024] POST /api/search/get_statistics => generated 24 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 45/122] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:09:25 2024] POST /api/search/get_statistics => generated 24 bytes in 39 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 46/123] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:09:27 2024] POST /api/search/get_statistics => generated 24 bytes in 46 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+[pid: 922831|app: 0|req: 47/124] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 16:09:28 2024] POST /api/search/get_statistics => generated 24 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 304 bytes (1 switches on core 0)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 922829)...
+Gracefully killing worker 4 (pid: 922832)...
+Gracefully killing worker 2 (pid: 922830)...
+Gracefully killing worker 3 (pid: 922831)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+*** Starting uWSGI 2.0.28 (64bit) on [Sat Dec 21 16:10:03 2024] ***
+compiled with version: 11.4.0 on 09 December 2024 07:39:47
+os: Linux-5.15.0-113-generic #123-Ubuntu SMP Mon Jun 10 08:16:17 UTC 2024
+nodename: zrtbighandsomeboy
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 16
+current working directory: /AcademiaHub/Backend/AcademiaHub
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /AcademiaHub/Backend/AcademiaHub
+your processes number limit is 126366
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8002 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov  6 2024, 20:22:13) [GCC 11.4.0]
+Python main interpreter initialized at 0x55b91042c310
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507960 bytes (496 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55b91042c310 pid: 927708 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 927708)
+spawned uWSGI worker 1 (pid: 927709, cores: 1)
+spawned uWSGI worker 2 (pid: 927710, cores: 1)
+spawned uWSGI worker 3 (pid: 927711, cores: 1)
+spawned uWSGI worker 4 (pid: 927712, cores: 1)
+[pid: 927711|app: 0|req: 1/1] 219.239.227.241 () {40 vars in 694 bytes} [Sat Dec 21 16:10:10 2024] POST /api/search/search => generated 216433 bytes in 2101 msecs (HTTP/1.1 200) 7 headers in 216 bytes (1 switches on core 0)
+[pid: 927711|app: 0|req: 2/2] 219.239.227.241 () {40 vars in 710 bytes} [Sat Dec 21 16:10:23 2024] POST /api/search/get_statistics => generated 24 bytes in 47 msecs (HTTP/1.1 200) 7 headers in 212 bytes (1 switches on core 0)
+[pid: 927711|app: 0|req: 3/3] 219.239.227.241 () {40 vars in 710 bytes} [Sat Dec 21 16:10:38 2024] POST /api/search/get_statistics => generated 24 bytes in 41 msecs (HTTP/1.1 200) 7 headers in 212 bytes (1 switches on core 0)
+[pid: 927712|app: 0|req: 1/4] 219.239.227.241 () {40 vars in 710 bytes} [Sat Dec 21 16:10:40 2024] POST /api/search/get_statistics => generated 24 bytes in 157 msecs (HTTP/1.1 200) 7 headers in 212 bytes (1 switches on core 0)
+[pid: 927712|app: 0|req: 2/5] 219.239.227.241 () {40 vars in 710 bytes} [Sat Dec 21 16:11:05 2024] POST /api/search/get_statistics => generated 24 bytes in 44 msecs (HTTP/1.1 200) 7 headers in 212 bytes (1 switches on core 0)
+[pid: 927712|app: 0|req: 3/6] 219.239.227.241 () {40 vars in 710 bytes} [Sat Dec 21 16:11:10 2024] POST /api/search/get_statistics => generated 24 bytes in 44 msecs (HTTP/1.1 200) 7 headers in 212 bytes (1 switches on core 0)
+[pid: 927712|app: 0|req: 4/7] 219.239.227.241 () {40 vars in 710 bytes} [Sat Dec 21 16:11:11 2024] POST /api/search/get_statistics => generated 24 bytes in 47 msecs (HTTP/1.1 200) 7 headers in 212 bytes (1 switches on core 0)
+[pid: 927712|app: 0|req: 5/8] 219.239.227.241 () {40 vars in 710 bytes} [Sat Dec 21 16:11:28 2024] POST /api/search/get_statistics => generated 24 bytes in 54 msecs (HTTP/1.1 200) 7 headers in 212 bytes (1 switches on core 0)
+[pid: 927712|app: 0|req: 6/9] 219.239.227.241 () {40 vars in 710 bytes} [Sat Dec 21 16:11:29 2024] POST /api/search/get_statistics => generated 24 bytes in 38 msecs (HTTP/1.1 200) 7 headers in 212 bytes (1 switches on core 0)
+[pid: 927712|app: 0|req: 7/10] 219.239.227.241 () {40 vars in 710 bytes} [Sat Dec 21 16:11:29 2024] POST /api/search/get_statistics => generated 24 bytes in 34 msecs (HTTP/1.1 200) 7 headers in 212 bytes (1 switches on core 0)
+[pid: 927712|app: 0|req: 8/11] 219.239.227.241 () {40 vars in 710 bytes} [Sat Dec 21 16:15:02 2024] POST /api/search/get_statistics => generated 29379 bytes in 68 msecs (HTTP/1.1 200) 7 headers in 215 bytes (1 switches on core 0)
+[pid: 927711|app: 0|req: 4/12] 219.239.227.241 () {40 vars in 694 bytes} [Sat Dec 21 16:15:08 2024] POST /api/search/search => generated 216433 bytes in 7 msecs (HTTP/1.1 200) 7 headers in 216 bytes (1 switches on core 0)
+Not Found: /
+[pid: 927712|app: 0|req: 9/13] 92.255.57.58 () {34 vars in 554 bytes} [Sat Dec 21 16:16:33 2024] GET /?XDEBUG_SESSION_START=phpstorm => generated 2652 bytes in 10 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+...gracefully killing workers...
+Gracefully killing worker 3 (pid: 927711)...
+Gracefully killing worker 1 (pid: 927709)...
+Gracefully killing worker 2 (pid: 927710)...
+Gracefully killing worker 4 (pid: 927712)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /AcademiaHub/Backend/AcademiaHub
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (0.0.0.0:8002)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.28 (64bit) on [Sat Dec 21 16:20:46 2024] ***
+compiled with version: 11.4.0 on 09 December 2024 07:39:47
+os: Linux-5.15.0-113-generic #123-Ubuntu SMP Mon Jun 10 08:16:17 UTC 2024
+nodename: zrtbighandsomeboy
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 16
+current working directory: /AcademiaHub/Backend/AcademiaHub
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /AcademiaHub/Backend/AcademiaHub
+your processes number limit is 126366
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8002 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov  6 2024, 20:22:13) [GCC 11.4.0]
+Python main interpreter initialized at 0x556be70a3f30
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507960 bytes (496 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x556be70a3f30 pid: 927708 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 927708)
+spawned uWSGI worker 1 (pid: 928312, cores: 1)
+spawned uWSGI worker 2 (pid: 928313, cores: 1)
+spawned uWSGI worker 3 (pid: 928314, cores: 1)
+spawned uWSGI worker 4 (pid: 928315, cores: 1)
+[pid: 928315|app: 0|req: 1/1] 219.239.227.241 () {40 vars in 710 bytes} [Sat Dec 21 16:21:07 2024] POST /api/search/get_statistics => generated 29379 bytes in 191 msecs (HTTP/1.1 200) 7 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 928315|app: 0|req: 2/2] 167.94.145.102 () {28 vars in 311 bytes} [Sat Dec 21 16:32:04 2024] GET / => generated 2622 bytes in 10 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 928314|app: 0|req: 1/3] 219.239.227.193 () {40 vars in 706 bytes} [Sat Dec 21 16:35:38 2024] POST /api/mark/get-user-marks => generated 1551 bytes in 2142 msecs (HTTP/1.1 200) 7 headers in 214 bytes (1 switches on core 0)
+[pid: 928315|app: 0|req: 3/4] 219.239.227.193 () {40 vars in 706 bytes} [Sat Dec 21 16:35:07 2024] POST /api/mark/get-user-marks => generated 1551 bytes in 132644 msecs (HTTP/1.1 200) 7 headers in 214 bytes (1 switches on core 0)

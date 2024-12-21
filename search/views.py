@@ -11,7 +11,7 @@ import threading
 import logging
 import requests
 from .tasks import *
-
+import re
 logger = logging.getLogger('mylogger')
 
 
@@ -180,6 +180,141 @@ def add_search_work_num(work_id, work_title):
     threading.Thread(target=task).start()
 
 
+def getIeeeJournalFormat(bibInfo):
+    """
+    生成期刊文献的IEEE引用格式：{作者}, "{文章标题}," {期刊名称}, vol. {卷数}, no. {编号}, pp. {页码}, {年份}.
+    :return: {author}, "{title}," {journal}, vol. {volume}, no. {number}, pp. {pages}, {year}.
+    """
+    # 避免字典出现null值
+    if "volume" not in bibInfo:
+        bibInfo["volume"] = "null"
+    if "number" not in bibInfo:
+        bibInfo["number"] = "null"
+    if "pages" not in bibInfo:
+        bibInfo["pages"] = "null"
+
+    journalFormat =  bibInfo["author"] + \
+           ", \"" + bibInfo["title"] + \
+           ",\" " + bibInfo["journal"] + \
+           ", vol. " + bibInfo["volume"] + \
+           ", no. " + bibInfo["number"] + \
+           ", pp. " + bibInfo["pages"] + \
+           ", " + bibInfo["year"] + "."
+
+    # 对格式进行调整，去掉没有的信息，调整页码格式
+    journalFormatNormal = journalFormat.replace(", vol. null", "")
+    journalFormatNormal = journalFormatNormal.replace(", no. null", "")
+    journalFormatNormal = journalFormatNormal.replace(", pp. null", "")
+    journalFormatNormal = journalFormatNormal.replace("--", "-")
+    return journalFormatNormal
+
+def getIeeeConferenceFormat(bibInfo):
+    """
+    生成会议文献的IEEE引用格式：{作者}, "{文章标题}, " in {会议名称}, {年份}, pp. {页码}.
+    :return: {author}, "{title}, " in {booktitle}, {year}, pp. {pages}.
+    """
+    conferenceFormat = bibInfo["author"] + \
+                    ", \"" + bibInfo["title"] + ",\" " + \
+                    ", in " + bibInfo["booktitle"] + \
+                    ", " + bibInfo["year"] + \
+                    ", pp. " + bibInfo["pages"] + "."
+
+    # 对格式进行调整，，调整页码格式
+    conferenceFormatNormal = conferenceFormat.replace("--", "-")
+    return conferenceFormatNormal
+
+def getIeeeFormat(bibInfo):
+    """
+    本函数用于根据文献类型调用相应函数来输出ieee文献引用格式
+    :param bibInfo: 提取出的BibTeX引用信息
+    :return: ieee引用格式
+    """
+    if "journal" in bibInfo: # 期刊论文
+        return getIeeeJournalFormat(bibInfo)
+    elif "booktitle" in bibInfo: # 会议论文
+        return getIeeeConferenceFormat(bibInfo)
+
+def inforDir(bibtex):
+    #pattern = "[\w]+={[^{}]+}"   用正则表达式匹配符合 ...={...} 的字符串
+    pattern1 = "[\w]+=" # 用正则表达式匹配符合 ...= 的字符串
+    pattern2 = "{[^{}]+}" # 用正则表达式匹配符合 内层{...} 的字符串
+
+    # 找到所有的...=，并去除=号
+    result1 = re.findall(pattern1, bibtex)
+    for index in range(len(result1)) :
+        result1[index] = re.sub('=', '', result1[index])
+    # 找到所有的{...}，并去除{和}号
+    result2 = re.findall(pattern2, bibtex)
+    for index in range(len(result2)) :
+        result2[index] = re.sub('\{', '', result2[index])
+        result2[index] = re.sub('\}', '', result2[index])
+
+    # 创建BibTeX引用字典，归档所有有效信息
+    infordir = {}
+    for index in range(len(result1)):
+        infordir[result1[index]] = result2[index]
+    return infordir
+
+def generate_bibtex(specific_work):
+    """
+    根据获取到的特定工作生成 BibTeX 格式的引用。
+    :param specific_work: 获取到的特定工作数据
+    :return: BibTeX 格式的引用字符串
+    """
+    # 从 specific_work 中提取数据
+    authorships = specific_work.get("authorships", [])
+    title = specific_work.get("title", "")
+    year = specific_work.get("publication_year", "")
+    pages = specific_work.get("pages", "")
+    volume = specific_work.get("volume", "")
+    number = specific_work.get("number", "")
+    flag =0  # flag: 0-journal
+
+    if specific_work.get("primary_location","").get("source").get("type","") == "journal":
+        flag = 0
+        journal = specific_work.get("primary_location","").get("source").get("display_name","")
+    elif specific_work.get("primary_location","").get("source").get("type","") == "conference":
+        flag = 1
+        booktitle = specific_work.get("primary_location","").get("source").get("display_name","")
+    else:
+        flag = 2
+
+    # 从 authorships 提取作者的 display_name
+    author_names = [authorship.get("author", {}).get("display_name", "") for authorship in authorships]
+    author_str = " and ".join(author_names)
+
+
+    # 选择生成期刊论文或会议论文
+    if flag == 0:  # 如果有期刊
+        bibtex = f"@article{{{specific_work['id']},\n"
+        bibtex += f"author={{{author_str}}},\n"
+        bibtex += f"title={{{title}}},\n"
+        bibtex += f"journal= {{{journal}}},\n"
+        if volume:
+            bibtex += f"volume={{{volume}}},\n"
+        if number:
+            bibtex += f"number={{{number}}},\n"
+        if pages:
+            bibtex += f"pages={{{pages}}},\n"
+        bibtex += f"year={{{year}}}\n"
+        bibtex += "}"
+
+    elif flag == 1:  # 如果是会议论文
+        bibtex = f"@inproceedings{{{specific_work['id']},\n"
+        bibtex += f"author={{{author_str}}},\n"
+        bibtex += f"title={{{title}}},\n"
+        bibtex += f"booktitle={{{booktitle}}},\n"
+        if pages:
+            bibtex += f"pages={{{pages}}},\n"
+        bibtex += f"year={{{year}}}\n"
+        bibtex += "}"
+
+    else:
+        bibtex = ""
+
+    return bibtex
+
+
 # 获得特定的文章
 @require_POST
 def get_specific_work(request):
@@ -187,6 +322,14 @@ def get_specific_work(request):
     specific_work = get_single_work(openalex_id)
     work_id = specific_work['id']
     work_title = specific_work['title']
+
+    # 生成 BibTeX 引用格式
+    bibtex = generate_bibtex(specific_work)
+
+    # 转换为 IEEE 格式
+    bibtex_info = inforDir(bibtex)  # 将 BibTeX 转换为字典
+    ieee_format = getIeeeFormat(bibtex_info)  # 转换为 IEEE 格式
+
     specific_work['pdf'] = None
     for location in specific_work['locations']:
         pdf_url = location.get("pdf_url")
@@ -196,7 +339,11 @@ def get_specific_work(request):
 
     add_search_work_num(work_id, work_title)
 
-    result = {'result': specific_work}
+    result = {
+        'bibtex': bibtex,  # 返回 BibTeX 格式的引用
+        'ieee': ieee_format,  # 返回 IEEE 格式的引用
+        'result': specific_work
+    }
     return JsonResponse(result)
 
 def get_top10_words(num):
@@ -396,7 +543,7 @@ def get_statistics(request):
 
     # 尝试从数据库中获取统计数据
     try:
-        stats = Statistics.objects.get(filter=query)
+        stats = Statistics.objects.filter(filter=query).first()
         return JsonResponse({'status': 'completed', 'stats': {
             'publication_year_list': stats.publication_year_list,
             'type_list': stats.type_list,

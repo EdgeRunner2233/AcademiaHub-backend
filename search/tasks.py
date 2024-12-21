@@ -45,7 +45,7 @@ def calculate_statistics(params):
     author_list = data.get('group_by', [])
 
     # 创建新的统计记录
-    stats = Statistics.objects.create(
+    stats = Statistics.objects.update_or_create(
         filter=params['filter'],
         publication_year_list=publication_year_list,
         type_list=type_list,

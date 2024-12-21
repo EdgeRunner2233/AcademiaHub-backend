@@ -102,3 +102,11 @@ def chunks(task, it, n):
 def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
     return 1
 
+
+def calculate_statistics(params):
+    return 1
+
+
+def calculate_statistics(params):
+    return 1
+

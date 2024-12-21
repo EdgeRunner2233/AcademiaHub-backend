@@ -97,10 +97,10 @@ def get_user_marks(request):
 
         topics_dict = defaultdict(list)
 
-        work_ids = [relationship.work_id for relationship in mark_relationships]
+        work_ids = [relationship.to_dic() for relationship in mark_relationships]
 
-        for work_id in work_ids:
-            work = get_single_work(work_id)
+        for mark_relationship in mark_relationships:
+            work = get_single_work(mark_relationship.work_id)
             topics = work.get('topics', [])
 
             for topic in topics:
@@ -108,7 +108,8 @@ def get_user_marks(request):
                 topic_name = topic['display_name']
 
                 topics_dict[topic_name].append({
-                    'id': work['id'],
+                    'id': mark_relationship.id,
+                    'work_id': work['id'],
                     'title': work['title'],
                     'doi': work['doi'],
                     'publication_year': work['publication_year'],

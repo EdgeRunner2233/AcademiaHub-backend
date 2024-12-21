@@ -125,7 +125,7 @@ LOGGING = {
         'celeryFile': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': 'celery.log',  # 文件保存在当前目录
+            'filename': 'celeryFile.log',  # 文件保存在当前目录
         },
     },
     'loggers': {
