@@ -1,11 +1,12 @@
 import pytz
 import sqlalchemy as sql
+from src.util import logger
+from src.cache import Token
+import src.config as config
 import sqlalchemy.exc as exc
 from datetime import datetime
 from src.extensions import db
 from flask_babel import gettext
-from src.util import logger
-from src.cache import Token
 import werkzeug.security as security
 from typing import Type, TypeVar, Optional, Union, Tuple, List
 
@@ -85,10 +86,12 @@ class User(db.Model, Base):  # type: ignore
     nickname = sql.Column(sql.String(20))
     password_hash = sql.Column(sql.String(256))
 
+    avatar_url = sql.Column(sql.String(150), default=config.DEFAULT_AVATAR_URL)
+
     openalex_id = sql.Column(sql.String(30), default="")
-    organization = sql.Column(sql.String(50), default="")
+    organization = sql.Column(sql.String(100), default="")
     title = sql.Column(sql.String(20), default="")
-    research_field = sql.Column(sql.String(50), default="")
+    research_field = sql.Column(sql.String(200), default="")
     gmt_became_researcher = sql.Column(sql.DateTime)
 
     gmt_registered = sql.Column(sql.DateTime, default=datetime.now(tz))

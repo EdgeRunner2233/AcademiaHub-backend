@@ -34,6 +34,9 @@ def create_app(**config):
     babel.init_app(app)
     redis.init_app(app)
 
+    with app.app_context():
+        db.create_all()
+
     app.register_blueprint(rsc_service_bp)
     app.register_blueprint(user_service_bp)
 
