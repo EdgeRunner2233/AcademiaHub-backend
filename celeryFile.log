@@ -106,3 +106,23 @@ def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retri
 def accumulate(self, *args, **kwargs):
     return 1
 
+
+def calculate_statistics(params):
+    return 1
+
+
+def calculate_statistics(params):
+    return 1
+
+
+def calculate_statistics(params):
+    return 1
+
+
+def calculate_statistics(params):
+    return 1
+
+
+def calculate_statistics(params):
+    return 1
+

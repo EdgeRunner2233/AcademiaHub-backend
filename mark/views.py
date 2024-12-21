@@ -46,7 +46,6 @@ def modify_description(request):
     return JsonResponse(result)
 
 
-
 @require_POST
 def add_mark(request):
     user_id = request.POST.get('user_id', '')
@@ -62,13 +61,13 @@ def add_mark(request):
         result = {'result': 'error', 'massage': '标记列表不存在'}
         return JsonResponse(result)
 
-    mark.count += 1  
-    mark.save()  
-
     mark_relationships = MarkRelationships.objects.filter(mark_list=mark, work_id=work_id)
     if mark_relationships:
         result = {'result': 'error', 'massage': '已添加到标记列表中'}
         return JsonResponse(result)
+
+    mark.count += 1
+    mark.save()
 
     mark_relationship = MarkRelationships.objects.create(mark_list=mark, work_id=work_id)
     result = {'result': 'successful', 'message': '添加成功', 'id': mark_relationship.id, 'mark_list_id': mark.id, 'work_id': work_id}
@@ -156,8 +155,8 @@ def get_user_single_mark_list(request):
 
         work_ids = [relationship.work_id for relationship in mark_relationships]
 
-        for work_id in work_ids:
-            work = get_single_work(work_id)
+        for mark_relationship in mark_relationships:
+            work = get_single_work(mark_relationship.work_id)
             topics = work.get('topics', [])
 
             for topic in topics:
@@ -165,7 +164,8 @@ def get_user_single_mark_list(request):
                 topic_name = topic['display_name']
 
                 topics_dict[topic_name].append({
-                    'id': work['id'],
+                    'id': mark_relationship.id,
+                    'work_id': work['id'],
                     'title': work['title'],
                     'doi': work['doi'],
                     'publication_year': work['publication_year'],
@@ -215,6 +215,8 @@ def delete_mark_relationship(request):
     user_id = request.POST.get('user_id', '')
     mark_relationship_id = request.POST.get('mark_relationship_id', '')
 
+
+
     if user_id == '' or mark_relationship_id == '':
         result = {'result': 'error', 'message': '缺少用户id 或 标记id'}
         return JsonResponse(result)
@@ -223,9 +225,11 @@ def delete_mark_relationship(request):
     if not mark_relationship:
         result = {'result': 'error', 'message': '标记id不存在'}
         return JsonResponse(result)
-
+    mark_list = mark_relationship.mark_list
+    mark_list.count -= 1
+    mark_list.save()
     mark_relationship.delete()
-    result = {'result': 'successful', 'message': 'MarkRelationship deleted successfully'}
+    result = {'result': 'successful', 'mark_work_id': mark_relationship_id, 'message': 'MarkRelationship deleted successfully'}
     return JsonResponse(result)
 
 
@@ -244,7 +248,7 @@ def delete_mark(request):
         return JsonResponse(result)
 
     mark.delete()
-    result = {'result': 'successful', 'message': 'Mark deleted successfully'}
+    result = {'result': 'successful', 'mark_id': mark_id, 'message': 'Mark deleted successfully'}
     return JsonResponse(result)
 
 @require_POST
