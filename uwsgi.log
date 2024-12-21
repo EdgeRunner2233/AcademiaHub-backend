@@ -4432,3 +4432,911 @@ Not Found: /
 [pid: 928315|app: 0|req: 2/2] 167.94.145.102 () {28 vars in 311 bytes} [Sat Dec 21 16:32:04 2024] GET / => generated 2622 bytes in 10 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
 [pid: 928314|app: 0|req: 1/3] 219.239.227.193 () {40 vars in 706 bytes} [Sat Dec 21 16:35:38 2024] POST /api/mark/get-user-marks => generated 1551 bytes in 2142 msecs (HTTP/1.1 200) 7 headers in 214 bytes (1 switches on core 0)
 [pid: 928315|app: 0|req: 3/4] 219.239.227.193 () {40 vars in 706 bytes} [Sat Dec 21 16:35:07 2024] POST /api/mark/get-user-marks => generated 1551 bytes in 132644 msecs (HTTP/1.1 200) 7 headers in 214 bytes (1 switches on core 0)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 928312)...
+Gracefully killing worker 2 (pid: 928313)...
+Gracefully killing worker 3 (pid: 928314)...
+Gracefully killing worker 4 (pid: 928315)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+Sat Dec 21 16:45:48 2024 - worker 4 (pid: 928315) is taking too much time to die...NO MERCY !!!
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /AcademiaHub/Backend/AcademiaHub
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (0.0.0.0:8002)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.28 (64bit) on [Sat Dec 21 16:45:49 2024] ***
+compiled with version: 11.4.0 on 09 December 2024 07:39:47
+os: Linux-5.15.0-113-generic #123-Ubuntu SMP Mon Jun 10 08:16:17 UTC 2024
+nodename: zrtbighandsomeboy
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 16
+current working directory: /AcademiaHub/Backend/AcademiaHub
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /AcademiaHub/Backend/AcademiaHub
+your processes number limit is 126366
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8002 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov  6 2024, 20:22:13) [GCC 11.4.0]
+Python main interpreter initialized at 0x561ee8c08f30
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507960 bytes (496 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x561ee8c08f30 pid: 927708 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 927708)
+spawned uWSGI worker 1 (pid: 929749, cores: 1)
+spawned uWSGI worker 2 (pid: 929750, cores: 1)
+spawned uWSGI worker 3 (pid: 929751, cores: 1)
+spawned uWSGI worker 4 (pid: 929752, cores: 1)
+[pid: 929751|app: 0|req: 1/1] 219.239.227.241 () {40 vars in 710 bytes} [Sat Dec 21 16:47:54 2024] POST /api/search/get_statistics => generated 29379 bytes in 180 msecs (HTTP/1.1 200) 7 headers in 215 bytes (1 switches on core 0)
+[pid: 929749|app: 0|req: 1/2] 219.239.227.193 () {40 vars in 706 bytes} [Sat Dec 21 16:45:50 2024] POST /api/mark/get-user-marks => generated 1593 bytes in 131410 msecs (HTTP/1.1 200) 7 headers in 214 bytes (1 switches on core 0)
+[pid: 929751|app: 0|req: 2/3] 219.239.227.193 () {40 vars in 706 bytes} [Sat Dec 21 16:48:11 2024] POST /api/mark/get-user-marks => generated 1593 bytes in 136 msecs (HTTP/1.1 200) 7 headers in 214 bytes (1 switches on core 0)
+[pid: 929752|app: 0|req: 1/4] 219.239.227.193 () {40 vars in 706 bytes} [Sat Dec 21 16:46:13 2024] POST /api/mark/get-user-marks => generated 1593 bytes in 131016 msecs (HTTP/1.1 200) 7 headers in 214 bytes (1 switches on core 0)
+[pid: 929751|app: 0|req: 3/5] 219.239.227.193 () {40 vars in 716 bytes} [Sat Dec 21 16:50:24 2024] POST /api/mark/get-user-mark-lists => generated 583 bytes in 55 msecs (HTTP/1.1 200) 7 headers in 213 bytes (1 switches on core 0)
+Not Found: /actuator/gateway/routes
+[pid: 929752|app: 0|req: 2/6] 92.255.57.58 () {34 vars in 541 bytes} [Sat Dec 21 16:52:08 2024] GET /actuator/gateway/routes => generated 2709 bytes in 10 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 929752|app: 0|req: 3/7] 219.239.227.193 () {40 vars in 728 bytes} [Sat Dec 21 16:58:19 2024] POST /api/mark/get-user-single-mark-list => generated 1173 bytes in 2028 msecs (HTTP/1.1 200) 7 headers in 214 bytes (1 switches on core 0)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 929749)...
+Gracefully killing worker 2 (pid: 929750)...
+Gracefully killing worker 3 (pid: 929751)...
+Gracefully killing worker 4 (pid: 929752)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /AcademiaHub/Backend/AcademiaHub
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (0.0.0.0:8002)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.28 (64bit) on [Sat Dec 21 16:58:34 2024] ***
+compiled with version: 11.4.0 on 09 December 2024 07:39:47
+os: Linux-5.15.0-113-generic #123-Ubuntu SMP Mon Jun 10 08:16:17 UTC 2024
+nodename: zrtbighandsomeboy
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 16
+current working directory: /AcademiaHub/Backend/AcademiaHub
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /AcademiaHub/Backend/AcademiaHub
+your processes number limit is 126366
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8002 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov  6 2024, 20:22:13) [GCC 11.4.0]
+Python main interpreter initialized at 0x55a0c98f1f30
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507960 bytes (496 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55a0c98f1f30 pid: 927708 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 927708)
+spawned uWSGI worker 1 (pid: 930315, cores: 1)
+spawned uWSGI worker 2 (pid: 930316, cores: 1)
+spawned uWSGI worker 3 (pid: 930317, cores: 1)
+spawned uWSGI worker 4 (pid: 930318, cores: 1)
+[pid: 930318|app: 0|req: 1/1] 219.239.227.193 () {40 vars in 728 bytes} [Sat Dec 21 16:58:36 2024] POST /api/mark/get-user-single-mark-list => generated 1215 bytes in 206 msecs (HTTP/1.1 200) 7 headers in 214 bytes (1 switches on core 0)
+[pid: 930318|app: 0|req: 2/2] 219.239.227.193 () {40 vars in 728 bytes} [Sat Dec 21 16:58:55 2024] POST /api/mark/get-user-single-mark-list => generated 1215 bytes in 66 msecs (HTTP/1.1 200) 7 headers in 214 bytes (1 switches on core 0)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 930315)...
+Gracefully killing worker 3 (pid: 930317)...
+Gracefully killing worker 2 (pid: 930316)...
+Gracefully killing worker 4 (pid: 930318)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /AcademiaHub/Backend/AcademiaHub
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (0.0.0.0:8002)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.28 (64bit) on [Sat Dec 21 17:01:57 2024] ***
+compiled with version: 11.4.0 on 09 December 2024 07:39:47
+os: Linux-5.15.0-113-generic #123-Ubuntu SMP Mon Jun 10 08:16:17 UTC 2024
+nodename: zrtbighandsomeboy
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 16
+current working directory: /AcademiaHub/Backend/AcademiaHub
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /AcademiaHub/Backend/AcademiaHub
+your processes number limit is 126366
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8002 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov  6 2024, 20:22:13) [GCC 11.4.0]
+Python main interpreter initialized at 0x55850d4e5f30
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507960 bytes (496 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55850d4e5f30 pid: 927708 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 927708)
+spawned uWSGI worker 1 (pid: 930499, cores: 1)
+spawned uWSGI worker 2 (pid: 930500, cores: 1)
+spawned uWSGI worker 3 (pid: 930501, cores: 1)
+spawned uWSGI worker 4 (pid: 930502, cores: 1)
+[pid: 930502|app: 0|req: 1/1] 219.239.227.193 () {40 vars in 706 bytes} [Sat Dec 21 17:02:06 2024] POST /api/mark/get-user-marks => generated 1593 bytes in 234 msecs (HTTP/1.1 200) 7 headers in 214 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 2/2] 219.239.227.193 () {40 vars in 704 bytes} [Sat Dec 21 17:02:17 2024] POST /api/search/single-work => generated 15397 bytes in 1554 msecs (HTTP/1.1 200) 7 headers in 215 bytes (1 switches on core 0)
+[pid: 930499|app: 0|req: 1/3] 219.239.227.193 () {40 vars in 694 bytes} [Sat Dec 21 17:02:32 2024] POST /api/search/search => generated 51708 bytes in 1285 msecs (HTTP/1.1 200) 7 headers in 215 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 3/4] 219.239.227.193 () {40 vars in 728 bytes} [Sat Dec 21 17:02:56 2024] POST /api/mark/get-user-single-mark-list => generated 1215 bytes in 51 msecs (HTTP/1.1 200) 7 headers in 214 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 4/5] 219.239.227.193 () {40 vars in 716 bytes} [Sat Dec 21 17:02:59 2024] POST /api/mark/get-user-mark-lists => generated 583 bytes in 54 msecs (HTTP/1.1 200) 7 headers in 213 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 1/6] 219.239.227.193 () {40 vars in 710 bytes} [Sat Dec 21 17:03:25 2024] POST /api/mark/create-mark-list => generated 139 bytes in 173 msecs (HTTP/1.1 200) 7 headers in 213 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 1/7] 219.239.227.193 () {40 vars in 694 bytes} [Sat Dec 21 17:03:52 2024] POST /api/mark/add-mark => generated 138 bytes in 181 msecs (HTTP/1.1 200) 7 headers in 213 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 2/8] 219.239.227.193 () {40 vars in 726 bytes} [Sat Dec 21 17:04:11 2024] POST /api/mark/delete-mark-relationship => generated 97 bytes in 47 msecs (HTTP/1.1 200) 7 headers in 212 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 5/9] 219.239.227.193 () {40 vars in 700 bytes} [Sat Dec 21 17:04:41 2024] POST /api/mark/delete-mark => generated 80 bytes in 86 msecs (HTTP/1.1 200) 7 headers in 212 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 6/10] 219.239.227.182 () {48 vars in 799 bytes} [Sat Dec 21 17:38:03 2024] OPTIONS /api/search/hot-paper => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 2/11] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 17:38:03 2024] POST /api/search/hot-paper => generated 1528 bytes in 49 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 7/12] 219.239.227.182 () {48 vars in 797 bytes} [Sat Dec 21 17:38:03 2024] OPTIONS /api/search/hot-word => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 8/13] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 17:38:03 2024] POST /api/search/hot-word => generated 339 bytes in 70 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 9/14] 219.239.227.182 () {48 vars in 799 bytes} [Sat Dec 21 17:38:03 2024] OPTIONS /api/search/new-paper => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 10/15] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 17:38:03 2024] POST /api/search/new-paper => generated 2166 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 11/16] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 17:38:07 2024] POST /api/search/hot-paper => generated 1528 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 12/17] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 17:38:07 2024] POST /api/search/hot-word => generated 339 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 13/18] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 17:38:07 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 14/19] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 17:38:22 2024] POST /api/search/hot-paper => generated 1528 bytes in 46 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 15/20] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 17:38:22 2024] POST /api/search/hot-word => generated 339 bytes in 50 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 16/21] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 17:38:22 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 17/22] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 17:39:03 2024] POST /api/search/hot-paper => generated 1528 bytes in 55 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 18/23] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 17:39:03 2024] POST /api/search/hot-word => generated 339 bytes in 55 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 19/24] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 17:39:03 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 3/25] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 17:39:26 2024] POST /api/search/hot-paper => generated 1528 bytes in 37 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 4/26] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 17:39:26 2024] POST /api/search/hot-word => generated 339 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 5/27] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 17:39:26 2024] POST /api/search/new-paper => generated 2166 bytes in 30 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 20/28] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 17:40:02 2024] POST /api/search/hot-paper => generated 1528 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 21/29] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 17:40:02 2024] POST /api/search/hot-word => generated 339 bytes in 39 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930499|app: 0|req: 2/30] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 17:40:02 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 22/31] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 17:40:20 2024] POST /api/search/hot-paper => generated 1528 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 23/32] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 17:40:20 2024] POST /api/search/hot-word => generated 339 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 24/33] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 17:40:20 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 25/34] 219.239.227.182 () {40 vars in 700 bytes} [Sat Dec 21 17:41:39 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 214 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 26/35] 219.239.227.182 () {40 vars in 700 bytes} [Sat Dec 21 17:42:20 2024] POST /api/search/hot-paper => generated 1528 bytes in 63 msecs (HTTP/1.1 200) 7 headers in 214 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 27/36] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 17:42:40 2024] POST /api/search/hot-paper => generated 1528 bytes in 52 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 28/37] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 17:42:40 2024] POST /api/search/hot-word => generated 339 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 29/38] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 17:42:40 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 30/39] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 17:42:44 2024] POST /api/search/hot-paper => generated 1528 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 31/40] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 17:42:44 2024] POST /api/search/hot-word => generated 339 bytes in 50 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 32/41] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 17:42:44 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 33/42] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 17:42:57 2024] POST /api/search/new-paper => generated 2166 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 3/43] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 17:43:03 2024] POST /api/search/hot-paper => generated 1528 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 34/44] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 17:43:03 2024] POST /api/search/hot-word => generated 339 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 35/45] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 17:43:03 2024] POST /api/search/new-paper => generated 2166 bytes in 39 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 36/46] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 17:56:38 2024] POST /api/search/hot-paper => generated 1528 bytes in 52 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+Not Found: /actuator/health
+[pid: 930502|app: 0|req: 37/47] 172.169.207.7 () {34 vars in 423 bytes} [Sat Dec 21 17:57:12 2024] GET /actuator/health => generated 2682 bytes in 6 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 38/48] 46.232.120.230 () {46 vars in 828 bytes} [Sat Dec 21 18:03:40 2024] OPTIONS /api/search/advanced_search => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 39/49] 46.232.120.230 () {44 vars in 817 bytes} [Sat Dec 21 18:03:40 2024] POST /api/search/advanced_search => generated 562428 bytes in 1884 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+Internal Server Error: /api/search/get_statistics
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/AcademiaHub/Backend/AcademiaHub/./search/views.py", line 548, in get_statistics
+    'publication_year_list': stats.publication_year_list,
+AttributeError: 'NoneType' object has no attribute 'publication_year_list'
+[pid: 930502|app: 0|req: 40/50] 46.232.120.230 () {44 vars in 919 bytes} [Sat Dec 21 18:03:44 2024] POST /api/search/get_statistics => generated 58162 bytes in 60 msecs (HTTP/1.1 500) 9 headers in 342 bytes (1 switches on core 0)
+Not Found: /
+[pid: 930502|app: 0|req: 41/51] 95.214.55.32 () {28 vars in 309 bytes} [Sat Dec 21 18:05:45 2024] GET / => generated 2622 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 4/52] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:06:37 2024] POST /api/search/hot-paper => generated 1528 bytes in 54 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 42/53] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 18:06:38 2024] POST /api/search/hot-word => generated 339 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 6/54] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:06:38 2024] POST /api/search/new-paper => generated 2166 bytes in 71 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 43/55] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:06:46 2024] POST /api/search/hot-paper => generated 1528 bytes in 52 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 44/56] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 18:06:46 2024] POST /api/search/hot-word => generated 339 bytes in 35 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 45/57] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:06:46 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 46/58] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:06:57 2024] POST /api/search/hot-paper => generated 1528 bytes in 46 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 5/59] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 18:06:57 2024] POST /api/search/hot-word => generated 339 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 7/60] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:06:57 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 8/61] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:08:00 2024] POST /api/search/hot-paper => generated 1528 bytes in 52 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 47/62] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 18:08:00 2024] POST /api/search/hot-word => generated 339 bytes in 46 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 48/63] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:08:00 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 6/64] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:08:02 2024] POST /api/search/hot-paper => generated 1528 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 9/65] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 18:08:02 2024] POST /api/search/hot-word => generated 339 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 7/66] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:08:02 2024] POST /api/search/new-paper => generated 2166 bytes in 32 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 49/67] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:08:03 2024] POST /api/search/hot-paper => generated 1528 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 50/68] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 18:08:03 2024] POST /api/search/hot-word => generated 339 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 8/69] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:08:03 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 51/70] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:08:04 2024] POST /api/search/hot-paper => generated 1528 bytes in 36 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 52/71] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 18:08:04 2024] POST /api/search/hot-word => generated 339 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 53/72] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:08:04 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 54/73] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:08:11 2024] POST /api/search/hot-paper => generated 1528 bytes in 36 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 55/74] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 18:08:11 2024] POST /api/search/hot-word => generated 339 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 56/75] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:08:11 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 10/76] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:08:14 2024] POST /api/search/hot-paper => generated 1528 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 57/77] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 18:08:14 2024] POST /api/search/hot-word => generated 339 bytes in 37 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 58/78] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:08:14 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 59/79] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:08:36 2024] POST /api/search/hot-paper => generated 1528 bytes in 40 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 9/80] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 18:08:36 2024] POST /api/search/hot-word => generated 339 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 11/81] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:08:36 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 60/82] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:08:38 2024] POST /api/search/hot-paper => generated 1528 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 61/83] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 18:08:38 2024] POST /api/search/hot-word => generated 339 bytes in 38 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 62/84] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:08:38 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 63/85] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:08:50 2024] POST /api/search/hot-paper => generated 1528 bytes in 40 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 64/86] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 18:08:50 2024] POST /api/search/hot-word => generated 339 bytes in 39 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 65/87] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:08:50 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 66/88] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:08:52 2024] POST /api/search/hot-paper => generated 1528 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 67/89] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 18:08:52 2024] POST /api/search/hot-word => generated 339 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 68/90] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:08:53 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 69/91] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:09:00 2024] POST /api/search/hot-paper => generated 1528 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 70/92] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 18:09:00 2024] POST /api/search/hot-word => generated 339 bytes in 37 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 71/93] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:09:00 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 12/94] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:09:02 2024] POST /api/search/hot-paper => generated 1528 bytes in 55 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 72/95] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 18:09:02 2024] POST /api/search/hot-word => generated 339 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 13/96] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:09:02 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 73/97] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:12:21 2024] POST /api/search/hot-paper => generated 1528 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 74/98] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 18:12:21 2024] POST /api/search/hot-word => generated 339 bytes in 51 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 75/99] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:12:21 2024] POST /api/search/new-paper => generated 2166 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 76/100] 46.232.120.230 () {44 vars in 815 bytes} [Sat Dec 21 18:15:45 2024] POST /api/search/advanced_search => generated 321150 bytes in 1826 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 14/101] 46.232.120.230 () {44 vars in 814 bytes} [Sat Dec 21 18:15:51 2024] POST /api/search/advanced_search => generated 321150 bytes in 1887 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 15/102] 46.232.120.230 () {44 vars in 815 bytes} [Sat Dec 21 18:15:56 2024] POST /api/search/advanced_search => generated 321150 bytes in 1467 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 16/103] 46.232.120.230 () {44 vars in 815 bytes} [Sat Dec 21 18:17:15 2024] POST /api/search/advanced_search => generated 321150 bytes in 1964 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 77/104] 46.232.120.230 () {44 vars in 815 bytes} [Sat Dec 21 18:15:50 2024] POST /api/search/advanced_search => generated 321150 bytes in 132040 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 78/105] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:18:48 2024] POST /api/search/new-paper => generated 2166 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 79/106] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:19:33 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 80/107] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:19:36 2024] POST /api/search/hot-paper => generated 1528 bytes in 49 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 81/108] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 18:19:36 2024] POST /api/search/hot-word => generated 339 bytes in 46 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 82/109] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:19:36 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 83/110] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:19:37 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 84/111] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:19:39 2024] POST /api/search/hot-paper => generated 1528 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 85/112] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 18:19:39 2024] POST /api/search/hot-word => generated 339 bytes in 40 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 17/113] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:19:39 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 86/114] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:19:40 2024] POST /api/search/hot-paper => generated 1528 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 18/115] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:19:41 2024] POST /api/search/hot-paper => generated 1528 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 19/116] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 18:19:41 2024] POST /api/search/hot-word => generated 339 bytes in 38 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 87/117] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:19:42 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 88/118] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 18:19:42 2024] POST /api/search/hot-word => generated 339 bytes in 36 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 89/119] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:20:04 2024] POST /api/search/hot-paper => generated 1528 bytes in 50 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 90/120] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 18:20:04 2024] POST /api/search/hot-word => generated 339 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 91/121] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 18:20:04 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 92/122] 46.232.120.230 () {44 vars in 814 bytes} [Sat Dec 21 18:22:31 2024] POST /api/search/advanced_search => generated 321150 bytes in 1754 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 20/123] 46.232.120.230 () {44 vars in 814 bytes} [Sat Dec 21 18:24:14 2024] POST /api/search/advanced_search => generated 321150 bytes in 1479 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 21/124] 46.232.120.230 () {44 vars in 814 bytes} [Sat Dec 21 18:24:33 2024] POST /api/search/advanced_search => generated 321150 bytes in 1852 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 93/125] 46.232.120.230 () {44 vars in 814 bytes} [Sat Dec 21 18:22:40 2024] POST /api/search/advanced_search => generated 321150 bytes in 131759 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 94/126] 46.232.120.230 () {44 vars in 816 bytes} [Sat Dec 21 18:31:09 2024] POST /api/search/advanced_search => generated 664969 bytes in 2079 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 930499|app: 0|req: 3/127] 46.232.120.230 () {44 vars in 817 bytes} [Sat Dec 21 18:31:28 2024] POST /api/search/advanced_search => generated 664969 bytes in 1806 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 22/128] 46.232.120.230 () {44 vars in 817 bytes} [Sat Dec 21 18:31:36 2024] POST /api/search/advanced_search => generated 562428 bytes in 1509 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 23/129] 46.232.120.230 () {44 vars in 817 bytes} [Sat Dec 21 18:32:09 2024] POST /api/search/advanced_search => generated 562428 bytes in 1485 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 930499|app: 0|req: 4/130] 46.232.120.230 () {44 vars in 817 bytes} [Sat Dec 21 18:32:45 2024] POST /api/search/advanced_search => generated 562428 bytes in 1554 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+Sat Dec 21 18:33:26 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 46.232.120.230) !!!
+Sat Dec 21 18:33:26 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (46.232.120.230)
+OSError: write error
+[pid: 930502|app: 0|req: 95/131] 46.232.120.230 () {44 vars in 817 bytes} [Sat Dec 21 18:31:13 2024] POST /api/search/advanced_search => generated 523980 bytes in 132603 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+[pid: 930502|app: 0|req: 96/132] 46.232.120.230 () {44 vars in 816 bytes} [Sat Dec 21 18:33:26 2024] POST /api/search/advanced_search => generated 562428 bytes in 1488 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+Sat Dec 21 18:34:15 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 46.232.120.230) !!!
+Sat Dec 21 18:34:15 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (46.232.120.230)
+OSError: write error
+[pid: 930500|app: 0|req: 10/133] 46.232.120.230 () {44 vars in 817 bytes} [Sat Dec 21 18:32:04 2024] POST /api/search/advanced_search => generated 523980 bytes in 131016 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+[pid: 930500|app: 0|req: 11/134] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 18:34:15 2024] POST /api/search/hot-paper => generated 1528 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 12/135] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 18:34:15 2024] POST /api/search/hot-paper => generated 1528 bytes in 50 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 13/136] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 18:34:15 2024] POST /api/search/hot-paper => generated 1528 bytes in 38 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 14/137] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 18:34:15 2024] POST /api/search/hot-word => generated 339 bytes in 40 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 15/138] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 18:34:15 2024] POST /api/search/new-paper => generated 2166 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+Sat Dec 21 18:34:25 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 46.232.120.230) !!!
+Sat Dec 21 18:34:25 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (46.232.120.230)
+OSError: write error
+[pid: 930501|app: 0|req: 24/139] 46.232.120.230 () {44 vars in 817 bytes} [Sat Dec 21 18:32:13 2024] POST /api/search/advanced_search => generated 523980 bytes in 132008 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Sat Dec 21 18:34:58 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 46.232.120.230) !!!
+Sat Dec 21 18:34:58 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (46.232.120.230)
+OSError: write error
+[pid: 930499|app: 0|req: 5/140] 46.232.120.230 () {44 vars in 817 bytes} [Sat Dec 21 18:32:47 2024] POST /api/search/advanced_search => generated 523980 bytes in 131082 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Sat Dec 21 18:35:39 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 46.232.120.230) !!!
+Sat Dec 21 18:35:39 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (46.232.120.230)
+OSError: write error
+[pid: 930502|app: 0|req: 97/141] 46.232.120.230 () {44 vars in 817 bytes} [Sat Dec 21 18:33:27 2024] POST /api/search/advanced_search => generated 523980 bytes in 131325 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+[pid: 930500|app: 0|req: 16/142] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:41:09 2024] POST /api/search/advanced_search => generated 562428 bytes in 1667 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 25/143] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:42:39 2024] POST /api/search/advanced_search => generated 562428 bytes in 1511 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 26/144] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:43:11 2024] POST /api/search/advanced_search => generated 562428 bytes in 1664 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 17/145] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 18:43:12 2024] POST /api/search/get_statistics => generated 21909 bytes in 60 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+Sat Dec 21 18:43:17 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.162) !!!
+Sat Dec 21 18:43:17 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.162)
+OSError: write error
+[pid: 930502|app: 0|req: 98/146] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:41:05 2024] POST /api/search/advanced_search => generated 523980 bytes in 132691 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+[pid: 930502|app: 0|req: 99/147] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:43:41 2024] POST /api/search/advanced_search => generated 562428 bytes in 1498 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 100/148] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 18:43:42 2024] POST /api/search/get_statistics => generated 21909 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 101/149] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:45:06 2024] POST /api/search/advanced_search => generated 562428 bytes in 1467 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 102/150] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 18:45:08 2024] POST /api/search/get_statistics => generated 21909 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+Sat Dec 21 18:47:07 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.162) !!!
+Sat Dec 21 18:47:07 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.162)
+OSError: write error
+[pid: 930501|app: 0|req: 27/151] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:44:56 2024] POST /api/search/advanced_search => generated 523980 bytes in 130829 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Sat Dec 21 18:51:21 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.162) !!!
+Sat Dec 21 18:51:21 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.162)
+OSError: write error
+[pid: 930502|app: 0|req: 103/152] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:49:10 2024] POST /api/search/advanced_search => generated 523980 bytes in 131072 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Sat Dec 21 18:51:25 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.162) !!!
+Sat Dec 21 18:51:25 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.162)
+OSError: write error
+[pid: 930501|app: 0|req: 28/153] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:49:13 2024] POST /api/search/advanced_search => generated 523980 bytes in 131610 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Sat Dec 21 18:52:55 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.162) !!!
+Sat Dec 21 18:52:55 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.162)
+OSError: write error
+[pid: 930501|app: 0|req: 29/154] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:52:54 2024] POST /api/search/advanced_search => generated 523980 bytes in 1519 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Sat Dec 21 18:52:56 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.162) !!!
+Sat Dec 21 18:52:56 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.162)
+OSError: write error
+[pid: 930499|app: 0|req: 6/155] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:52:54 2024] POST /api/search/advanced_search => generated 523980 bytes in 1862 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Sat Dec 21 18:52:57 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.162) !!!
+Sat Dec 21 18:52:57 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.162)
+OSError: write error
+[pid: 930500|app: 0|req: 18/156] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:52:55 2024] POST /api/search/advanced_search => generated 523980 bytes in 1628 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+[pid: 930501|app: 0|req: 30/157] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:52:56 2024] POST /api/search/advanced_search => generated 562428 bytes in 1701 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 31/158] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 18:52:57 2024] POST /api/search/get_statistics => generated 21909 bytes in 50 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+Sat Dec 21 18:53:19 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.162) !!!
+Sat Dec 21 18:53:19 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.162)
+OSError: write error
+[pid: 930500|app: 0|req: 19/159] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:53:18 2024] POST /api/search/advanced_search => generated 523980 bytes in 1515 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Sat Dec 21 18:53:41 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.162) !!!
+Sat Dec 21 18:53:41 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.162)
+OSError: write error
+[pid: 930500|app: 0|req: 20/160] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:53:39 2024] POST /api/search/advanced_search => generated 523980 bytes in 1523 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Sat Dec 21 18:55:02 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.162) !!!
+Sat Dec 21 18:55:02 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.162)
+OSError: write error
+[pid: 930502|app: 0|req: 104/161] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:52:51 2024] POST /api/search/advanced_search => generated 523980 bytes in 130891 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Sat Dec 21 18:55:03 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.162) !!!
+Sat Dec 21 18:55:03 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.162)
+OSError: write error
+[pid: 930502|app: 0|req: 105/162] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:55:02 2024] POST /api/search/advanced_search => generated 523980 bytes in 1506 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Sat Dec 21 18:55:10 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.162) !!!
+Sat Dec 21 18:55:10 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.162)
+OSError: write error
+[pid: 930501|app: 0|req: 32/163] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:52:59 2024] POST /api/search/advanced_search => generated 523980 bytes in 130963 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Sat Dec 21 18:55:12 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.162) !!!
+Sat Dec 21 18:55:12 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.162)
+OSError: write error
+[pid: 930501|app: 0|req: 33/164] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:55:10 2024] POST /api/search/advanced_search => generated 523980 bytes in 1458 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Sat Dec 21 18:55:13 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.162) !!!
+Sat Dec 21 18:55:13 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.162)
+OSError: write error
+[pid: 930501|app: 0|req: 34/165] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:55:12 2024] POST /api/search/advanced_search => generated 523980 bytes in 1729 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Sat Dec 21 18:55:15 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.162) !!!
+Sat Dec 21 18:55:15 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.162)
+OSError: write error
+[pid: 930501|app: 0|req: 35/166] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:55:13 2024] POST /api/search/advanced_search => generated 523980 bytes in 1498 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Sat Dec 21 18:55:16 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.162) !!!
+Sat Dec 21 18:55:16 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.162)
+OSError: write error
+[pid: 930501|app: 0|req: 36/167] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:55:15 2024] POST /api/search/advanced_search => generated 523980 bytes in 1531 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Sat Dec 21 18:55:31 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.162) !!!
+Sat Dec 21 18:55:31 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.162)
+OSError: write error
+[pid: 930499|app: 0|req: 7/168] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:53:19 2024] POST /api/search/advanced_search => generated 523980 bytes in 131197 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Sat Dec 21 18:55:32 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.162) !!!
+Sat Dec 21 18:55:32 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.162)
+OSError: write error
+[pid: 930499|app: 0|req: 8/169] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:55:31 2024] POST /api/search/advanced_search => generated 523980 bytes in 1487 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Sat Dec 21 18:55:34 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.162) !!!
+Sat Dec 21 18:55:34 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.162)
+OSError: write error
+[pid: 930499|app: 0|req: 9/170] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:55:32 2024] POST /api/search/advanced_search => generated 523980 bytes in 1534 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+[pid: 930499|app: 0|req: 10/171] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:55:34 2024] POST /api/search/advanced_search => generated 562428 bytes in 1482 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 930499|app: 0|req: 11/172] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 18:55:35 2024] POST /api/search/hot-paper => generated 1528 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930499|app: 0|req: 12/173] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 18:55:35 2024] POST /api/search/hot-paper => generated 1528 bytes in 46 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930499|app: 0|req: 13/174] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 18:55:35 2024] POST /api/search/get_statistics => generated 21909 bytes in 51 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+[pid: 930499|app: 0|req: 14/175] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 18:55:35 2024] POST /api/search/hot-word => generated 339 bytes in 37 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930499|app: 0|req: 15/176] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 18:55:35 2024] POST /api/search/hot-word => generated 339 bytes in 35 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930499|app: 0|req: 16/177] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 18:55:35 2024] POST /api/search/new-paper => generated 2166 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930499|app: 0|req: 17/178] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 18:55:35 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930499|app: 0|req: 18/179] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 18:55:44 2024] POST /api/search/hot-paper => generated 1528 bytes in 36 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930499|app: 0|req: 19/180] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 18:55:44 2024] POST /api/search/hot-word => generated 339 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930499|app: 0|req: 20/181] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 18:55:45 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930499|app: 0|req: 21/182] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 18:55:47 2024] POST /api/search/hot-paper => generated 1528 bytes in 36 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930499|app: 0|req: 22/183] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 18:55:47 2024] POST /api/search/hot-word => generated 339 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930499|app: 0|req: 23/184] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 18:55:47 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930499|app: 0|req: 24/185] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 18:55:48 2024] POST /api/search/hot-paper => generated 1528 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930499|app: 0|req: 25/186] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 18:55:48 2024] POST /api/search/hot-word => generated 339 bytes in 39 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930499|app: 0|req: 26/187] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 18:55:48 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+Sat Dec 21 18:55:53 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.162) !!!
+Sat Dec 21 18:55:53 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.162)
+OSError: write error
+[pid: 930500|app: 0|req: 21/188] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:53:41 2024] POST /api/search/advanced_search => generated 523980 bytes in 132247 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+[pid: 930500|app: 0|req: 22/189] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 18:55:57 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 23/190] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 18:56:00 2024] POST /api/search/hot-paper => generated 1528 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 24/191] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 18:56:00 2024] POST /api/search/hot-word => generated 339 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930499|app: 0|req: 27/192] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 18:56:00 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 25/193] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 18:56:01 2024] POST /api/search/hot-word => generated 339 bytes in 46 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 26/194] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 18:56:28 2024] POST /api/search/hot-paper => generated 1528 bytes in 50 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 27/195] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 18:56:28 2024] POST /api/search/hot-word => generated 339 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 28/196] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 18:56:28 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+Sat Dec 21 18:57:15 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.162) !!!
+Sat Dec 21 18:57:15 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.162)
+OSError: write error
+[pid: 930502|app: 0|req: 106/197] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:55:03 2024] POST /api/search/advanced_search => generated 523980 bytes in 131671 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Sat Dec 21 18:57:27 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.162) !!!
+Sat Dec 21 18:57:27 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.162)
+OSError: write error
+[pid: 930501|app: 0|req: 37/198] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 18:55:16 2024] POST /api/search/advanced_search => generated 523980 bytes in 130984 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+[pid: 930502|app: 0|req: 107/199] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 18:57:31 2024] POST /api/search/hot-paper => generated 1528 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 108/200] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 18:57:31 2024] POST /api/search/hot-word => generated 339 bytes in 34 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 38/201] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 18:57:31 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 39/202] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 18:57:54 2024] POST /api/search/hot-paper => generated 1528 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 40/203] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 18:57:54 2024] POST /api/search/hot-word => generated 339 bytes in 38 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 109/204] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 18:57:54 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 110/205] 219.239.227.182 () {40 vars in 698 bytes} [Sat Dec 21 18:58:10 2024] POST /api/search/hot-word => generated 339 bytes in 40 msecs (HTTP/1.1 200) 7 headers in 213 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 111/206] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 18:59:15 2024] POST /api/search/hot-paper => generated 1528 bytes in 46 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 112/207] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 18:59:15 2024] POST /api/search/hot-word => generated 339 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 113/208] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 18:59:15 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 114/209] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:00:13 2024] POST /api/search/hot-word => generated 339 bytes in 49 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 115/210] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:00:17 2024] POST /api/search/hot-paper => generated 1528 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 41/211] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:00:18 2024] POST /api/search/hot-word => generated 339 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 42/212] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:00:18 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 116/213] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:00:19 2024] POST /api/search/hot-paper => generated 1528 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 117/214] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:00:38 2024] POST /api/search/hot-paper => generated 1528 bytes in 36 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 118/215] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:02:59 2024] POST /api/search/hot-paper => generated 1528 bytes in 53 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 119/216] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:02:59 2024] POST /api/search/hot-word => generated 339 bytes in 38 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 120/217] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:02:59 2024] POST /api/search/new-paper => generated 2166 bytes in 51 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 121/218] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:03:05 2024] POST /api/search/hot-paper => generated 1528 bytes in 39 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 122/219] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:03:05 2024] POST /api/search/hot-word => generated 339 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 123/220] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:03:05 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 124/221] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:03:21 2024] POST /api/search/hot-paper => generated 1528 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 125/222] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:03:21 2024] POST /api/search/hot-word => generated 339 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 126/223] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:03:21 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 127/224] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:06:47 2024] POST /api/search/hot-paper => generated 1528 bytes in 63 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 128/225] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:06:47 2024] POST /api/search/hot-word => generated 339 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 129/226] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:06:47 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 43/227] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:08:06 2024] POST /api/search/hot-paper => generated 1528 bytes in 54 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 130/228] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:08:06 2024] POST /api/search/hot-word => generated 339 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 131/229] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:08:07 2024] POST /api/search/new-paper => generated 2166 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 132/230] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:08:23 2024] POST /api/search/hot-paper => generated 1528 bytes in 35 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 133/231] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:08:23 2024] POST /api/search/hot-word => generated 339 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 29/232] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:08:23 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 134/233] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:08:34 2024] POST /api/search/hot-paper => generated 1528 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 135/234] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:08:34 2024] POST /api/search/hot-word => generated 339 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 44/235] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:08:34 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 136/236] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:18:22 2024] POST /api/search/hot-paper => generated 1528 bytes in 54 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 45/237] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:18:22 2024] POST /api/search/hot-word => generated 339 bytes in 51 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 137/238] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:18:22 2024] POST /api/search/new-paper => generated 2166 bytes in 51 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 138/239] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:19:09 2024] POST /api/search/hot-paper => generated 1528 bytes in 55 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 139/240] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:19:10 2024] POST /api/search/hot-word => generated 339 bytes in 46 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 140/241] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:19:10 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 46/242] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:19:12 2024] POST /api/search/hot-paper => generated 1528 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 141/243] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:19:12 2024] POST /api/search/hot-word => generated 339 bytes in 49 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 142/244] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:19:12 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 143/245] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:19:16 2024] POST /api/search/hot-paper => generated 1528 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 144/246] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:19:16 2024] POST /api/search/hot-word => generated 339 bytes in 38 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 47/247] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:19:16 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 48/248] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:19:22 2024] POST /api/search/hot-paper => generated 1528 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 145/249] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:19:22 2024] POST /api/search/hot-word => generated 339 bytes in 31 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 146/250] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:19:22 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+Not Found: /login.rsp
+[pid: 930502|app: 0|req: 147/251] 154.213.187.122 () {34 vars in 419 bytes} [Sat Dec 21 19:19:26 2024] GET /login.rsp => generated 2667 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 148/252] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:19:28 2024] POST /api/search/hot-paper => generated 1528 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 149/253] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:19:28 2024] POST /api/search/hot-word => generated 339 bytes in 38 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 150/254] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:19:28 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 151/255] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:19:35 2024] POST /api/search/hot-paper => generated 1528 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 152/256] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:19:35 2024] POST /api/search/hot-word => generated 339 bytes in 37 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 153/257] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:19:36 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 154/258] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:19:39 2024] POST /api/search/hot-paper => generated 1528 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 155/259] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:19:39 2024] POST /api/search/hot-word => generated 339 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 156/260] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:19:40 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 157/261] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:19:43 2024] POST /api/search/hot-paper => generated 1528 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 158/262] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:19:43 2024] POST /api/search/hot-word => generated 339 bytes in 46 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 159/263] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:19:43 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 160/264] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:19:46 2024] POST /api/search/hot-paper => generated 1528 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 161/265] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:19:46 2024] POST /api/search/hot-word => generated 339 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 162/266] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:19:47 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 163/267] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:19:51 2024] POST /api/search/hot-paper => generated 1528 bytes in 38 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 164/268] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:19:51 2024] POST /api/search/hot-word => generated 339 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 165/269] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:19:51 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 166/270] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:20:03 2024] POST /api/search/hot-paper => generated 1528 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 167/271] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:20:03 2024] POST /api/search/hot-word => generated 339 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 168/272] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:20:03 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 49/273] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:20:08 2024] POST /api/search/hot-word => generated 339 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 50/274] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:20:10 2024] POST /api/search/hot-paper => generated 1528 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 169/275] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:20:10 2024] POST /api/search/hot-word => generated 339 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 170/276] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:20:10 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 171/277] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:20:13 2024] POST /api/search/hot-paper => generated 1528 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 172/278] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:20:13 2024] POST /api/search/hot-word => generated 339 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 173/279] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:20:14 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 51/280] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:20:17 2024] POST /api/search/hot-paper => generated 1528 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 174/281] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:20:18 2024] POST /api/search/hot-word => generated 339 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 175/282] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:20:18 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+Not Found: /
+[pid: 930502|app: 0|req: 176/283] 34.140.130.14 () {36 vars in 432 bytes} [Sat Dec 21 19:23:31 2024] GET / => generated 2619 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 177/284] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:23:37 2024] POST /api/search/hot-paper => generated 1528 bytes in 54 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 52/285] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:23:38 2024] POST /api/search/hot-word => generated 339 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 53/286] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:23:38 2024] POST /api/search/new-paper => generated 2166 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 178/287] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:23:41 2024] POST /api/search/hot-paper => generated 1528 bytes in 49 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 179/288] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:23:41 2024] POST /api/search/hot-word => generated 339 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 180/289] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:23:42 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 181/290] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:24:27 2024] POST /api/search/hot-paper => generated 1528 bytes in 34 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 54/291] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:24:27 2024] POST /api/search/hot-word => generated 339 bytes in 32 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 182/292] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:24:27 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+Not Found: /
+[pid: 930502|app: 0|req: 183/293] 170.106.167.214 () {46 vars in 845 bytes} [Sat Dec 21 19:25:38 2024] GET / => generated 2619 bytes in 6 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 55/294] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:27:27 2024] POST /api/search/hot-paper => generated 1528 bytes in 57 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 56/295] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:27:27 2024] POST /api/search/hot-word => generated 339 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 184/296] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:27:27 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+Not Found: /.env
+[pid: 930500|app: 0|req: 30/297] 87.120.115.34 () {36 vars in 524 bytes} [Sat Dec 21 19:28:13 2024] GET /.env => generated 2649 bytes in 6 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /_profiler/phpinfo
+[pid: 930502|app: 0|req: 185/298] 87.120.115.34 () {36 vars in 511 bytes} [Sat Dec 21 19:41:21 2024] GET /_profiler/phpinfo => generated 2688 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 186/299] 219.239.227.182 () {46 vars in 770 bytes} [Sat Dec 21 19:41:28 2024] OPTIONS /api/search/hot-paper => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 57/300] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:41:28 2024] POST /api/search/hot-paper => generated 1528 bytes in 55 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 187/301] 219.239.227.182 () {46 vars in 768 bytes} [Sat Dec 21 19:41:28 2024] OPTIONS /api/search/hot-word => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 188/302] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:41:28 2024] POST /api/search/hot-word => generated 339 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 189/303] 219.239.227.182 () {46 vars in 770 bytes} [Sat Dec 21 19:41:28 2024] OPTIONS /api/search/new-paper => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 190/304] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:41:28 2024] POST /api/search/new-paper => generated 2166 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 191/305] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:41:29 2024] POST /api/search/hot-paper => generated 1528 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 192/306] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:41:29 2024] POST /api/search/hot-word => generated 339 bytes in 49 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 193/307] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:41:29 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 194/308] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:41:36 2024] POST /api/search/hot-paper => generated 1528 bytes in 38 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 195/309] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:41:37 2024] POST /api/search/hot-word => generated 339 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 196/310] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:41:37 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 31/311] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:41:57 2024] POST /api/search/hot-paper => generated 1528 bytes in 39 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 197/312] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:41:58 2024] POST /api/search/hot-word => generated 339 bytes in 40 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 58/313] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:41:58 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 198/314] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:42:00 2024] POST /api/search/hot-paper => generated 1528 bytes in 38 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 59/315] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:42:00 2024] POST /api/search/hot-word => generated 339 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 199/316] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:42:00 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 200/317] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:42:03 2024] POST /api/search/hot-paper => generated 1528 bytes in 39 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 201/318] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:42:03 2024] POST /api/search/hot-word => generated 339 bytes in 39 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 202/319] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:42:03 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 60/320] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:42:10 2024] POST /api/search/hot-word => generated 339 bytes in 35 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 203/321] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:42:10 2024] POST /api/search/hot-paper => generated 1528 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 204/322] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:42:10 2024] POST /api/search/hot-word => generated 339 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 205/323] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:42:10 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 206/324] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:42:25 2024] POST /api/search/hot-word => generated 339 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 207/325] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:42:26 2024] POST /api/search/hot-paper => generated 1528 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 208/326] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:42:26 2024] POST /api/search/hot-word => generated 339 bytes in 36 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 209/327] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:42:26 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 210/328] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:42:32 2024] POST /api/search/hot-word => generated 339 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 211/329] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:42:33 2024] POST /api/search/hot-paper => generated 1528 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 212/330] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:42:33 2024] POST /api/search/hot-word => generated 339 bytes in 38 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 213/331] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:42:34 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+Not Found: /.env
+[pid: 930499|app: 0|req: 28/332] 80.64.30.210 () {36 vars in 548 bytes} [Sat Dec 21 19:43:38 2024] GET /.env => generated 2649 bytes in 8 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 214/333] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:44:17 2024] POST /api/search/hot-paper => generated 1528 bytes in 51 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 215/334] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:44:17 2024] POST /api/search/hot-word => generated 339 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 216/335] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:44:17 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 61/336] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:44:41 2024] POST /api/search/hot-paper => generated 1528 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 62/337] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:44:41 2024] POST /api/search/hot-word => generated 339 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 63/338] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:44:41 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 217/339] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:44:43 2024] POST /api/search/hot-paper => generated 1528 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 218/340] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:44:45 2024] POST /api/search/hot-paper => generated 1528 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 64/341] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:44:45 2024] POST /api/search/hot-word => generated 339 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 65/342] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:44:45 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 32/343] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:44:48 2024] POST /api/search/hot-paper => generated 1528 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 219/344] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:44:48 2024] POST /api/search/hot-word => generated 339 bytes in 39 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 220/345] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:44:48 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 221/346] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:45:17 2024] POST /api/search/hot-paper => generated 1528 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 222/347] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:45:17 2024] POST /api/search/hot-word => generated 339 bytes in 40 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 223/348] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:45:17 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 224/349] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:45:17 2024] POST /api/search/hot-paper => generated 1528 bytes in 36 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 225/350] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:45:17 2024] POST /api/search/hot-word => generated 339 bytes in 33 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 226/351] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:45:17 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 66/352] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:46:35 2024] POST /api/search/hot-paper => generated 1528 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 227/353] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:46:35 2024] POST /api/search/hot-paper => generated 1528 bytes in 56 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 228/354] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:46:35 2024] POST /api/search/hot-word => generated 339 bytes in 34 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 67/355] 219.239.227.182 () {44 vars in 755 bytes} [Sat Dec 21 19:46:35 2024] POST /api/search/hot-word => generated 339 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 68/356] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:46:35 2024] POST /api/search/new-paper => generated 2166 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 229/357] 219.239.227.182 () {44 vars in 757 bytes} [Sat Dec 21 19:46:35 2024] POST /api/search/new-paper => generated 2166 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+Not Found: /
+[pid: 930502|app: 0|req: 230/358] 185.191.126.213 () {28 vars in 312 bytes} [Sat Dec 21 19:57:41 2024] GET / => generated 2622 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 231/359] 219.239.227.173 () {40 vars in 742 bytes} [Sat Dec 21 20:06:08 2024] POST /api/mark/get-user-single-mark-list-detail => generated 197 bytes in 65 msecs (HTTP/1.1 200) 7 headers in 213 bytes (1 switches on core 0)
+Not Found: /cgi-bin/luci/;stok=/locale
+[pid: 930502|app: 0|req: 232/360] 95.214.55.74 () {28 vars in 361 bytes} [Sat Dec 21 20:09:31 2024] GET /cgi-bin/luci/;stok=/locale => generated 2722 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 233/361] 219.239.227.173 () {40 vars in 728 bytes} [Sat Dec 21 20:21:31 2024] POST /api/mark/get-user-single-mark-list => generated 1215 bytes in 1997 msecs (HTTP/1.1 200) 7 headers in 214 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 234/362] 219.239.227.105 () {48 vars in 846 bytes} [Sat Dec 21 20:29:07 2024] OPTIONS /api/search/hot-paper => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 235/363] 219.239.227.105 () {46 vars in 833 bytes} [Sat Dec 21 20:29:08 2024] POST /api/search/hot-paper => generated 1528 bytes in 79 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 236/364] 219.239.227.105 () {48 vars in 844 bytes} [Sat Dec 21 20:29:08 2024] OPTIONS /api/search/hot-word => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 69/365] 219.239.227.105 () {46 vars in 831 bytes} [Sat Dec 21 20:29:08 2024] POST /api/search/hot-word => generated 339 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 70/366] 219.239.227.105 () {48 vars in 846 bytes} [Sat Dec 21 20:29:08 2024] OPTIONS /api/search/new-paper => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 237/367] 219.239.227.105 () {46 vars in 833 bytes} [Sat Dec 21 20:29:08 2024] POST /api/search/new-paper => generated 2166 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 33/368] 219.239.227.105 () {46 vars in 833 bytes} [Sat Dec 21 20:29:25 2024] POST /api/search/hot-paper => generated 1528 bytes in 46 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 238/369] 219.239.227.105 () {46 vars in 831 bytes} [Sat Dec 21 20:29:25 2024] POST /api/search/hot-word => generated 339 bytes in 34 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 239/370] 219.239.227.105 () {46 vars in 833 bytes} [Sat Dec 21 20:29:25 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 34/371] 219.239.227.105 () {46 vars in 833 bytes} [Sat Dec 21 20:29:32 2024] POST /api/search/hot-paper => generated 1528 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930501|app: 0|req: 71/372] 219.239.227.105 () {46 vars in 831 bytes} [Sat Dec 21 20:29:32 2024] POST /api/search/hot-word => generated 339 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930500|app: 0|req: 35/373] 219.239.227.105 () {46 vars in 833 bytes} [Sat Dec 21 20:29:32 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 240/374] 219.239.227.105 () {46 vars in 833 bytes} [Sat Dec 21 20:29:38 2024] POST /api/search/hot-paper => generated 1528 bytes in 40 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 241/375] 219.239.227.105 () {46 vars in 831 bytes} [Sat Dec 21 20:29:38 2024] POST /api/search/hot-word => generated 339 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 242/376] 219.239.227.105 () {46 vars in 833 bytes} [Sat Dec 21 20:29:38 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+Not Found: /
+[pid: 930502|app: 0|req: 243/377] 95.214.55.32 () {28 vars in 309 bytes} [Sat Dec 21 20:34:52 2024] GET / => generated 2622 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 244/378] 219.239.227.193 () {40 vars in 710 bytes} [Sat Dec 21 20:35:38 2024] POST /api/mark/create-mark-list => generated 141 bytes in 65 msecs (HTTP/1.1 200) 7 headers in 213 bytes (1 switches on core 0)
+[pid: 930502|app: 0|req: 245/379] 219.239.227.193 () {40 vars in 694 bytes} [Sat Dec 21 20:35:52 2024] POST /api/mark/add-mark => generated 139 bytes in 64 msecs (HTTP/1.1 200) 7 headers in 213 bytes (1 switches on core 0)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 930499)...
+Gracefully killing worker 2 (pid: 930500)...
+Gracefully killing worker 3 (pid: 930501)...
+Gracefully killing worker 4 (pid: 930502)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /AcademiaHub/Backend/AcademiaHub
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (0.0.0.0:8002)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.28 (64bit) on [Sat Dec 21 20:38:12 2024] ***
+compiled with version: 11.4.0 on 09 December 2024 07:39:47
+os: Linux-5.15.0-113-generic #123-Ubuntu SMP Mon Jun 10 08:16:17 UTC 2024
+nodename: zrtbighandsomeboy
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 16
+current working directory: /AcademiaHub/Backend/AcademiaHub
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /AcademiaHub/Backend/AcademiaHub
+your processes number limit is 126366
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8002 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov  6 2024, 20:22:13) [GCC 11.4.0]
+Python main interpreter initialized at 0x55d5518c3f30
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507960 bytes (496 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55d5518c3f30 pid: 927708 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 927708)
+spawned uWSGI worker 1 (pid: 940219, cores: 1)
+spawned uWSGI worker 2 (pid: 940220, cores: 1)
+spawned uWSGI worker 3 (pid: 940221, cores: 1)
+spawned uWSGI worker 4 (pid: 940222, cores: 1)
+[pid: 940222|app: 0|req: 1/1] 219.239.227.193 () {40 vars in 694 bytes} [Sat Dec 21 20:38:22 2024] POST /api/mark/add-mark => generated 88 bytes in 186 msecs (HTTP/1.1 200) 7 headers in 212 bytes (1 switches on core 0)
+[pid: 940221|app: 0|req: 1/2] 219.239.227.193 () {40 vars in 726 bytes} [Sat Dec 21 20:38:58 2024] POST /api/mark/delete-mark-relationship => generated 97 bytes in 203 msecs (HTTP/1.1 200) 7 headers in 212 bytes (1 switches on core 0)
+...gracefully killing workers...
+Gracefully killing worker 3 (pid: 940221)...
+Gracefully killing worker 4 (pid: 940222)...
+Gracefully killing worker 2 (pid: 940220)...
+Gracefully killing worker 1 (pid: 940219)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /AcademiaHub/Backend/AcademiaHub
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (0.0.0.0:8002)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.28 (64bit) on [Sat Dec 21 20:41:37 2024] ***
+compiled with version: 11.4.0 on 09 December 2024 07:39:47
+os: Linux-5.15.0-113-generic #123-Ubuntu SMP Mon Jun 10 08:16:17 UTC 2024
+nodename: zrtbighandsomeboy
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 16
+current working directory: /AcademiaHub/Backend/AcademiaHub
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /AcademiaHub/Backend/AcademiaHub
+your processes number limit is 126366
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8002 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov  6 2024, 20:22:13) [GCC 11.4.0]
+Python main interpreter initialized at 0x561530859f30
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507960 bytes (496 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x561530859f30 pid: 927708 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 927708)
+spawned uWSGI worker 1 (pid: 940375, cores: 1)
+spawned uWSGI worker 2 (pid: 940376, cores: 1)
+spawned uWSGI worker 3 (pid: 940377, cores: 1)
+spawned uWSGI worker 4 (pid: 940378, cores: 1)
+[pid: 940377|app: 0|req: 1/1] 219.239.227.193 () {40 vars in 710 bytes} [Sat Dec 21 20:42:02 2024] POST /api/mark/create-mark-list => generated 142 bytes in 173 msecs (HTTP/1.1 200) 7 headers in 213 bytes (1 switches on core 0)
+Not Found: /
+[pid: 940378|app: 0|req: 1/2] 95.214.53.205 () {44 vars in 783 bytes} [Sat Dec 21 20:42:05 2024] GET / => generated 2622 bytes in 113 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 2/3] 219.239.227.193 () {40 vars in 694 bytes} [Sat Dec 21 20:42:12 2024] POST /api/mark/add-mark => generated 139 bytes in 72 msecs (HTTP/1.1 200) 7 headers in 213 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 3/4] 219.239.227.193 () {40 vars in 726 bytes} [Sat Dec 21 20:42:39 2024] POST /api/mark/delete-mark-relationship => generated 97 bytes in 68 msecs (HTTP/1.1 200) 7 headers in 212 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 4/5] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 20:47:32 2024] POST /api/search/hot-paper => generated 1528 bytes in 58 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 5/6] 219.239.227.105 () {44 vars in 802 bytes} [Sat Dec 21 20:47:32 2024] POST /api/search/hot-word => generated 339 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 6/7] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 20:47:32 2024] POST /api/search/new-paper => generated 2166 bytes in 85 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+Not Found: /
+[pid: 940378|app: 0|req: 7/8] 124.70.57.132 () {36 vars in 581 bytes} [Sat Dec 21 21:17:55 2024] HEAD / => generated 2620 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 940378|app: 0|req: 8/9] 124.70.57.132 () {36 vars in 580 bytes} [Sat Dec 21 21:17:55 2024] GET / => generated 2619 bytes in 3 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 940378|app: 0|req: 9/10] 46.19.138.234 () {44 vars in 780 bytes} [Sat Dec 21 21:32:05 2024] GET / => generated 2619 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 940378|app: 0|req: 10/11] 124.70.25.74 () {36 vars in 594 bytes} [Sat Dec 21 21:48:46 2024] HEAD / => generated 2620 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 940377|app: 0|req: 2/12] 124.70.25.74 () {44 vars in 793 bytes} [Sat Dec 21 21:48:46 2024] GET / => generated 2619 bytes in 6 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 940378|app: 0|req: 11/13] 124.70.25.74 () {42 vars in 746 bytes} [Sat Dec 21 21:48:46 2024] GET /favicon.ico => generated 2670 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 940378|app: 0|req: 12/14] 64.62.197.46 () {34 vars in 439 bytes} [Sat Dec 21 21:49:27 2024] GET / => generated 2619 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 13/15] 219.239.227.105 () {46 vars in 825 bytes} [Sat Dec 21 21:49:37 2024] OPTIONS /api/search/hot-paper => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 426 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 14/16] 219.239.227.105 () {44 vars in 812 bytes} [Sat Dec 21 21:49:37 2024] POST /api/search/hot-paper => generated 1528 bytes in 58 msecs (HTTP/1.1 200) 9 headers in 310 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 15/17] 219.239.227.105 () {46 vars in 823 bytes} [Sat Dec 21 21:49:37 2024] OPTIONS /api/search/hot-word => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 426 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 16/18] 219.239.227.105 () {44 vars in 810 bytes} [Sat Dec 21 21:49:37 2024] POST /api/search/hot-word => generated 339 bytes in 55 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 17/19] 219.239.227.105 () {46 vars in 825 bytes} [Sat Dec 21 21:49:37 2024] OPTIONS /api/search/new-paper => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 426 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 3/20] 219.239.227.105 () {44 vars in 812 bytes} [Sat Dec 21 21:49:37 2024] POST /api/search/new-paper => generated 2166 bytes in 89 msecs (HTTP/1.1 200) 9 headers in 310 bytes (1 switches on core 0)
+Not Found: /webui/
+[pid: 940378|app: 0|req: 18/21] 64.62.197.34 () {34 vars in 507 bytes} [Sat Dec 21 21:50:33 2024] GET /webui/ => generated 2655 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 940377|app: 0|req: 4/22] 64.62.197.38 () {34 vars in 518 bytes} [Sat Dec 21 21:51:29 2024] GET /favicon.ico => generated 2670 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /geoserver/web/
+[pid: 940377|app: 0|req: 5/23] 64.62.197.38 () {34 vars in 467 bytes} [Sat Dec 21 21:51:46 2024] GET /geoserver/web/ => generated 2679 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 6/24] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:14:10 2024] POST /api/search/hot-paper => generated 1528 bytes in 58 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 7/25] 219.239.227.105 () {44 vars in 802 bytes} [Sat Dec 21 22:14:10 2024] POST /api/search/hot-word => generated 339 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 19/26] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:14:10 2024] POST /api/search/new-paper => generated 2166 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 8/27] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:19:33 2024] POST /api/search/hot-paper => generated 1528 bytes in 50 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 20/28] 219.239.227.105 () {44 vars in 802 bytes} [Sat Dec 21 22:19:33 2024] POST /api/search/hot-word => generated 339 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 21/29] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:19:33 2024] POST /api/search/new-paper => generated 2166 bytes in 51 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 22/30] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:22:30 2024] POST /api/search/hot-paper => generated 1528 bytes in 46 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 23/31] 219.239.227.105 () {44 vars in 802 bytes} [Sat Dec 21 22:22:30 2024] POST /api/search/hot-word => generated 339 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 24/32] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:22:30 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 25/33] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:22:37 2024] POST /api/search/hot-paper => generated 1528 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 26/34] 219.239.227.105 () {44 vars in 802 bytes} [Sat Dec 21 22:22:37 2024] POST /api/search/hot-word => generated 339 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 27/35] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:22:37 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 28/36] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:25:05 2024] POST /api/search/hot-paper => generated 1528 bytes in 49 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 29/37] 219.239.227.105 () {44 vars in 802 bytes} [Sat Dec 21 22:25:05 2024] POST /api/search/hot-word => generated 339 bytes in 34 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 30/38] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:25:05 2024] POST /api/search/new-paper => generated 2166 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940376|app: 0|req: 1/39] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:25:20 2024] POST /api/search/hot-paper => generated 1528 bytes in 146 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 31/40] 219.239.227.105 () {44 vars in 802 bytes} [Sat Dec 21 22:25:20 2024] POST /api/search/hot-word => generated 339 bytes in 37 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 32/41] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:25:20 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 9/42] 219.239.227.114 () {40 vars in 694 bytes} [Sat Dec 21 22:26:16 2024] POST /api/search/search => generated 535143 bytes in 4254 msecs (HTTP/1.1 200) 7 headers in 216 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 33/43] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:27:13 2024] POST /api/search/hot-paper => generated 1528 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 34/44] 219.239.227.105 () {44 vars in 802 bytes} [Sat Dec 21 22:27:14 2024] POST /api/search/hot-word => generated 339 bytes in 37 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 35/45] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:27:14 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 10/46] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 22:27:33 2024] POST /api/search/single-work => generated 43550 bytes in 1686 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 11/47] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:27:46 2024] POST /api/search/hot-paper => generated 1528 bytes in 49 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 12/48] 219.239.227.105 () {44 vars in 802 bytes} [Sat Dec 21 22:27:47 2024] POST /api/search/hot-word => generated 339 bytes in 56 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 13/49] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:27:47 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 14/50] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 22:28:03 2024] POST /api/search/single-work => generated 43550 bytes in 3 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 36/51] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 22:27:23 2024] POST /api/search/single-work => generated 43550 bytes in 132177 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 37/52] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 22:29:38 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 38/53] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 22:29:41 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 15/54] 219.239.227.105 () {46 vars in 817 bytes} [Sat Dec 21 22:30:26 2024] OPTIONS /api/search/hot-paper => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 39/55] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:30:26 2024] POST /api/search/hot-paper => generated 1528 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 40/56] 219.239.227.105 () {46 vars in 815 bytes} [Sat Dec 21 22:30:26 2024] OPTIONS /api/search/hot-word => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 41/57] 219.239.227.105 () {44 vars in 802 bytes} [Sat Dec 21 22:30:26 2024] POST /api/search/hot-word => generated 339 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 42/58] 219.239.227.105 () {46 vars in 817 bytes} [Sat Dec 21 22:30:26 2024] OPTIONS /api/search/new-paper => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 43/59] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:30:26 2024] POST /api/search/new-paper => generated 2166 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 44/60] 219.239.227.114 () {40 vars in 704 bytes} [Sat Dec 21 22:31:03 2024] POST /api/search/single-work => generated 15397 bytes in 1623 msecs (HTTP/1.1 200) 7 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 940376|app: 0|req: 2/61] 95.214.55.32 () {28 vars in 309 bytes} [Sat Dec 21 22:32:04 2024] GET / => generated 2622 bytes in 6 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 45/62] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 22:32:27 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 46/63] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 22:34:07 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 47/64] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 22:35:36 2024] POST /api/search/single-work => generated 43550 bytes in 1212 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 16/65] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 22:34:48 2024] POST /api/search/single-work => generated 43550 bytes in 131997 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940376|app: 0|req: 3/66] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 22:37:46 2024] POST /api/search/single-work => generated 43550 bytes in 33 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 17/67] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 22:39:46 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 48/68] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 22:41:05 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 49/69] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 22:41:06 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 50/70] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 22:41:21 2024] POST /api/search/single-work => generated 43550 bytes in 3 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 51/71] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 22:41:22 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 52/72] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:41:45 2024] POST /api/search/hot-paper => generated 1528 bytes in 38 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 53/73] 219.239.227.105 () {44 vars in 802 bytes} [Sat Dec 21 22:41:45 2024] POST /api/search/hot-word => generated 339 bytes in 49 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 54/74] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:41:45 2024] POST /api/search/new-paper => generated 2166 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 55/75] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:47:10 2024] POST /api/search/hot-paper => generated 1528 bytes in 46 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 56/76] 219.239.227.105 () {44 vars in 802 bytes} [Sat Dec 21 22:47:10 2024] POST /api/search/hot-word => generated 339 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 57/77] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:47:10 2024] POST /api/search/new-paper => generated 2166 bytes in 39 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 58/78] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:47:42 2024] POST /api/search/hot-paper => generated 1528 bytes in 38 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 59/79] 219.239.227.105 () {44 vars in 802 bytes} [Sat Dec 21 22:47:42 2024] POST /api/search/hot-word => generated 339 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 60/80] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:47:42 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 61/81] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:50:06 2024] POST /api/search/hot-paper => generated 1528 bytes in 49 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 62/82] 219.239.227.105 () {44 vars in 802 bytes} [Sat Dec 21 22:50:06 2024] POST /api/search/hot-word => generated 339 bytes in 49 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 63/83] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:50:06 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 64/84] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 22:50:45 2024] POST /api/search/single-work => generated 43550 bytes in 1531 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 18/85] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:50:53 2024] POST /api/search/hot-paper => generated 1528 bytes in 33 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 19/86] 219.239.227.105 () {44 vars in 802 bytes} [Sat Dec 21 22:50:53 2024] POST /api/search/hot-word => generated 339 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 65/87] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:50:53 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 20/88] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:52:21 2024] POST /api/search/hot-paper => generated 1528 bytes in 52 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 21/89] 219.239.227.105 () {44 vars in 802 bytes} [Sat Dec 21 22:52:21 2024] POST /api/search/hot-word => generated 339 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 22/90] 219.239.227.105 () {44 vars in 804 bytes} [Sat Dec 21 22:52:21 2024] POST /api/search/new-paper => generated 2166 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 23/91] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 22:55:15 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 66/92] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:01:27 2024] POST /api/search/single-work => generated 43550 bytes in 1741 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 67/93] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:01:45 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 68/94] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:02:39 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 24/95] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:02:40 2024] POST /api/search/single-work => generated 43550 bytes in 3 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 69/96] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:03:00 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 70/97] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:03:01 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+Not Found: /OjPS
+[pid: 940378|app: 0|req: 71/98] 148.153.56.82 () {34 vars in 470 bytes} [Sat Dec 21 23:05:23 2024] GET /OjPS => generated 2652 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /Fsl8
+[pid: 940378|app: 0|req: 72/99] 148.153.56.82 () {34 vars in 470 bytes} [Sat Dec 21 23:05:24 2024] GET /Fsl8 => generated 2652 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /aab8
+[pid: 940378|app: 0|req: 73/100] 148.153.56.82 () {34 vars in 470 bytes} [Sat Dec 21 23:05:25 2024] GET /aab8 => generated 2652 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /jquery-3.3.1.slim.min.js
+[pid: 940378|app: 0|req: 74/101] 148.153.56.82 () {34 vars in 510 bytes} [Sat Dec 21 23:05:25 2024] GET /jquery-3.3.1.slim.min.js => generated 2712 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /aab9
+[pid: 940378|app: 0|req: 75/102] 148.153.56.82 () {34 vars in 470 bytes} [Sat Dec 21 23:05:26 2024] GET /aab9 => generated 2652 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /jquery-3.3.2.slim.min.js
+[pid: 940377|app: 0|req: 25/103] 148.153.56.82 () {34 vars in 510 bytes} [Sat Dec 21 23:05:26 2024] GET /jquery-3.3.2.slim.min.js => generated 2712 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 76/104] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:10:07 2024] POST /api/search/single-work => generated 43550 bytes in 1232 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 77/105] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:10:19 2024] POST /api/search/single-work => generated 43550 bytes in 3 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 78/106] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:11:03 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 79/107] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:11:06 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 80/108] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:11:07 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 26/109] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:11:07 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 81/110] 219.239.227.182 () {48 vars in 799 bytes} [Sat Dec 21 23:11:08 2024] OPTIONS /api/search/hot-paper => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 82/111] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:11:08 2024] POST /api/search/hot-paper => generated 1528 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 83/112] 219.239.227.182 () {48 vars in 797 bytes} [Sat Dec 21 23:11:08 2024] OPTIONS /api/search/hot-word => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 84/113] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 23:11:08 2024] POST /api/search/hot-word => generated 339 bytes in 35 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 85/114] 219.239.227.182 () {48 vars in 799 bytes} [Sat Dec 21 23:11:08 2024] OPTIONS /api/search/new-paper => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 86/115] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:11:08 2024] POST /api/search/new-paper => generated 2166 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 87/116] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:11:08 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 88/117] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:11:17 2024] POST /api/search/hot-paper => generated 1528 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 89/118] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 23:11:18 2024] POST /api/search/hot-word => generated 339 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 90/119] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:11:18 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 91/120] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:11:33 2024] POST /api/search/hot-paper => generated 1528 bytes in 40 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 27/121] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 23:11:33 2024] POST /api/search/hot-word => generated 339 bytes in 49 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940376|app: 0|req: 4/122] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:11:33 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940376|app: 0|req: 5/123] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:11:39 2024] POST /api/search/hot-paper => generated 1528 bytes in 46 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 92/124] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 23:11:39 2024] POST /api/search/hot-word => generated 339 bytes in 38 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 93/125] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:11:40 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 94/126] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:12:18 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940376|app: 0|req: 6/127] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:12:40 2024] POST /api/search/hot-paper => generated 1528 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
