@@ -1,5 +1,4 @@
 import src.util as util
-from src.model import User
 import src.config as config
 from src.util import logger
 from src.oss import obs_client
@@ -7,6 +6,7 @@ from src.cache import EmailMessage
 from src.response import Response
 from flask import Blueprint, request
 from src.pre_check import require_fields
+from src.model import User, PlatformMessages
 
 user_service_bp = Blueprint("usr_service", __name__, url_prefix="/api/user")
 
@@ -88,6 +88,42 @@ def get_user_info():
         return res(302)
 
     return res(0, data=user.info())
+
+
+@user_service_bp.route("/send_message", methods=["POST"])
+@require_fields("sender", "title", "body", "receiver_role")
+def send_message():
+    req = request.form
+    res = Response()
+
+    sender = req.get("sender")
+    title = req.get("title")
+    body = req.get("body")
+    receiver_role = req.get("receiver_role")
+    if receiver_role not in ["user", "researcher", "all"]:
+        return res(103, "receiver_role")
+
+    if receiver_role == "user" or receiver_role == "all":
+        PlatformMessages.create(title, sender, User.Role.USER, body)
+    if receiver_role == "researcher" or receiver_role == "all":
+        PlatformMessages.create(title, sender, User.Role.RESEARCHER, body)
+
+    return res(0)
+
+
+@user_service_bp.route("/get_information", methods=["POST"])
+@require_fields("id")
+def get_message_list():
+    req = request.form
+    res = Response()
+
+    user_id = req.get("id")
+
+    user = User.get_by_id(user_id)
+    if not user:
+        return res(302)
+
+    return res(0, data={"messages": PlatformMessages.get_by_receiver(user.role)})
 
 
 @user_service_bp.route("/change_email", methods=["POST"])

@@ -8,6 +8,7 @@ class Message:
         0: gettext("操作成功"),
         101: gettext("缺少参数 {}"),
         102: gettext("参数 {} 不符合格式要求"),
+        103: gettext("参数 {} 不符合要求"),
         300: gettext("登陆成功"),
         301: gettext("用户不存在或密码错误"),
         302: gettext("用户不存在"),

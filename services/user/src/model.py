@@ -87,9 +87,9 @@ class User(db.Model, Base):  # type: ignore
 
     avatar_url = sql.Column(sql.String(150), default=config.DEFAULT_AVATAR_URL)
 
-    gmt_registered = sql.Column(sql.DateTime, default=datetime.now(tz))
-    gmt_created = sql.Column(sql.DateTime, default=datetime.now(tz))
-    gmt_modified = sql.Column(sql.DateTime, default=datetime.now(tz))
+    time_registered = sql.Column(sql.DateTime, default=datetime.now(tz))
+    time_created = sql.Column(sql.DateTime, default=datetime.now(tz))
+    time_modified = sql.Column(sql.DateTime, default=datetime.now(tz))
 
     is_deleted = sql.Column(sql.Boolean, default=False)
 
@@ -253,7 +253,7 @@ class User(db.Model, Base):  # type: ignore
             "id": self.id,
             "email": self.email,
             "nickname": self.nickname,
-            "time_registered": self.gmt_registered.strftime("%Y-%m-%d %H:%M:%S"),
+            "time_registered": self.time_registered.strftime("%Y-%m-%d %H:%M:%S"),
             "role": User.Role.mapping.get(int(self.role)),
         }
         if self.role == User.Role.RESEARCHER:
@@ -278,8 +278,8 @@ class ResearcherApplication(Base):
     id_card_back = sql.Column(sql.String(200), nullable=False)
     academic_achievement = sql.Column(sql.String(200), nullable=False)
 
-    gmt_created = sql.Column(sql.DateTime, default=datetime.now(tz))
-    gmt_modified = sql.Column(sql.DateTime, default=datetime.now(tz))
+    time_created = sql.Column(sql.DateTime, default=datetime.now(tz))
+    time_modified = sql.Column(sql.DateTime, default=datetime.now(tz))
     is_deleted = sql.Column(sql.Boolean, default=False)
 
     def create(
@@ -340,9 +340,9 @@ class Researcher(Base):
 
     is_valid = sql.Column(sql.Boolean, default=False)
 
-    gmt_became_researcher = sql.Column(sql.DateTime, default=datetime.now(tz))
-    gmt_created = sql.Column(sql.DateTime, default=datetime.now(tz))
-    gmt_modified = sql.Column(sql.DateTime, default=datetime.now(tz))
+    time_became_researcher = sql.Column(sql.DateTime, default=datetime.now(tz))
+    time_created = sql.Column(sql.DateTime, default=datetime.now(tz))
+    time_modified = sql.Column(sql.DateTime, default=datetime.now(tz))
     is_deleted = sql.Column(sql.Boolean, default=False)
 
     @staticmethod
@@ -428,3 +428,55 @@ class Researcher(Base):
 
     def __repr__(self):
         return f"<Researcher {self.real_name}({self.openalex_id})>"
+
+
+class PlatformMessages(Base):
+    id = sql.Column(sql.Integer, primary_key=True, autoincrement=True)
+
+    title = sql.Column(sql.Text, nullable=False)
+    sender = sql.Column(sql.Text, nullable=False)
+    receiver_role = sql.Column(sql.Integer, nullable=False)
+    body = sql.Column(sql.Text, default="")
+    time_sent = sql.Column(sql.DateTime, default=datetime.now(tz))
+
+    time_created = sql.Column(sql.DateTime, default=datetime.now(tz))
+    time_modified = sql.Column(sql.DateTime, default=datetime.now(tz))
+    is_deleted = sql.Column(sql.Boolean, default=False)
+
+    @staticmethod
+    def create(
+        title: str, sender: str, receiver_role: int, body: str = ""
+    ) -> Optional["PlatformMessages"]:
+        """
+        Create a new platform message and save it to database.
+
+        Args:
+            title (str): The title of the message.
+            sender (str): The sender of the message.
+            receiver_role (int): The role of receiver of the message.
+            body (str): The body of the message. Defaults to "".
+
+        Returns:
+            Optional[PlatformMessages]: The created PlatformMessages object or None if failed.
+        """
+
+        message = PlatformMessages(
+            title=title, sender=sender, receiver_role=receiver_role, body=body
+        )
+        return message if message.save() else None
+
+    def get_by_receiver(receiver_role: int) -> List["PlatformMessages"]:
+        """
+        Get all platform messages with given receiver_role.
+
+        Args:
+            receiver_role (int): The role of receiver of the message.
+
+        Returns:
+            List[PlatformMessages]: The platform messages with given receiver_role.
+        """
+
+        return PlatformMessages.query_all(receiver_role=receiver_role)
+
+    def __repr__(self):
+        return f"<PlatformMessages {self.title} from {self.sender} to {User.Role.mapping.get(self.receiver_role)}>({self.id})"
