@@ -213,7 +213,7 @@ class ApiTestCase(unittest.TestCase):
         response = self.client.post(
             "/api/user/change_email",
             data={
-                "email": "test@email.testemail",
+                "id": "1",
                 "new_email": "test_new@email.testemail",
             },
             content_type="multipart/form-data",
@@ -234,7 +234,7 @@ class ApiTestCase(unittest.TestCase):
         response = self.client.post(
             "/api/user/change_password",
             data={
-                "email": "test@email.testemail",
+                "id": "1",
                 "password": "test_password",
                 "new_password": "test_new_password",
             },

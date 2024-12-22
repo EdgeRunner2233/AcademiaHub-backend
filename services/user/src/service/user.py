@@ -329,7 +329,7 @@ def become_researcher():
 
 @user_service_bp.route("/feedback_missing_work", methods=["POST"])
 @require_fields("content")
-def become_researcher():
+def feedback_missing_work():
     form = request.form
     res = Response()
 
