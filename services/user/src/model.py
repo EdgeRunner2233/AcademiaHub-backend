@@ -63,6 +63,12 @@ class Base:
             filter["is_deleted"] = False
         return cls.query.filter_by(**filter).all()  # type: ignore
 
+    @classmethod
+    def count(cls: Type[T], **filter: Union[int, str, bool]) -> int:
+        if "is_deleted" not in filter:
+            filter["is_deleted"] = False
+        return cls.query.filter_by(**filter).count()  # type: ignore
+
 
 class User(db.Model, Base):  # type: ignore
     class Role:

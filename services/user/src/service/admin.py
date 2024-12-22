@@ -1,7 +1,7 @@
 from src.response import Response
 from flask import Blueprint, request
 from src.pre_check import require_fields
-from src.model import Researcher, ResearcherApplication
+from src.model import User, Researcher, ResearcherApplication
 
 admin_service_bp = Blueprint("admin_service", __name__, url_prefix="/api/admin")
 
@@ -53,3 +53,10 @@ def disapprove_researcher_application():
     researcher.delete()
 
     return res(0)
+
+
+@admin_service_bp.route("/user_num", methods=["GET", "POST"])
+def get_user_num():
+    res = Response()
+
+    return res(0, data={"user_num": User.count(), "researcher_num": Researcher.count()})
