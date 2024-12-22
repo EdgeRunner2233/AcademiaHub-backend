@@ -179,7 +179,7 @@ def change_password():
 
 @user_service_bp.route("/forget_password", methods=["POST"])
 @require_fields("email", "verification_code", "new_password")
-def change_password():
+def forget_password():
     req = request.form
     res = Response()
 
