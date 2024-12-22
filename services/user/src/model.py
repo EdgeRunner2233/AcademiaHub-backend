@@ -6,7 +6,6 @@ import src.config as config
 import sqlalchemy.exc as exc
 from datetime import datetime
 from src.extensions import db
-from flask_babel import gettext
 import werkzeug.security as security
 from typing import Type, TypeVar, Optional, Union, Tuple, List
 
@@ -73,10 +72,10 @@ class User(db.Model, Base):  # type: ignore
         SUPER_ADMIN = 3
 
         mapping = {
-            0: gettext("用户"),
-            1: gettext("科研人员"),
-            2: gettext("管理员"),
-            3: gettext("超级管理员"),
+            0: "user",
+            1: "researcher",
+            2: "admin",
+            3: "super_admin",
         }
 
     id = sql.Column(sql.Integer, primary_key=True)
@@ -87,12 +86,6 @@ class User(db.Model, Base):  # type: ignore
     password_hash = sql.Column(sql.String(256))
 
     avatar_url = sql.Column(sql.String(150), default=config.DEFAULT_AVATAR_URL)
-
-    openalex_id = sql.Column(sql.String(30), default="")
-    organization = sql.Column(sql.String(100), default="")
-    title = sql.Column(sql.String(20), default="")
-    research_field = sql.Column(sql.String(200), default="")
-    gmt_became_researcher = sql.Column(sql.DateTime)
 
     gmt_registered = sql.Column(sql.DateTime, default=datetime.now(tz))
     gmt_created = sql.Column(sql.DateTime, default=datetime.now(tz))
@@ -264,18 +257,174 @@ class User(db.Model, Base):  # type: ignore
             "role": User.Role.mapping.get(int(self.role)),
         }
         if self.role == User.Role.RESEARCHER:
+            researcher = Researcher.get_by_user_id(self.id)
             user_info.update(
                 {
-                    "openalex_id": self.openalex_id,
-                    "organization": self.organization,
-                    "title": self.title,
-                    "research_field": self.research_field,
-                    "gmt_became_researcher": self.gmt_became_researcher.strftime(
-                        "%Y-%m-%d %H:%M:%S"
-                    ),
+                    "is_applied_for_researcher": researcher is not None,
+                    "researcher_info": researcher.info() if researcher else {},
                 }
             )
         return user_info
 
     def __repr__(self):
         return f"<User {self.email}({self.id})>"
+
+
+class ResearcherApplication(Base):
+    user_id = sql.Column(sql.Integer)
+
+    certificate = sql.Column(sql.String(200), nullable=False)
+    id_card_front = sql.Column(sql.String(200), nullable=False)
+    id_card_back = sql.Column(sql.String(200), nullable=False)
+    academic_achievement = sql.Column(sql.String(200), nullable=False)
+
+    gmt_created = sql.Column(sql.DateTime, default=datetime.now(tz))
+    gmt_modified = sql.Column(sql.DateTime, default=datetime.now(tz))
+    is_deleted = sql.Column(sql.Boolean, default=False)
+
+    def create(
+        self,
+        certificate: str,
+        id_card_front: str,
+        id_card_back: str,
+        academic_achievement: str,
+    ) -> Optional["ResearcherApplication"]:
+        """
+        Create the application.
+
+        Args:
+            certificate (str): The certificate of the user for application.
+            id_card_front (str): The front side of the ID card.
+            id_card_back (str): The back side of the ID card.
+            academic_achievement (str): The academic achievement of the user.
+
+        Returns:
+            bool: Whether the application is created successfully.
+        """
+
+        researcher_application = ResearcherApplication(
+            certificate=certificate,
+            id_card_front=id_card_front,
+            id_card_back=id_card_back,
+            academic_achievement=academic_achievement,
+        )
+
+        return researcher_application if researcher_application.save() else None
+
+    def get_by_user_id(user_id: int) -> Optional["ResearcherApplication"]:
+        """
+        Get the application with given user_id.
+
+        Args:
+            user_id (int): The id of the user.
+
+        Returns:
+            Optional[ResearcherApplication]: The application with given user_id or None if not found.
+        """
+
+        return ResearcherApplication.query_first(user_id=user_id)
+
+
+class Researcher(Base):
+    user_id = sql.Column(sql.Integer, nullable=False)
+    openalex_id = sql.Column(sql.String(50), nullable=False)
+
+    real_name = sql.Column(sql.String(20), default="")
+    gender = sql.Column(sql.String(10), default="")
+    birth_date = sql.Column(sql.String(20), default="")
+    phone_number = sql.Column(sql.String(20), default="")
+    researcher_email = sql.Column(sql.String(50), default="")
+    address = sql.Column(sql.String(50), default="")
+    academic_background = sql.Column(sql.String(20), default="")
+    graduated_from = sql.Column(sql.String(30), default="")
+
+    is_valid = sql.Column(sql.Boolean, default=False)
+
+    gmt_became_researcher = sql.Column(sql.DateTime, default=datetime.now(tz))
+    gmt_created = sql.Column(sql.DateTime, default=datetime.now(tz))
+    gmt_modified = sql.Column(sql.DateTime, default=datetime.now(tz))
+    is_deleted = sql.Column(sql.Boolean, default=False)
+
+    @staticmethod
+    def create(
+        user_id: int,
+        openalex_id: str,
+        real_name: str,
+        gender: str,
+        birth_date: str,
+        phone_number: str,
+        researcher_email: str,
+        address: str,
+        academic_background: str,
+        graduated_from: str,
+    ) -> Optional["Researcher"]:
+        """
+        Create a new researcher (from a user) and save it to database.
+
+        Args:
+            user_id (int): The id of the user.
+            openalex_id (str): The openalex id of the user.
+            real_name (str): The real name of the user.
+            gender (str): The gender of the user.
+            birth_date (str): The birth date of the user.
+            phone_number (str): The phone number of the user.
+            researcher_email (str): The email of the user.
+            address (str): The address of the user.
+            academic_background (str): The academic background of the user.
+            graduated_from (str): The graduated from of the user.
+
+        Returns:
+            Optional[Researcher]: The created Researcher object or None if failed.
+        """
+
+        researcher = Researcher(
+            user_id=user_id,
+            openalex_id=openalex_id,
+            real_name=real_name,
+            gender=gender,
+            birth_date=birth_date,
+            phone_number=phone_number,
+            researcher_email=researcher_email,
+            address=address,
+            academic_background=academic_background,
+            graduated_from=graduated_from,
+        )
+
+        return researcher if researcher.save() else None
+
+    def get_by_user_id(user_id: int) -> Optional["Researcher"]:
+        """
+        Get the researcher with given user_id.
+
+        Args:
+            user_id (int): The id of the user.
+
+        Returns:
+            Optional[Researcher]: The researcher with given user_id or None if not found.
+        """
+
+        return Researcher.query_first(user_id=user_id, is_valid=True)
+
+    def info(self) -> dict:
+        """
+        Get the researcher info.
+
+        Returns:
+            dict: The researcher info.
+        """
+        researcher_info = {
+            "user_id": self.user_id,
+            "openalex_id": self.openalex_id,
+            "real_name": self.real_name,
+            "gender": self.gender,
+            "birth_date": self.birth_date,
+            "phone_number": self.phone_number,
+            "researcher_email": self.researcher_email,
+            "address": self.address,
+            "academic_background": self.academic_background,
+            "graduated_from": self.graduated_from,
+        }
+        return researcher_info
+
+    def __repr__(self):
+        return f"<Researcher {self.real_name}({self.openalex_id})>"

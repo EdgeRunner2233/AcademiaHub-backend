@@ -1,4 +1,6 @@
 import re
+import string
+import random
 from src.config import INI_PATH
 
 
@@ -34,3 +36,17 @@ def check_email_pattern(email: str) -> bool:
 
     pattern = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
     return re.match(pattern, email) is not None
+
+
+def generate_random_string(length=5) -> str:
+    """
+    Generate a random string of given length.
+
+    Args:
+        length (int, optional): Length of the random string. Defaults to 5.
+
+    Returns:
+        str: Random string.
+    """
+
+    return "".join(random.choices(string.ascii_letters + string.digits, k=length))

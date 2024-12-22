@@ -25,6 +25,7 @@ class Message:
         404: gettext("无操作权限"),
         501: gettext("科研人员id不存在"),
         502: gettext("API请求失败"),
+        503: gettext("文件上传失败"),
     }
 
     @staticmethod

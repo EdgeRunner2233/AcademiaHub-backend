@@ -2,6 +2,7 @@ import src.util as util
 from src.model import User
 import src.config as config
 from src.util import logger
+from src.oss import obs_client
 from src.cache import EmailMessage
 from src.response import Response
 from flask import Blueprint, request
@@ -46,7 +47,7 @@ def login():
 
     user = User.get_by_email(user_email)
     token = user.generate_token()
-    return res(300, data={"id": user.id, "token": token})
+    return res(300, data={"id": user.id, "token": token, "info": user.info()})
 
 
 @user_service_bp.route("/register", methods=["POST"])
@@ -71,18 +72,18 @@ def register():
     user = User.create(user_email, user_nickname, user_password)
 
     token = user.generate_token()
-    return res(310, data={"id": user.id, "token": token})
+    return res(310, data={"id": user.id, "token": token, "info": user.info()})
 
 
 @user_service_bp.route("/info", methods=["POST"])
-@require_fields("email")
+@require_fields("user_id")
 def get_user_info():
     req = request.form
     res = Response()
 
-    email = req.get("email")
+    user_id = req.get("user_id")
 
-    user = User.get_by_email(email)
+    user = User.get_by_id(user_id)
     if not user:
         return res(302)
 
@@ -136,5 +137,103 @@ def change_password():
 
     user.update(password_hash=User.generate_password_hash(new_password))
     EmailMessage.send_change_password_success(email)
+
+    return res(0)
+
+
+@user_service_bp.route("/forget_password", methods=["POST"])
+@require_fields("email", "verification_code", "new_password")
+def change_password():
+    req = request.form
+    res = Response()
+
+    email = req.get("email")
+    verification_code = req.get("verification_code")
+    new_password = req.get("new_password")
+
+    user = User.get_by_email(email)
+    if not user:
+        return res(302)
+
+    if not EmailMessage.verify_vcode(email, verification_code):
+        return res(304)
+
+    user.update(password_hash=User.generate_password_hash(new_password))
+    EmailMessage.send_change_password_success(email)
+
+    return res(0)
+
+
+@user_service_bp.route("/become_researcher", methods=["POST"])
+@require_fields(
+    "user_id",
+    "work_id",
+    "name",
+    "gender",
+    "birth_date",
+    "phone_number",
+    "email",
+    "address",
+    "academic",
+    "graduated_school",
+    type="form",
+)
+@require_fields("certificate", "img1", "img2", "achievement", "avatar", type="files")
+def become_researcher():
+    form = request.form
+    files = request.files
+    res = Response()
+
+    user_id = form.get("user_id")
+    work_id = form.get("work_id")
+
+    real_name = form.get("name")
+    gender = form.get("gender")
+    birth_date = form.get("birth_date")
+    phone_number = form.get("phone_number")
+    researcher_email = form.get("email")
+    address = form.get("address")
+    academic_background = form.get("academic")
+    graduated_from = form.get("graduated_school")
+
+    certificate = files.get("certificate")
+    id_card_front = files.get("img1")
+    id_card_back = files.get("img2")
+    academic_achievement = files.get("achievement")
+    avatar = files.get("avatar")
+
+    if not util.check_email_pattern(researcher_email):
+        return res(102, "email")
+
+    try:
+        certificate_url = obs_client.put_file(
+            certificate.stream.read(),
+            util.generate_random_string(20),
+            config.OBS_APPLICATION_PREFIX,
+        )
+        id_card_front_url = obs_client.put_file(
+            id_card_front.stream.read(),
+            util.generate_random_string(20),
+            config.OBS_APPLICATION_PREFIX,
+        )
+        id_card_back_url = obs_client.put_file(
+            id_card_back.stream.read(),
+            util.generate_random_string(20),
+            config.OBS_APPLICATION_PREFIX,
+        )
+        academic_achievement_url = obs_client.put_file(
+            academic_achievement.stream.read(),
+            util.generate_random_string(20),
+            config.OBS_APPLICATION_PREFIX,
+        )
+        avatar_url = obs_client.put_file(
+            avatar.stream.read(),
+            f"{user_id}/{avatar.filename}",
+            config.OBS_AVATAR_PREFIX,
+        )
+    except obs_client.ObsOperationError:
+        return res(503)
+
+    # TODO
 
     return res(0)

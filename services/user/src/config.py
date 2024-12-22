@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 
-__version__ = "v0.0.8"
+__version__ = "v0.0.9"
 
 
 OPENALEX_BASE = "https://api.openalex.org/"
@@ -14,10 +14,9 @@ OBS_SERVER = "obs.cn-north-4.myhuaweicloud.com"
 OBS_BUCKET_NAME = "academiahub"
 OBS_BASE_URL = "https://academiahub.obs.cn-north-4.myhuaweicloud.com/"
 OBS_AVATAR_PREFIX = "user/avatar/"
-
+OBS_APPLICATION_PREFIX = "user/application/"
 
 DEFAULT_AVATAR_URL = OBS_BASE_URL + "user/avatar/default.png"
-
 
 DB_DELIMITER = "$|$"
 

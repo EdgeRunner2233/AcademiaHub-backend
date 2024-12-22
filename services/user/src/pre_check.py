@@ -50,6 +50,7 @@ def require_fields(*fields: str, type="form"):
                     (type == "form" and field not in request.form)
                     or (type == "json" and field not in request.json)
                     or (type == "args" and field not in request.args)
+                    or (type == "files" and field not in request.files)
                 ):
                     res = Response()
                     return res(101, field)
