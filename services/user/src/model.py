@@ -531,3 +531,58 @@ class PlatformMessages(db.Model, Base):  # type: ignore
 
     def __repr__(self):
         return f"<PlatformMessages {self.title} from {self.sender} to {User.Role.mapping.get(self.receiver_role)}>({self.id})"
+
+
+class MissingWork(db.Model, Base):  # type: ignore
+    id = sql.Column(sql.Integer, primary_key=True)
+
+    content = sql.Column(sql.Text, nullable=False)
+    is_read = sql.Column(sql.Boolean, default=False)
+
+    time_created = sql.Column(sql.DateTime, default=datetime.now(tz))
+    time_modified = sql.Column(sql.DateTime, default=datetime.now(tz))
+    is_deleted = sql.Column(sql.Boolean, default=False)
+
+    @staticmethod
+    def create(content: str) -> Optional["MissingWork"]:
+        """
+        Create a new missing work and save it to database.
+
+        Args:
+            content (str): The content of the missing work.
+
+        Returns:
+            Optional[MissingWork]: The created MissingWork object or None if failed.
+        """
+
+        missing_work = MissingWork(content=content)
+        return missing_work if missing_work.save() else None
+
+    @staticmethod
+    def get_unread() -> List[dict]:
+        """
+        Get all unread missing works.
+
+        Returns:
+            List[dict]: The unread missing works.
+        """
+
+        works = MissingWork.query_all(is_read=False)
+        return [work.info() for work in works]
+
+    def info(self) -> dict:
+        """
+        Get the missing work info.
+
+        Returns:
+            dict: The missing work info.
+        """
+
+        return {
+            "id": self.id,
+            "content": self.content,
+            "time_submitted": self.time_created.strftime("%Y-%m-%d %H:%M:%S"),
+        }
+
+    def __repr__(self):
+        return f"<MissingWork {self.content[:10]}...>({self.id})"

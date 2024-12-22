@@ -8,7 +8,13 @@ from src.cache import EmailMessage
 from flask import Blueprint, request
 from src.api_request import ApiRequest
 from src.pre_check import require_fields
-from src.model import User, PlatformMessages, ResearcherApplication, Researcher
+from src.model import (
+    User,
+    PlatformMessages,
+    ResearcherApplication,
+    Researcher,
+    MissingWork,
+)
 
 user_service_bp = Blueprint("usr_service", __name__, url_prefix="/api/user")
 
@@ -319,3 +325,18 @@ def become_researcher():
         return res(506)
 
     return res(510)
+
+
+@user_service_bp.route("/feedback_missing_work", methods=["POST"])
+@require_fields("content")
+def become_researcher():
+    form = request.form
+    res = Response()
+
+    content = form.get("content")
+
+    missing_work = MissingWork.create(content)
+    if not missing_work:
+        return res(506)
+
+    return res(0)

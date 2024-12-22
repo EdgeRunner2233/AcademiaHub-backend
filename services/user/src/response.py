@@ -32,6 +32,7 @@ class Message:
         506: gettext("数据库操作失败"),
         510: gettext("提交成功, 正在审核中"),
         511: gettext("该用户未提出科研人员申请"),
+        521: gettext("文献缺失信息不存在或已读"),
         999: gettext("未知错误"),
     }
 

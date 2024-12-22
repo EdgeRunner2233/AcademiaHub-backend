@@ -1,7 +1,7 @@
 from src.response import Response
 from flask import Blueprint, request
 from src.pre_check import require_fields
-from src.model import User, Researcher, ResearcherApplication
+from src.model import User, Researcher, ResearcherApplication, MissingWork
 
 admin_service_bp = Blueprint("admin_service", __name__, url_prefix="/api/admin")
 
@@ -60,3 +60,27 @@ def get_user_num():
     res = Response()
 
     return res(0, data={"user_num": User.count(), "researcher_num": Researcher.count()})
+
+
+@admin_service_bp.route("/get_unread_feedback", methods=["GET", "POST"])
+def all_unread_feedback():
+    res = Response()
+
+    return res(0, data={"feedbacks": MissingWork.get_unread()})
+
+
+@admin_service_bp.route("/read_feedback", methods=["POST"])
+@require_fields("id")
+def read_feedback():
+    form = request.form
+    res = Response()
+
+    missing_work_id = form.get("id")
+    missing_work = MissingWork.query_first(id=missing_work_id, is_read=False)
+
+    if not missing_work:
+        return res(521)
+
+    missing_work.update(is_read=True)
+
+    return res(0)
