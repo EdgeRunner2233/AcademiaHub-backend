@@ -286,6 +286,7 @@ class ResearcherApplication(db.Model, Base):  # type: ignore
 
     @staticmethod
     def create(
+        user_id: int,
         certificate: str,
         id_card_front: str,
         id_card_back: str,
@@ -305,6 +306,7 @@ class ResearcherApplication(db.Model, Base):  # type: ignore
         """
 
         researcher_application = ResearcherApplication(
+            user_id=user_id,
             certificate=certificate,
             id_card_front=id_card_front,
             id_card_back=id_card_back,

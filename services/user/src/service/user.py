@@ -270,22 +270,22 @@ def become_researcher():
     try:
         certificate_url = obs_client.put_file(
             certificate.stream.read(),
-            util.generate_random_string(20),
+            f"{util.generate_random_string(20)}/{certificate.filename}",
             config.OBS_APPLICATION_PREFIX,
         )
         id_card_front_url = obs_client.put_file(
             id_card_front.stream.read(),
-            util.generate_random_string(20),
+            f"{util.generate_random_string(20)}/{id_card_front.filename}",
             config.OBS_APPLICATION_PREFIX,
         )
         id_card_back_url = obs_client.put_file(
             id_card_back.stream.read(),
-            util.generate_random_string(20),
+            f"{util.generate_random_string(20)}/{id_card_back.filename}",
             config.OBS_APPLICATION_PREFIX,
         )
         academic_achievement_url = obs_client.put_file(
             academic_achievement.stream.read(),
-            util.generate_random_string(20),
+            f"{util.generate_random_string(20)}/{academic_achievement.filename}",
             config.OBS_APPLICATION_PREFIX,
         )
         avatar_url = obs_client.put_file(
@@ -297,6 +297,7 @@ def become_researcher():
         return res(503)
 
     application = ResearcherApplication.create(
+        user_id=user_id,
         certificate=certificate_url,
         id_card_front=id_card_front_url,
         id_card_back=id_card_back_url,
