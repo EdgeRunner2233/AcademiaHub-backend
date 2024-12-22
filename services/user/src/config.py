@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 
-__version__ = "v0.2.0"
+__version__ = "v0.3.0"
 
 
 OPENALEX_BASE = "https://api.openalex.org"
@@ -19,6 +19,8 @@ OBS_APPLICATION_PREFIX = "user/application/"
 DEFAULT_AVATAR_URL = OBS_BASE_URL + "user/avatar/default.png"
 
 DB_DELIMITER = "$|$"
+
+INFO_CACHE_EXPIRE_TIME = 36000
 
 
 def version():

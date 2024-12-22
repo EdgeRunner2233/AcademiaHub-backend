@@ -1,10 +1,16 @@
 import os
+import json
 import random
 from authlib.jose import jwt
+from typing import Type, TypeVar
 from src.extensions import mail, redis
+from src.config import INFO_CACHE_EXPIRE_TIME
 from flask_mail import Message as MailMessage
 from authlib.jose.errors import BadSignatureError
 from datetime import datetime, timedelta, timezone
+
+
+T = TypeVar("T", bound="InfoCache")
 
 
 class Token:
@@ -240,3 +246,62 @@ class EmailMessage:
             return True
         else:
             return False
+
+
+class InfoCache:
+    """
+    Cached info.
+    """
+
+    class CacheNotFound(Exception):
+        """
+        Cached info not found.
+        """
+
+    representation: str = "info"
+
+    @classmethod
+    def set(cls: Type[T], id: str, info: dict | str) -> None:
+        """
+        Set info to cache.
+
+        Args:
+            id (str): info id.
+            info (dict): info.
+
+        Returns:
+            None
+        """
+
+        redis.set(
+            f"{cls.representation}#{id}", json.dumps(info), ex=INFO_CACHE_EXPIRE_TIME
+        )
+
+    @classmethod
+    def get(cls: Type[T], id: str) -> dict | str:
+        """
+        Get cached info from cache.
+
+        Args:
+            id (str): info id.
+
+        Raises:
+            CacheNotFound: If cache info not found.
+
+        Returns:
+            dict: cached info.
+        """
+
+        info = redis.get(f"{cls.representation}#{id}")
+        if info is None:
+            raise cls.CacheNotFound
+
+        return json.loads(info)
+
+
+class CachedWork(InfoCache):
+    representation: str = "work_info"
+
+
+class CachedAuthor(InfoCache):
+    representation: str = "author_info"

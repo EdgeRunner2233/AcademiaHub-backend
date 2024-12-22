@@ -6,6 +6,7 @@ from flask import Blueprint, request
 from src.api_request import ApiRequest
 from src.model import User, Researcher
 from src.pre_check import require_fields
+from src.cache import CachedWork, CachedAuthor
 
 rsc_service_bp = Blueprint("rsc_service", __name__, url_prefix="/api/researcher")
 
@@ -27,18 +28,22 @@ def get_info():
     researcher_id = req.get("researcher_id", "")
 
     try:
-        result = ApiRequest.request_api(
-            f"{config.OPENALEX_BASE}/authors/{researcher_id}"
-        )
-    except ApiRequest.RequestNotFoundError:
-        return res(501)
-    except ApiRequest.RequestError:
-        return res(502)
+        result = CachedAuthor.get(researcher_id)
+    except CachedAuthor.CacheNotFound:
+        try:
+            result = ApiRequest.request_api(
+                f"{config.OPENALEX_BASE}/authors/{researcher_id}"
+            )
+            result: dict = json.loads(result)  # type: ignore
+            CachedAuthor.set(researcher_id, result)
+        except ApiRequest.RequestNotFoundError:
+            return res(501)
+        except ApiRequest.RequestError:
+            return res(502)
 
     researcher = Researcher.query_first(openalex_id=researcher_id)
     user = User.get_by_id(researcher.user_id) if researcher else None
 
-    result: dict = json.loads(result)  # type: ignore
     domains = [
         x.get("domain", {}).get("display_name", "")
         for x in result.get("topics", [])
@@ -61,11 +66,16 @@ def get_info():
         },
     }
 
+    work_id = result.get("works_api_url")
     try:
-        works = ApiRequest.request_api(result.get("works_api_url"))
-    except ApiRequest.RequestError:
-        return res(502)
-    works: list[dict] = json.loads(works).get("results", [])  # type: ignore
+        works = CachedWork.get(work_id)
+    except CachedWork.CacheNotFound:
+        try:
+            works = ApiRequest.request_api(result.get("works_api_url"))
+            works: list[dict] = json.loads(works).get("results", [])  # type: ignore
+            CachedWork.set(work_id, works)
+        except ApiRequest.RequestError:
+            return res(502)
 
     data["cooperators"] = []
     for work in works:
