@@ -11,6 +11,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    if: github.event.ref_type == 'branch'
     env:
       SECRET_KEY: "dev"
       SQLALCHEMY_DATABASE_URI: "sqlite:///:memory:"
