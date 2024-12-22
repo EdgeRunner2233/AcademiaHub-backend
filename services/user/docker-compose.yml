@@ -1,6 +1,7 @@
 services:
   redis:
     image: redis:alpine
+    restart: always
     networks:
       - user_module_network
 
@@ -8,6 +9,7 @@ services:
     image: ghcr.nju.edu.cn/edgerunner2233/academiahub-backend-module-user:latest
     depends_on:
       - redis
+    restart: always
     ports:
       - "30000:30000"
     environment:

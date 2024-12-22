@@ -271,7 +271,7 @@ class User(db.Model, Base):  # type: ignore
 
 
 class ResearcherApplication(db.Model, Base):  # type: ignore
-    pk_id = sql.Column(sql.Integer, primary_key=True)
+    id = sql.Column(sql.Integer, primary_key=True)
     user_id = sql.Column(sql.Integer)
 
     certificate = sql.Column(sql.String(200), nullable=False)
@@ -352,7 +352,7 @@ class ResearcherApplication(db.Model, Base):  # type: ignore
 
 
 class Researcher(db.Model, Base):  # type: ignore
-    pk_id = sql.Column(sql.Integer, primary_key=True)
+    id = sql.Column(sql.Integer, primary_key=True)
     user_id = sql.Column(sql.Integer, nullable=False)
     openalex_id = sql.Column(sql.String(50), nullable=False)
 
@@ -520,7 +520,7 @@ class PlatformMessages(db.Model, Base):  # type: ignore
             "title": self.title,
             "sender": self.sender,
             "body": self.body,
-            "time": self.time_sent,
+            "time": self.time_sent.strftime("%Y-%m-%d %H:%M:%S"),
         }
 
     def __repr__(self):
