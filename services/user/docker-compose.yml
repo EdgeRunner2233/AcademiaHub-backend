@@ -22,6 +22,8 @@ services:
       - MAIL_DEFAULT_SENDER=AcademiaHub@163.com
       - TOKEN_SECRET=<TOKEN_SECRET>
       - TOKEN_EXPIRE_TIME=3600
+      - OBS_ACCESS_KEY=<OBS_ACCESS_KEY>
+      - OBS_SECRET_KEY=<OBS_SECRET_KEY>
     networks:
       - user_module_network
 
