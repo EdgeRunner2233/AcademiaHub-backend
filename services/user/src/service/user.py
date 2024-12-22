@@ -1,3 +1,4 @@
+import json
 import src.util as util
 import src.config as config
 from src.util import logger
@@ -252,6 +253,7 @@ def become_researcher():
     except ApiRequest.RequestError:
         return res(502)
 
+    result = json.loads(result)
     authors: list[dict] = result.get("authorships", [])
     for author in authors:
         author_obj = author.get("author", {})
