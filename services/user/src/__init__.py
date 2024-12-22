@@ -2,6 +2,8 @@ import os
 from flask import Flask
 from dotenv import load_dotenv
 from src.service.user import user_service_bp
+from src.service.email import email_service_bp
+from src.service.admin import admin_service_bp
 from src.service.researcher import rsc_service_bp
 from src.extensions import babel, db, mail, redis
 
@@ -39,5 +41,7 @@ def create_app(**config):
 
     app.register_blueprint(rsc_service_bp)
     app.register_blueprint(user_service_bp)
+    app.register_blueprint(email_service_bp)
+    app.register_blueprint(admin_service_bp)
 
     return app

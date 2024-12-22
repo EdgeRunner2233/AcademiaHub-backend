@@ -71,9 +71,24 @@ class Token:
 
 class EmailMessage:
     @staticmethod
-    def _send(subject: str, recipients: str, body: str):
-        message = MailMessage(subject, [recipients], body)
+    def _send(subject: str, recipient: str, body: str):
+        message = MailMessage(subject, [recipient], body)
         mail.send(message)
+
+    @staticmethod
+    def send(recipient: str, subject: str, body: str):
+        """
+        Send email to recipient.
+
+        Args:
+            recipient (str): recipients email.
+            subject (str): email subject.
+            body (str): email body.
+
+        Returns:
+            None
+        """
+        EmailMessage._send(subject, recipient, body)
 
     @staticmethod
     def generate_vcode() -> str:

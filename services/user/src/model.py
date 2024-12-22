@@ -78,7 +78,8 @@ class User(db.Model, Base):  # type: ignore
             3: "super_admin",
         }
 
-    id = sql.Column(sql.Integer, primary_key=True)
+    pk_id = sql.Column(sql.Integer, primary_key=True, autoincrement=True)
+    id = sql.Column(sql.Integer)
     role = sql.Column(sql.Integer, default=Role.USER)
 
     email = sql.Column(sql.String(50))
@@ -271,13 +272,15 @@ class User(db.Model, Base):  # type: ignore
 
 
 class ResearcherApplication(db.Model, Base):  # type: ignore
-    user_id = sql.Column(sql.Integer, primary_key=True)
+    pk_id = sql.Column(sql.Integer, primary_key=True, autoincrement=True)
+    user_id = sql.Column(sql.Integer)
 
     certificate = sql.Column(sql.String(200), nullable=False)
     id_card_front = sql.Column(sql.String(200), nullable=False)
     id_card_back = sql.Column(sql.String(200), nullable=False)
     academic_achievement = sql.Column(sql.String(200), nullable=False)
 
+    time_submitted = sql.Column(sql.DateTime, default=datetime.now(tz))
     time_created = sql.Column(sql.DateTime, default=datetime.now(tz))
     time_modified = sql.Column(sql.DateTime, default=datetime.now(tz))
     is_deleted = sql.Column(sql.Boolean, default=False)
@@ -325,9 +328,31 @@ class ResearcherApplication(db.Model, Base):  # type: ignore
 
         return ResearcherApplication.query_first(user_id=user_id)
 
+    @staticmethod
+    def get_all_pending() -> List[dict]:
+        """
+        Get all pending applications.
+
+        Returns:
+            List[dict]: The list of pending applications.
+        """
+        applications = ResearcherApplication.query_all()
+        return [app.info() for app in applications]
+
+    def info(self) -> dict:
+        return {
+            "user_id": self.user_id,
+            "certificate": self.certificate,
+            "id_card_front": self.id_card_front,
+            "id_card_back": self.id_card_back,
+            "academic_achievement": self.academic_achievement,
+            "time_submitted": self.time_submitted.strftime("%Y-%m-%d %H:%M:%S"),
+        }
+
 
 class Researcher(db.Model, Base):  # type: ignore
-    user_id = sql.Column(sql.Integer, primary_key=True, nullable=False)
+    pk_id = sql.Column(sql.Integer, primary_key=True, autoincrement=True)
+    user_id = sql.Column(sql.Integer, nullable=False)
     openalex_id = sql.Column(sql.String(50), nullable=False)
 
     real_name = sql.Column(sql.String(20), default="")
@@ -433,7 +458,8 @@ class Researcher(db.Model, Base):  # type: ignore
 
 
 class PlatformMessages(db.Model, Base):  # type: ignore
-    id = sql.Column(sql.Integer, primary_key=True, autoincrement=True)
+    pk_id = sql.Column(sql.Integer, primary_key=True, autoincrement=True)
+    id = sql.Column(sql.Integer, autoincrement=True)
 
     title = sql.Column(sql.Text, nullable=False)
     sender = sql.Column(sql.Text, nullable=False)
@@ -468,7 +494,7 @@ class PlatformMessages(db.Model, Base):  # type: ignore
         return message if message.save() else None
 
     @staticmethod
-    def get_by_receiver(receiver_role: int) -> List["PlatformMessages"]:
+    def get_by_receiver(receiver_role: int) -> List[dict]:
         """
         Get all platform messages with given receiver_role.
 
@@ -476,10 +502,26 @@ class PlatformMessages(db.Model, Base):  # type: ignore
             receiver_role (int): The role of receiver of the message.
 
         Returns:
-            List[PlatformMessages]: The platform messages with given receiver_role.
+            List[dict]: The platform messages with given receiver_role.
         """
 
-        return PlatformMessages.query_all(receiver_role=receiver_role)
+        messages = PlatformMessages.query_all(receiver_role=receiver_role)
+        return [message.info() for message in messages]
+
+    def info(self) -> dict:
+        """
+        Get the platform message info.
+
+        Returns:
+            dict: The platform message info.
+        """
+        return {
+            "id": self.id,
+            "title": self.title,
+            "sender": self.sender,
+            "body": self.body,
+            "time": self.time_sent,
+        }
 
     def __repr__(self):
         return f"<PlatformMessages {self.title} from {self.sender} to {User.Role.mapping.get(self.receiver_role)}>({self.id})"
