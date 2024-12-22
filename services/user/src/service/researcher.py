@@ -72,7 +72,12 @@ def get_info():
         for author in work.get("authorships", []):
             cooperator = author.get("author")
             if cooperator and cooperator not in data["cooperators"]:
-                data["cooperators"].append(cooperator)
+                data["cooperators"].append(
+                    {
+                        "name": cooperator.get("display_name", ""),
+                        "id": cooperator.get("id", "").split("/")[-1],
+                    }
+                )
     data["works"] = [
         {
             "title": x.get("title", ""),

@@ -129,22 +129,22 @@ def get_message_list():
 
 
 @user_service_bp.route("/change_email", methods=["POST"])
-@require_fields("email", "new_email")
+@require_fields("id", "new_email")
 def change_email():
     req = request.form
     res = Response()
 
-    user_email = req.get("email")
+    user_id = req.get("id")
     new_email = req.get("new_email")
 
-    user = User.get_by_email(user_email)
+    user = User.get_by_id(user_id)
     if not user:
         return res(302)
 
     if not util.check_email_pattern(new_email):
         return res(102, "new_email")
 
-    if new_email == user_email:
+    if new_email == user.email:
         return res(322)
 
     if User.exists(new_email):
@@ -157,24 +157,24 @@ def change_email():
 
 
 @user_service_bp.route("/change_password", methods=["POST"])
-@require_fields("email", "password", "new_password")
+@require_fields("id", "password", "new_password")
 def change_password():
     req = request.form
     res = Response()
 
-    email = req.get("email")
+    user_id = req.get("id")
     password = req.get("password")
     new_password = req.get("new_password")
 
-    user = User.get_by_email(email)
+    user = User.get_by_id(user_id)
     if not user:
         return res(302)
 
-    if not User.login_check(email, password):
+    if not User.login_check(user.email, password):
         return res(305)
 
     user.update(password_hash=User.generate_password_hash(new_password))
-    EmailMessage.send_change_password_success(email)
+    EmailMessage.send_change_password_success(user.email)
 
     return res(0)
 
