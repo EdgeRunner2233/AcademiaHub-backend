@@ -1,10 +1,10 @@
 import json
-from src.model import User
 from src.util import logger
 import src.config as config
 from src.response import Response
 from flask import Blueprint, request
 from src.api_request import ApiRequest
+from src.model import User, Researcher
 from src.pre_check import require_fields
 
 rsc_service_bp = Blueprint("rsc_service", __name__, url_prefix="/api/researcher")
@@ -35,7 +35,8 @@ def get_info():
     except ApiRequest.RequestError:
         return res(502)
 
-    user = User.query_first(openalex_id=researcher_id)
+    researcher = Researcher.query_first(openalex_id=researcher_id)
+    user = User.get_by_id(researcher.user_id) if researcher else None
 
     result: dict = json.loads(result)  # type: ignore
     domains = [
@@ -52,7 +53,7 @@ def get_info():
         "cited_by_count": result.get("cited_by_count", 0),
         "summary_stats": result.get("summary_stats", {}),
         "avatar_url": user.avatar_url if user else config.DEFAULT_AVATAR_URL,
-        "email": user.email if user else "",
+        "email": researcher.researcher_email if researcher else "",
         "topics": list(set(domains)),
         "institution": {
             "name": institution.get("display_name", ""),

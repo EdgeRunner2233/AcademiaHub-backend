@@ -250,7 +250,7 @@ class ApiTestCase(unittest.TestCase):
         self.register()
         response = self.client.post(
             "/api/user/info",
-            data={"email": "test@email.testemail"},
+            data={"user_id": "1"},
             content_type="multipart/form-data",
         )
         payload = self.check_success_field(response)

@@ -257,7 +257,7 @@ class User(db.Model, Base):  # type: ignore
             "role": User.Role.mapping.get(int(self.role)),
         }
         if self.role == User.Role.RESEARCHER:
-            researcher = Researcher.get_by_user_id(self.id)
+            researcher = Researcher.get_by_user_id(int(self.id))
             user_info.update(
                 {
                     "is_applied_for_researcher": researcher is not None,
@@ -270,8 +270,8 @@ class User(db.Model, Base):  # type: ignore
         return f"<User {self.email}({self.id})>"
 
 
-class ResearcherApplication(Base):
-    user_id = sql.Column(sql.Integer)
+class ResearcherApplication(db.Model, Base):  # type: ignore
+    user_id = sql.Column(sql.Integer, primary_key=True)
 
     certificate = sql.Column(sql.String(200), nullable=False)
     id_card_front = sql.Column(sql.String(200), nullable=False)
@@ -325,8 +325,8 @@ class ResearcherApplication(Base):
         return ResearcherApplication.query_first(user_id=user_id)
 
 
-class Researcher(Base):
-    user_id = sql.Column(sql.Integer, nullable=False)
+class Researcher(db.Model, Base):  # type: ignore
+    user_id = sql.Column(sql.Integer, primary_key=True, nullable=False)
     openalex_id = sql.Column(sql.String(50), nullable=False)
 
     real_name = sql.Column(sql.String(20), default="")
@@ -430,7 +430,7 @@ class Researcher(Base):
         return f"<Researcher {self.real_name}({self.openalex_id})>"
 
 
-class PlatformMessages(Base):
+class PlatformMessages(db.Model, Base):  # type: ignore
     id = sql.Column(sql.Integer, primary_key=True, autoincrement=True)
 
     title = sql.Column(sql.Text, nullable=False)
@@ -465,6 +465,7 @@ class PlatformMessages(Base):
         )
         return message if message.save() else None
 
+    @staticmethod
     def get_by_receiver(receiver_role: int) -> List["PlatformMessages"]:
         """
         Get all platform messages with given receiver_role.
