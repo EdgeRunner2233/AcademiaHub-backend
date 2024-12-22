@@ -27,6 +27,11 @@ class Message:
         501: gettext("科研人员id不存在"),
         502: gettext("API请求失败"),
         503: gettext("文件上传失败"),
+        504: gettext("文献id不存在"),
+        505: gettext("科研人员名称有误或未被平台收录"),
+        506: gettext("数据库操作失败"),
+        510: gettext("提交成功, 正在审核中"),
+        999: gettext("未知错误"),
     }
 
     @staticmethod

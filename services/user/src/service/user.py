@@ -5,8 +5,9 @@ from src.oss import obs_client
 from src.cache import EmailMessage
 from src.response import Response
 from flask import Blueprint, request
+from src.api_request import ApiRequest
 from src.pre_check import require_fields
-from src.model import User, PlatformMessages
+from src.model import User, PlatformMessages, ResearcherApplication, Researcher
 
 user_service_bp = Blueprint("usr_service", __name__, url_prefix="/api/user")
 
@@ -238,6 +239,29 @@ def become_researcher():
     academic_achievement = files.get("achievement")
     avatar = files.get("avatar")
 
+    openalex_id = ""
+
+    user = User.get_by_id(user_id)
+    if not user:
+        return res(302)
+
+    try:
+        result = ApiRequest.request_api(f"{config.OPENALEX_BASE}/works/{work_id}")
+    except ApiRequest.RequestNotFoundError:
+        return res(504)
+    except ApiRequest.RequestError:
+        return res(502)
+
+    authors: list[dict] = result.get("authorships", [])
+    for author in authors:
+        author_obj = author.get("author", {})
+        if author_obj.get("display_name", "") == real_name:
+            openalex_id = author_obj.get("id", "").split("/")[-1]
+            break
+
+    if openalex_id is None or len(openalex_id) <= 0:
+        return res(505)
+
     if not util.check_email_pattern(researcher_email):
         return res(102, "email")
 
@@ -270,6 +294,25 @@ def become_researcher():
     except obs_client.ObsOperationError:
         return res(503)
 
-    # TODO
+    application = ResearcherApplication.create(
+        certificate=certificate_url,
+        id_card_front=id_card_front_url,
+        id_card_back=id_card_back_url,
+        academic_achievement=academic_achievement_url,
+    )
+    researcher = Researcher.create(
+        user_id=user_id,
+        openalex_id=openalex_id,
+        real_name=real_name,
+        gender=gender,
+        birth_date=birth_date,
+        phone_number=phone_number,
+        researcher_email=researcher_email,
+        address=address,
+        academic_background=academic_background,
+        graduated_from=graduated_from,
+    )
+    if not application or not researcher or not user.update(avatar_url=avatar_url):
+        return res(506)
 
-    return res(0)
+    return res(510)

@@ -185,6 +185,27 @@ class EmailMessage:
         EmailMessage._send(subject, email, body)
 
     @staticmethod
+    def send_become_researcher(email: str) -> None:
+        """
+        Send become researcher success message to user.
+
+        Args:
+            email (str): user email.
+
+        Returns:
+            None
+        """
+
+        subject = "[AcademiaHub] 科研人员申请已通过!"
+        body = (
+            "科研人员申请已通过! \n\n"
+            + "Your application to become a researcher has been approved. \n\n\n"
+            + "----------\nAcademiaHub Team"
+        )
+
+        EmailMessage._send(subject, email, body)
+
+    @staticmethod
     def verify_vcode(email: str, code: str) -> bool:
         """
         Verify verification code.

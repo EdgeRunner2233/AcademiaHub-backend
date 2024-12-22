@@ -282,8 +282,8 @@ class ResearcherApplication(db.Model, Base):  # type: ignore
     time_modified = sql.Column(sql.DateTime, default=datetime.now(tz))
     is_deleted = sql.Column(sql.Boolean, default=False)
 
+    @staticmethod
     def create(
-        self,
         certificate: str,
         id_card_front: str,
         id_card_back: str,
@@ -311,6 +311,7 @@ class ResearcherApplication(db.Model, Base):  # type: ignore
 
         return researcher_application if researcher_application.save() else None
 
+    @staticmethod
     def get_by_user_id(user_id: int) -> Optional["ResearcherApplication"]:
         """
         Get the application with given user_id.
@@ -392,6 +393,7 @@ class Researcher(db.Model, Base):  # type: ignore
 
         return researcher if researcher.save() else None
 
+    @staticmethod
     def get_by_user_id(user_id: int) -> Optional["Researcher"]:
         """
         Get the researcher with given user_id.

@@ -4,24 +4,31 @@ from src.model import User
 from src.response import Response
 
 
-def permission(required_role=User.Role.USER):
+def permission(required_role=User.Role.USER, field="id", type="form"):
     """
     Decorator to check if user has permission to access the endpoint.
 
     Args:
         required_role (int, optional): Required role. Defaults to USER.
+        field (str, optional): Field to check. Defaults to "id".
+        type (str, optional): Type of request data. Defaults to "form".
     """
 
     def decorator(f):
         @functools.wraps(f)
         def warper(*args, **kwargs):
             res = Response()
-            token = request.headers.get("Authorization", "")
-            if not token:
-                return res(401)
-            user, err = User.get_by_token(token)
-            if err > 0:
-                return res(err)
+            if type == "form":
+                field_value = request.form.get(field, None)
+            elif type == "json":
+                field_value = request.json.get(field, None)
+            elif type == "args":
+                field_value = request.args.get(field, None)
+            else:
+                return res(999)
+            user = User.query_first(**{field: field_value})
+            if not user:
+                return res(302)
             elif user.role < required_role:
                 return res(404)
             else:
