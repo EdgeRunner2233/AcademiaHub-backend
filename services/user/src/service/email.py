@@ -1,4 +1,5 @@
 import src.util as util
+from src.model import User
 from src.response import Response
 from src.cache import EmailMessage
 from flask import Blueprint, request
@@ -13,13 +14,17 @@ def send_email():
     form = request.form
     res = Response()
 
-    recipient = form.get("recipient").strip()
+    recipient = form.get("recipient")
     subject = form.get("subject")
     body = form.get("body")
 
-    if not util.check_email_pattern(recipient):
-        return res(102, "recipient")
+    user = User.get_by_id(recipient)
+    if not user:
+        return res(302)
 
-    EmailMessage.send(recipient, subject, body)
+    if not util.check_email_pattern(user.email):
+        return res(102, "user's email")
+
+    EmailMessage.send(user.email, subject, body)
 
     return res(0)
