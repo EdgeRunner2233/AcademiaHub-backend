@@ -78,8 +78,7 @@ class User(db.Model, Base):  # type: ignore
             3: "super_admin",
         }
 
-    pk_id = sql.Column(sql.Integer, primary_key=True, autoincrement=True)
-    id = sql.Column(sql.Integer)
+    id = sql.Column(sql.Integer, primary_key=True)
     role = sql.Column(sql.Integer, default=Role.USER)
 
     email = sql.Column(sql.String(50))
@@ -272,7 +271,7 @@ class User(db.Model, Base):  # type: ignore
 
 
 class ResearcherApplication(db.Model, Base):  # type: ignore
-    pk_id = sql.Column(sql.Integer, primary_key=True, autoincrement=True)
+    pk_id = sql.Column(sql.Integer, primary_key=True)
     user_id = sql.Column(sql.Integer)
 
     certificate = sql.Column(sql.String(200), nullable=False)
@@ -351,7 +350,7 @@ class ResearcherApplication(db.Model, Base):  # type: ignore
 
 
 class Researcher(db.Model, Base):  # type: ignore
-    pk_id = sql.Column(sql.Integer, primary_key=True, autoincrement=True)
+    pk_id = sql.Column(sql.Integer, primary_key=True)
     user_id = sql.Column(sql.Integer, nullable=False)
     openalex_id = sql.Column(sql.String(50), nullable=False)
 
@@ -458,8 +457,7 @@ class Researcher(db.Model, Base):  # type: ignore
 
 
 class PlatformMessages(db.Model, Base):  # type: ignore
-    pk_id = sql.Column(sql.Integer, primary_key=True, autoincrement=True)
-    id = sql.Column(sql.Integer, autoincrement=True)
+    id = sql.Column(sql.Integer, primary_key=True)
 
     title = sql.Column(sql.Text, nullable=False)
     sender = sql.Column(sql.Text, nullable=False)

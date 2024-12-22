@@ -260,5 +260,3 @@ class ApiTestCase(unittest.TestCase):
         self.assertEqual(user_info["email"], "test@email.testemail")
         self.assertEqual(user_info["nickname"], "test")
         self.assertEqual(user_info["role"], User.Role.mapping.get(User.Role.USER))
-
-        # TODO: test info for researcher
