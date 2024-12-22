@@ -542,13 +542,16 @@ def get_statistics(request):
     query = request.POST.get('search_str', '')  # 获取搜索关键词
 
     # 尝试从数据库中获取统计数据
-    try:
-        stats = Statistics.objects.filter(filter=query).first()
+    stats = Statistics.objects.filter(filter=query).first()
+    
+    if stats and (stats.publication_year_list or stats.type_list or stats.author_list):
+        # 如果找到了统计数据且其中至少有一个列表不为空
         return JsonResponse({'status': 'completed', 'stats': {
             'publication_year_list': stats.publication_year_list,
             'type_list': stats.type_list,
             'author_list': stats.author_list,
         }})
-    except Statistics.DoesNotExist:
-        # 如果数据不存在，说明还在处理中
+    else:
+        # 如果找不到数据或者数据为空
         return JsonResponse({'status': 'processing'})
+

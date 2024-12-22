@@ -91,3 +91,8 @@ def update_new_works():
             new_work.work_title = work_title
             new_work.publication_date = publication_date
             new_work.save()
+
+@app.task
+def update_dataset():
+    # TODO
+    logger.info("update dataset !!!")

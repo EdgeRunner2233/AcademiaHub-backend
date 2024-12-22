@@ -61,7 +61,16 @@ def add_mark(request):
         result = {'result': 'error', 'massage': '标记列表不存在'}
         return JsonResponse(result)
 
-    mark_relationships = MarkRelationships.objects.filter(mark_list=mark, work_id=work_id)
+    work = get_single_work(work_id)
+    work_title = work['title']
+    authorships = work['authorships']
+    author_name = ', '.join(author_entry['author']['display_name'] for author_entry in authorships)
+    cited_by_count = work['cited_by_count']
+    created_date = work['created_date']
+    publication_date = work['publication_date']
+
+    mark_relationships = MarkRelationships.objects.filter(mark_list=mark,
+                                                          work_id=work_id)
     if mark_relationships:
         result = {'result': 'error', 'massage': '已添加到标记列表中'}
         return JsonResponse(result)
@@ -69,7 +78,14 @@ def add_mark(request):
     mark.count += 1
     mark.save()
 
-    mark_relationship = MarkRelationships.objects.create(mark_list=mark, work_id=work_id)
+    mark_relationship = MarkRelationships.objects.create(mark_list=mark,
+                                                         work_id=work_id,
+                                                         author_name=author_name,
+                                                         work_title=work_title,
+                                                         cited_by_count=cited_by_count,
+                                                         created_date=created_date,
+                                                         publication_date=publication_date
+                                                         )
     result = {'result': 'successful', 'message': '添加成功', 'id': mark_relationship.id, 'mark_list_id': mark.id, 'work_id': work_id}
     return JsonResponse(result)
 

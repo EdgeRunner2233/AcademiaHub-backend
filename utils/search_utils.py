@@ -59,6 +59,17 @@ def get_single_work(openalex_id):
         if single_work['abstract_inverted_index'] is not None:
             single_work['abstract'] = get_abstract(single_work['abstract_inverted_index'])
 
+        authorships = single_work['authorships']
+        institutions_info = []
+
+        for author_entry in authorships:
+            for institution in author_entry['institutions']:
+                institutions_info.append({
+                    "id": institution['id'],
+                    "display_name": institution['display_name']
+                })
+        single_work['institutions_info'] = institutions_info
+
         key = single_work['id']
         value = single_work
         cache.set(key, value, timeout=300)

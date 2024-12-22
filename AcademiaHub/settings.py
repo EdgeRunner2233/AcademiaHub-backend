@@ -18,6 +18,9 @@ from celery.schedules import crontab
 env = environ.Env()
 environ.Env.read_env(env_file='/AcademiaHub/Backend/AcademiaHub/.env')
 
+# 通过环境变量来动态设置时间间隔
+update_interval = env('UPDATE_INTERVAL') 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -200,6 +203,10 @@ CELERY_BEAT_SCHEDULE = {
     'update_new_works': {
         'task': 'search.tasks.update_new_works',
         'schedule': timedelta(days=1),
+    },
+    'update_dataset': {
+        'task': 'search.tasks.update_dataset',
+        'schedule': timedelta(days=int(update_interval)),  # 动态设置时间
     },
 }
 

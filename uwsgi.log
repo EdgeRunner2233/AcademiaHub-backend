@@ -5340,3 +5340,1631 @@ Not Found: /jquery-3.3.2.slim.min.js
 [pid: 940378|app: 0|req: 93/125] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:11:40 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
 [pid: 940378|app: 0|req: 94/126] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:12:18 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
 [pid: 940376|app: 0|req: 6/127] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:12:40 2024] POST /api/search/hot-paper => generated 1528 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 95/128] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:13:30 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 96/129] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:13:30 2024] POST /api/search/hot-paper => generated 1528 bytes in 33 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 97/130] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 23:13:31 2024] POST /api/search/hot-word => generated 339 bytes in 38 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 98/131] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:13:31 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 99/132] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:13:41 2024] POST /api/search/hot-paper => generated 1528 bytes in 35 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 100/133] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 23:13:41 2024] POST /api/search/hot-word => generated 339 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 101/134] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:13:41 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940376|app: 0|req: 7/135] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:13:48 2024] POST /api/search/hot-paper => generated 1528 bytes in 40 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 102/136] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 23:13:48 2024] POST /api/search/hot-word => generated 339 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 103/137] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:13:48 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 104/138] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:13:52 2024] POST /api/search/hot-paper => generated 1528 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 105/139] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 23:13:52 2024] POST /api/search/hot-word => generated 339 bytes in 39 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 106/140] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:13:52 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940376|app: 0|req: 8/141] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:14:01 2024] POST /api/search/hot-paper => generated 1528 bytes in 40 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 107/142] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 23:14:01 2024] POST /api/search/hot-word => generated 339 bytes in 38 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 108/143] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:14:01 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 109/144] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:14:03 2024] POST /api/search/hot-paper => generated 1528 bytes in 39 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 110/145] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 23:14:04 2024] POST /api/search/hot-word => generated 339 bytes in 39 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 111/146] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:14:04 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 112/147] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:14:08 2024] POST /api/search/hot-paper => generated 1528 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 113/148] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 23:14:08 2024] POST /api/search/hot-word => generated 339 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 114/149] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:14:08 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 115/150] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:14:12 2024] POST /api/search/hot-paper => generated 1528 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 116/151] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 23:14:12 2024] POST /api/search/hot-word => generated 339 bytes in 49 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 117/152] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:14:12 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 118/153] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:14:27 2024] POST /api/search/hot-paper => generated 1528 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 119/154] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 23:14:27 2024] POST /api/search/hot-word => generated 339 bytes in 50 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 120/155] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:14:27 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 121/156] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:14:52 2024] POST /api/search/single-work => generated 43550 bytes in 3 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 28/157] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:15:35 2024] POST /api/search/single-work => generated 43550 bytes in 1425 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+Not Found: /api',
+[pid: 940377|app: 0|req: 29/158] 125.44.105.152 () {58 vars in 1070 bytes} [Sat Dec 21 23:16:24 2024] GET /api', => generated 2667 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 122/159] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:19:05 2024] POST /api/search/hot-paper => generated 1528 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 123/160] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 23:19:05 2024] POST /api/search/hot-word => generated 339 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 124/161] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:19:05 2024] POST /api/search/new-paper => generated 2166 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 125/162] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:19:13 2024] POST /api/search/hot-paper => generated 1528 bytes in 40 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 126/163] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 23:19:13 2024] POST /api/search/hot-word => generated 339 bytes in 46 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 127/164] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:19:13 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 128/165] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:19:16 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 129/166] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:19:17 2024] POST /api/search/hot-paper => generated 1528 bytes in 38 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 130/167] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 23:19:17 2024] POST /api/search/hot-word => generated 339 bytes in 50 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 131/168] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:19:17 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 132/169] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:20:28 2024] POST /api/search/single-work => generated 43550 bytes in 3 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 30/170] 219.239.227.182 () {48 vars in 846 bytes} [Sat Dec 21 23:20:36 2024] OPTIONS /api/search/hot-paper => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 133/171] 219.239.227.182 () {46 vars in 833 bytes} [Sat Dec 21 23:20:36 2024] POST /api/search/hot-paper => generated 1528 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 134/172] 219.239.227.182 () {48 vars in 844 bytes} [Sat Dec 21 23:20:36 2024] OPTIONS /api/search/hot-word => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 135/173] 219.239.227.182 () {46 vars in 831 bytes} [Sat Dec 21 23:20:36 2024] POST /api/search/hot-word => generated 339 bytes in 37 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 136/174] 219.239.227.182 () {48 vars in 846 bytes} [Sat Dec 21 23:20:36 2024] OPTIONS /api/search/new-paper => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 31/175] 219.239.227.182 () {46 vars in 833 bytes} [Sat Dec 21 23:20:36 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 32/176] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:21:10 2024] POST /api/search/single-work => generated 43550 bytes in 1451 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 137/177] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:21:02 2024] POST /api/search/single-work => generated 43550 bytes in 130741 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 33/178] 219.239.227.162 () {48 vars in 858 bytes} [Sat Dec 21 23:23:20 2024] OPTIONS /api/search/advanced_search => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 138/179] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 23:23:20 2024] POST /api/search/advanced_search => generated 631487 bytes in 2159 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+Internal Server Error: /api/search/get_statistics
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/AcademiaHub/Backend/AcademiaHub/./search/views.py", line 548, in get_statistics
+    'publication_year_list': stats.publication_year_list,
+AttributeError: 'NoneType' object has no attribute 'publication_year_list'
+[pid: 940378|app: 0|req: 139/180] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 23:23:23 2024] POST /api/search/get_statistics => generated 58274 bytes in 67 msecs (HTTP/1.1 500) 9 headers in 342 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 34/181] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:23:45 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940376|app: 0|req: 9/182] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:24:25 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 140/183] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:24:26 2024] POST /api/search/single-work => generated 43550 bytes in 3 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 141/184] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:26:08 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940376|app: 0|req: 10/185] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:26:19 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 35/186] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:27:04 2024] POST /api/search/hot-paper => generated 1528 bytes in 35 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 36/187] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 23:27:04 2024] POST /api/search/hot-word => generated 339 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 37/188] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:27:04 2024] POST /api/search/new-paper => generated 2166 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 38/189] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:27:18 2024] POST /api/search/hot-paper => generated 1528 bytes in 58 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 142/190] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 23:27:18 2024] POST /api/search/hot-word => generated 339 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940376|app: 0|req: 11/191] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:27:18 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 143/192] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:27:22 2024] POST /api/search/hot-paper => generated 1528 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 144/193] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 23:27:22 2024] POST /api/search/hot-word => generated 339 bytes in 70 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 145/194] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:27:22 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 146/195] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:27:28 2024] POST /api/search/hot-paper => generated 1528 bytes in 51 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 147/196] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 23:27:28 2024] POST /api/search/hot-word => generated 339 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 148/197] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:27:28 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 149/198] 219.239.227.162 () {48 vars in 846 bytes} [Sat Dec 21 23:27:50 2024] OPTIONS /api/search/hot-paper => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 150/199] 219.239.227.162 () {46 vars in 833 bytes} [Sat Dec 21 23:27:50 2024] POST /api/search/hot-paper => generated 1528 bytes in 40 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 151/200] 219.239.227.162 () {48 vars in 844 bytes} [Sat Dec 21 23:27:50 2024] OPTIONS /api/search/hot-word => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 152/201] 219.239.227.162 () {46 vars in 831 bytes} [Sat Dec 21 23:27:50 2024] POST /api/search/hot-word => generated 339 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 153/202] 219.239.227.162 () {48 vars in 846 bytes} [Sat Dec 21 23:27:50 2024] OPTIONS /api/search/new-paper => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 154/203] 219.239.227.162 () {46 vars in 833 bytes} [Sat Dec 21 23:27:50 2024] POST /api/search/new-paper => generated 2166 bytes in 0 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 155/204] 219.239.227.162 () {46 vars in 833 bytes} [Sat Dec 21 23:28:46 2024] POST /api/search/hot-paper => generated 1528 bytes in 50 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 156/205] 219.239.227.162 () {46 vars in 831 bytes} [Sat Dec 21 23:28:46 2024] POST /api/search/hot-word => generated 339 bytes in 37 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 157/206] 219.239.227.162 () {46 vars in 833 bytes} [Sat Dec 21 23:28:46 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 39/207] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:29:05 2024] POST /api/search/single-work => generated 43550 bytes in 1594 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 40/208] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 23:29:57 2024] POST /api/search/advanced_search => generated 562428 bytes in 1788 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 41/209] 219.239.227.162 () {46 vars in 949 bytes} [Sat Dec 21 23:29:59 2024] POST /api/search/get_statistics => generated 21909 bytes in 51 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 42/210] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:31:00 2024] POST /api/search/hot-paper => generated 1528 bytes in 59 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 43/211] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 23:31:00 2024] POST /api/search/hot-word => generated 339 bytes in 51 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 44/212] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:31:00 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+Sat Dec 21 23:31:02 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.162) !!!
+Sat Dec 21 23:31:02 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.162)
+OSError: write error
+[pid: 940378|app: 0|req: 158/213] 219.239.227.162 () {46 vars in 847 bytes} [Sat Dec 21 23:28:51 2024] POST /api/search/advanced_search => generated 523980 bytes in 131342 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+[pid: 940378|app: 0|req: 159/214] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:31:12 2024] POST /api/search/hot-paper => generated 1528 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 45/215] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 23:31:12 2024] POST /api/search/hot-word => generated 339 bytes in 46 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 160/216] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:31:12 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940376|app: 0|req: 12/217] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:31:13 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 161/218] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:31:14 2024] POST /api/search/single-work => generated 43550 bytes in 3 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 162/219] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:31:27 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 163/220] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:31:28 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 164/221] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:32:10 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 165/222] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:32:11 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 166/223] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:32:20 2024] POST /api/search/hot-paper => generated 1528 bytes in 49 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 167/224] 219.239.227.182 () {46 vars in 784 bytes} [Sat Dec 21 23:32:20 2024] POST /api/search/hot-word => generated 339 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 168/225] 219.239.227.182 () {46 vars in 786 bytes} [Sat Dec 21 23:32:20 2024] POST /api/search/new-paper => generated 2166 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 169/226] 219.239.227.182 () {48 vars in 811 bytes} [Sat Dec 21 23:32:35 2024] OPTIONS /api/search/advanced_search => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 170/227] 219.239.227.182 () {46 vars in 800 bytes} [Sat Dec 21 23:32:35 2024] POST /api/search/advanced_search => generated 244 bytes in 1538 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 46/228] 219.239.227.182 () {46 vars in 800 bytes} [Sat Dec 21 23:32:36 2024] POST /api/search/advanced_search => generated 244 bytes in 919 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+Internal Server Error: /api/search/get_statistics
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/AcademiaHub/Backend/AcademiaHub/./search/views.py", line 548, in get_statistics
+    'publication_year_list': stats.publication_year_list,
+AttributeError: 'NoneType' object has no attribute 'publication_year_list'
+[pid: 940378|app: 0|req: 171/229] 219.239.227.182 () {46 vars in 902 bytes} [Sat Dec 21 23:32:37 2024] POST /api/search/get_statistics => generated 58235 bytes in 62 msecs (HTTP/1.1 500) 9 headers in 342 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 172/230] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:33:10 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 173/231] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:33:32 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+Not Found: /
+[pid: 940377|app: 0|req: 47/232] 205.209.102.36 () {36 vars in 563 bytes} [Sat Dec 21 23:33:38 2024] GET / => generated 2619 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /HNAP1/
+[pid: 940375|app: 0|req: 1/233] 205.209.102.36 () {38 vars in 612 bytes} [Sat Dec 21 23:33:52 2024] GET /HNAP1/ => generated 2655 bytes in 111 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /hudson/script
+[pid: 940378|app: 0|req: 174/234] 205.209.102.36 () {38 vars in 626 bytes} [Sat Dec 21 23:33:56 2024] GET /hudson/script => generated 2676 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /script
+[pid: 940378|app: 0|req: 175/235] 205.209.102.36 () {38 vars in 612 bytes} [Sat Dec 21 23:33:57 2024] GET /script => generated 2655 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 176/236] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:33:59 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+Not Found: /sqlite/main.php
+[pid: 940378|app: 0|req: 177/237] 205.209.102.36 () {38 vars in 630 bytes} [Sat Dec 21 23:34:01 2024] GET /sqlite/main.php => generated 2682 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /sqlitemanager/main.php
+[pid: 940378|app: 0|req: 178/238] 205.209.102.36 () {38 vars in 644 bytes} [Sat Dec 21 23:34:01 2024] GET /sqlitemanager/main.php => generated 2703 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /SQLiteManager/main.php
+[pid: 940375|app: 0|req: 2/239] 205.209.102.36 () {38 vars in 644 bytes} [Sat Dec 21 23:34:02 2024] GET /SQLiteManager/main.php => generated 2703 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /SQLite/main.php
+[pid: 940378|app: 0|req: 179/240] 205.209.102.36 () {38 vars in 630 bytes} [Sat Dec 21 23:34:05 2024] GET /SQLite/main.php => generated 2682 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /SQlite/main.php
+[pid: 940375|app: 0|req: 3/241] 205.209.102.36 () {38 vars in 630 bytes} [Sat Dec 21 23:34:08 2024] GET /SQlite/main.php => generated 2682 bytes in 5 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /main.php
+[pid: 940378|app: 0|req: 180/242] 205.209.102.36 () {38 vars in 616 bytes} [Sat Dec 21 23:34:09 2024] GET /main.php => generated 2661 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /test/sqlite/SQLiteManager-1.2.0/SQLiteManager-1.2.0/main.php
+[pid: 940378|app: 0|req: 181/243] 205.209.102.36 () {38 vars in 720 bytes} [Sat Dec 21 23:34:09 2024] GET /test/sqlite/SQLiteManager-1.2.0/SQLiteManager-1.2.0/main.php => generated 2817 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /SQLiteManager-1.2.4/main.php
+[pid: 940375|app: 0|req: 4/244] 205.209.102.36 () {38 vars in 656 bytes} [Sat Dec 21 23:34:10 2024] GET /SQLiteManager-1.2.4/main.php => generated 2721 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /agSearch/SQlite/main.php
+[pid: 940378|app: 0|req: 182/245] 205.209.102.36 () {38 vars in 648 bytes} [Sat Dec 21 23:34:10 2024] GET /agSearch/SQlite/main.php => generated 2709 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpmyadmin/
+[pid: 940378|app: 0|req: 183/246] 205.209.102.36 () {38 vars in 622 bytes} [Sat Dec 21 23:34:14 2024] GET /phpmyadmin/ => generated 2670 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin/
+[pid: 940375|app: 0|req: 5/247] 205.209.102.36 () {38 vars in 622 bytes} [Sat Dec 21 23:34:14 2024] GET /phpMyAdmin/ => generated 2670 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /PMA/
+[pid: 940378|app: 0|req: 184/248] 205.209.102.36 () {38 vars in 608 bytes} [Sat Dec 21 23:34:15 2024] GET /PMA/ => generated 2649 bytes in 5 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /pma/
+[pid: 940375|app: 0|req: 6/249] 205.209.102.36 () {38 vars in 608 bytes} [Sat Dec 21 23:34:15 2024] GET /pma/ => generated 2649 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 185/250] 205.209.102.36 () {38 vars in 612 bytes} [Sat Dec 21 23:34:16 2024] GET /admin/ => generated 0 bytes in 29 msecs (HTTP/1.1 302) 10 headers in 380 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 186/251] 205.209.102.36 () {38 vars in 649 bytes} [Sat Dec 21 23:34:16 2024] GET /admin/login/?next=/admin/ => generated 4164 bytes in 16 msecs (HTTP/1.1 200) 10 headers in 478 bytes (1 switches on core 0)
+Not Found: /dbadmin/
+[pid: 940375|app: 0|req: 7/252] 205.209.102.36 () {40 vars in 673 bytes} [Sat Dec 21 23:34:17 2024] GET /dbadmin/ => generated 2661 bytes in 6 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /mysql/
+[pid: 940378|app: 0|req: 187/253] 205.209.102.36 () {40 vars in 669 bytes} [Sat Dec 21 23:34:20 2024] GET /mysql/ => generated 2655 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /myadmin/
+[pid: 940378|app: 0|req: 188/254] 205.209.102.36 () {40 vars in 673 bytes} [Sat Dec 21 23:34:20 2024] GET /myadmin/ => generated 2661 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /openserver/phpmyadmin/
+[pid: 940378|app: 0|req: 189/255] 205.209.102.36 () {40 vars in 701 bytes} [Sat Dec 21 23:34:21 2024] GET /openserver/phpmyadmin/ => generated 2703 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpmyadmin2/
+[pid: 940378|app: 0|req: 190/256] 205.209.102.36 () {40 vars in 681 bytes} [Sat Dec 21 23:34:21 2024] GET /phpmyadmin2/ => generated 2673 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin2/
+[pid: 940378|app: 0|req: 191/257] 205.209.102.36 () {40 vars in 681 bytes} [Sat Dec 21 23:34:22 2024] GET /phpMyAdmin2/ => generated 2673 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2/
+[pid: 940375|app: 0|req: 8/258] 205.209.102.36 () {40 vars in 683 bytes} [Sat Dec 21 23:34:31 2024] GET /phpMyAdmin-2/ => generated 2676 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 940375|app: 0|req: 9/259] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:34:32 2024] POST /api/search/single-work => generated 43550 bytes in 1254 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+Not Found: /php-my-admin/
+[pid: 940375|app: 0|req: 10/260] 205.209.102.36 () {40 vars in 683 bytes} [Sat Dec 21 23:34:33 2024] GET /php-my-admin/ => generated 2676 bytes in 5 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.2.3/
+[pid: 940375|app: 0|req: 11/261] 205.209.102.36 () {40 vars in 691 bytes} [Sat Dec 21 23:34:33 2024] GET /phpMyAdmin-2.2.3/ => generated 2688 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.2.6/
+[pid: 940375|app: 0|req: 12/262] 205.209.102.36 () {40 vars in 691 bytes} [Sat Dec 21 23:34:34 2024] GET /phpMyAdmin-2.2.6/ => generated 2688 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.5.1/
+[pid: 940375|app: 0|req: 13/263] 205.209.102.36 () {40 vars in 691 bytes} [Sat Dec 21 23:34:34 2024] GET /phpMyAdmin-2.5.1/ => generated 2688 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 192/264] 219.239.227.182 () {44 vars in 771 bytes} [Sat Dec 21 23:34:31 2024] POST /api/search/advanced_search => generated 618266 bytes in 3694 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+Internal Server Error: /api/search/get_statistics
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/AcademiaHub/Backend/AcademiaHub/./search/views.py", line 548, in get_statistics
+    'publication_year_list': stats.publication_year_list,
+AttributeError: 'NoneType' object has no attribute 'publication_year_list'
+[pid: 940378|app: 0|req: 193/265] 219.239.227.182 () {44 vars in 873 bytes} [Sat Dec 21 23:34:35 2024] POST /api/search/get_statistics => generated 58678 bytes in 54 msecs (HTTP/1.1 500) 9 headers in 342 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.5.4/
+[pid: 940378|app: 0|req: 194/266] 205.209.102.36 () {40 vars in 691 bytes} [Sat Dec 21 23:34:38 2024] GET /phpMyAdmin-2.5.4/ => generated 2688 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.5.5-rc1/
+[pid: 940378|app: 0|req: 195/267] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:34:38 2024] GET /phpMyAdmin-2.5.5-rc1/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.5.5-rc2/
+[pid: 940375|app: 0|req: 14/268] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:34:39 2024] GET /phpMyAdmin-2.5.5-rc2/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.5.5/
+[pid: 940378|app: 0|req: 196/269] 205.209.102.36 () {40 vars in 691 bytes} [Sat Dec 21 23:34:39 2024] GET /phpMyAdmin-2.5.5/ => generated 2688 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.5.5-pl1/
+[pid: 940375|app: 0|req: 15/270] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:34:40 2024] GET /phpMyAdmin-2.5.5-pl1/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.5.6-rc1/
+[pid: 940378|app: 0|req: 197/271] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:34:40 2024] GET /phpMyAdmin-2.5.6-rc1/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.5.6-rc2/
+[pid: 940378|app: 0|req: 198/272] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:34:40 2024] GET /phpMyAdmin-2.5.6-rc2/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.5.6/
+[pid: 940375|app: 0|req: 16/273] 205.209.102.36 () {40 vars in 691 bytes} [Sat Dec 21 23:34:41 2024] GET /phpMyAdmin-2.5.6/ => generated 2688 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.5.7/
+[pid: 940378|app: 0|req: 199/274] 205.209.102.36 () {40 vars in 691 bytes} [Sat Dec 21 23:34:41 2024] GET /phpMyAdmin-2.5.7/ => generated 2688 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.5.7-pl1/
+[pid: 940378|app: 0|req: 200/275] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:34:42 2024] GET /phpMyAdmin-2.5.7-pl1/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.0-alpha/
+[pid: 940378|app: 0|req: 201/276] 205.209.102.36 () {40 vars in 703 bytes} [Sat Dec 21 23:34:42 2024] GET /phpMyAdmin-2.6.0-alpha/ => generated 2706 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.0-alpha2/
+[pid: 940378|app: 0|req: 202/277] 205.209.102.36 () {40 vars in 705 bytes} [Sat Dec 21 23:34:43 2024] GET /phpMyAdmin-2.6.0-alpha2/ => generated 2709 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.0-beta1/
+[pid: 940378|app: 0|req: 203/278] 205.209.102.36 () {40 vars in 703 bytes} [Sat Dec 21 23:34:44 2024] GET /phpMyAdmin-2.6.0-beta1/ => generated 2706 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.0-beta2/
+[pid: 940375|app: 0|req: 17/279] 205.209.102.36 () {40 vars in 703 bytes} [Sat Dec 21 23:34:47 2024] GET /phpMyAdmin-2.6.0-beta2/ => generated 2706 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.0-rc1/
+[pid: 940375|app: 0|req: 18/280] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:34:48 2024] GET /phpMyAdmin-2.6.0-rc1/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.0-rc2/
+[pid: 940378|app: 0|req: 204/281] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:34:49 2024] GET /phpMyAdmin-2.6.0-rc2/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.0-rc3/
+[pid: 940375|app: 0|req: 19/282] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:34:49 2024] GET /phpMyAdmin-2.6.0-rc3/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.0/
+[pid: 940375|app: 0|req: 20/283] 205.209.102.36 () {40 vars in 691 bytes} [Sat Dec 21 23:34:50 2024] GET /phpMyAdmin-2.6.0/ => generated 2688 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.0-pl1/
+[pid: 940378|app: 0|req: 205/284] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:34:50 2024] GET /phpMyAdmin-2.6.0-pl1/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.0-pl2/
+[pid: 940378|app: 0|req: 206/285] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:34:50 2024] GET /phpMyAdmin-2.6.0-pl2/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.0-pl3/
+[pid: 940378|app: 0|req: 207/286] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:34:51 2024] GET /phpMyAdmin-2.6.0-pl3/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.1-rc1/
+[pid: 940375|app: 0|req: 21/287] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:34:51 2024] GET /phpMyAdmin-2.6.1-rc1/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.1-rc2/
+[pid: 940378|app: 0|req: 208/288] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:34:52 2024] GET /phpMyAdmin-2.6.1-rc2/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.1/
+[pid: 940378|app: 0|req: 209/289] 205.209.102.36 () {40 vars in 691 bytes} [Sat Dec 21 23:34:52 2024] GET /phpMyAdmin-2.6.1/ => generated 2688 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.1-pl1/
+[pid: 940375|app: 0|req: 22/290] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:34:53 2024] GET /phpMyAdmin-2.6.1-pl1/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.1-pl2/
+[pid: 940378|app: 0|req: 210/291] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:34:53 2024] GET /phpMyAdmin-2.6.1-pl2/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.1-pl3/
+[pid: 940378|app: 0|req: 211/292] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:34:54 2024] GET /phpMyAdmin-2.6.1-pl3/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.2-rc1/
+[pid: 940378|app: 0|req: 212/293] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:34:54 2024] GET /phpMyAdmin-2.6.2-rc1/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.2-beta1/
+[pid: 940375|app: 0|req: 23/294] 205.209.102.36 () {40 vars in 703 bytes} [Sat Dec 21 23:34:55 2024] GET /phpMyAdmin-2.6.2-beta1/ => generated 2706 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.2-rc1/
+[pid: 940378|app: 0|req: 213/295] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:34:56 2024] GET /phpMyAdmin-2.6.2-rc1/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.2/
+[pid: 940378|app: 0|req: 214/296] 205.209.102.36 () {40 vars in 691 bytes} [Sat Dec 21 23:34:57 2024] GET /phpMyAdmin-2.6.2/ => generated 2688 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.2-pl1/
+[pid: 940378|app: 0|req: 215/297] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:34:57 2024] GET /phpMyAdmin-2.6.2-pl1/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.3/
+[pid: 940378|app: 0|req: 216/298] 205.209.102.36 () {40 vars in 691 bytes} [Sat Dec 21 23:34:57 2024] GET /phpMyAdmin-2.6.3/ => generated 2688 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 217/299] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:34:59 2024] POST /api/search/single-work => generated 43550 bytes in 3 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 218/300] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:35:00 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.3-rc1/
+[pid: 940378|app: 0|req: 219/301] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:35:01 2024] GET /phpMyAdmin-2.6.3-rc1/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.3/
+[pid: 940378|app: 0|req: 220/302] 205.209.102.36 () {40 vars in 691 bytes} [Sat Dec 21 23:35:01 2024] GET /phpMyAdmin-2.6.3/ => generated 2688 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.3-pl1/
+[pid: 940375|app: 0|req: 24/303] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:35:02 2024] GET /phpMyAdmin-2.6.3-pl1/ => generated 2700 bytes in 5 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.4-rc1/
+[pid: 940378|app: 0|req: 221/304] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:35:03 2024] GET /phpMyAdmin-2.6.4-rc1/ => generated 2700 bytes in 6 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.4-pl1/
+[pid: 940378|app: 0|req: 222/305] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:35:06 2024] GET /phpMyAdmin-2.6.4-pl1/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.4-pl2/
+[pid: 940378|app: 0|req: 223/306] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:35:07 2024] GET /phpMyAdmin-2.6.4-pl2/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.4-pl3/
+[pid: 940378|app: 0|req: 224/307] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:35:07 2024] GET /phpMyAdmin-2.6.4-pl3/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.6.4-pl4/
+[pid: 940375|app: 0|req: 25/308] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:35:08 2024] GET /phpMyAdmin-2.6.4-pl4/ => generated 2700 bytes in 3 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Sat Dec 21 23:35:08 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.182) !!!
+Sat Dec 21 23:35:08 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.182)
+OSError: write error
+[pid: 940376|app: 0|req: 13/309] 219.239.227.182 () {46 vars in 800 bytes} [Sat Dec 21 23:32:53 2024] POST /api/search/advanced_search => generated 523980 bytes in 134430 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Not Found: /phpMyAdmin-2.6.4/
+[pid: 940376|app: 0|req: 14/310] 205.209.102.36 () {40 vars in 691 bytes} [Sat Dec 21 23:35:08 2024] GET /phpMyAdmin-2.6.4/ => generated 2688 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.7.0-beta1/
+[pid: 940378|app: 0|req: 225/311] 205.209.102.36 () {40 vars in 703 bytes} [Sat Dec 21 23:35:09 2024] GET /phpMyAdmin-2.7.0-beta1/ => generated 2706 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.7.0-rc1/
+[pid: 940378|app: 0|req: 226/312] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:35:09 2024] GET /phpMyAdmin-2.7.0-rc1/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.7.0-pl1/
+[pid: 940376|app: 0|req: 15/313] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:35:10 2024] GET /phpMyAdmin-2.7.0-pl1/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.7.0-pl2/
+[pid: 940378|app: 0|req: 227/314] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:35:11 2024] GET /phpMyAdmin-2.7.0-pl2/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.7.0/
+[pid: 940376|app: 0|req: 16/315] 205.209.102.36 () {40 vars in 691 bytes} [Sat Dec 21 23:35:11 2024] GET /phpMyAdmin-2.7.0/ => generated 2688 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.8.0-beta1/
+[pid: 940378|app: 0|req: 228/316] 205.209.102.36 () {40 vars in 703 bytes} [Sat Dec 21 23:35:12 2024] GET /phpMyAdmin-2.8.0-beta1/ => generated 2706 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.8.0-rc1/
+[pid: 940378|app: 0|req: 229/317] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:35:12 2024] GET /phpMyAdmin-2.8.0-rc1/ => generated 2700 bytes in 5 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.8.0-rc2/
+[pid: 940378|app: 0|req: 230/318] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:35:13 2024] GET /phpMyAdmin-2.8.0-rc2/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.8.0/
+[pid: 940378|app: 0|req: 231/319] 205.209.102.36 () {40 vars in 691 bytes} [Sat Dec 21 23:35:13 2024] GET /phpMyAdmin-2.8.0/ => generated 2688 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.8.0.1/
+[pid: 940378|app: 0|req: 232/320] 205.209.102.36 () {40 vars in 695 bytes} [Sat Dec 21 23:35:14 2024] GET /phpMyAdmin-2.8.0.1/ => generated 2694 bytes in 6 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.8.0.2/
+[pid: 940376|app: 0|req: 17/321] 205.209.102.36 () {40 vars in 695 bytes} [Sat Dec 21 23:35:14 2024] GET /phpMyAdmin-2.8.0.2/ => generated 2694 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.8.0.3/
+[pid: 940376|app: 0|req: 18/322] 205.209.102.36 () {40 vars in 695 bytes} [Sat Dec 21 23:35:15 2024] GET /phpMyAdmin-2.8.0.3/ => generated 2694 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.8.0.4/
+[pid: 940378|app: 0|req: 233/323] 205.209.102.36 () {40 vars in 695 bytes} [Sat Dec 21 23:35:15 2024] GET /phpMyAdmin-2.8.0.4/ => generated 2694 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.8.1-rc1/
+[pid: 940376|app: 0|req: 19/324] 205.209.102.36 () {40 vars in 699 bytes} [Sat Dec 21 23:35:16 2024] GET /phpMyAdmin-2.8.1-rc1/ => generated 2700 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.8.1/
+[pid: 940378|app: 0|req: 234/325] 205.209.102.36 () {40 vars in 691 bytes} [Sat Dec 21 23:35:17 2024] GET /phpMyAdmin-2.8.1/ => generated 2688 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpMyAdmin-2.8.2/
+[pid: 940378|app: 0|req: 235/326] 205.209.102.36 () {40 vars in 691 bytes} [Sat Dec 21 23:35:17 2024] GET /phpMyAdmin-2.8.2/ => generated 2688 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /sqlmanager/
+[pid: 940376|app: 0|req: 20/327] 205.209.102.36 () {40 vars in 679 bytes} [Sat Dec 21 23:35:18 2024] GET /sqlmanager/ => generated 2670 bytes in 3 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /mysqlmanager/
+[pid: 940376|app: 0|req: 21/328] 205.209.102.36 () {40 vars in 683 bytes} [Sat Dec 21 23:35:18 2024] GET /mysqlmanager/ => generated 2676 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /p/m/a/
+[pid: 940376|app: 0|req: 22/329] 205.209.102.36 () {40 vars in 669 bytes} [Sat Dec 21 23:35:19 2024] GET /p/m/a/ => generated 2655 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /PMA2005/
+[pid: 940375|app: 0|req: 26/330] 205.209.102.36 () {40 vars in 673 bytes} [Sat Dec 21 23:35:19 2024] GET /PMA2005/ => generated 2661 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /pma2005/
+[pid: 940378|app: 0|req: 236/331] 205.209.102.36 () {40 vars in 673 bytes} [Sat Dec 21 23:35:20 2024] GET /pma2005/ => generated 2661 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpmanager/
+[pid: 940378|app: 0|req: 237/332] 205.209.102.36 () {40 vars in 679 bytes} [Sat Dec 21 23:35:21 2024] GET /phpmanager/ => generated 2670 bytes in 6 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /php-myadmin/
+[pid: 940375|app: 0|req: 27/333] 205.209.102.36 () {40 vars in 681 bytes} [Sat Dec 21 23:35:21 2024] GET /php-myadmin/ => generated 2673 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /phpmy-admin/
+[pid: 940376|app: 0|req: 23/334] 205.209.102.36 () {40 vars in 681 bytes} [Sat Dec 21 23:35:22 2024] GET /phpmy-admin/ => generated 2673 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /webadmin/
+[pid: 940378|app: 0|req: 238/335] 205.209.102.36 () {40 vars in 675 bytes} [Sat Dec 21 23:35:22 2024] GET /webadmin/ => generated 2664 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /sqlweb/
+[pid: 940376|app: 0|req: 24/336] 205.209.102.36 () {40 vars in 671 bytes} [Sat Dec 21 23:35:23 2024] GET /sqlweb/ => generated 2658 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /websql/
+[pid: 940378|app: 0|req: 239/337] 205.209.102.36 () {40 vars in 671 bytes} [Sat Dec 21 23:35:23 2024] GET /websql/ => generated 2658 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /webdb/
+[pid: 940378|app: 0|req: 240/338] 205.209.102.36 () {40 vars in 669 bytes} [Sat Dec 21 23:35:24 2024] GET /webdb/ => generated 2655 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /mysqladmin/
+[pid: 940378|app: 0|req: 241/339] 205.209.102.36 () {40 vars in 679 bytes} [Sat Dec 21 23:35:25 2024] GET /mysqladmin/ => generated 2670 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /mysql-admin/
+[pid: 940375|app: 0|req: 28/340] 205.209.102.36 () {40 vars in 681 bytes} [Sat Dec 21 23:35:25 2024] GET /mysql-admin/ => generated 2673 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 242/341] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:35:26 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940376|app: 0|req: 25/342] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:35:26 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 243/343] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:35:28 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940376|app: 0|req: 26/344] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:35:55 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+Sat Dec 21 23:35:58 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.182) !!!
+Sat Dec 21 23:35:58 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.182)
+OSError: write error
+[pid: 940377|app: 0|req: 48/345] 219.239.227.182 () {46 vars in 800 bytes} [Sat Dec 21 23:33:46 2024] POST /api/search/advanced_search => generated 523980 bytes in 132468 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Not Found: /api/api/user/get_verification
+[pid: 940378|app: 0|req: 244/346] 116.62.164.108 () {42 vars in 705 bytes} [Sat Dec 21 23:37:04 2024] POST /api//api/user/get_verification => generated 2725 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 49/347] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:37:40 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 245/348] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:39:29 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940376|app: 0|req: 27/349] 219.239.227.114 () {40 vars in 704 bytes} [Sat Dec 21 23:40:47 2024] POST /api/search/single-work => generated 43550 bytes in 1680 msecs (HTTP/1.1 200) 7 headers in 215 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 246/350] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:41:23 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 247/351] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:41:25 2024] POST /api/search/single-work => generated 43550 bytes in 3 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+Not Found: /api/api/user/get_verification
+[pid: 940378|app: 0|req: 248/352] 121.41.83.71 () {42 vars in 703 bytes} [Sat Dec 21 23:41:30 2024] POST /api//api/user/get_verification => generated 2725 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 249/353] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:42:24 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 50/354] 219.239.227.114 () {40 vars in 704 bytes} [Sat Dec 21 23:40:25 2024] POST /api/search/single-work => generated 43550 bytes in 132735 msecs (HTTP/1.1 200) 7 headers in 215 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 250/355] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:43:18 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 251/356] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:43:31 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 252/357] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:44:18 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 51/358] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:45:58 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 253/359] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:46:30 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 254/360] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:48:31 2024] POST /api/search/single-work => generated 43550 bytes in 1403 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940375|app: 0|req: 29/361] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:49:59 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 52/362] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:50:43 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 53/363] 219.239.227.114 () {44 vars in 871 bytes} [Sat Dec 21 23:53:24 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 255/364] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 00:02:11 2024] POST /api/search/single-work => generated 43550 bytes in 132165 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 256/365] 219.239.227.114 () {40 vars in 704 bytes} [Sun Dec 22 00:04:23 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 215 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 257/366] 219.239.227.114 () {40 vars in 704 bytes} [Sun Dec 22 00:04:23 2024] POST /api/search/single-work => generated 43550 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 215 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 258/367] 219.239.227.114 () {40 vars in 704 bytes} [Sun Dec 22 00:04:23 2024] POST /api/search/single-work => generated 43550 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 215 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 54/368] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 00:02:21 2024] POST /api/search/single-work => generated 43550 bytes in 131444 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 259/369] 219.239.227.114 () {40 vars in 704 bytes} [Sun Dec 22 00:04:38 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 215 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 55/370] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 00:04:46 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940376|app: 0|req: 28/371] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 00:02:36 2024] POST /api/search/single-work => generated 43550 bytes in 131550 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940375|app: 0|req: 30/372] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 00:02:52 2024] POST /api/search/single-work => generated 43550 bytes in 131165 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 56/373] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 00:05:34 2024] POST /api/search/single-work => generated 43550 bytes in 3 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 260/374] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 00:11:08 2024] POST /api/search/single-work => generated 43550 bytes in 1395 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 261/375] 219.239.227.193 () {40 vars in 710 bytes} [Sun Dec 22 00:16:53 2024] POST /api/mark/create-mark-list => generated 205 bytes in 53 msecs (HTTP/1.1 200) 7 headers in 213 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 57/376] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 00:17:48 2024] POST /api/search/single-work => generated 43550 bytes in 1420 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 262/377] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 00:21:30 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940377|app: 0|req: 58/378] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 00:29:22 2024] POST /api/search/single-work => generated 43550 bytes in 2860 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 940378|app: 0|req: 263/379] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 00:29:25 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 940375)...
+Gracefully killing worker 3 (pid: 940377)...
+Gracefully killing worker 2 (pid: 940376)...
+Gracefully killing worker 4 (pid: 940378)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /AcademiaHub/Backend/AcademiaHub
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (0.0.0.0:8002)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Dec 22 00:32:48 2024] ***
+compiled with version: 11.4.0 on 09 December 2024 07:39:47
+os: Linux-5.15.0-113-generic #123-Ubuntu SMP Mon Jun 10 08:16:17 UTC 2024
+nodename: zrtbighandsomeboy
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 16
+current working directory: /AcademiaHub/Backend/AcademiaHub
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /AcademiaHub/Backend/AcademiaHub
+your processes number limit is 126366
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8002 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov  6 2024, 20:22:13) [GCC 11.4.0]
+Python main interpreter initialized at 0x55d4e8468f30
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507960 bytes (496 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55d4e8468f30 pid: 927708 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 927708)
+spawned uWSGI worker 1 (pid: 953048, cores: 1)
+spawned uWSGI worker 2 (pid: 953049, cores: 1)
+spawned uWSGI worker 3 (pid: 953050, cores: 1)
+spawned uWSGI worker 4 (pid: 953051, cores: 1)
+[pid: 953051|app: 0|req: 1/1] 219.239.227.193 () {40 vars in 694 bytes} [Sun Dec 22 00:33:15 2024] POST /api/mark/add-mark => generated 136 bytes in 1439 msecs (HTTP/1.1 200) 7 headers in 213 bytes (1 switches on core 0)
+Internal Server Error: /api/mark/get-user-marks
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/AcademiaHub/Backend/AcademiaHub/./mark/views.py", line 115, in get_user_marks
+    work_ids = [relationship.to_dic() for relationship in mark_relationships]
+  File "/AcademiaHub/Backend/AcademiaHub/./mark/views.py", line 115, in <listcomp>
+    work_ids = [relationship.to_dic() for relationship in mark_relationships]
+  File "/AcademiaHub/Backend/AcademiaHub/./mark/models.py", line 53, in to_dic
+    'publication_year': self.publication_year,
+AttributeError: 'MarkRelationships' object has no attribute 'publication_year'
+[pid: 953050|app: 0|req: 1/2] 219.239.227.193 () {40 vars in 706 bytes} [Sun Dec 22 00:33:42 2024] POST /api/mark/get-user-marks => generated 69533 bytes in 203 msecs (HTTP/1.1 500) 7 headers in 250 bytes (1 switches on core 0)
+...gracefully killing workers...
+Gracefully killing worker 3 (pid: 953050)...
+Gracefully killing worker 1 (pid: 953048)...
+Gracefully killing worker 2 (pid: 953049)...
+Gracefully killing worker 4 (pid: 953051)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /AcademiaHub/Backend/AcademiaHub
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (0.0.0.0:8002)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Dec 22 00:34:55 2024] ***
+compiled with version: 11.4.0 on 09 December 2024 07:39:47
+os: Linux-5.15.0-113-generic #123-Ubuntu SMP Mon Jun 10 08:16:17 UTC 2024
+nodename: zrtbighandsomeboy
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 16
+current working directory: /AcademiaHub/Backend/AcademiaHub
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /AcademiaHub/Backend/AcademiaHub
+your processes number limit is 126366
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8002 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov  6 2024, 20:22:13) [GCC 11.4.0]
+Python main interpreter initialized at 0x5638157d2f60
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507960 bytes (496 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5638157d2f60 pid: 927708 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 927708)
+spawned uWSGI worker 1 (pid: 953237, cores: 1)
+spawned uWSGI worker 2 (pid: 953238, cores: 1)
+spawned uWSGI worker 3 (pid: 953239, cores: 1)
+spawned uWSGI worker 4 (pid: 953240, cores: 1)
+[pid: 953238|app: 0|req: 1/1] 219.239.227.193 () {40 vars in 706 bytes} [Sun Dec 22 00:35:15 2024] POST /api/mark/get-user-marks => generated 2709 bytes in 1624 msecs (HTTP/1.1 200) 7 headers in 214 bytes (1 switches on core 0)
+[pid: 953239|app: 0|req: 1/2] 219.239.227.193 () {40 vars in 716 bytes} [Sun Dec 22 00:35:42 2024] POST /api/mark/get-user-mark-lists => generated 729 bytes in 149 msecs (HTTP/1.1 200) 7 headers in 213 bytes (1 switches on core 0)
+[pid: 953238|app: 0|req: 2/3] 219.239.227.193 () {40 vars in 728 bytes} [Sun Dec 22 00:35:55 2024] POST /api/mark/get-user-single-mark-list => generated 1027 bytes in 54 msecs (HTTP/1.1 200) 7 headers in 214 bytes (1 switches on core 0)
+[pid: 953239|app: 0|req: 2/4] 219.239.227.193 () {40 vars in 728 bytes} [Sun Dec 22 00:36:04 2024] POST /api/mark/get-user-single-mark-list => generated 1270 bytes in 100 msecs (HTTP/1.1 200) 7 headers in 214 bytes (1 switches on core 0)
+[pid: 953240|app: 0|req: 1/5] 219.239.227.193 () {40 vars in 706 bytes} [Sun Dec 22 00:35:01 2024] POST /api/mark/get-user-marks => generated 2709 bytes in 131636 msecs (HTTP/1.1 200) 7 headers in 214 bytes (1 switches on core 0)
+[pid: 953238|app: 0|req: 3/6] 219.239.227.193 () {40 vars in 742 bytes} [Sun Dec 22 00:37:17 2024] POST /api/mark/get-user-single-mark-list-detail => generated 487 bytes in 70 msecs (HTTP/1.1 200) 7 headers in 213 bytes (1 switches on core 0)
+Not Found: /
+[pid: 953240|app: 0|req: 2/7] 95.214.55.32 () {28 vars in 309 bytes} [Sun Dec 22 00:40:08 2024] GET / => generated 2622 bytes in 6 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 953237)...
+Gracefully killing worker 3 (pid: 953239)...
+Gracefully killing worker 2 (pid: 953238)...
+Gracefully killing worker 4 (pid: 953240)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /AcademiaHub/Backend/AcademiaHub
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (0.0.0.0:8002)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Dec 22 00:44:26 2024] ***
+compiled with version: 11.4.0 on 09 December 2024 07:39:47
+os: Linux-5.15.0-113-generic #123-Ubuntu SMP Mon Jun 10 08:16:17 UTC 2024
+nodename: zrtbighandsomeboy
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 16
+current working directory: /AcademiaHub/Backend/AcademiaHub
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /AcademiaHub/Backend/AcademiaHub
+your processes number limit is 126366
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8002 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov  6 2024, 20:22:13) [GCC 11.4.0]
+Python main interpreter initialized at 0x563c5e442f60
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507960 bytes (496 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x563c5e442f60 pid: 927708 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 927708)
+spawned uWSGI worker 1 (pid: 953957, cores: 1)
+spawned uWSGI worker 2 (pid: 953958, cores: 1)
+spawned uWSGI worker 3 (pid: 953959, cores: 1)
+spawned uWSGI worker 4 (pid: 953960, cores: 1)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 666, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 718, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/AcademiaHub/Backend/AcademiaHub/./AcademiaHub/urls.py", line 23, in <module>
+    path('api/work/', include('work.urls')),
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/AcademiaHub/Backend/AcademiaHub/./work/urls.py", line 2, in <module>
+    from . import views
+  File "/AcademiaHub/Backend/AcademiaHub/./work/views.py", line 23
+    f.write(f'{'UPDATE_INTERVAL'}={update_interval}\n')  # 写入新的值
+                ^^^^^^^^^^^^^^^
+SyntaxError: f-string: expecting '}'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/deprecation.py", line 129, in __call__
+    response = response or self.get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 428, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 666, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 718, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/AcademiaHub/Backend/AcademiaHub/./AcademiaHub/urls.py", line 23, in <module>
+    path('api/work/', include('work.urls')),
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/AcademiaHub/Backend/AcademiaHub/./work/urls.py", line 2, in <module>
+    from . import views
+  File "/AcademiaHub/Backend/AcademiaHub/./work/views.py", line 23
+    f.write(f'{'UPDATE_INTERVAL'}={update_interval}\n')  # 写入新的值
+                ^^^^^^^^^^^^^^^
+SyntaxError: f-string: expecting '}'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/deprecation.py", line 129, in __call__
+    response = response or self.get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 428, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 666, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 718, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/AcademiaHub/Backend/AcademiaHub/./AcademiaHub/urls.py", line 23, in <module>
+    path('api/work/', include('work.urls')),
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/AcademiaHub/Backend/AcademiaHub/./work/urls.py", line 2, in <module>
+    from . import views
+  File "/AcademiaHub/Backend/AcademiaHub/./work/views.py", line 23
+    f.write(f'{'UPDATE_INTERVAL'}={update_interval}\n')  # 写入新的值
+                ^^^^^^^^^^^^^^^
+SyntaxError: f-string: expecting '}'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/deprecation.py", line 129, in __call__
+    response = response or self.get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 428, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 666, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 718, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/AcademiaHub/Backend/AcademiaHub/./AcademiaHub/urls.py", line 23, in <module>
+    path('api/work/', include('work.urls')),
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/AcademiaHub/Backend/AcademiaHub/./work/urls.py", line 2, in <module>
+    from . import views
+  File "/AcademiaHub/Backend/AcademiaHub/./work/views.py", line 23
+    f.write(f'{'UPDATE_INTERVAL'}={update_interval}\n')  # 写入新的值
+                ^^^^^^^^^^^^^^^
+SyntaxError: f-string: expecting '}'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/deprecation.py", line 129, in __call__
+    response = response or self.get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 428, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 666, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 718, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/AcademiaHub/Backend/AcademiaHub/./AcademiaHub/urls.py", line 23, in <module>
+    path('api/work/', include('work.urls')),
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/AcademiaHub/Backend/AcademiaHub/./work/urls.py", line 2, in <module>
+    from . import views
+  File "/AcademiaHub/Backend/AcademiaHub/./work/views.py", line 23
+    f.write(f'{'UPDATE_INTERVAL'}={update_interval}\n')  # 写入新的值
+                ^^^^^^^^^^^^^^^
+SyntaxError: f-string: expecting '}'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/corsheaders/middleware.py", line 56, in __call__
+    result = self.get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 428, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 666, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 718, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/AcademiaHub/Backend/AcademiaHub/./AcademiaHub/urls.py", line 23, in <module>
+    path('api/work/', include('work.urls')),
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/AcademiaHub/Backend/AcademiaHub/./work/urls.py", line 2, in <module>
+    from . import views
+  File "/AcademiaHub/Backend/AcademiaHub/./work/views.py", line 23
+    f.write(f'{'UPDATE_INTERVAL'}={update_interval}\n')  # 写入新的值
+                ^^^^^^^^^^^^^^^
+SyntaxError: f-string: expecting '}'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/deprecation.py", line 129, in __call__
+    response = response or self.get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 428, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 666, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 718, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/AcademiaHub/Backend/AcademiaHub/./AcademiaHub/urls.py", line 23, in <module>
+    path('api/work/', include('work.urls')),
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/AcademiaHub/Backend/AcademiaHub/./work/urls.py", line 2, in <module>
+    from . import views
+  File "/AcademiaHub/Backend/AcademiaHub/./work/views.py", line 23
+    f.write(f'{'UPDATE_INTERVAL'}={update_interval}\n')  # 写入新的值
+                ^^^^^^^^^^^^^^^
+SyntaxError: f-string: expecting '}'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/deprecation.py", line 129, in __call__
+    response = response or self.get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 428, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 666, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 718, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/AcademiaHub/Backend/AcademiaHub/./AcademiaHub/urls.py", line 23, in <module>
+    path('api/work/', include('work.urls')),
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/AcademiaHub/Backend/AcademiaHub/./work/urls.py", line 2, in <module>
+    from . import views
+  File "/AcademiaHub/Backend/AcademiaHub/./work/views.py", line 23
+    f.write(f'{'UPDATE_INTERVAL'}={update_interval}\n')  # 写入新的值
+                ^^^^^^^^^^^^^^^
+SyntaxError: f-string: expecting '}'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/wsgi.py", line 124, in __call__
+    response = self.get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 140, in get_response
+    response = self._middleware_chain(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 140, in response_for_exception
+    response = handle_uncaught_exception(
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 181, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 69, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 428, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 411, in get_traceback_data
+    c["raising_view_name"] = get_caller(self.request)
+  File "/usr/local/lib/python3.10/dist-packages/django/views/debug.py", line 102, in get_caller
+    resolver_match = resolve(request.path)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 666, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 718, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/AcademiaHub/Backend/AcademiaHub/./AcademiaHub/urls.py", line 23, in <module>
+    path('api/work/', include('work.urls')),
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/AcademiaHub/Backend/AcademiaHub/./work/urls.py", line 2, in <module>
+    from . import views
+  File "/AcademiaHub/Backend/AcademiaHub/./work/views.py", line 23
+    f.write(f'{'UPDATE_INTERVAL'}={update_interval}\n')  # 写入新的值
+                ^^^^^^^^^^^^^^^
+SyntaxError: f-string: expecting '}'
+[pid: 953960|app: 0|req: 1/1] 219.239.227.241 () {38 vars in 531 bytes} [Sun Dec 22 00:45:25 2024] POST /api/work/get_update_interval => generated 0 bytes in 2315 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 953957)...
+Gracefully killing worker 3 (pid: 953959)...
+Gracefully killing worker 2 (pid: 953958)...
+Gracefully killing worker 4 (pid: 953960)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /AcademiaHub/Backend/AcademiaHub
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (0.0.0.0:8002)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Dec 22 00:53:06 2024] ***
+compiled with version: 11.4.0 on 09 December 2024 07:39:47
+os: Linux-5.15.0-113-generic #123-Ubuntu SMP Mon Jun 10 08:16:17 UTC 2024
+nodename: zrtbighandsomeboy
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 16
+current working directory: /AcademiaHub/Backend/AcademiaHub
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /AcademiaHub/Backend/AcademiaHub
+your processes number limit is 126366
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8002 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov  6 2024, 20:22:13) [GCC 11.4.0]
+Python main interpreter initialized at 0x559917abaf60
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507960 bytes (496 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x559917abaf60 pid: 927708 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 927708)
+spawned uWSGI worker 1 (pid: 954368, cores: 1)
+spawned uWSGI worker 2 (pid: 954369, cores: 1)
+spawned uWSGI worker 3 (pid: 954370, cores: 1)
+spawned uWSGI worker 4 (pid: 954371, cores: 1)
+[pid: 954371|app: 0|req: 1/1] 219.239.227.241 () {40 vars in 710 bytes} [Sun Dec 22 00:53:18 2024] POST /api/search/get_statistics => generated 29379 bytes in 175 msecs (HTTP/1.1 200) 7 headers in 215 bytes (1 switches on core 0)
+[pid: 954371|app: 0|req: 2/2] 219.239.227.241 () {38 vars in 531 bytes} [Sun Dec 22 00:53:23 2024] POST /api/work/get_update_interval => generated 67 bytes in 0 msecs (HTTP/1.1 200) 7 headers in 212 bytes (1 switches on core 0)
+[pid: 954371|app: 0|req: 3/3] 219.239.227.241 () {40 vars in 716 bytes} [Sun Dec 22 00:55:07 2024] POST /api/work/set_update_interval => generated 43 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 212 bytes (1 switches on core 0)
+[pid: 954370|app: 0|req: 1/4] 219.239.227.241 () {40 vars in 716 bytes} [Sun Dec 22 00:55:15 2024] POST /api/work/set_update_interval => generated 43 bytes in 105 msecs (HTTP/1.1 200) 7 headers in 212 bytes (1 switches on core 0)
+update dataset !!!
+[pid: 954371|app: 0|req: 4/5] 219.239.227.241 () {40 vars in 706 bytes} [Sun Dec 22 00:58:39 2024] POST /api/work/update_dataset => generated 38 bytes in 0 msecs (HTTP/1.1 200) 7 headers in 212 bytes (1 switches on core 0)
+[pid: 954371|app: 0|req: 5/6] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:01:59 2024] POST /api/search/single-work => generated 43550 bytes in 1248 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 954371|app: 0|req: 6/7] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:02:03 2024] POST /api/search/single-work => generated 43550 bytes in 3 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 954371|app: 0|req: 7/8] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:05:03 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 954371|app: 0|req: 8/9] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:05:27 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 954371|app: 0|req: 9/10] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:05:32 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 954370|app: 0|req: 2/11] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:06:03 2024] POST /api/search/single-work => generated 43550 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+Not Found: /api',
+[pid: 954370|app: 0|req: 3/12] 223.111.196.199 () {58 vars in 1071 bytes} [Sun Dec 22 01:06:26 2024] GET /api', => generated 2667 bytes in 6 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 954371|app: 0|req: 10/13] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:07:16 2024] POST /api/search/single-work => generated 43550 bytes in 1250 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 954371|app: 0|req: 11/14] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:08:35 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+Not Found: /api',
+[pid: 954370|app: 0|req: 4/15] 112.17.51.215 () {58 vars in 1069 bytes} [Sun Dec 22 01:09:03 2024] GET /api', => generated 2667 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 954371|app: 0|req: 12/16] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:11:11 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 954370|app: 0|req: 5/17] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:13:00 2024] POST /api/search/single-work => generated 43550 bytes in 1411 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+Not Found: /
+[pid: 954370|app: 0|req: 6/18] 47.92.243.234 () {36 vars in 519 bytes} [Sun Dec 22 01:15:55 2024] GET / => generated 2619 bytes in 5 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 954371|app: 0|req: 13/19] 47.92.243.234 () {34 vars in 414 bytes} [Sun Dec 22 01:15:56 2024] GET /favicon.ico => generated 2670 bytes in 7 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 954370|app: 0|req: 7/20] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:16:51 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+Not Found: /api',
+[pid: 954371|app: 0|req: 14/21] 219.157.114.12 () {58 vars in 1069 bytes} [Sun Dec 22 01:17:11 2024] GET /api', => generated 2667 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /api&
+[pid: 954369|app: 0|req: 1/22] 49.71.75.188 () {58 vars in 1066 bytes} [Sun Dec 22 01:17:25 2024] GET /api& => generated 2661 bytes in 111 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 954369|app: 0|req: 2/23] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:18:30 2024] POST /api/search/single-work => generated 43550 bytes in 1401 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 954371|app: 0|req: 15/24] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:18:26 2024] POST /api/search/single-work => generated 43550 bytes in 132232 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 954371|app: 0|req: 16/25] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:23:52 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 954369|app: 0|req: 3/26] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:24:10 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 954371|app: 0|req: 17/27] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:24:11 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 954369|app: 0|req: 4/28] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:25:28 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+Not Found: /
+[pid: 954371|app: 0|req: 18/29] 49.51.243.156 () {46 vars in 843 bytes} [Sun Dec 22 01:26:21 2024] GET / => generated 2619 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 954371|app: 0|req: 19/30] 219.239.227.193 () {40 vars in 704 bytes} [Sun Dec 22 01:27:17 2024] POST /api/search/single-work => generated 17464 bytes in 1402 msecs (HTTP/1.1 200) 7 headers in 215 bytes (1 switches on core 0)
+[pid: 954370|app: 0|req: 8/31] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:27:23 2024] POST /api/search/single-work => generated 43550 bytes in 1543 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 954371|app: 0|req: 20/32] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:27:25 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 954371|app: 0|req: 21/33] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:27:46 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 954371|app: 0|req: 22/34] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:27:48 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 954370|app: 0|req: 9/35] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:28:07 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+...gracefully killing workers...
+Gracefully killing worker 2 (pid: 954369)...
+Gracefully killing worker 1 (pid: 954368)...
+Gracefully killing worker 4 (pid: 954371)...
+Gracefully killing worker 3 (pid: 954370)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /AcademiaHub/Backend/AcademiaHub
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (0.0.0.0:8002)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Dec 22 01:28:28 2024] ***
+compiled with version: 11.4.0 on 09 December 2024 07:39:47
+os: Linux-5.15.0-113-generic #123-Ubuntu SMP Mon Jun 10 08:16:17 UTC 2024
+nodename: zrtbighandsomeboy
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 16
+current working directory: /AcademiaHub/Backend/AcademiaHub
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /AcademiaHub/Backend/AcademiaHub
+your processes number limit is 126366
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8002 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov  6 2024, 20:22:13) [GCC 11.4.0]
+Python main interpreter initialized at 0x556407a0af60
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507960 bytes (496 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x556407a0af60 pid: 927708 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 927708)
+spawned uWSGI worker 1 (pid: 955955, cores: 1)
+spawned uWSGI worker 2 (pid: 955956, cores: 1)
+spawned uWSGI worker 3 (pid: 955957, cores: 1)
+spawned uWSGI worker 4 (pid: 955958, cores: 1)
+[pid: 955957|app: 0|req: 1/1] 219.239.227.193 () {40 vars in 704 bytes} [Sun Dec 22 01:28:35 2024] POST /api/search/single-work => generated 17464 bytes in 149 msecs (HTTP/1.1 200) 7 headers in 215 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 1/2] 219.239.227.193 () {40 vars in 704 bytes} [Sun Dec 22 01:28:39 2024] POST /api/search/single-work => generated 17464 bytes in 135 msecs (HTTP/1.1 200) 7 headers in 215 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 2/3] 219.239.227.193 () {40 vars in 704 bytes} [Sun Dec 22 01:29:25 2024] POST /api/search/single-work => generated 9840 bytes in 1927 msecs (HTTP/1.1 200) 7 headers in 214 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 3/4] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:29:54 2024] POST /api/search/single-work => generated 43550 bytes in 3 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 4/5] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:29:56 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 5/6] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:31:16 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 955957|app: 0|req: 2/7] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:31:18 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 6/8] 219.239.227.114 () {44 vars in 871 bytes} [Sun Dec 22 01:32:07 2024] POST /api/search/single-work => generated 43550 bytes in 2 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+Not Found: /
+[pid: 955958|app: 0|req: 7/9] 95.214.55.43 () {44 vars in 779 bytes} [Sun Dec 22 01:45:40 2024] GET / => generated 2619 bytes in 6 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /cgi-bin/luci/;stok=/locale
+[pid: 955958|app: 0|req: 8/10] 95.214.55.74 () {28 vars in 361 bytes} [Sun Dec 22 02:18:13 2024] GET /cgi-bin/luci/;stok=/locale => generated 2722 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /agc/calendar_db.js
+[pid: 955957|app: 0|req: 3/11] 193.46.255.244 () {36 vars in 469 bytes} [Sun Dec 22 02:20:18 2024] GET /agc/calendar_db.js => generated 2691 bytes in 7 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 955958|app: 0|req: 9/12] 3.142.242.121 () {34 vars in 489 bytes} [Sun Dec 22 03:01:42 2024] GET / => generated 2619 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 955957|app: 0|req: 4/13] 95.214.53.205 () {44 vars in 783 bytes} [Sun Dec 22 03:07:02 2024] GET / => generated 2622 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 955958|app: 0|req: 10/14] 46.19.138.234 () {44 vars in 780 bytes} [Sun Dec 22 03:26:15 2024] GET / => generated 2619 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /.env
+[pid: 955957|app: 0|req: 5/15] 87.120.112.187 () {36 vars in 503 bytes} [Sun Dec 22 03:36:49 2024] GET /.env => generated 2649 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 955958|app: 0|req: 11/16] 95.214.55.79 () {44 vars in 779 bytes} [Sun Dec 22 03:37:38 2024] GET / => generated 2619 bytes in 5 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /login.rsp
+[pid: 955958|app: 0|req: 12/17] 154.213.187.122 () {34 vars in 419 bytes} [Sun Dec 22 03:47:43 2024] GET /login.rsp => generated 2667 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /login.rsp
+[pid: 955955|app: 0|req: 1/18] 154.213.187.237 () {34 vars in 419 bytes} [Sun Dec 22 03:48:20 2024] GET /login.rsp => generated 2667 bytes in 112 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 955958|app: 0|req: 13/19] 95.214.55.32 () {28 vars in 309 bytes} [Sun Dec 22 04:10:28 2024] GET / => generated 2622 bytes in 3 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /agc/calendar_db.js
+[pid: 955958|app: 0|req: 14/20] 193.46.255.244 () {36 vars in 469 bytes} [Sun Dec 22 04:47:12 2024] GET /agc/calendar_db.js => generated 2691 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /CQuS
+[pid: 955958|app: 0|req: 15/21] 202.112.47.148 () {32 vars in 384 bytes} [Sun Dec 22 05:40:10 2024] GET /CQuS => generated 2652 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /jquery-3.3.1.min.js
+[pid: 955958|app: 0|req: 16/22] 202.112.47.148 () {32 vars in 414 bytes} [Sun Dec 22 05:40:10 2024] GET /jquery-3.3.1.min.js => generated 2697 bytes in 3 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /%77eb%75i_%77sma_Http
+[pid: 955957|app: 0|req: 6/23] 89.248.162.181 () {40 vars in 590 bytes} [Sun Dec 22 06:20:21 2024] POST /%2577eb%2575i_%2577sma_Http => generated 2707 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /hudson
+[pid: 955958|app: 0|req: 17/24] 4.255.100.158 () {34 vars in 405 bytes} [Sun Dec 22 06:25:40 2024] GET /hudson => generated 2655 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 955957|app: 0|req: 7/25] 95.214.53.205 () {44 vars in 783 bytes} [Sun Dec 22 06:41:13 2024] GET / => generated 2622 bytes in 3 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 955958|app: 0|req: 18/26] 43.131.243.208 () {46 vars in 844 bytes} [Sun Dec 22 07:34:28 2024] GET / => generated 2619 bytes in 68 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 955957|app: 0|req: 8/27] 95.214.55.32 () {28 vars in 309 bytes} [Sun Dec 22 07:51:30 2024] GET / => generated 2622 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 955957|app: 0|req: 9/28] 147.185.133.113 () {32 vars in 628 bytes} [Sun Dec 22 07:52:57 2024] GET / => generated 2622 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /.env
+[pid: 955958|app: 0|req: 19/29] 178.215.236.240 () {36 vars in 495 bytes} [Sun Dec 22 07:54:55 2024] GET /.env => generated 2649 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 955958|app: 0|req: 20/30] 185.191.126.213 () {28 vars in 312 bytes} [Sun Dec 22 08:02:59 2024] GET / => generated 2622 bytes in 3 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /agc/calendar_db.js
+[pid: 955957|app: 0|req: 10/31] 124.70.57.132 () {36 vars in 632 bytes} [Sun Dec 22 08:14:00 2024] GET /agc/calendar_db.js => generated 2691 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 955958|app: 0|req: 21/32] 185.242.226.12 () {34 vars in 488 bytes} [Sun Dec 22 08:23:23 2024] GET / => generated 2619 bytes in 3 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /portal/redlion
+[pid: 955956|app: 0|req: 1/33] 104.40.75.39 () {34 vars in 420 bytes} [Sun Dec 22 09:05:49 2024] GET /portal/redlion => generated 2679 bytes in 115 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /manager/html
+[pid: 955958|app: 0|req: 22/34] 57.151.71.88 () {34 vars in 416 bytes} [Sun Dec 22 09:11:15 2024] GET /manager/html => generated 2673 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 955958|app: 0|req: 23/35] 95.214.55.43 () {44 vars in 779 bytes} [Sun Dec 22 09:23:10 2024] GET / => generated 2619 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 955956|app: 0|req: 2/36] 185.191.126.213 () {28 vars in 312 bytes} [Sun Dec 22 09:35:02 2024] GET / => generated 2622 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 955958|app: 0|req: 24/37] 206.168.34.115 () {34 vars in 443 bytes} [Sun Dec 22 09:46:02 2024] GET / => generated 2619 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 955958|app: 0|req: 25/38] 141.98.11.155 () {28 vars in 310 bytes} [Sun Dec 22 09:55:21 2024] GET / => generated 2622 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 955957|app: 0|req: 11/39] 219.239.227.188 () {48 vars in 799 bytes} [Sun Dec 22 09:55:21 2024] OPTIONS /api/search/hot-paper => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 955957|app: 0|req: 12/40] 219.239.227.188 () {46 vars in 786 bytes} [Sun Dec 22 09:55:21 2024] POST /api/search/hot-paper => generated 1547 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 955956|app: 0|req: 3/41] 219.239.227.188 () {48 vars in 797 bytes} [Sun Dec 22 09:55:21 2024] OPTIONS /api/search/hot-word => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 26/42] 219.239.227.188 () {46 vars in 784 bytes} [Sun Dec 22 09:55:21 2024] POST /api/search/hot-word => generated 339 bytes in 52 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 27/43] 219.239.227.188 () {48 vars in 799 bytes} [Sun Dec 22 09:55:21 2024] OPTIONS /api/search/new-paper => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 28/44] 219.239.227.188 () {46 vars in 786 bytes} [Sun Dec 22 09:55:21 2024] POST /api/search/new-paper => generated 2166 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 29/45] 219.239.227.188 () {48 vars in 846 bytes} [Sun Dec 22 10:02:11 2024] OPTIONS /api/search/hot-paper => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 30/46] 219.239.227.188 () {46 vars in 833 bytes} [Sun Dec 22 10:02:11 2024] POST /api/search/hot-paper => generated 1547 bytes in 61 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 31/47] 219.239.227.188 () {48 vars in 844 bytes} [Sun Dec 22 10:02:11 2024] OPTIONS /api/search/hot-word => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 955957|app: 0|req: 13/48] 219.239.227.188 () {46 vars in 831 bytes} [Sun Dec 22 10:02:11 2024] POST /api/search/hot-word => generated 339 bytes in 52 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 32/49] 219.239.227.188 () {48 vars in 846 bytes} [Sun Dec 22 10:02:11 2024] OPTIONS /api/search/new-paper => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 33/50] 219.239.227.188 () {46 vars in 833 bytes} [Sun Dec 22 10:02:11 2024] POST /api/search/new-paper => generated 2166 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+Not Found: /
+[pid: 955958|app: 0|req: 34/51] 95.214.55.32 () {28 vars in 309 bytes} [Sun Dec 22 10:04:20 2024] GET / => generated 2622 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 35/52] 219.239.227.188 () {44 vars in 804 bytes} [Sun Dec 22 10:11:00 2024] POST /api/search/hot-paper => generated 1547 bytes in 53 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 36/53] 219.239.227.188 () {44 vars in 802 bytes} [Sun Dec 22 10:11:00 2024] POST /api/search/hot-word => generated 339 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 37/54] 219.239.227.188 () {44 vars in 804 bytes} [Sun Dec 22 10:11:00 2024] POST /api/search/new-paper => generated 2166 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 38/55] 219.239.227.188 () {44 vars in 804 bytes} [Sun Dec 22 10:15:50 2024] POST /api/search/hot-paper => generated 1547 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 39/56] 219.239.227.188 () {44 vars in 802 bytes} [Sun Dec 22 10:15:51 2024] POST /api/search/hot-word => generated 339 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 40/57] 219.239.227.188 () {44 vars in 804 bytes} [Sun Dec 22 10:15:51 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+Not Found: /.env
+[pid: 955958|app: 0|req: 41/58] 87.120.115.119 () {36 vars in 567 bytes} [Sun Dec 22 10:18:18 2024] GET /.env => generated 2649 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 42/59] 219.239.227.162 () {48 vars in 846 bytes} [Sun Dec 22 10:20:11 2024] OPTIONS /api/search/hot-paper => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 43/60] 219.239.227.162 () {46 vars in 833 bytes} [Sun Dec 22 10:20:11 2024] POST /api/search/hot-paper => generated 1547 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 44/61] 219.239.227.162 () {48 vars in 844 bytes} [Sun Dec 22 10:20:11 2024] OPTIONS /api/search/hot-word => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 45/62] 219.239.227.162 () {46 vars in 831 bytes} [Sun Dec 22 10:20:11 2024] POST /api/search/hot-word => generated 339 bytes in 46 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 46/63] 219.239.227.162 () {48 vars in 846 bytes} [Sun Dec 22 10:20:11 2024] OPTIONS /api/search/new-paper => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 47/64] 219.239.227.162 () {46 vars in 833 bytes} [Sun Dec 22 10:20:11 2024] POST /api/search/new-paper => generated 2166 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 955957|app: 0|req: 14/65] 219.239.227.162 () {48 vars in 858 bytes} [Sun Dec 22 10:20:27 2024] OPTIONS /api/search/advanced_search => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 422 bytes (1 switches on core 0)
+[pid: 955957|app: 0|req: 15/66] 219.239.227.162 () {46 vars in 847 bytes} [Sun Dec 22 10:20:27 2024] POST /api/search/advanced_search => generated 362076 bytes in 2040 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+Internal Server Error: /api/search/get_statistics
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/AcademiaHub/Backend/AcademiaHub/./search/views.py", line 548, in get_statistics
+    'publication_year_list': stats.publication_year_list,
+AttributeError: 'NoneType' object has no attribute 'publication_year_list'
+[pid: 955957|app: 0|req: 16/67] 219.239.227.162 () {46 vars in 949 bytes} [Sun Dec 22 10:20:29 2024] POST /api/search/get_statistics => generated 58436 bytes in 62 msecs (HTTP/1.1 500) 9 headers in 342 bytes (1 switches on core 0)
+Internal Server Error: /api/search/get_statistics
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/AcademiaHub/Backend/AcademiaHub/./search/views.py", line 548, in get_statistics
+    'publication_year_list': stats.publication_year_list,
+AttributeError: 'NoneType' object has no attribute 'publication_year_list'
+[pid: 955956|app: 0|req: 4/68] 120.55.51.103 () {42 vars in 695 bytes} [Sun Dec 22 10:21:10 2024] POST /api/search/get_statistics => generated 57792 bytes in 69 msecs (HTTP/1.1 500) 7 headers in 250 bytes (1 switches on core 0)
+Not Found: /
+[pid: 955957|app: 0|req: 17/69] 206.168.34.87 () {34 vars in 442 bytes} [Sun Dec 22 10:23:20 2024] GET / => generated 2619 bytes in 3 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 955957|app: 0|req: 18/70] 219.239.227.188 () {44 vars in 804 bytes} [Sun Dec 22 10:23:31 2024] POST /api/search/hot-paper => generated 1547 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 955957|app: 0|req: 19/71] 219.239.227.188 () {44 vars in 802 bytes} [Sun Dec 22 10:23:31 2024] POST /api/search/hot-word => generated 339 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 48/72] 219.239.227.188 () {44 vars in 804 bytes} [Sun Dec 22 10:23:31 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 955956|app: 0|req: 5/73] 46.232.120.230 () {44 vars in 816 bytes} [Sun Dec 22 10:28:12 2024] POST /api/search/advanced_search => generated 562403 bytes in 2096 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 955955|app: 0|req: 2/74] 46.232.120.230 () {44 vars in 918 bytes} [Sun Dec 22 10:28:16 2024] POST /api/search/get_statistics => generated 21909 bytes in 63 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 49/75] 46.232.120.230 () {44 vars in 817 bytes} [Sun Dec 22 10:26:54 2024] POST /api/search/advanced_search => generated 362076 bytes in 131194 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 955955|app: 0|req: 3/76] 46.232.120.230 () {44 vars in 816 bytes} [Sun Dec 22 10:29:20 2024] POST /api/search/advanced_search => generated 562403 bytes in 1762 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 50/77] 46.232.120.230 () {44 vars in 918 bytes} [Sun Dec 22 10:29:24 2024] POST /api/search/get_statistics => generated 21909 bytes in 50 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+[pid: 955957|app: 0|req: 20/78] 46.232.120.230 () {44 vars in 816 bytes} [Sun Dec 22 10:27:54 2024] POST /api/search/advanced_search => generated 362076 bytes in 132999 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+Sun Dec 22 10:31:39 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 46.232.120.230) !!!
+Sun Dec 22 10:31:39 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (46.232.120.230)
+OSError: write error
+[pid: 955955|app: 0|req: 4/79] 46.232.120.230 () {44 vars in 816 bytes} [Sun Dec 22 10:29:26 2024] POST /api/search/advanced_search => generated 523980 bytes in 132643 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Internal Server Error: /api/search/get_statistics
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/AcademiaHub/Backend/AcademiaHub/./search/views.py", line 548, in get_statistics
+    return JsonResponse({'status': 'completed', 'stats': {
+AttributeError: 'NoneType' object has no attribute 'publication_year_list'
+[pid: 955958|app: 0|req: 51/80] 47.96.120.50 () {42 vars in 694 bytes} [Sun Dec 22 10:31:59 2024] POST /api/search/get_statistics => generated 57795 bytes in 71 msecs (HTTP/1.1 500) 7 headers in 250 bytes (1 switches on core 0)
+Sun Dec 22 10:32:08 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 46.232.120.230) !!!
+Sun Dec 22 10:32:08 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (46.232.120.230)
+OSError: write error
+[pid: 955956|app: 0|req: 6/81] 46.232.120.230 () {44 vars in 816 bytes} [Sun Dec 22 10:29:56 2024] POST /api/search/advanced_search => generated 523980 bytes in 131892 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+[pid: 955958|app: 0|req: 52/82] 219.239.227.188 () {44 vars in 804 bytes} [Sun Dec 22 10:34:26 2024] POST /api/search/hot-paper => generated 1547 bytes in 52 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 955957|app: 0|req: 21/83] 219.239.227.188 () {44 vars in 802 bytes} [Sun Dec 22 10:34:26 2024] POST /api/search/hot-word => generated 339 bytes in 40 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 53/84] 219.239.227.188 () {44 vars in 804 bytes} [Sun Dec 22 10:34:26 2024] POST /api/search/new-paper => generated 2166 bytes in 38 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 54/85] 219.239.227.188 () {44 vars in 804 bytes} [Sun Dec 22 10:34:52 2024] POST /api/search/hot-paper => generated 1547 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 55/86] 219.239.227.188 () {44 vars in 802 bytes} [Sun Dec 22 10:34:52 2024] POST /api/search/hot-word => generated 339 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 56/87] 219.239.227.188 () {44 vars in 804 bytes} [Sun Dec 22 10:34:52 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 955957|app: 0|req: 22/88] 46.232.120.230 () {44 vars in 817 bytes} [Sun Dec 22 10:36:20 2024] POST /api/search/advanced_search => generated 562403 bytes in 1686 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 955958|app: 0|req: 57/89] 46.232.120.230 () {44 vars in 919 bytes} [Sun Dec 22 10:36:23 2024] POST /api/search/get_statistics => generated 21909 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 955955)...
+Gracefully killing worker 2 (pid: 955956)...
+Gracefully killing worker 3 (pid: 955957)...
+Gracefully killing worker 4 (pid: 955958)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /AcademiaHub/Backend/AcademiaHub
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (0.0.0.0:8002)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.28 (64bit) on [Sun Dec 22 10:36:26 2024] ***
+compiled with version: 11.4.0 on 09 December 2024 07:39:47
+os: Linux-5.15.0-113-generic #123-Ubuntu SMP Mon Jun 10 08:16:17 UTC 2024
+nodename: zrtbighandsomeboy
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 16
+current working directory: /AcademiaHub/Backend/AcademiaHub
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /AcademiaHub/Backend/AcademiaHub
+your processes number limit is 126366
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8002 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov  6 2024, 20:22:13) [GCC 11.4.0]
+Python main interpreter initialized at 0x55ffaa73af60
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 507960 bytes (496 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55ffaa73af60 pid: 927708 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 927708)
+spawned uWSGI worker 1 (pid: 978403, cores: 1)
+spawned uWSGI worker 2 (pid: 978404, cores: 1)
+spawned uWSGI worker 3 (pid: 978405, cores: 1)
+spawned uWSGI worker 4 (pid: 978406, cores: 1)
+[pid: 978405|app: 0|req: 1/1] 219.239.227.188 () {44 vars in 804 bytes} [Sun Dec 22 10:38:42 2024] POST /api/search/hot-paper => generated 1547 bytes in 154 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 1/2] 219.239.227.188 () {44 vars in 802 bytes} [Sun Dec 22 10:38:43 2024] POST /api/search/hot-word => generated 339 bytes in 183 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 2/3] 219.239.227.188 () {44 vars in 804 bytes} [Sun Dec 22 10:38:43 2024] POST /api/search/new-paper => generated 2166 bytes in 30 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 978404|app: 0|req: 1/4] 219.239.227.188 () {44 vars in 804 bytes} [Sun Dec 22 10:39:45 2024] POST /api/search/hot-paper => generated 1547 bytes in 177 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 978404|app: 0|req: 2/5] 219.239.227.188 () {44 vars in 802 bytes} [Sun Dec 22 10:39:45 2024] POST /api/search/hot-word => generated 339 bytes in 41 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 3/6] 219.239.227.188 () {44 vars in 804 bytes} [Sun Dec 22 10:39:45 2024] POST /api/search/new-paper => generated 2166 bytes in 39 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 4/7] 46.232.120.230 () {44 vars in 816 bytes} [Sun Dec 22 10:48:07 2024] POST /api/search/advanced_search => generated 562403 bytes in 1604 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 5/8] 46.232.120.230 () {44 vars in 918 bytes} [Sun Dec 22 10:48:11 2024] POST /api/search/get_statistics => generated 21909 bytes in 49 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+Sun Dec 22 10:48:55 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 46.232.120.230) !!!
+Sun Dec 22 10:48:55 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (46.232.120.230)
+OSError: write error
+[pid: 978405|app: 0|req: 2/9] 46.232.120.230 () {44 vars in 816 bytes} [Sun Dec 22 10:46:43 2024] POST /api/search/advanced_search => generated 523980 bytes in 132485 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+[pid: 978405|app: 0|req: 3/10] 46.232.120.230 () {44 vars in 816 bytes} [Sun Dec 22 10:50:30 2024] POST /api/search/advanced_search => generated 562403 bytes in 1964 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 6/11] 46.232.120.230 () {44 vars in 918 bytes} [Sun Dec 22 10:50:34 2024] POST /api/search/get_statistics => generated 21909 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 7/12] 46.232.120.230 () {44 vars in 816 bytes} [Sun Dec 22 10:50:47 2024] POST /api/search/advanced_search => generated 562403 bytes in 1546 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+Not Found: /login.rsp
+[pid: 978405|app: 0|req: 4/13] 154.213.187.122 () {34 vars in 419 bytes} [Sun Dec 22 10:50:49 2024] GET /login.rsp => generated 2667 bytes in 6 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 8/14] 46.232.120.230 () {44 vars in 918 bytes} [Sun Dec 22 10:50:52 2024] POST /api/search/get_statistics => generated 21909 bytes in 39 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+[pid: 978404|app: 0|req: 3/15] 46.232.120.230 () {44 vars in 817 bytes} [Sun Dec 22 10:52:18 2024] POST /api/search/advanced_search => generated 562403 bytes in 1530 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 978404|app: 0|req: 4/16] 46.232.120.230 () {44 vars in 919 bytes} [Sun Dec 22 10:52:21 2024] POST /api/search/get_statistics => generated 21909 bytes in 53 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+[pid: 978404|app: 0|req: 5/17] 46.232.120.230 () {44 vars in 817 bytes} [Sun Dec 22 10:52:25 2024] POST /api/search/advanced_search => generated 562403 bytes in 1862 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 978404|app: 0|req: 6/18] 46.232.120.230 () {44 vars in 919 bytes} [Sun Dec 22 10:52:28 2024] POST /api/search/get_statistics => generated 21909 bytes in 54 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+[pid: 978404|app: 0|req: 7/19] 219.239.227.188 () {44 vars in 804 bytes} [Sun Dec 22 10:53:22 2024] POST /api/search/hot-paper => generated 1547 bytes in 44 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 978404|app: 0|req: 8/20] 219.239.227.188 () {44 vars in 802 bytes} [Sun Dec 22 10:53:22 2024] POST /api/search/hot-word => generated 339 bytes in 40 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 978404|app: 0|req: 9/21] 219.239.227.188 () {44 vars in 804 bytes} [Sun Dec 22 10:53:22 2024] POST /api/search/new-paper => generated 2166 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+Sun Dec 22 10:54:11 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 46.232.120.230) !!!
+Sun Dec 22 10:54:11 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (46.232.120.230)
+OSError: write error
+[pid: 978406|app: 0|req: 9/22] 46.232.120.230 () {44 vars in 816 bytes} [Sun Dec 22 10:51:58 2024] POST /api/search/advanced_search => generated 523980 bytes in 132501 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Sun Dec 22 10:54:23 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 46.232.120.230) !!!
+Sun Dec 22 10:54:23 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (46.232.120.230)
+OSError: write error
+[pid: 978405|app: 0|req: 5/23] 46.232.120.230 () {44 vars in 817 bytes} [Sun Dec 22 10:52:11 2024] POST /api/search/advanced_search => generated 523980 bytes in 131870 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Not Found: /
+[pid: 978405|app: 0|req: 6/24] 95.214.53.205 () {44 vars in 783 bytes} [Sun Dec 22 10:54:44 2024] GET / => generated 2622 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 978404|app: 0|req: 10/25] 46.232.120.230 () {44 vars in 816 bytes} [Sun Dec 22 10:55:41 2024] POST /api/search/advanced_search => generated 595633 bytes in 2051 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 978404|app: 0|req: 11/26] 46.232.120.230 () {44 vars in 918 bytes} [Sun Dec 22 10:55:45 2024] POST /api/search/get_statistics => generated 21898 bytes in 52 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+[pid: 978404|app: 0|req: 12/27] 46.232.120.230 () {44 vars in 816 bytes} [Sun Dec 22 10:55:50 2024] POST /api/search/advanced_search => generated 595633 bytes in 1498 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 978404|app: 0|req: 13/28] 46.232.120.230 () {44 vars in 918 bytes} [Sun Dec 22 10:55:53 2024] POST /api/search/get_statistics => generated 21898 bytes in 50 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+[pid: 978403|app: 0|req: 1/29] 46.232.120.230 () {44 vars in 816 bytes} [Sun Dec 22 10:55:56 2024] POST /api/search/advanced_search => generated 595633 bytes in 1668 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 978404|app: 0|req: 14/30] 46.232.120.230 () {44 vars in 918 bytes} [Sun Dec 22 10:56:00 2024] POST /api/search/get_statistics => generated 21898 bytes in 54 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+Sun Dec 22 10:56:34 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 46.232.120.230) !!!
+Sun Dec 22 10:56:34 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (46.232.120.230)
+OSError: write error
+[pid: 978406|app: 0|req: 10/31] 46.232.120.230 () {44 vars in 817 bytes} [Sun Dec 22 10:54:23 2024] POST /api/search/advanced_search => generated 523980 bytes in 131410 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Sun Dec 22 10:56:59 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 46.232.120.230) !!!
+Sun Dec 22 10:56:59 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (46.232.120.230)
+OSError: write error
+[pid: 978405|app: 0|req: 7/32] 46.232.120.230 () {44 vars in 817 bytes} [Sun Dec 22 10:54:46 2024] POST /api/search/advanced_search => generated 523980 bytes in 132520 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+[pid: 978405|app: 0|req: 8/33] 46.232.120.230 () {44 vars in 817 bytes} [Sun Dec 22 10:57:37 2024] POST /api/search/advanced_search => generated 595633 bytes in 1525 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 978403|app: 0|req: 2/34] 46.232.120.230 () {44 vars in 816 bytes} [Sun Dec 22 10:58:18 2024] POST /api/search/advanced_search => generated 595633 bytes in 1496 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 978404|app: 0|req: 15/35] 46.232.120.230 () {44 vars in 918 bytes} [Sun Dec 22 10:58:21 2024] POST /api/search/get_statistics => generated 21898 bytes in 46 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+[pid: 978404|app: 0|req: 16/36] 46.232.120.230 () {44 vars in 816 bytes} [Sun Dec 22 10:58:30 2024] POST /api/search/advanced_search => generated 818156 bytes in 2095 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 978404|app: 0|req: 17/37] 46.232.120.230 () {44 vars in 918 bytes} [Sun Dec 22 10:58:34 2024] POST /api/search/get_statistics => generated 21727 bytes in 51 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+Sun Dec 22 10:59:40 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 46.232.120.230) !!!
+Sun Dec 22 10:59:40 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (46.232.120.230)
+OSError: write error
+[pid: 978406|app: 0|req: 11/38] 46.232.120.230 () {44 vars in 816 bytes} [Sun Dec 22 10:57:30 2024] POST /api/search/advanced_search => generated 523980 bytes in 130715 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Sun Dec 22 10:59:53 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 46.232.120.230) !!!
+Sun Dec 22 10:59:53 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (46.232.120.230)
+OSError: write error
+[pid: 978405|app: 0|req: 9/39] 46.232.120.230 () {44 vars in 817 bytes} [Sun Dec 22 10:57:41 2024] POST /api/search/advanced_search => generated 523980 bytes in 132039 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+[pid: 978405|app: 0|req: 10/40] 219.239.227.188 () {44 vars in 804 bytes} [Sun Dec 22 11:00:25 2024] POST /api/search/hot-paper => generated 1547 bytes in 33 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 978405|app: 0|req: 11/41] 219.239.227.188 () {44 vars in 802 bytes} [Sun Dec 22 11:00:25 2024] POST /api/search/hot-word => generated 339 bytes in 36 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 978405|app: 0|req: 12/42] 219.239.227.188 () {44 vars in 804 bytes} [Sun Dec 22 11:00:25 2024] POST /api/search/new-paper => generated 2166 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 978405|app: 0|req: 13/43] 219.239.227.188 () {44 vars in 804 bytes} [Sun Dec 22 11:01:01 2024] POST /api/search/hot-paper => generated 1547 bytes in 54 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 978405|app: 0|req: 14/44] 219.239.227.188 () {44 vars in 802 bytes} [Sun Dec 22 11:01:01 2024] POST /api/search/hot-word => generated 339 bytes in 51 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 978405|app: 0|req: 15/45] 219.239.227.188 () {44 vars in 804 bytes} [Sun Dec 22 11:01:01 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 978404|app: 0|req: 18/46] 46.232.120.230 () {44 vars in 817 bytes} [Sun Dec 22 11:01:40 2024] POST /api/search/advanced_search => generated 595633 bytes in 1919 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 978405|app: 0|req: 16/47] 46.232.120.230 () {44 vars in 919 bytes} [Sun Dec 22 11:01:44 2024] POST /api/search/get_statistics => generated 21898 bytes in 59 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+Sun Dec 22 11:02:08 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 46.232.120.230) !!!
+Sun Dec 22 11:02:08 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (46.232.120.230)
+OSError: write error
+[pid: 978406|app: 0|req: 12/48] 46.232.120.230 () {44 vars in 817 bytes} [Sun Dec 22 10:59:55 2024] POST /api/search/advanced_search => generated 523980 bytes in 132827 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+[pid: 978404|app: 0|req: 19/49] 46.232.120.230 () {44 vars in 817 bytes} [Sun Dec 22 11:02:33 2024] POST /api/search/advanced_search => generated 722699 bytes in 2136 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 978404|app: 0|req: 20/50] 46.232.120.230 () {44 vars in 919 bytes} [Sun Dec 22 11:02:38 2024] POST /api/search/get_statistics => generated 21687 bytes in 47 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+Sun Dec 22 11:04:01 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 46.232.120.230) !!!
+Sun Dec 22 11:04:01 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (46.232.120.230)
+OSError: write error
+[pid: 978405|app: 0|req: 17/51] 46.232.120.230 () {44 vars in 817 bytes} [Sun Dec 22 11:01:48 2024] POST /api/search/advanced_search => generated 523980 bytes in 132764 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Sun Dec 22 11:04:34 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 46.232.120.230) !!!
+Sun Dec 22 11:04:34 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (46.232.120.230)
+OSError: write error
+[pid: 978406|app: 0|req: 13/52] 46.232.120.230 () {44 vars in 817 bytes} [Sun Dec 22 11:02:21 2024] POST /api/search/advanced_search => generated 523980 bytes in 132901 msecs (HTTP/1.1 200) 9 headers in 308 bytes (0 switches on core 0)
+Not Found: /api/mark/create-tracker
+[pid: 978406|app: 0|req: 14/53] 120.27.139.77 () {40 vars in 648 bytes} [Sun Dec 22 11:05:38 2024] POST /api/mark/create-tracker?para=TS+%3D+pig&tracker_name=deep+learning&user_id=123 => generated 5211 bytes in 7 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 15/54] 219.239.227.188 () {44 vars in 804 bytes} [Sun Dec 22 11:13:56 2024] POST /api/search/hot-paper => generated 1547 bytes in 56 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 16/55] 219.239.227.188 () {44 vars in 802 bytes} [Sun Dec 22 11:13:56 2024] POST /api/search/hot-word => generated 339 bytes in 49 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 17/56] 219.239.227.188 () {44 vars in 804 bytes} [Sun Dec 22 11:13:56 2024] POST /api/search/new-paper => generated 2166 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 18/57] 219.239.227.188 () {44 vars in 804 bytes} [Sun Dec 22 11:15:25 2024] POST /api/search/hot-paper => generated 1547 bytes in 49 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 19/58] 219.239.227.188 () {44 vars in 802 bytes} [Sun Dec 22 11:15:25 2024] POST /api/search/hot-word => generated 339 bytes in 46 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 20/59] 219.239.227.188 () {44 vars in 804 bytes} [Sun Dec 22 11:15:26 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+Not Found: /
+[pid: 978406|app: 0|req: 21/60] 95.214.55.32 () {28 vars in 309 bytes} [Sun Dec 22 11:31:06 2024] GET / => generated 2622 bytes in 6 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 978405|app: 0|req: 18/61] 219.239.227.114 () {48 vars in 803 bytes} [Sun Dec 22 11:32:02 2024] OPTIONS /api/search/hot-paper => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 424 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 22/62] 219.239.227.114 () {46 vars in 790 bytes} [Sun Dec 22 11:32:02 2024] POST /api/search/hot-paper => generated 1547 bytes in 48 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 23/63] 219.239.227.114 () {48 vars in 801 bytes} [Sun Dec 22 11:32:02 2024] OPTIONS /api/search/hot-word => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 424 bytes (1 switches on core 0)
+[pid: 978405|app: 0|req: 19/64] 219.239.227.114 () {46 vars in 788 bytes} [Sun Dec 22 11:32:02 2024] POST /api/search/hot-word => generated 339 bytes in 56 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+[pid: 978405|app: 0|req: 20/65] 219.239.227.114 () {48 vars in 803 bytes} [Sun Dec 22 11:32:02 2024] OPTIONS /api/search/new-paper => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 424 bytes (1 switches on core 0)
+[pid: 978404|app: 0|req: 21/66] 219.239.227.114 () {46 vars in 790 bytes} [Sun Dec 22 11:32:02 2024] POST /api/search/new-paper => generated 2166 bytes in 35 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 24/67] 219.239.227.114 () {46 vars in 790 bytes} [Sun Dec 22 11:32:13 2024] POST /api/search/hot-paper => generated 1547 bytes in 54 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 25/68] 219.239.227.114 () {46 vars in 788 bytes} [Sun Dec 22 11:32:13 2024] POST /api/search/hot-word => generated 339 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 26/69] 219.239.227.114 () {46 vars in 790 bytes} [Sun Dec 22 11:32:13 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 27/70] 219.239.227.114 () {46 vars in 790 bytes} [Sun Dec 22 11:32:31 2024] POST /api/search/hot-paper => generated 1547 bytes in 38 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 28/71] 219.239.227.114 () {46 vars in 788 bytes} [Sun Dec 22 11:32:31 2024] POST /api/search/hot-word => generated 339 bytes in 39 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 29/72] 219.239.227.114 () {46 vars in 790 bytes} [Sun Dec 22 11:32:31 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 30/73] 219.239.227.114 () {46 vars in 790 bytes} [Sun Dec 22 11:32:40 2024] POST /api/search/hot-paper => generated 1547 bytes in 52 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 31/74] 219.239.227.114 () {46 vars in 788 bytes} [Sun Dec 22 11:32:40 2024] POST /api/search/hot-word => generated 339 bytes in 46 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 32/75] 219.239.227.114 () {46 vars in 790 bytes} [Sun Dec 22 11:32:40 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 33/76] 219.239.227.114 () {46 vars in 790 bytes} [Sun Dec 22 11:32:42 2024] POST /api/search/hot-paper => generated 1547 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 34/77] 219.239.227.114 () {46 vars in 788 bytes} [Sun Dec 22 11:32:42 2024] POST /api/search/hot-word => generated 339 bytes in 40 msecs (HTTP/1.1 200) 9 headers in 307 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 35/78] 219.239.227.114 () {46 vars in 790 bytes} [Sun Dec 22 11:32:42 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 308 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 36/79] 219.239.227.114 () {48 vars in 815 bytes} [Sun Dec 22 11:33:35 2024] OPTIONS /api/search/advanced_search => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 424 bytes (1 switches on core 0)
+[pid: 978405|app: 0|req: 21/80] 219.239.227.114 () {46 vars in 804 bytes} [Sun Dec 22 11:33:37 2024] POST /api/search/advanced_search => generated 579980 bytes in 2236 msecs (HTTP/1.1 200) 9 headers in 310 bytes (1 switches on core 0)
+[pid: 978404|app: 0|req: 22/81] 219.239.227.114 () {46 vars in 906 bytes} [Sun Dec 22 11:33:39 2024] POST /api/search/get_statistics => generated 21746 bytes in 42 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 978405|app: 0|req: 22/82] 219.239.227.114 () {48 vars in 813 bytes} [Sun Dec 22 11:34:08 2024] OPTIONS /api/search/get_statistics => generated 0 bytes in 0 msecs (HTTP/1.1 200) 11 headers in 424 bytes (1 switches on core 0)
+[pid: 978404|app: 0|req: 23/83] 219.239.227.114 () {46 vars in 800 bytes} [Sun Dec 22 11:34:08 2024] POST /api/search/get_statistics => generated 24 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 978405|app: 0|req: 23/84] 219.239.227.188 () {46 vars in 833 bytes} [Sun Dec 22 11:35:24 2024] POST /api/search/hot-paper => generated 1547 bytes in 56 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 978405|app: 0|req: 24/85] 219.239.227.188 () {46 vars in 831 bytes} [Sun Dec 22 11:35:24 2024] POST /api/search/hot-word => generated 339 bytes in 36 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+[pid: 978405|app: 0|req: 25/86] 219.239.227.188 () {46 vars in 833 bytes} [Sun Dec 22 11:35:24 2024] POST /api/search/new-paper => generated 2166 bytes in 1 msecs (HTTP/1.1 200) 9 headers in 306 bytes (1 switches on core 0)
+[pid: 978405|app: 0|req: 26/87] 219.239.227.114 () {46 vars in 804 bytes} [Sun Dec 22 11:35:32 2024] POST /api/search/advanced_search => generated 579980 bytes in 1526 msecs (HTTP/1.1 200) 9 headers in 310 bytes (1 switches on core 0)
+[pid: 978405|app: 0|req: 27/88] 219.239.227.114 () {46 vars in 906 bytes} [Sun Dec 22 11:35:34 2024] POST /api/search/get_statistics => generated 21746 bytes in 50 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+Sun Dec 22 11:35:47 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.114) !!!
+Sun Dec 22 11:35:47 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.114)
+OSError: write error
+[pid: 978406|app: 0|req: 37/89] 219.239.227.114 () {46 vars in 804 bytes} [Sun Dec 22 11:33:35 2024] POST /api/search/advanced_search => generated 523978 bytes in 132141 msecs (HTTP/1.1 200) 9 headers in 310 bytes (0 switches on core 0)
+[pid: 978406|app: 0|req: 38/90] 219.239.227.114 () {46 vars in 804 bytes} [Sun Dec 22 11:36:42 2024] POST /api/search/advanced_search => generated 579980 bytes in 1511 msecs (HTTP/1.1 200) 9 headers in 310 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 39/91] 219.239.227.114 () {46 vars in 906 bytes} [Sun Dec 22 11:36:43 2024] POST /api/search/get_statistics => generated 21746 bytes in 52 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+Sun Dec 22 11:37:34 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.114) !!!
+Sun Dec 22 11:37:34 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.114)
+OSError: write error
+[pid: 978404|app: 0|req: 24/92] 219.239.227.114 () {46 vars in 804 bytes} [Sun Dec 22 11:35:22 2024] POST /api/search/advanced_search => generated 523978 bytes in 131606 msecs (HTTP/1.1 200) 9 headers in 310 bytes (0 switches on core 0)
+[pid: 978406|app: 0|req: 40/93] 219.239.227.114 () {46 vars in 804 bytes} [Sun Dec 22 11:38:14 2024] POST /api/search/advanced_search => generated 579980 bytes in 1812 msecs (HTTP/1.1 200) 9 headers in 310 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 41/94] 219.239.227.114 () {46 vars in 906 bytes} [Sun Dec 22 11:38:16 2024] POST /api/search/get_statistics => generated 21746 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 42/95] 219.239.227.114 () {46 vars in 804 bytes} [Sun Dec 22 11:38:16 2024] POST /api/search/advanced_search => generated 579980 bytes in 1840 msecs (HTTP/1.1 200) 9 headers in 310 bytes (1 switches on core 0)
+[pid: 978406|app: 0|req: 43/96] 219.239.227.114 () {46 vars in 906 bytes} [Sun Dec 22 11:38:18 2024] POST /api/search/get_statistics => generated 21746 bytes in 46 msecs (HTTP/1.1 200) 9 headers in 309 bytes (1 switches on core 0)
+Not Found: /
+[pid: 978405|app: 0|req: 28/97] 45.156.128.114 () {34 vars in 488 bytes} [Sun Dec 22 11:42:58 2024] GET / => generated 2619 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /
+[pid: 978405|app: 0|req: 29/98] 45.156.128.114 () {34 vars in 488 bytes} [Sun Dec 22 11:43:23 2024] GET / => generated 2619 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /cf_scripts/scripts/ajax/ckeditor/ckeditor.js
+[pid: 978405|app: 0|req: 30/99] 45.156.128.111 () {34 vars in 576 bytes} [Sun Dec 22 11:43:23 2024] GET /cf_scripts/scripts/ajax/ckeditor/ckeditor.js => generated 2769 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /zabbix/favicon.ico
+[pid: 978405|app: 0|req: 31/100] 45.156.128.112 () {34 vars in 524 bytes} [Sun Dec 22 11:43:25 2024] GET /zabbix/favicon.ico => generated 2691 bytes in 5 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 978405|app: 0|req: 32/101] 45.156.128.113 () {34 vars in 510 bytes} [Sun Dec 22 11:43:48 2024] GET /favicon.ico => generated 2670 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 978405|app: 0|req: 33/102] 219.239.227.173 () {44 vars in 889 bytes} [Sun Dec 22 11:43:53 2024] POST /api/mark/get-user-single-mark-list-detail => generated 487 bytes in 74 msecs (HTTP/1.1 200) 9 headers in 305 bytes (1 switches on core 0)
+Sun Dec 22 11:44:46 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.114) !!!
+Sun Dec 22 11:44:46 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.114)
+OSError: write error
+[pid: 978406|app: 0|req: 44/103] 219.239.227.114 () {46 vars in 804 bytes} [Sun Dec 22 11:42:35 2024] POST /api/search/advanced_search => generated 523978 bytes in 130809 msecs (HTTP/1.1 200) 9 headers in 310 bytes (0 switches on core 0)
+Sun Dec 22 11:44:46 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.114) !!!
+Sun Dec 22 11:44:46 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.114)
+OSError: write error
+[pid: 978403|app: 0|req: 3/104] 219.239.227.114 () {46 vars in 804 bytes} [Sun Dec 22 11:42:35 2024] POST /api/search/advanced_search => generated 523978 bytes in 131061 msecs (HTTP/1.1 200) 9 headers in 310 bytes (0 switches on core 0)
+Not Found: /OA_HTML/AppsLocalLogin.jsp
+[pid: 978403|app: 0|req: 4/105] 45.156.128.114 () {34 vars in 540 bytes} [Sun Dec 22 11:44:46 2024] GET /OA_HTML/AppsLocalLogin.jsp => generated 2715 bytes in 6 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+[pid: 978403|app: 0|req: 5/106] 219.239.227.114 () {40 vars in 704 bytes} [Sun Dec 22 11:44:46 2024] POST /api/search/single-work => generated 9840 bytes in 1688 msecs (HTTP/1.1 200) 7 headers in 214 bytes (1 switches on core 0)
+Not Found: /index.jsp
+[pid: 978403|app: 0|req: 6/107] 45.156.128.113 () {34 vars in 506 bytes} [Sun Dec 22 11:44:48 2024] GET /index.jsp => generated 2664 bytes in 5 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
+Sun Dec 22 11:44:48 2024 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /api/search/advanced_search (ip 219.239.227.114) !!!
+Sun Dec 22 11:44:48 2024 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 341] during POST /api/search/advanced_search (219.239.227.114)
+OSError: write error
+[pid: 978404|app: 0|req: 25/108] 219.239.227.114 () {46 vars in 804 bytes} [Sun Dec 22 11:42:37 2024] POST /api/search/advanced_search => generated 523978 bytes in 131398 msecs (HTTP/1.1 200) 9 headers in 310 bytes (0 switches on core 0)
+Not Found: /internal_forms_authentication
+[pid: 978403|app: 0|req: 7/109] 45.156.128.113 () {34 vars in 546 bytes} [Sun Dec 22 11:45:07 2024] GET /internal_forms_authentication => generated 2724 bytes in 4 msecs (HTTP/1.1 404) 7 headers in 229 bytes (1 switches on core 0)
