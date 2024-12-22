@@ -11,7 +11,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    if: github.event.ref_type == 'branch'
+    if: "!startsWith(github.ref, 'refs/tags')"
     env:
       SECRET_KEY: "dev"
       SQLALCHEMY_DATABASE_URI: "sqlite:///:memory:"
