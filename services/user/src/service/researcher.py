@@ -77,17 +77,6 @@ def get_info():
         except ApiRequest.RequestError:
             return res(502)
 
-    data["cooperators"] = []
-    for work in works:
-        for author in work.get("authorships", []):
-            cooperator = author.get("author")
-            if cooperator and cooperator not in data["cooperators"]:
-                data["cooperators"].append(
-                    {
-                        "name": cooperator.get("display_name", ""),
-                        "id": cooperator.get("id", "").split("/")[-1],
-                    }
-                )
     data["works"] = [
         {
             "title": x.get("title", ""),
@@ -98,3 +87,65 @@ def get_info():
     ]
 
     return res(0, data=data)
+
+
+@rsc_service_bp.route("/coauthor", methods=["POST"])
+@require_fields("researcher_id")
+def get_coauthor():
+    logger.info("get_coauthor of researcher service called")
+    req = request.form
+    res = Response()
+
+    researcher_id = req.get("researcher_id", "")
+
+    try:
+        result = CachedAuthor.get(researcher_id)
+    except CachedAuthor.CacheNotFound:
+        try:
+            result = ApiRequest.request_api(
+                f"{config.OPENALEX_BASE}/authors/{researcher_id}"
+            )
+            result: dict = json.loads(result)  # type: ignore
+            CachedAuthor.set(researcher_id, result)
+        except ApiRequest.RequestNotFoundError:
+            return res(501)
+        except ApiRequest.RequestError:
+            return res(502)
+
+    work_id = result.get("works_api_url")
+    try:
+        works = CachedWork.get(work_id)
+    except CachedWork.CacheNotFound:
+        try:
+            works = ApiRequest.request_api(result.get("works_api_url"))
+            works: list[dict] = json.loads(works).get("results", [])  # type: ignore
+            CachedWork.set(work_id, works)
+        except ApiRequest.RequestError:
+            return res(502)
+
+    coauthors = []
+    coauthor_ids = []
+    for work in works:
+        for author in work.get("authorships", []):
+            cooperator: dict = author.get("author")
+            cid = cooperator.get("id", "").split("/")[-1]
+            if cid == researcher_id:
+                continue
+            if cid not in coauthor_ids:
+                coauthors.append(
+                    {
+                        "name": cooperator.get("display_name", ""),
+                        "id": cid,
+                        "coauthor_times": 1,
+                    }
+                )
+            else:
+                for coauthor in coauthors:
+                    if coauthor.get("id", None) == cid:
+                        coauthor["coauthor_times"] += 1
+            coauthor_ids.append(cid)
+
+    coauthors.sort(key=lambda x: x["coauthor_times"], reverse=True)
+    coauthors = coauthors[:10]
+
+    return res(0, data={"coauthors": coauthors})
