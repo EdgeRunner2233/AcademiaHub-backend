@@ -211,7 +211,7 @@ def forget_password():
 @user_service_bp.route("/become_researcher", methods=["POST"])
 @require_fields(
     "user_id",
-    "work_id",
+    "researcher_id",
     "name",
     "gender",
     "birth_date",
@@ -229,7 +229,7 @@ def become_researcher():
     res = Response()
 
     user_id = form.get("user_id")
-    work_id = form.get("work_id")
+    researcher_id = form.get("researcher_id")
 
     real_name = form.get("name")
     gender = form.get("gender")
@@ -249,8 +249,6 @@ def become_researcher():
     if ResearcherApplication.get_by_user_id(user_id):
         return res(507)
 
-    openalex_id = ""
-
     user = User.get_by_id(user_id)
     if not user:
         return res(302)
@@ -258,22 +256,7 @@ def become_researcher():
     if user.role == User.Role.RESEARCHER:
         return res(508)
 
-    try:
-        result = ApiRequest.request_api(f"{config.OPENALEX_BASE}/works/{work_id}")
-    except ApiRequest.RequestNotFoundError:
-        return res(504)
-    except ApiRequest.RequestError:
-        return res(502)
-
-    result = json.loads(result)
-    authors: list[dict] = result.get("authorships", [])
-    for author in authors:
-        author_obj = author.get("author", {})
-        if author_obj.get("display_name", "") == real_name:
-            openalex_id = author_obj.get("id", "").split("/")[-1]
-            break
-
-    if openalex_id is None or len(openalex_id) <= 0:
+    if researcher_id is None or len(researcher_id) <= 0:
         return res(505)
 
     if not util.check_email_pattern(researcher_email):
@@ -317,7 +300,7 @@ def become_researcher():
     )
     researcher = Researcher.create(
         user_id=user_id,
-        openalex_id=openalex_id,
+        openalex_id=researcher_id,
         real_name=real_name,
         gender=gender,
         birth_date=birth_date,

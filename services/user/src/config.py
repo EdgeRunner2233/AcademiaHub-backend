@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 
-__version__ = "v1.1.0"
+__version__ = "v1.1.1"
 
 
 OPENALEX_BASE = "https://api.openalex.org"
