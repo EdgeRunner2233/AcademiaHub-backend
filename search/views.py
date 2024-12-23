@@ -346,6 +346,18 @@ def get_specific_work(request):
     }
     return JsonResponse(result)
 
+
+@require_POST
+def get_related_works(request):
+    openalex_id = request.POST.get('openalex_id', '')
+    specific_work = cache.get(openalex_id)
+    result = {}
+    result['referenced_works_detail'] = asyncio.run(get_work_details(specific_work['referenced_works']))
+    result['related_works_detail'] = asyncio.run(get_work_details(specific_work['related_works']))
+
+    return JsonResponse(result)
+
+
 def get_top10_words(num):
     top_words = SearchWord.objects.all().order_by('-number')[:]
     return [words.to_dic() for words in top_words]
@@ -390,7 +402,7 @@ def advanced_search(request):
             # 构造过滤参数
             processed_filters = []
             for key, value in filters.items():
-                if not value:  # 忽略空值
+                if value == "" or not value:  # 忽略空值和空字符串
                     continue
 
                 # 针对每个键值对的特殊处理

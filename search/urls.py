@@ -6,10 +6,12 @@ urlpatterns = [
     path('advanced_search', views.advanced_search, name='advanced_search'),
     
     path('single-work', views.get_specific_work, name='single_work'),
+    path('related-works', views.get_related_works, name='related_works'),
 
     path('hot-paper', views.get_weekly_popular_works, name='hot-paper'),
     path('hot-word', views.get_weekly_popular_words, name='hot-word'),
     path('new-paper', views.get_new_works, name='new-paper'),
 
     path('get_statistics', views.get_statistics, name='get_statistics'),
+
 ]

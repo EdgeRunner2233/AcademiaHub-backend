@@ -1,13 +1,18 @@
 # tasks.py
 from celery import shared_task
 from search.models import *
+from tracker.models import *
 from AcademiaHub.celery import app
 import requests
 import logging
 from django.core.cache import cache
 from utils.search_utils import openAlex_ordinary_search
+from work.models import *
+from faker import Faker
+import random
 
 logger = logging.getLogger('celeryFile')
+fake = Faker()
 
 @app.task
 def test():
@@ -92,7 +97,63 @@ def update_new_works():
             new_work.publication_date = publication_date
             new_work.save()
 
+# 创建模拟文献数据
+def generate_literature_data():
+    return {
+        "title": fake.sentence(nb_words=random.randint(5, 12)),
+        "authors": fake.name() + ", " + fake.name(),
+        "abstract": fake.text(max_nb_chars=200),
+        "publish_text": fake.company(),
+        "year": random.randint(1990, 2024),
+        "publish": fake.company_suffix(),
+        "ref_wr": random.randint(1, 100),
+        "key_words": ', '.join([fake.word() for _ in range(random.randint(3, 8))])
+    }
+
+
+# 批量生成数据并存入数据库
+def bulk_create_literature(num_entries=10000):
+    literature_list = []
+    for _ in range(num_entries):
+        literature_data = generate_literature_data()
+        literature = Literature(**literature_data)
+        literature_list.append(literature)
+
+    Literature.objects.bulk_create(literature_list)
+
+def create_total_literature_count():
+    # 获取当前模型对象的最新 total_literature_count
+    latest = TotalLiteratureCount.objects.latest('id') if TotalLiteratureCount.objects.exists() else None
+    if latest:
+        # 从最新的total_literature_count基础上增加100-1000的随机数
+        increment = random.randint(100, 1000)
+        new_count = latest.total_literature_count + increment
+    else:
+        # 如果没有数据，则从0开始
+        increment = random.randint(100, 1000)
+        new_count = increment
+    
+    # 创建并保存新对象
+    new_record = TotalLiteratureCount(total_literature_count=new_count)
+    new_record.save()
+    return increment
+
 @app.task
-def update_dataset():
+def update_dataset_task():
     # TODO
+    random_objects = TrackerList.objects.all().order_by('?')[:5]
+    for tracker in random_objects:
+        user_id = tracker.user_id
+        body = '您存储的跟踪器 "' + tracker.tracker_name + '" 的搜索内容更新，请查收!'
+        requests.post(
+            "http://113.44.139.65/api/email/send",
+            data={
+                "recipient": user_id,
+                "subject": "跟踪器修改提醒",
+                "body": body,
+            },
+        )
+
+    new_count = create_total_literature_count()
+    bulk_create_literature(new_count)
     logger.info("update dataset !!!")

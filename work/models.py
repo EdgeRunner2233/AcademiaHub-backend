@@ -1,5 +1,5 @@
 from django.db import models
-
+import random
 # Create your models here.
 
 
@@ -48,3 +48,27 @@ class Literature(models.Model):
     class Meta:
         verbose_name = "文献"
         verbose_name_plural = "文献"
+
+class TotalLiteratureCount(models.Model):
+    total_literature_count = models.IntegerField()
+
+    def __str__(self):
+        return f"ID: {self.id}, Total Literature Count: {self.total_literature_count}"
+    
+    @classmethod
+    def create_with_random_increment(cls):
+        # 获取当前模型对象的最新 total_literature_count
+        latest = cls.objects.latest('id') if cls.objects.exists() else None
+        if latest:
+            # 从最新的total_literature_count基础上增加100-1000的随机数
+            increment = random.randint(100, 1000)
+            new_count = latest.total_literature_count + increment
+        else:
+            # 如果没有数据，则从0开始
+            increment = random.randint(100, 1000)
+            new_count = increment
+        
+        # 创建并保存新对象
+        new_record = cls(total_literature_count=new_count)
+        new_record.save()
+        return increment

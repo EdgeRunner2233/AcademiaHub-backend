@@ -22,4 +22,5 @@ urlpatterns = [
     path('api/search/', include('search.urls')),
     path('api/work/', include('work.urls')),
     path('api/mark/', include('mark.urls')),
+    path('api/tracker/', include('tracker.urls')),
 ]

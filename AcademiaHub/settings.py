@@ -55,9 +55,11 @@ INSTALLED_APPS = [
     'search',
     'work',
     'utils',
+    'tracker',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
@@ -205,7 +207,7 @@ CELERY_BEAT_SCHEDULE = {
         'schedule': timedelta(days=1),
     },
     'update_dataset': {
-        'task': 'search.tasks.update_dataset',
+        'task': 'search.tasks.update_dataset_task',
         'schedule': timedelta(days=int(update_interval)),  # 动态设置时间
     },
 }

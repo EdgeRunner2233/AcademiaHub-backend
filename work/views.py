@@ -7,6 +7,8 @@ import random
 import environ
 # Create your views here.
 
+from search.tasks import *
+
 env = environ.Env()
 environ.Env.read_env(env_file='/AcademiaHub/Backend/AcademiaHub/.env')
 
@@ -39,10 +41,29 @@ def get_update_interval(request):
     result = {'result': "get update_interval success !",'update_interval': update_interval}
     return JsonResponse(result)
 
+@require_POST
 def update_dataset(request):
     # TODO
-    print("update dataset !!!")
+    update_dataset_task()
 
     result = {'result': "update dataset success !"}
     return JsonResponse(result)
 
+@require_POST
+def update_dataset(request):
+    # TODO
+    update_dataset_task()
+
+    result = {'result': "update dataset success !"}
+    return JsonResponse(result)
+
+@require_POST
+def get_recent_counts(request):
+    # 获取最近五条文献总量记录，按ID降序排列
+    recent_records = TotalLiteratureCount.objects.all().order_by('-id')[:5]
+    
+    # 提取文献总量字段
+    total_literature_counts = [record.total_literature_count for record in recent_records]
+    
+    # 返回一个包含最近五次文献总量的列表
+    return JsonResponse({'recent_literature_counts': total_literature_counts})
