@@ -1,11 +1,15 @@
 import json
 import unittest
 from src import create_app
+from fakeredis import FakeRedis
+from unittest.mock import patch
 from werkzeug.test import TestResponse
 
-# from src.extensions import db
+
+test_redis = FakeRedis()
 
 
+@patch("src.cache.redis", test_redis)
 class ApiTestCase(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
