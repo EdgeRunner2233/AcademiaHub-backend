@@ -26,6 +26,7 @@ packaging==24.2
 pluggy==1.5.0
 pycparser==2.22
 pycryptodome==3.21.0
+PyMySQL==1.1.1
 pytest==8.3.3
 pytest-cov==6.0.0
 python-dotenv==1.0.1

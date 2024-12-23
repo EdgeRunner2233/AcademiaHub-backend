@@ -4,8 +4,9 @@ from dotenv import load_dotenv
 from src.service.user import user_service_bp
 from src.service.email import email_service_bp
 from src.service.admin import admin_service_bp
-from src.service.researcher import rsc_service_bp
+from src.config import DB_SQLALCHEMY_DATABASE_URI
 from src.extensions import babel, db, mail, redis
+from src.service.researcher import rsc_service_bp
 
 load_dotenv()
 
@@ -18,7 +19,7 @@ def create_app(**config):
     else:
         app.config.from_mapping(
             SECRET_KEY=os.getenv("SECRET_KEY"),
-            SQLALCHEMY_DATABASE_URI=os.getenv("SQLALCHEMY_DATABASE_URI"),
+            SQLALCHEMY_DATABASE_URI=DB_SQLALCHEMY_DATABASE_URI,
         )
 
     app.config.update(

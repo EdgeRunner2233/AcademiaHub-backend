@@ -15,7 +15,6 @@ services:
     environment:
       - REDIS_HOST=redis
       - SECRET_KEY=<SECRET_KEY>
-      - SQLALCHEMY_DATABASE_URI=sqlite:////Service/User/data.db
       - MAIL_SERVER=smtp.163.com
       - MAIL_PORT=465
       - MAIL_USE_SSL=True
@@ -26,6 +25,11 @@ services:
       - TOKEN_EXPIRE_TIME=3600
       - OBS_ACCESS_KEY=<OBS_ACCESS_KEY>
       - OBS_SECRET_KEY=<OBS_SECRET_KEY>
+      - DB_USERNAME=<DB_USERNAME>
+      - DB_PASSWORD=<DB_PASSWORD>
+      - DB_HOST=<DB_HOST>
+      - DB_PORT=<DB_PORT>
+      - DB_NAME=<DB_NAME>
     networks:
       - user_module_network
 
