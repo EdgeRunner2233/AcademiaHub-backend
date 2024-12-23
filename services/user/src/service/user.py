@@ -246,11 +246,17 @@ def become_researcher():
     academic_achievement = files.get("achievement")
     avatar = files.get("avatar")
 
+    if ResearcherApplication.get_by_user_id(user_id):
+        return res(507)
+
     openalex_id = ""
 
     user = User.get_by_id(user_id)
     if not user:
         return res(302)
+
+    if user.role == User.Role.RESEARCHER:
+        return res(508)
 
     try:
         result = ApiRequest.request_api(f"{config.OPENALEX_BASE}/works/{work_id}")

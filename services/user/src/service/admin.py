@@ -13,6 +13,10 @@ def get_pending_researcher_applications():
     res = Response()
 
     applications = ResearcherApplication.get_all_pending()
+    for application in applications:
+        user_id = application.get("user_id", "")
+        researcher = Researcher.query_first(user_id=user_id, is_valid=False)
+        application.update(researcher.info() if researcher else {})
 
     return res(0, data={"applications": applications})
 
@@ -25,6 +29,11 @@ def approve_researcher_application():
     res = Response()
 
     user_id = form.get("user_id")
+
+    user = User.get_by_id(user_id)
+    if not user:
+        return res(302)
+
     application = ResearcherApplication.get_by_user_id(user_id)
     researcher = Researcher.query_first(user_id=user_id, is_valid=False)
     if not application or not researcher:
@@ -32,6 +41,7 @@ def approve_researcher_application():
 
     application.delete()
     researcher.update(is_valid=True)
+    user.update(role=User.Role.RESEARCHER)
 
     return res(0)
 
