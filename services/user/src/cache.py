@@ -122,8 +122,8 @@ class EmailMessage:
 
         subject = "[AcademiaHub] 验证码: {code}"
         body = (
-            "感谢您注册AcademiaHub, 您的验证码为: {code}, 10分钟内有效。\n\n"
-            + "Thank you for registering on AcademiaHub. "
+            "感谢您使用AcademiaHub! 您的验证码为: {code}, 10分钟内有效。\n\n"
+            + "Thank you for choosing AcademiaHub! "
             + "Your verification code is: {code}, valid for 10 minutes.\n\n\n"
             + "----------\nAcademiaHub Team"
         )
@@ -177,8 +177,8 @@ class EmailMessage:
 
         subject = "[AcademiaHub] 您已成功修改邮箱!"
         body = (
-            "您的邮箱账户已激活。\n\n"
-            + "Your email has been activated. \n\n\n"
+            "感谢您使用AcademiaHub! 您的邮箱账户已激活。\n\n"
+            + "Thank you for choosing AcademiaHub! Your email has been activated. \n\n\n"
             + "----------\nAcademiaHub Team"
         )
 
@@ -198,8 +198,30 @@ class EmailMessage:
 
         subject = "[AcademiaHub] 您已成功修改密码!"
         body = (
-            "您已成功修改密码。\n\n"
-            + "You have changed your password. \n\n\n"
+            "感谢您使用AcademiaHub! 您已成功修改密码。\n\n"
+            + "Thank you for choosing AcademiaHub! You have changed your password. \n\n\n"
+            + "----------\nAcademiaHub Team"
+        )
+
+        EmailMessage._send(subject, email, body)
+
+    @staticmethod
+    def send_apply_researcher(email: str) -> None:
+        """
+        Send applied for researcher message to user.
+
+        Args:
+            email (str): user email.
+
+        Returns:
+            None
+        """
+
+        subject = "[AcademiaHub] 您已成功提交科研人员申请!"
+        body = (
+            "感谢您使用AcademiaHub! 您已成功提交科研人员申请, 请等待管理员审核。 \n\n"
+            + "Thank you for choosing AcademiaHub! "
+            + "Your application to become a researcher has been submitted, please wait for the administrator to review. \n\n\n"
             + "----------\nAcademiaHub Team"
         )
 
@@ -219,8 +241,53 @@ class EmailMessage:
 
         subject = "[AcademiaHub] 科研人员申请已通过!"
         body = (
-            "科研人员申请已通过! \n\n"
+            "感谢您使用AcademiaHub! 您的科研人员申请已通过。 \n\n"
+            + "Thank you for choosing AcademiaHub! "
             + "Your application to become a researcher has been approved. \n\n\n"
+            + "----------\nAcademiaHub Team"
+        )
+
+        EmailMessage._send(subject, email, body)
+
+    @staticmethod
+    def send_rejected_researcher(email: str) -> None:
+        """
+        Send reject researcher application message to user.
+
+        Args:
+            email (str): user email.
+
+        Returns:
+            None
+        """
+
+        subject = "[AcademiaHub] 科研人员申请未通过"
+        body = (
+            "感谢您使用AcademiaHub! 您的科研人员申请未通过, 请修改信息后重新提交。 \n\n"
+            + "Thank you for choosing AcademiaHub! "
+            + "Your application to become a researcher has been rejected, please update your information and resubmit. \n\n\n"
+            + "----------\nAcademiaHub Team"
+        )
+
+        EmailMessage._send(subject, email, body)
+
+    @staticmethod
+    def send_update_researcher_info(email: str) -> None:
+        """
+        Send update researcher info success message to user.
+
+        Args:
+            email (str): user email.
+
+        Returns:
+            None
+        """
+
+        subject = "[AcademiaHub] 科研人员信息已更新!"
+        body = (
+            "感谢您使用AcademiaHub! 您的科研人员信息已更新。 \n\n"
+            + "Thank you for choosing AcademiaHub! "
+            + "Your researcher information has been updated. \n\n\n"
             + "----------\nAcademiaHub Team"
         )
 
