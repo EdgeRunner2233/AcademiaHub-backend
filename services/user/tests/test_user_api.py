@@ -1,17 +1,16 @@
-import json
 import unittest
 from src import create_app
 from src.model import User
+import tests.util as test_util
 from fakeredis import FakeRedis
 from unittest.mock import patch
 from src.extensions import db, mail
-from werkzeug.test import TestResponse
 
 test_redis = FakeRedis()
 
 
 @patch("src.cache.redis", test_redis)
-class ApiTestCase(unittest.TestCase):
+class UserApiTestCase(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.app = create_app(
@@ -35,21 +34,6 @@ class ApiTestCase(unittest.TestCase):
         test_redis.flushall()
 
         self.app_context.pop()
-
-    def check_success_field(self, response: TestResponse):
-        self.assertEqual(response.status_code, 200)
-
-        payload: dict = json.loads(response.data)
-        self.assertIn("success", payload)
-        self.assertIn("code", payload)
-        self.assertIn("message", payload)
-        self.assertIn("data", payload)
-
-        if payload["success"] == False:
-            print("Error: ", payload["message"])
-        self.assertEqual(payload["success"], True)
-
-        return payload
 
     def register(self, email=None, nickname=None, password=None):
         """
@@ -90,7 +74,7 @@ class ApiTestCase(unittest.TestCase):
             content_type="multipart/form-data",
         )
 
-        return self.check_success_field(response)
+        return test_util.check_success_field(response)
 
     def login(self, email=None, password=None):
         """
@@ -112,7 +96,7 @@ class ApiTestCase(unittest.TestCase):
             content_type="multipart/form-data",
         )
 
-        return self.check_success_field(response)
+        return test_util.check_success_field(response)
 
     def test_app_exist(self):
         self.assertIsNotNone(self.app)
@@ -127,7 +111,7 @@ class ApiTestCase(unittest.TestCase):
 
     def test_api_health(self):
         response = self.client.get("/api/user/health")
-        payload = self.check_success_field(response)
+        payload = test_util.check_success_field(response)
         self.assertEqual(payload["code"], 0)
 
     def test_api_get_verification(self):
@@ -143,7 +127,7 @@ class ApiTestCase(unittest.TestCase):
 
             self.assertEqual(len(outbox), 1)
 
-        self.check_success_field(response)
+        test_util.check_success_field(response)
 
         v_code = test_redis.get("vcode#test@email.testemail")
         self.assertIsNotNone(v_code)
@@ -160,7 +144,7 @@ class ApiTestCase(unittest.TestCase):
             content_type="multipart/form-data",
         )
 
-        payload = self.check_success_field(response)
+        payload = test_util.check_success_field(response)
         self.assertEqual(payload["code"], 300)
 
         user_id = payload["data"]["id"]
@@ -194,7 +178,7 @@ class ApiTestCase(unittest.TestCase):
             )
             self.assertEqual(len(outbox), 1)
 
-        payload = self.check_success_field(response)
+        payload = test_util.check_success_field(response)
         self.assertEqual(payload["code"], 310)
 
         user_id = payload["data"]["id"]
@@ -218,7 +202,7 @@ class ApiTestCase(unittest.TestCase):
             },
             content_type="multipart/form-data",
         )
-        self.check_success_field(response)
+        test_util.check_success_field(response)
 
         user = User.get_by_email("test@email.testemail")
         self.assertIsNone(user)
@@ -240,7 +224,7 @@ class ApiTestCase(unittest.TestCase):
             },
             content_type="multipart/form-data",
         )
-        payload = self.check_success_field(response)
+        payload = test_util.check_success_field(response)
         self.assertEqual(payload["code"], 0)
 
         self.assertFalse(User.login_check("test@email.testemail", "test_password"))
@@ -253,7 +237,7 @@ class ApiTestCase(unittest.TestCase):
             data={"user_id": "1"},
             content_type="multipart/form-data",
         )
-        payload = self.check_success_field(response)
+        payload = test_util.check_success_field(response)
         self.assertEqual(payload["code"], 0)
 
         user_info = payload["data"]
