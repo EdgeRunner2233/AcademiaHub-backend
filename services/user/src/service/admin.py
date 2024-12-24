@@ -1,4 +1,5 @@
 from src.response import Response
+from src.cache import EmailMessage
 from flask import Blueprint, request
 from src.pre_check import require_fields
 from src.model import User, Researcher, ResearcherApplication, MissingWork
@@ -43,6 +44,8 @@ def approve_researcher_application():
     researcher.update(is_valid=True)
     user.update(role=User.Role.RESEARCHER)
 
+    EmailMessage.send_become_researcher(user.email)
+
     return res(0)
 
 
@@ -69,7 +72,13 @@ def disapprove_researcher_application():
 def get_user_num():
     res = Response()
 
-    return res(0, data={"user_num": User.count(), "researcher_num": Researcher.count()})
+    return res(
+        0,
+        data={
+            "user_num": User.count(role=User.Role.USER),
+            "researcher_num": User.count(role=User.Role.RESEARCHER),
+        },
+    )
 
 
 @admin_service_bp.route("/get_unread_feedback", methods=["GET", "POST"])

@@ -39,6 +39,7 @@ class Obs_Client:
 
         with tempfile.NamedTemporaryFile() as tmp:
             tmp.write(content)
+            tmp.flush()
             res = self.obs_client.putFile(
                 config.OBS_BUCKET_NAME, obs_dir + obs_filename, tmp.name
             )
