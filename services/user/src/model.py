@@ -93,9 +93,13 @@ class User(db.Model, Base):  # type: ignore
 
     avatar_url = sql.Column(sql.String(150), default=config.DEFAULT_AVATAR_URL)
 
-    time_registered = sql.Column(sql.DateTime, default=datetime.now(tz))
-    time_created = sql.Column(sql.DateTime, default=datetime.now(tz))
-    time_modified = sql.Column(sql.DateTime, default=datetime.now(tz))
+    time_registered = sql.Column(sql.DateTime, default=lambda: datetime.now(tz))
+    time_created = sql.Column(sql.DateTime, default=lambda: datetime.now(tz))
+    time_modified = sql.Column(
+        sql.DateTime,
+        default=lambda: datetime.now(tz),
+        onupdate=lambda: datetime.now(tz),
+    )
 
     is_deleted = sql.Column(sql.Boolean, default=False)
 
@@ -285,9 +289,13 @@ class ResearcherApplication(db.Model, Base):  # type: ignore
     id_card_back = sql.Column(sql.String(200), nullable=False)
     academic_achievement = sql.Column(sql.String(200), nullable=False)
 
-    time_submitted = sql.Column(sql.DateTime, default=datetime.now(tz))
-    time_created = sql.Column(sql.DateTime, default=datetime.now(tz))
-    time_modified = sql.Column(sql.DateTime, default=datetime.now(tz))
+    time_submitted = sql.Column(sql.DateTime, default=lambda: datetime.now(tz))
+    time_created = sql.Column(sql.DateTime, default=lambda: datetime.now(tz))
+    time_modified = sql.Column(
+        sql.DateTime,
+        default=lambda: datetime.now(tz),
+        onupdate=lambda: datetime.now(tz),
+    )
     is_deleted = sql.Column(sql.Boolean, default=False)
 
     @staticmethod
@@ -373,9 +381,13 @@ class Researcher(db.Model, Base):  # type: ignore
 
     is_valid = sql.Column(sql.Boolean, default=False)
 
-    time_became_researcher = sql.Column(sql.DateTime, default=datetime.now(tz))
-    time_created = sql.Column(sql.DateTime, default=datetime.now(tz))
-    time_modified = sql.Column(sql.DateTime, default=datetime.now(tz))
+    time_became_researcher = sql.Column(sql.DateTime, default=lambda: datetime.now(tz))
+    time_created = sql.Column(sql.DateTime, default=lambda: datetime.now(tz))
+    time_modified = sql.Column(
+        sql.DateTime,
+        default=lambda: datetime.now(tz),
+        onupdate=lambda: datetime.now(tz),
+    )
     is_deleted = sql.Column(sql.Boolean, default=False)
 
     @staticmethod
@@ -471,10 +483,14 @@ class PlatformMessages(db.Model, Base):  # type: ignore
     sender = sql.Column(sql.Text, nullable=False)
     receiver_role = sql.Column(sql.Integer, nullable=False)
     body = sql.Column(sql.Text, default="")
-    time_sent = sql.Column(sql.DateTime, default=datetime.now(tz))
+    time_sent = sql.Column(sql.DateTime, default=lambda: datetime.now(tz))
 
-    time_created = sql.Column(sql.DateTime, default=datetime.now(tz))
-    time_modified = sql.Column(sql.DateTime, default=datetime.now(tz))
+    time_created = sql.Column(sql.DateTime, default=lambda: datetime.now(tz))
+    time_modified = sql.Column(
+        sql.DateTime,
+        default=lambda: datetime.now(tz),
+        onupdate=lambda: datetime.now(tz),
+    )
     is_deleted = sql.Column(sql.Boolean, default=False)
 
     @staticmethod
@@ -539,8 +555,12 @@ class MissingWork(db.Model, Base):  # type: ignore
     content = sql.Column(sql.Text, nullable=False)
     is_read = sql.Column(sql.Boolean, default=False)
 
-    time_created = sql.Column(sql.DateTime, default=datetime.now(tz))
-    time_modified = sql.Column(sql.DateTime, default=datetime.now(tz))
+    time_created = sql.Column(sql.DateTime, default=lambda: datetime.now(tz))
+    time_modified = sql.Column(
+        sql.DateTime,
+        default=lambda: datetime.now(tz),
+        onupdate=lambda: datetime.now(tz),
+    )
     is_deleted = sql.Column(sql.Boolean, default=False)
 
     @staticmethod

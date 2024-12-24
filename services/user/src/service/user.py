@@ -1,4 +1,3 @@
-import json
 import src.util as util
 import src.config as config
 from src.util import logger
@@ -6,7 +5,6 @@ from src.oss import obs_client
 from src.response import Response
 from src.cache import EmailMessage
 from flask import Blueprint, request
-from src.api_request import ApiRequest
 from src.pre_check import require_fields
 from src.model import (
     User,
