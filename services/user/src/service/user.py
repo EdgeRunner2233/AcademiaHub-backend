@@ -253,9 +253,6 @@ def become_researcher():
     if not user:
         return res(302)
 
-    if user.role == User.Role.RESEARCHER:
-        return res(508)
-
     if researcher_id is None or len(researcher_id) <= 0:
         return res(505)
 
@@ -312,6 +309,8 @@ def become_researcher():
     )
     if not application or not researcher or not user.update(avatar_url=avatar_url):
         return res(506)
+
+    EmailMessage.send_apply_researcher(user.email)
 
     return res(510)
 

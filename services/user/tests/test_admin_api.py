@@ -263,21 +263,32 @@ class AdminApiTestCase(unittest.TestCase):
         self.assertEqual(payload["code"], 511)
 
         # disapprove application
-        response = self.client.post(
-            "/api/admin/disapprove_researcher_application",
-            data={"id": "1", "user_id": "1"},
-            content_type="multipart/form-data",
-        )
+        with mail.record_messages() as outbox:
+            self.assertEqual(len(outbox), 0)
+            response = self.client.post(
+                "/api/admin/disapprove_researcher_application",
+                data={"id": "1", "user_id": "1"},
+                content_type="multipart/form-data",
+            )
+            self.assertEqual(len(outbox), 0)
         payload = test_util.check_fail_field(response)
         self.assertEqual(payload["code"], 511)
 
         # become researcher
-        response = self.request_become_researcher()
+        with mail.record_messages() as outbox:
+            self.assertEqual(len(outbox), 0)
+            response = self.request_become_researcher()
+            self.assertEqual(len(outbox), 1)
+            self.assertEqual(len(outbox[0].recipients), 1)
+            self.assertEqual(outbox[0].recipients[0], "test@email.testemail")
         payload = test_util.check_success_field(response)
         self.assertEqual(payload["code"], 510)
 
         # duplicate become researcher request
-        response = self.request_become_researcher()
+        with mail.record_messages() as outbox:
+            self.assertEqual(len(outbox), 0)
+            response = self.request_become_researcher()
+            self.assertEqual(len(outbox), 0)
         payload = test_util.check_fail_field(response)
         self.assertEqual(payload["code"], 507)
 
@@ -324,11 +335,14 @@ class AdminApiTestCase(unittest.TestCase):
         self.assertEqual(payload["code"], 511)
 
         # disapprove application
-        response = self.client.post(
-            "/api/admin/disapprove_researcher_application",
-            data={"id": "1", "user_id": "1"},
-            content_type="multipart/form-data",
-        )
+        with mail.record_messages() as outbox:
+            self.assertEqual(len(outbox), 0)
+            response = self.client.post(
+                "/api/admin/disapprove_researcher_application",
+                data={"id": "1", "user_id": "1"},
+                content_type="multipart/form-data",
+            )
+            self.assertEqual(len(outbox), 0)
         payload = test_util.check_fail_field(response)
         self.assertEqual(payload["code"], 511)
 
@@ -361,7 +375,12 @@ class AdminApiTestCase(unittest.TestCase):
 
         # register another user and request to become researcher
         self.register("test2@email.testemail", "test2", "test_password2")
-        response = self.request_become_researcher(2)
+        with mail.record_messages() as outbox:
+            self.assertEqual(len(outbox), 0)
+            response = self.request_become_researcher(2)
+            self.assertEqual(len(outbox), 1)
+            self.assertEqual(len(outbox[0].recipients), 1)
+            self.assertEqual(outbox[0].recipients[0], "test2@email.testemail")
         payload = test_util.check_success_field(response)
         self.assertEqual(payload["code"], 510)
 
@@ -379,11 +398,16 @@ class AdminApiTestCase(unittest.TestCase):
         self.assertEqual(data["researcher_num"], 1)
 
         # disapprove application
-        response = self.client.post(
-            "/api/admin/disapprove_researcher_application",
-            data={"id": "1", "user_id": "2"},
-            content_type="multipart/form-data",
-        )
+        with mail.record_messages() as outbox:
+            self.assertEqual(len(outbox), 0)
+            response = self.client.post(
+                "/api/admin/disapprove_researcher_application",
+                data={"id": "1", "user_id": "2"},
+                content_type="multipart/form-data",
+            )
+            self.assertEqual(len(outbox), 1)
+            self.assertEqual(len(outbox[0].recipients), 1)
+            self.assertEqual(outbox[0].recipients[0], "test2@email.testemail")
         payload = test_util.check_success_field(response)
         self.assertEqual(payload["code"], 0)
 
@@ -415,7 +439,12 @@ class AdminApiTestCase(unittest.TestCase):
         self.assertEqual(data["researcher_num"], 1)
 
         # request to become researcher again
-        response = self.request_become_researcher(2)
+        with mail.record_messages() as outbox:
+            self.assertEqual(len(outbox), 0)
+            response = self.request_become_researcher(2)
+            self.assertEqual(len(outbox), 1)
+            self.assertEqual(len(outbox[0].recipients), 1)
+            self.assertEqual(outbox[0].recipients[0], "test2@email.testemail")
         payload = test_util.check_success_field(response)
         self.assertEqual(payload["code"], 510)
 

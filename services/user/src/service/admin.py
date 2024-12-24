@@ -36,15 +36,20 @@ def approve_researcher_application():
         return res(302)
 
     application = ResearcherApplication.get_by_user_id(user_id)
-    researcher = Researcher.query_first(user_id=user_id, is_valid=False)
-    if not application or not researcher:
+    if not application:
         return res(511)
 
     application.delete()
-    researcher.update(is_valid=True)
-    user.update(role=User.Role.RESEARCHER)
-
-    EmailMessage.send_become_researcher(user.email)
+    existing_researcher = Researcher.query_first(user_id=user_id, is_valid=True)
+    new_researcher = Researcher.query_first(user_id=user_id, is_valid=False)
+    if not existing_researcher:
+        new_researcher.update(is_valid=True)
+        user.update(role=User.Role.RESEARCHER)
+        EmailMessage.send_become_researcher(user.email)
+    else:
+        existing_researcher.delete()
+        new_researcher.update(is_valid=True)
+        EmailMessage.send_update_researcher_info(user.email)
 
     return res(0)
 
@@ -57,6 +62,11 @@ def disapprove_researcher_application():
     res = Response()
 
     user_id = form.get("user_id")
+
+    user = User.get_by_id(user_id)
+    if not user:
+        return res(302)
+
     application = ResearcherApplication.get_by_user_id(user_id)
     researcher = Researcher.query_first(user_id=user_id, is_valid=False)
     if not application or not researcher:
@@ -64,6 +74,8 @@ def disapprove_researcher_application():
 
     application.delete()
     researcher.delete()
+
+    EmailMessage.send_rejected_researcher(user.email)
 
     return res(0)
 
