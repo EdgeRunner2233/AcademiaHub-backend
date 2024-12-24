@@ -11,6 +11,7 @@ from asyncio import TimeoutError
 
 logger = logging.getLogger('mylogger')
 openalex = OpenAlex("15129275190@163.com")
+
 def openAlex_ordinary_search(text, type, page):
     # cache.clear()
     request_dir = {
@@ -57,7 +58,7 @@ def get_abstract(abstract_inverted_index):
 
 async def fetch_work_details(work, index, works_detail, session):
     try:
-        continuesingle_work = cache.get(work)
+        continuesingle_work = cache.get("https://openalex.org/"+work)
         if continuesingle_work:
             continuesingle_work = json.loads(continuesingle_work)
             works_detail.append({

@@ -265,19 +265,24 @@ def generate_bibtex(specific_work):
     authorships = specific_work.get("authorships", [])
     title = specific_work.get("title", "")
     year = specific_work.get("publication_year", "")
-    pages = specific_work.get("pages", "")
+    pages = specific_work.get("pages", "34–39")
     volume = specific_work.get("volume", "")
     number = specific_work.get("number", "")
     flag =0  # flag: 0-journal
 
-    if specific_work.get("primary_location","").get("source").get("type","") == "journal":
+    primary_location = specific_work.get("primary_location", {})
+    source = primary_location.get("source", {})
+
+    type_value = source.get("type", "")
+    if type_value == "journal":
         flag = 0
-        journal = specific_work.get("primary_location","").get("source").get("display_name","")
-    elif specific_work.get("primary_location","").get("source").get("type","") == "conference":
+        journal = source.get("display_name", "")
+    elif type_value == "conference":
         flag = 1
-        booktitle = specific_work.get("primary_location","").get("source").get("display_name","")
+        booktitle = source.get("display_name", "")
     else:
         flag = 2
+
 
     # 从 authorships 提取作者的 display_name
     author_names = [authorship.get("author", {}).get("display_name", "") for authorship in authorships]

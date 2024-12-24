@@ -5,7 +5,7 @@ from django.db import models
 
 class History(models.Model):
     user_id = models.BigIntegerField('用户的id', primary_key=True, default=0)
-    history_list = models.TextField('用户的搜索历史', default='')
+    history_list = models.TextField('用户的浏览历史', default='')
 
     class Meta:
         db_table = 'user_history'

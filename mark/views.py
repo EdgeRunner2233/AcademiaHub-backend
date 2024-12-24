@@ -154,12 +154,13 @@ def get_user_single_mark_list(request):
         result = {'result': 'error', 'message': '缺少用户id'}
         return JsonResponse(result)
 
-    marks = Mark.objects.filter(id=list_id).prefetch_related(
+
+    marks = Mark.objects.filter(id=list_id, user_id=int(user_id)).prefetch_related(
         Prefetch('mark_list', queryset=MarkRelationships.objects.all())
     )
 
     if not marks:
-        result = {'result': 'error', 'message': '该用户没有标记列表'}
+        result = {'result': 'error', 'message': '该用户没有标记列表 或 该列表不是该用户的列表'}
         return JsonResponse(result)
 
     user_marks_with_details = []
@@ -231,15 +232,18 @@ def delete_mark_relationship(request):
     user_id = request.POST.get('user_id', '')
     mark_relationship_id = request.POST.get('mark_relationship_id', '')
 
-
-
     if user_id == '' or mark_relationship_id == '':
         result = {'result': 'error', 'message': '缺少用户id 或 标记id'}
         return JsonResponse(result)
 
     mark_relationship = MarkRelationships.objects.filter(id=mark_relationship_id).first()
+
+    if mark_relationship.mark_list.user_id != user_id:
+        result = {'result': 'error', 'message': '标记id不是该用户的标记'}
+        return JsonResponse(result)
+
     if not mark_relationship:
-        result = {'result': 'error', 'message': '标记id不存在'}
+        result = {'result': 'error', 'message': '标记id不存在 或 标记不是该用户的标记'}
         return JsonResponse(result)
     mark_list = mark_relationship.mark_list
     mark_list.count -= 1
@@ -258,9 +262,9 @@ def delete_mark(request):
         result = {'result': 'error', 'message': '缺少用户id 或 标记列表id'}
         return JsonResponse(result)
 
-    mark = Mark.objects.filter(id=mark_id).first()
+    mark = Mark.objects.filter(id=mark_id, user_id=user_id).first()
     if not mark:
-        result = {'result': 'error', 'message': '标记列表id不存在'}
+        result = {'result': 'error', 'message': '标记列表id不存在 或 该列表不是该用户的列表'}
         return JsonResponse(result)
 
     mark.delete()
@@ -278,9 +282,9 @@ def get_user_single_mark_list_detail(request):
 
     try:
         # 查找 Mark 对象
-        mark = Mark.objects.get(id=list_id)
+        mark = Mark.objects.get(id=list_id, user_id=user_id)
     except Mark.DoesNotExist:
-        return JsonResponse({'result': 'error', 'message': '该用户没有标记列表'})
+        return JsonResponse({'result': 'error', 'message': '该用户没有标记列表 或 该列表不是该用户的列表'})
 
     mark_relationships = MarkRelationships.objects.filter(mark_list=mark)
 
