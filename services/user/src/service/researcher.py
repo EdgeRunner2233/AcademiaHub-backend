@@ -77,6 +77,30 @@ def get_info():
         except ApiRequest.RequestError:
             return res(502)
 
+    coauthors = []
+    coauthor_ids = []
+    for work in works:
+        for author in work.get("authorships", []):
+            cooperator: dict = author.get("author")
+            cid = cooperator.get("id", "").split("/")[-1]
+            if cid == researcher_id:
+                continue
+            if cid not in coauthor_ids:
+                coauthors.append(
+                    {
+                        "name": cooperator.get("display_name", ""),
+                        "id": cid,
+                        "coauthor_times": 1,
+                    }
+                )
+            else:
+                for coauthor in coauthors:
+                    if coauthor.get("id", None) == cid:
+                        coauthor["coauthor_times"] += 1
+            coauthor_ids.append(cid)
+
+    coauthors.sort(key=lambda x: x["coauthor_times"], reverse=True)
+    data["cooperators"] = coauthors[:10]
     data["works"] = [
         {
             "title": x.get("title", ""),

@@ -49,6 +49,12 @@ class ResearcherApiTestCase(unittest.TestCase):
         self.assertIn("works_count", data)
         self.assertIn("cited_by_count", data)
         self.assertIn("summary_stats", data)
+        self.assertIn("avatar_url", data)
+        self.assertIn("email", data)
+        self.assertIn("topics", data)
+        self.assertIn("institution", data)
+        self.assertIn("cooperators", data)
+        self.assertIn("works", data)
 
     def test_get_researcher_info_fail(self):
         response = self.client.post(
