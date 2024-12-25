@@ -16,6 +16,11 @@ class ApiRequest:
         RequestNotFoundError class
         """
 
+    class RequestTimeoutError(RequestError):
+        """
+        RequestTimeoutError class
+        """
+
     @staticmethod
     def request_api(url: str, method="GET", kwargs={}) -> str:
         """
@@ -34,7 +39,9 @@ class ApiRequest:
         """
 
         try:
-            res = requests.request(method, url, **kwargs)
+            res = requests.request(method, url, timeout=3, **kwargs)
+        except requests.exceptions.ConnectTimeout as e:
+            raise ApiRequest.RequestTimeoutError(e)
         except Exception as e:
             raise ApiRequest.RequestError(e)
 

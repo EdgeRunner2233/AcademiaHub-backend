@@ -6,6 +6,7 @@ from dataclasses import dataclass, field
 class Message:
     _mapping = {
         0: gettext("操作成功"),
+        10: gettext("超时返回"),
         101: gettext("缺少参数 {}"),
         102: gettext("参数 {} 不符合格式要求"),
         103: gettext("参数 {} 不符合要求"),

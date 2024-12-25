@@ -27,6 +27,22 @@ def get_info():
 
     researcher_id = req.get("researcher_id", "")
 
+    data = {
+        "openalex_id": "",
+        "orcid": "",
+        "name": "",
+        "works_count": 0,
+        "cited_by_count": 0,
+        "summary_stats": {},
+        "avatar_url": config.DEFAULT_AVATAR_URL,
+        "email": "",
+        "topics": [],
+        "institution": {
+            "name": "",
+            "id": "",
+        },
+    }
+
     try:
         result = CachedAuthor.get(researcher_id)
     except CachedAuthor.CacheNotFound:
@@ -38,6 +54,8 @@ def get_info():
             CachedAuthor.set(researcher_id, result)
         except ApiRequest.RequestNotFoundError:
             return res(501)
+        except ApiRequest.RequestTimeoutError:
+            return res(10, data=data)
         except ApiRequest.RequestError:
             return res(502)
 
@@ -49,7 +67,8 @@ def get_info():
         for x in result.get("topics", [])
         if x
     ]
-    institution: dict = result.get("last_known_institutions", [{}])[0]  # type: ignore
+    institution: list = result.get("last_known_institutions", [{}])  # type: ignore
+    institution = institution[0] if len(institution) > 0 else {}
     data = {
         "openalex_id": result.get("id", ""),
         "orcid": result.get("orcid", ""),
@@ -74,6 +93,8 @@ def get_info():
             works = ApiRequest.request_api(result.get("works_api_url"))
             works: list[dict] = json.loads(works).get("results", [])  # type: ignore
             CachedWork.set(work_id, works)
+        except ApiRequest.RequestTimeoutError:
+            return res(10, data=data)
         except ApiRequest.RequestError:
             return res(502)
 
@@ -133,6 +154,8 @@ def get_coauthor():
             CachedAuthor.set(researcher_id, result)
         except ApiRequest.RequestNotFoundError:
             return res(501)
+        except ApiRequest.RequestTimeoutError:
+            return res(10, data={"coauthors": []})
         except ApiRequest.RequestError:
             return res(502)
 
@@ -144,6 +167,8 @@ def get_coauthor():
             works = ApiRequest.request_api(result.get("works_api_url"))
             works: list[dict] = json.loads(works).get("results", [])  # type: ignore
             CachedWork.set(work_id, works)
+        except ApiRequest.RequestTimeoutError:
+            return res(10, data={"coauthors": []})
         except ApiRequest.RequestError:
             return res(502)
 
